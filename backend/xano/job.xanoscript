@@ -1,0 +1,15 @@
+// fetch a job's status and artifacts
+// NOTE: xanoscript precondition ($job == null) misfires on record objects —
+// a missing id returns a null body (http 200, `null`). client treats that as 404.
+query job verb=GET {
+  input {
+    int id
+  }
+  stack {
+    db.get design_jobs {
+      field_name = "id"
+      field_value = $input.id
+    } as $job
+  }
+  response = $job
+}

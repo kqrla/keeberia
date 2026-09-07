@@ -54,3 +54,9 @@ restructured the repo properly (this one, with `/backend` engines + daemons and 
 - [ ] xano api live (blocked on fresh metadata token)
 - [ ] case generator (openscad, flow four)
 - [ ] lovable frontend wired to the real engine
+
+## day three (sept 7): the api goes live
+
+- fresh xano metadata token in hand, the v1 skeleton landed: `design_jobs` table, `keeberia` api group, `POST /generate` + `GET /job`. posted a real hackpad-3key layout through the public endpoint and got job #1 back, queued. the loop exists now.
+- learned xanoscript the way you learn any language: by having it reject you. `error_type = "invalidinput"` isn't a valid error type. and the precondition `($job == null)` fires *even when the record exists* — object comparison in preconditions is just broken, so missing jobs return a null body instead of a 404. shipped it with a note in the deploy readme. pragmatism over pedantry.
+- repo went public: github.com/kqrla/keeberia. README rewritten in memorium's voice — thesis first, coined a word for the core belief: **traceparency**. nothing in the copper path is generated, guessed, or probabilistic, so every trace has a reason.
