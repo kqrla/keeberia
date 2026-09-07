@@ -1,0 +1,16 @@
+// queue a keeberia pcb generation job
+query generate verb=POST {
+  input {
+    json layout
+  }
+  stack {
+    db.add design_jobs {
+      data = {
+        layout: $input.layout
+        status: "queued"
+        attempts: 0
+      }
+    } as $job
+  }
+  response = $job
+}
