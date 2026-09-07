@@ -80,3 +80,15 @@ restructured the repo properly (this one, with `/backend` engines + daemons and 
 
 - anne dropped the canonical description of what keeberia is and what its parts are (plus the full five-flow editor architecture and the lovable ux prompt for components + pcb, from the may planning sessions). it's filed where it belongs instead of living in a chat log: `scope/product.md` is the working spec, `AGENTS.md` is the build contract (one project model, five views, portability as a product requirement, validation in words not error codes), and the raw exports live in `scope/reference/` for provenance — the wandery material that rode along in one export was left out deliberately.
 - nothing in it changes the course: it confirms what's built (the loop, kicad as the interchange, deterministic routing) and names what's next in ui terms — layout as spatial planning, components as identity assignment, pcb as fabrication, case as parametric openscad, keys + knobs as the feel layer. the readme now links all of it.
+
+## day four: the case compiler — job #2 is a device now
+
+the cad engine is real: `backend/engines/cad/case-engine/` compiles a routed board into a readable, dependency-free openscad file — tray with standoffs on the mounting holes, usb-c slot in the wall where the xiao actually points, switch plate with key/encoder/oled openings. named slider params up top (pcb_width, wall_thickness, corner_radius…), everything derived from component metadata, not from any reference keyboard. hackpad and blueprint were studied as examples — anne made the point clearly: examples to learn from, not guidelines. keeberia doesn't inherit anyone's component restrictions. that stance is in the roadmap standing decisions now.
+
+two real fixes came out of building it: the xiao was sitting with its usb-c facing the key field — no case could ever cut a port, so the mcu is rotated 180° to face the board edge (pcb engine re-routed all fixtures clean after). and the engine's own validation caught 4mm standoffs being too short for the xiao + usb shell stack — default is 5mm now.
+
+verification was honest: openscad installed headless in the sandbox and all three reference boards compile to real stls, not just plausible text. then job #2 (ninepad) went queued → done through xano with case_scad + case_params in the artifacts — the loop now produces a device (board + case), not just a board.
+
+also: component library decisions locked in the roadmap — kicad defaults or marbastlib for symbols/footprints, snapeda/componentsearchengine as fallback lookup, grabcad for 3d models. keyboard-focussed, never a full pcb editor.
+
+next: gerber + excellon export (jlc-orderable output), then the freerouting bridge, then frontend wiring.

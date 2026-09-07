@@ -7,7 +7,7 @@
     "routedNets": 5,
     "failedNets": 0,
     "vias": 3,
-    "traceMm": 120
+    "traceMm": 99
   },
   "warnings": [],
   "nets": [

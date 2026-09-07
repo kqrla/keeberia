@@ -8,6 +8,7 @@
  * amd cloud hardware later without changing a line of the ladder.
  */
 import { generatePcb } from "../../engines/pcb/pcb-engine/src/index.ts";
+import { generateCase } from "../../engines/cad/case-engine/src/index.ts";
 import { placeComponents } from "../../engines/pcb/pcb-engine/src/layout.ts";
 import { renderSvg } from "../../engines/pcb/pcb-engine/src/preview.ts";
 
@@ -39,6 +40,14 @@ export async function runJob(job: DesignJob): Promise<JobResult> {
       const out = generatePcb(job.layout);
       const errors = out.result.warnings.filter((w) => w.level === "error");
       if (errors.length > 0) continue; // next rung
+      // the case compiles from the same board: one model, more artifacts
+      const caseOut = generateCase(out.result);
+      const caseErrors = caseOut.warnings.filter((w) => w.level === "error");
+      if (caseErrors.length > 0) {
+        // deterministic design flaw (e.g. no mounting holes) — retry rungs
+        // can't fix it, so the job fails with words a designer can act on
+        return { jobId: job.id, ok: false, status: "error", error: caseErrors[0].message };
+      }
       const ctx = placeComponents(job.layout);
       const svg = renderSvg(ctx, out.result, 720);
       return {
@@ -47,10 +56,12 @@ export async function runJob(job: DesignJob): Promise<JobResult> {
         status: "done",
         artifacts: {
           kicad_pcb: out.kicadPcb,
+          case_scad: caseOut.scad,
+          case_params: JSON.stringify(caseOut.params),
           bom_csv: out.bomCsv,
           qmk_info: JSON.stringify(out.qmkInfo),
           preview_svg: svg,
-          stats: JSON.stringify(out.result.stats),
+          stats: JSON.stringify({ ...out.result.stats, standoffs: caseOut.stats.standoffs, plateOpenings: caseOut.stats.plateOpenings }),
         },
       };
     } catch (e: any) {

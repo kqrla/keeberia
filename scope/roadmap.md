@@ -23,7 +23,7 @@
 2. ~~autolayout daemon~~ — done (sept 7): portable worker behind a queue interface, xano-rest transport, render.com blueprint. job #1 went queued → done end to end with artifacts
 3. **freerouting bridge** — the deterministic autorouting partner: engine emits placement + netlist as dsn, freerouting routes headless (java, render/amd — not xano), ses applies back to the board. until it lands, the engine's own a* router stays the v1 router and retry-ladder fallback
 4. **gerber + excellon export** — jlc-orderable output is the v1 bar; kicad_pcb alone doesn't order a board
-5. **case generator** — openscad + slider-based configurator controls (makerworld makerlab vibes) from engine output (outline + part heights); print test on the a1 mini
+5. ~~case generator~~ — done (sept 7): `backend/engines/cad/case-engine/` compiles a board into readable, dependency-free openscad (named slider params, usb slot derived from the mcu placement, standoffs on the mounting holes, switch plate with key/encoder/oled openings). all three reference boards compile to real stls (openscad verified in sandbox). job #2 (ninepad) went queued → done with case_scad + case_params artifacts. print test on the a1 mini still pending
 6. **frontend wiring** — job flow + webgl result viewer (board + case), notion/canva vibes strictly enforced
 
 ## standing decisions (don't re-litigate)
@@ -37,6 +37,8 @@
 - autorouting: freerouting (open source, deterministic — the right kind of "no ai") joins the copper path via a dsn in / ses out bridge. the engine's a* router stays as fallback until the bridge is proven
 - format: kicad everywhere — schema and pcb interchange
 - component ecosystem: jlcpcb — the bom carries jlc part numbers and footprints are verified against jlc's library
+- symbol/footprint sources: kicad default libraries or marbastlib (keyboard-native) first; snapeda.com / componentsearchengine.com as fallback lookup for anything missing; grabcad for 3d models. keeberia stays keyboard-focussed — not a general pcb editor
+- reference designs (hackpad, blueprint, hwdocs) are examples to learn from, never guidelines: keeberia doesn't inherit hack club's component or microcontroller restrictions. what generalizes is the practice (data-driven part metadata, parametric cases); what doesn't (their exact parts, dims, vendors) stays in research notes
 - protoflow keeps its role (verifier only, anne has credits); tensormux glm credits available for non-copper llm work; browserbase/firecrawl on request for scraping (jlc parts library, community builds)
 - design language: notion/figma/canva. never kicad/eda
 
