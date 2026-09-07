@@ -11,20 +11,26 @@ the background worker that turns design jobs into manufactured artifacts. the en
 ## job lifecycle
 
 ```
-queued → claimed → routing(retries…) → drc → exporting → done
-                                   ↘ failed (reason: user-readable)
+queued → claimed(running) → routing(retries…) → drc → done (artifacts persisted)
+                                          ↘ error (reason: user-readable)
 ```
 
-artifacts: kicad_pcb, gerbers + excellon (v1), drc report, bom csv, svg preview, case stl (v1), firmware config (v1).
+artifacts: kicad_pcb, bom csv, qmk info, svg preview, routing stats. gerbers + excellon, case stl and firmware config land in v1 as they're built.
 
-## layout
+## portability (standing decision)
 
-- `worker.ts` — queue loop skeleton (poll now; swappable for sqs/xano background tasks later)
-- transport is pluggable: `xano-rest` (pull from xano tables) or `http` (self-hosted queue). the engine call is identical either way
+the daemon has **no hard xano dependency**: the queue is one interface (`claim`, `complete`) with a pluggable transport. `xano-rest` is the v1 transport; a plain http/sqs transport drops in later without touching the run ladder. same for hosts — `render.yaml` deploys it as-is, and when denser boards need real hardware the same worker moves to amd cloud unchanged.
 
-## run (once the queue exists)
+## run
 
 ```bash
 cd backend/daemons/autolayout
-npx tsx worker.ts            # polls, sleeps, works
+KEEBERIA_ONCE=1 npx tsx worker.ts   # single pass (cron-style; exits when queue is empty)
+npx tsx worker.ts                   # poll forever (the render.com mode)
 ```
+
+env:
+- `KEEBERIA_XANO_BASE` — queue base url (defaults to the live keeberia instance)
+- `KEEBERIA_ONCE=1` — process one job then exit
+
+deploy on render.com: blueprint in `render.yaml` (worker service; set `KEEBERIA_XANO_BASE` in the dashboard).

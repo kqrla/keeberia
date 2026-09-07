@@ -1,0 +1,15 @@
+# render.com blueprint — the autolayout daemon (v1: polls the xano queue)
+# deploy from repo root. the worker is a plain node service: no xano code runs
+# inside it, so moving the queue (http/sqs) or the host (amd cloud) is config, not code.
+services:
+  - type: worker
+    name: keeberia-autolayout
+    runtime: node
+    rootDir: backend/daemons/autolayout
+    buildCommand: npm install --prefix ../../engines/pcb/pcb-engine 2>/dev/null || true
+    startCommand: npx --yes tsx worker.ts
+    envVars:
+      - key: KEEBERIA_XANO_BASE
+        sync: false # set in the render dashboard: https://<instance>/api:<group>:<branch>
+      - key: KEEBERIA_ONCE
+        value: "" # empty = poll forever (leave it)

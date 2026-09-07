@@ -1,0 +1,21 @@
+// worker reports a finished job: artifacts + status, or a user-readable error
+query complete verb=POST {
+  input {
+    int id
+    text status
+    json artifacts
+    text? error
+  }
+  stack {
+    db.edit design_jobs {
+      field_name = "id"
+      field_value = $input.id
+      data = {
+        status: $input.status
+        artifacts: $input.artifacts
+        error: $input.error
+      }
+    } as $job
+  }
+  response = $job
+}
