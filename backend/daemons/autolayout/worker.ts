@@ -9,6 +9,7 @@
  */
 import { generatePcb } from "../../engines/pcb/pcb-engine/src/index.ts";
 import { generateCase } from "../../engines/cad/case-engine/src/index.ts";
+import { exportGerbers } from "../../engines/pcb/pcb-engine/src/gerber.ts";
 import { placeComponents } from "../../engines/pcb/pcb-engine/src/layout.ts";
 import { renderSvg } from "../../engines/pcb/pcb-engine/src/preview.ts";
 
@@ -48,21 +49,31 @@ export async function runJob(job: DesignJob): Promise<JobResult> {
         // can't fix it, so the job fails with words a designer can act on
         return { jobId: job.id, ok: false, status: "error", error: caseErrors[0].message };
       }
+      // gerbers: the jlc-orderable output, one artifact per fab file
+      const gerbs = exportGerbers(out.result);
+      const gerberErrors = gerbs.warnings.filter((w) => w.level === "error");
+      if (gerberErrors.length > 0) {
+        return { jobId: job.id, ok: false, status: "error", error: gerberErrors[0].message };
+      }
       const ctx = placeComponents(job.layout);
       const svg = renderSvg(ctx, out.result, 720);
+      const artifacts: Record<string, string> = {
+        kicad_pcb: out.kicadPcb,
+        case_scad: caseOut.scad,
+        case_params: JSON.stringify(caseOut.params),
+        bom_csv: out.bomCsv,
+        qmk_info: JSON.stringify(out.qmkInfo),
+        preview_svg: svg,
+        stats: JSON.stringify({ ...out.result.stats, standoffs: caseOut.stats.standoffs, plateOpenings: caseOut.stats.plateOpenings }),
+      };
+      for (const [fname, content] of Object.entries(gerbs.files)) {
+        artifacts[`gerber_${fname.replace(/[^A-Za-z0-9._-]/g, "_")}`] = content;
+      }
       return {
         jobId: job.id,
         ok: true,
         status: "done",
-        artifacts: {
-          kicad_pcb: out.kicadPcb,
-          case_scad: caseOut.scad,
-          case_params: JSON.stringify(caseOut.params),
-          bom_csv: out.bomCsv,
-          qmk_info: JSON.stringify(out.qmkInfo),
-          preview_svg: svg,
-          stats: JSON.stringify({ ...out.result.stats, standoffs: caseOut.stats.standoffs, plateOpenings: caseOut.stats.plateOpenings }),
-        },
+        artifacts,
       };
     } catch (e: any) {
       // keep climbing; last rung's error becomes the user-facing reason
