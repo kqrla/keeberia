@@ -1,0 +1,92 @@
+{
+  "keyboard_name": "keeberia-streamdeck",
+  "manufacturer": "keeberia",
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x0001",
+    "device_version": "1.0.0"
+  },
+  "processor": "RP2040",
+  "bootloader": "rp2040-bootloader",
+  "features": {
+    "encoder_keys": true,
+    "oled": true
+  },
+  "matrix_pins": {
+    "rows": [
+      "GP28",
+      "GP29"
+    ],
+    "cols": [
+      "GP8",
+      "GP9",
+      "GP4",
+      "GP2",
+      "GP3"
+    ]
+  },
+  "diode_direction": "COL2ROW",
+  "layout": {
+    "LAYOUT_default": [
+      {
+        "x": 0,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "w": 1
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "w": 1
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "w": 1
+      }
+    ]
+  },
+  "encoder": {
+    "enabled": true,
+    "encoder_pins": [
+      [
+        "GP26",
+        "GP27"
+      ]
+    ]
+  }
+}

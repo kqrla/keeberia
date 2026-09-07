@@ -1,0 +1,51 @@
+{
+  "stats": {
+    "keys": 3,
+    "encoders": 0,
+    "oleds": 0,
+    "netCount": 5,
+    "routedNets": 5,
+    "failedNets": 0,
+    "vias": 3,
+    "traceMm": 120
+  },
+  "warnings": [],
+  "nets": [
+    {
+      "name": "+3V3",
+      "pads": [
+        "U1.3V3"
+      ]
+    },
+    {
+      "name": "GND",
+      "pads": [
+        "U1.GND",
+        "SW1.2",
+        "SW2.2",
+        "SW3.2"
+      ]
+    },
+    {
+      "name": "K1",
+      "pads": [
+        "SW1.1",
+        "U1.D0"
+      ]
+    },
+    {
+      "name": "K2",
+      "pads": [
+        "SW2.1",
+        "U1.D1"
+      ]
+    },
+    {
+      "name": "K3",
+      "pads": [
+        "SW3.1",
+        "U1.D2"
+      ]
+    }
+  ]
+}
