@@ -60,3 +60,10 @@ restructured the repo properly (this one, with `/backend` engines + daemons and 
 - fresh xano metadata token in hand, the v1 skeleton landed: `design_jobs` table, `keeberia` api group, `POST /generate` + `GET /job`. posted a real hackpad-3key layout through the public endpoint and got job #1 back, queued. the loop exists now.
 - learned xanoscript the way you learn any language: by having it reject you. `error_type = "invalidinput"` isn't a valid error type. and the precondition `($job == null)` fires *even when the record exists* — object comparison in preconditions is just broken, so missing jobs return a null body instead of a 404. shipped it with a note in the deploy readme. pragmatism over pedantry.
 - repo went public: github.com/kqrla/keeberia. README rewritten in memorium's voice — thesis first, coined a word for the core belief: **traceparency**. nothing in the copper path is generated, guessed, or probabilistic, so every trace has a reason.
+
+## day three, later: community research — the parts list was already written
+
+- pulled hackpad's kit + 20 gallery builds straight out of their site bundle + gallery api (their site is a spa, so i just read the javascript — the api endpoint was sitting right there: /api/gallery). reddit captcha-walled both curl and browserbase, but honestly we didn't need it.
+- the finding: our v1 default components ARE the hackpad parts list, item for item — xiao rp2040, mx + kailh hotswap, ec11, 0.91" oled, sk6812 mini-e. every gallery build is 3-12 keys with the encoder+oled+rgb trio. use cases are all shortcuts: fusion 360, krita, qlab, media, minecraft, artsey.
+- the strategic read: keeberia's export bundle should literally be a hack club blueprint submission (gerbers + step + firmware + bom). that's a distribution channel wearing a feature costume.
+- research lives in research/notes/communities-and-switches.md.
