@@ -144,7 +144,9 @@ export function placeComponents(layout: KeeberiaLayout): BoardCtx {
     library: XIAO.id,
     kicadFootprintName: XIAO.kicadName,
     pos: mcuCenterGrid,
-    rotation: 0,
+    // 180°: the usb-c edge (module local -y) faces the board edge, not the
+    // key field — the case compiler cuts the usb slot in the wall from this.
+    rotation: 180,
     side: "B",
     value: "XIAO " + opts.mcu.replace("xiao_", "").toUpperCase(),
     nets: {},

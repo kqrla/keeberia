@@ -6,8 +6,8 @@
     "netCount": 23,
     "routedNets": 23,
     "failedNets": 0,
-    "vias": 9,
-    "traceMm": 1368
+    "vias": 13,
+    "traceMm": 1262
   },
   "warnings": [],
   "nets": [
