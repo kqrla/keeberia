@@ -1,0 +1,5 @@
+Ref(s),Value,Footprint,Qty
+"SW1","ESC","keeberia:SW_Cherry_MX_1.00u_PCB_solder","1"
+"SW2","2","keeberia:SW_Cherry_MX_1.00u_PCB_solder","1"
+"SW3","3","keeberia:SW_Cherry_MX_1.00u_PCB_solder","1"
+"U1","XIAO RP2040","keeberia:Module_Seeed_XIAO","1"

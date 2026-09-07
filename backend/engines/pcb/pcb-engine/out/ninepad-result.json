@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "keys": 8,
+    "encoders": 1,
+    "oleds": 0,
+    "netCount": 12,
+    "routedNets": 12,
+    "failedNets": 0,
+    "vias": 2,
+    "traceMm": 587
+  },
+  "warnings": [],
+  "nets": [
+    {
+      "name": "+3V3",
+      "pads": [
+        "U1.3V3"
+      ]
+    },
+    {
+      "name": "GND",
+      "pads": [
+        "U1.GND",
+        "ENC1.C",
+        "ENC1.MP1",
+        "ENC1.MP2",
+        "SW1.2",
+        "SW2.2",
+        "SW3.2",
+        "SW4.2",
+        "SW5.2",
+        "SW6.2",
+        "SW7.2",
+        "SW8.2"
+      ]
+    },
+    {
+      "name": "ENC1_A",
+      "pads": [
+        "ENC1.A",
+        "U1.D0"
+      ]
+    },
+    {
+      "name": "ENC1_B",
+      "pads": [
+        "ENC1.B",
+        "U1.D1"
+      ]
+    },
+    {
+      "name": "K1",
+      "pads": [
+        "SW1.1",
+        "U1.D2"
+      ]
+    },
+    {
+      "name": "K2",
+      "pads": [
+        "SW2.1",
+        "U1.D3"
+      ]
+    },
+    {
+      "name": "K3",
+      "pads": [
+        "SW3.1",
+        "U1.D4"
+      ]
+    },
+    {
+      "name": "K4",
+      "pads": [
+        "SW4.1",
+        "U1.D5"
+      ]
+    },
+    {
+      "name": "K5",
+      "pads": [
+        "SW5.1",
+        "U1.D6"
+      ]
+    },
+    {
+      "name": "K6",
+      "pads": [
+        "SW6.1",
+        "U1.D7"
+      ]
+    },
+    {
+      "name": "K7",
+      "pads": [
+        "SW7.1",
+        "U1.D8"
+      ]
+    },
+    {
+      "name": "K8",
+      "pads": [
+        "SW8.1",
+        "U1.D9"
+      ]
+    }
+  ]
+}

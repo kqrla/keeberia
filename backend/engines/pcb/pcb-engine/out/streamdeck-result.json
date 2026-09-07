@@ -1,0 +1,192 @@
+{
+  "stats": {
+    "keys": 10,
+    "encoders": 1,
+    "oleds": 1,
+    "netCount": 23,
+    "routedNets": 23,
+    "failedNets": 0,
+    "vias": 9,
+    "traceMm": 1368
+  },
+  "warnings": [],
+  "nets": [
+    {
+      "name": "+3V3",
+      "pads": [
+        "U1.3V3",
+        "OLED1.VCC"
+      ]
+    },
+    {
+      "name": "GND",
+      "pads": [
+        "U1.GND",
+        "ENC1.C",
+        "ENC1.MP1",
+        "ENC1.MP2",
+        "OLED1.GND"
+      ]
+    },
+    {
+      "name": "COL0",
+      "pads": [
+        "SW1.1",
+        "SW2.1",
+        "U1.D6"
+      ]
+    },
+    {
+      "name": "COL1",
+      "pads": [
+        "SW3.1",
+        "SW4.1",
+        "U1.D7"
+      ]
+    },
+    {
+      "name": "COL2",
+      "pads": [
+        "SW5.1",
+        "SW6.1",
+        "U1.D8"
+      ]
+    },
+    {
+      "name": "COL3",
+      "pads": [
+        "SW7.1",
+        "SW8.1",
+        "U1.D9"
+      ]
+    },
+    {
+      "name": "COL4",
+      "pads": [
+        "SW9.1",
+        "SW10.1",
+        "U1.D10"
+      ]
+    },
+    {
+      "name": "ENC1_A",
+      "pads": [
+        "ENC1.A",
+        "U1.D0"
+      ]
+    },
+    {
+      "name": "ENC1_B",
+      "pads": [
+        "ENC1.B",
+        "U1.D1"
+      ]
+    },
+    {
+      "name": "N_SW1",
+      "pads": [
+        "SW1.2",
+        "D1.A"
+      ]
+    },
+    {
+      "name": "N_SW2",
+      "pads": [
+        "SW2.2",
+        "D2.A"
+      ]
+    },
+    {
+      "name": "N_SW3",
+      "pads": [
+        "SW3.2",
+        "D3.A"
+      ]
+    },
+    {
+      "name": "N_SW4",
+      "pads": [
+        "SW4.2",
+        "D4.A"
+      ]
+    },
+    {
+      "name": "N_SW5",
+      "pads": [
+        "SW5.2",
+        "D5.A"
+      ]
+    },
+    {
+      "name": "N_SW6",
+      "pads": [
+        "SW6.2",
+        "D6.A"
+      ]
+    },
+    {
+      "name": "N_SW7",
+      "pads": [
+        "SW7.2",
+        "D7.A"
+      ]
+    },
+    {
+      "name": "N_SW8",
+      "pads": [
+        "SW8.2",
+        "D8.A"
+      ]
+    },
+    {
+      "name": "N_SW9",
+      "pads": [
+        "SW9.2",
+        "D9.A"
+      ]
+    },
+    {
+      "name": "N_SW10",
+      "pads": [
+        "SW10.2",
+        "D10.A"
+      ]
+    },
+    {
+      "name": "ROW0",
+      "pads": [
+        "D1.K",
+        "D3.K",
+        "D5.K",
+        "D7.K",
+        "D9.K",
+        "U1.D2"
+      ]
+    },
+    {
+      "name": "ROW1",
+      "pads": [
+        "D2.K",
+        "D4.K",
+        "D6.K",
+        "D8.K",
+        "D10.K",
+        "U1.D3"
+      ]
+    },
+    {
+      "name": "SCL",
+      "pads": [
+        "OLED1.SCL",
+        "U1.D5"
+      ]
+    },
+    {
+      "name": "SDA",
+      "pads": [
+        "OLED1.SDA",
+        "U1.D4"
+      ]
+    }
+  ]
+}
