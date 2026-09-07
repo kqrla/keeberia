@@ -56,6 +56,7 @@ scope/
 - **frontend** — [layout-to-device.lovable.app](https://layout-to-device.lovable.app)
 - **journal** — [journal.md](journal.md), the build log (failures included)
 - **scope** — [scope/roadmap.md](scope/roadmap.md) + per-version definitions of done
+- **vision** — [scope/vision.md](scope/vision.md), the manifesto (the authoritative product spec)
 
 ## inspired by
 
