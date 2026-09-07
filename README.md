@@ -21,3 +21,19 @@ scope/
 ```
 
 everything in the ui is a **logical object** ("key", "knob", "oled"). the backend resolves each one into its manufacturing footprint + circuit. users never see an eda, never touch a net, never think about copper. micropads first, keebs later.
+
+## the loop
+
+```
+keeberia website (layout-to-device.lovable.app, lovable)
+   │  user designs a micropad — notion/canva vibes, zero eda concepts
+   ▼
+xano api  ── validate + queue the job
+   ▼
+autolayout daemon  ── runs pcb-engine, retry ladder, persists artifacts
+   ▼
+protoflow  ── verification only: our exported kicad boards get run through
+│             its drc/erc + footprint cross-checks (via its mcp + part
+│             library). protoflow never generates our copper — it just
+│             tries to prove us wrong before the board goes to fab.
+└────────▶ back to the website: preview, bom, case, firmware config
