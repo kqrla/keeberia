@@ -42,7 +42,8 @@ built `pcb-engine` in typescript: layout normalization → component placement �
 restructured the repo properly (this one, with `/backend` engines + daemons and `/scope` versions + roadmap, like sculptura), wrote the scope docs so "micropad first, keebs later" is written down somewhere that isn't my head.
 
 - xano deploy prep: metadata api is the transport (multidoc/xanoscript push), but every token in the vault 401'd — the metadata tokens **expire after 7 days by default**, mine were past that. need a fresh one from instance settings before the engine api goes live
-- validated all three boards end to end again post-restructure. still green. 
+- validated all three boards end to end again post-restructure. still green.
+- decided protoflow stays in the loop, but as the **verifier, never the generator**: its mcp runs drc/erc + footprint cross-checks on every board we export. the ai tool tries to prove us wrong; the deterministic engine keeps doing the copper 
 
 ## current state
 
