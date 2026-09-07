@@ -56,6 +56,9 @@ scope/
 - **frontend** — [layout-to-device.lovable.app](https://layout-to-device.lovable.app)
 - **journal** — [journal.md](journal.md), the build log (failures included)
 - **scope** — [scope/roadmap.md](scope/roadmap.md) + per-version definitions of done
+- **product** — [scope/product.md](scope/product.md), the working spec: what keeberia is, its five flows, and the rules that must not be compromised
+- **agents** — [AGENTS.md](AGENTS.md), the build contract for humans and coding agents
+- **reference** — [scope/reference/](scope/reference/), raw provenance exports (chatgpt editor architecture, lovable ux prompts)
 - **vision** — [scope/vision.md](scope/vision.md), the manifesto (the authoritative product spec)
 
 ## inspired by
