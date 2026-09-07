@@ -1,0 +1,29 @@
+// claim the oldest queued design job for the autolayout daemon
+// (sets status=running, attempts+1, returns the job; null body when queue is empty)
+query claim verb=POST {
+  input {
+  }
+  stack {
+    var $claimed {
+      value = null
+    }
+    db.query design_jobs {
+      where = $db.design_jobs.status == "queued"
+      sort = { design_jobs.id: "asc" }
+      return = { type: "single" }
+    } as $job
+    conditional {
+      if (`$job != null`) {
+        db.edit design_jobs {
+          field_name = "id"
+          field_value = $job.id
+          data = {
+            status: "running"
+            attempts: $job.attempts + 1
+          }
+        } as $claimed
+      }
+    }
+  }
+  response = $claimed
+}

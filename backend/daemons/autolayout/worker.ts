@@ -1,23 +1,27 @@
 /**
- * autolayout worker — claim → run engine → retry ladder → persist.
+ * autolayout worker — claim → run engine (retry ladder) → persist.
  *
- * v0 scaffold: the engine call and retry ladder are real; the queue is a
- * stub (pollFn placeholder) until the xano job tables exist. transport gets
- * swapped for sqs/xano tasks in v1 without touching the run ladder.
+ * portable by design: the queue is a pluggable transport behind the `Queue`
+ * interface. xano-rest is the v1 transport; when we outgrow xano (or want
+ * zero-xano), a plain http/sqs transport drops in without touching the run
+ * ladder. hosting: render.com (see render.yaml); denser boards move to
+ * amd cloud hardware later without changing a line of the ladder.
  */
 import { generatePcb } from "../../engines/pcb/pcb-engine/src/index.ts";
+import { placeComponents } from "../../engines/pcb/pcb-engine/src/layout.ts";
+import { renderSvg } from "../../engines/pcb/pcb-engine/src/preview.ts";
 
 export interface DesignJob {
-  id: string;
+  id: number;
   layout: any; // keeberia layout json (validated upstream)
   attempts: number;
 }
 
 export interface JobResult {
-  jobId: string;
+  jobId: number;
   ok: boolean;
-  status: string;
-  artifacts?: Record<string, string>; // name → stored url
+  status: string; // "done" | "error"
+  artifacts?: Record<string, string>; // name → content (kicad, bom, svg, ...)
   error?: string; // user-readable
 }
 
@@ -35,6 +39,8 @@ export async function runJob(job: DesignJob): Promise<JobResult> {
       const out = generatePcb(job.layout);
       const errors = out.result.warnings.filter((w) => w.level === "error");
       if (errors.length > 0) continue; // next rung
+      const ctx = placeComponents(job.layout);
+      const svg = renderSvg(ctx, out.result, 720);
       return {
         jobId: job.id,
         ok: true,
@@ -43,16 +49,18 @@ export async function runJob(job: DesignJob): Promise<JobResult> {
           kicad_pcb: out.kicadPcb,
           bom_csv: out.bomCsv,
           qmk_info: JSON.stringify(out.qmkInfo),
+          preview_svg: svg,
+          stats: JSON.stringify(out.result.stats),
         },
       };
     } catch (e: any) {
       // keep climbing; last rung's error becomes the user-facing reason
       if (rung === RETRY_LADDER[RETRY_LADDER.length - 1]) {
-        return { jobId: job.id, ok: false, status: "failed", error: friendlyError(e) };
+        return { jobId: job.id, ok: false, status: "error", error: friendlyError(e) };
       }
     }
   }
-  return { jobId: job.id, ok: false, status: "failed", error: "routing did not converge — layout may be too dense" };
+  return { jobId: job.id, ok: false, status: "error", error: "routing did not converge — layout may be too dense" };
 }
 
 /** errors a designer can act on — never raw stack traces */
@@ -63,12 +71,61 @@ function friendlyError(e: any): string {
   return msg;
 }
 
-/** main loop — stubbed poll until the queue transport lands */
-export async function main(pollFn: () => Promise<DesignJob | null>, persist: (r: JobResult) => Promise<void>) {
+/** the only contract the run ladder knows about: claim a job, report a result */
+export interface Queue {
+  claim(): Promise<DesignJob | null>;
+  complete(jobId: number, result: JobResult): Promise<void>;
+}
+
+/** v1 transport: xano rest queue (POST /claim, POST /complete) */
+export function xanoQueue(base: string): Queue {
+  return {
+    async claim() {
+      const res = await fetch(`${base}/claim`, { method: "POST" });
+      if (!res.ok) throw new Error(`claim failed: ${res.status} ${await res.text()}`);
+      const body = await res.text();
+      if (!body || body === "null") return null; // queue empty (xano quirk: null body)
+      return JSON.parse(body) as DesignJob;
+    },
+    async complete(jobId: number, result: JobResult) {
+      const res = await fetch(`${base}/complete`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: jobId,
+          status: result.status,
+          artifacts: result.artifacts ?? {},
+          error: result.error ?? null,
+        }),
+      });
+      if (!res.ok) throw new Error(`complete failed: ${res.status} ${await res.text()}`);
+    },
+  };
+}
+
+/**
+ * run the daemon. env:
+ *   KEEBERIA_XANO_BASE — queue base url (defaults to the live keeberia instance)
+ *   KEEBERIA_ONCE=1    — process one job then exit (cron-style); otherwise poll forever
+ */
+export async function main() {
+  const once = process.env.KEEBERIA_ONCE === "1" || process.argv.includes("--once");
+  const base = process.env.KEEBERIA_XANO_BASE ?? "https://xpnx-e4ie-cfuf.z7.xano.io/api:1WbTpRUh:v1";
+  const queue = xanoQueue(base);
+  console.log(`autolayout daemon up — queue: ${base}${once ? " (single pass)" : " (polling)"}`);
   for (;;) {
-    const job = await pollFn();
-    if (!job) { await new Promise((r) => setTimeout(r, 2000)); continue; }
+    const job = await queue.claim();
+    if (!job) {
+      if (once) { console.log("queue empty — exiting"); return; }
+      await new Promise((r) => setTimeout(r, 2000));
+      continue;
+    }
+    console.log(`job ${job.id}: claimed (attempt ${job.attempts}, "${job.layout?.name ?? "unnamed"}")`);
     const result = await runJob(job);
-    await persist(result);
+    await queue.complete(job.id, result);
+    console.log(`job ${job.id}: ${result.status}${result.error ? ` — ${result.error}` : ""}`);
+    if (once) return;
   }
 }
+
+main();
