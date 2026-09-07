@@ -92,3 +92,11 @@ verification was honest: openscad installed headless in the sandbox and all thre
 also: component library decisions locked in the roadmap — kicad defaults or marbastlib for symbols/footprints, snapeda/componentsearchengine as fallback lookup, grabcad for 3d models. keyboard-focussed, never a full pcb editor.
 
 next: gerber + excellon export (jlc-orderable output), then the freerouting bridge, then frontend wiring.
+
+## day four, later: jlc-orderable output — gerbers + drills
+
+the gerber exporter landed: `src/gerber.ts` emits rs-274x (mm, 3.5 fixed, y-flipped to fab view) for both copper layers, masks, paste, silk, edge cuts, plus an excellon drill file. silk legends are drawn with a tiny built-in stroke font (a-z, 0-9, basics) since gerbers have no text primitive. structural validation — header/format/terminator, every d-code defined before use, integer coordinates, drill tool table consistency — passes on all three reference boards, and the numbers cross-check: 39 drill hits on ninepad = 35 thru pads + 4 vias, exactly.
+
+one honest catch along the way: a hand-tweaked streamdeck variant i posted as a test job legitimately failed routing ("routing did not converge — layout may be too dense") and the retry ladder couldn't save it — the fixture streamdeck then went queued → done first attempt with all 17 artifacts, including every gerber + the drill file. the failure mode is real and it speaks human.
+
+known gap, documented in the roadmap: the B.Cu ground pour still lives only in the kicad export; gerbers carry routed copper only until the zone engine lands.
