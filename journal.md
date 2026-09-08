@@ -100,3 +100,9 @@ the gerber exporter landed: `src/gerber.ts` emits rs-274x (mm, 3.5 fixed, y-flip
 one honest catch along the way: a hand-tweaked streamdeck variant i posted as a test job legitimately failed routing ("routing did not converge — layout may be too dense") and the retry ladder couldn't save it — the fixture streamdeck then went queued → done first attempt with all 17 artifacts, including every gerber + the drill file. the failure mode is real and it speaks human.
 
 known gap, documented in the roadmap: the B.Cu ground pour still lives only in the kicad export; gerbers carry routed copper only until the zone engine lands.
+
+## day four (sept 8): the firmware three-way, settled into research
+
+- adaption labs turned out to be a dataset-adaptation platform (adaptive data + autoscientist), not a research api — noted for later (generated layout datasets), but for this one it was firecrawl's job. lesson reconfirmed: github scrapes via firecrawl return page chrome; raw.githubusercontent.com is free and correct.
+- rmk teardown via its llms.txt (best docs setup of the three, honestly): keyboard.toml covers matrix, encoder with per-detent resolution, our exact ssd1306 — and vial ships enabled by default. but zero ws2812 support anywhere in the docs index, which kills it as the sole default for now.
+- report written: kmk as v1 default (zero build infra, full delight trio, plain python in the zip), qmk as the via-remap polish path, rmk on the watchlist. decision pending anne's.
