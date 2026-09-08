@@ -15,7 +15,7 @@
 | 3. pcb (shape, silk, hidden routing) | deterministic routing + drc + kicad export | xano api + autolayout daemon + gerbers | bigger matrices, splits |
 | 4. case | — | openscad generator (stl/step) | keeb cases, plates |
 | 5. caps + knob covers | — | knob covers minimum | keycap/cover configurator + artisan bespoke keycaps |
-| 6. sound + firmware (supporting) | — | firmware config export (qmk or kmk — see scope/firmware.md) | in-browser switch sound testing (see scope/haptics.md) |
+| 6. sound + firmware (supporting) | — | firmware config export (qmk / kmk / rmk — see scope/firmware.md) | in-browser switch sound testing (see scope/haptics.md) |
 
 ## immediate (blocked → unblock → build)
 

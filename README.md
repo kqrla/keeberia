@@ -1,66 +1,75 @@
 # keeberia
 
-keeberia tackles the decades-old wall between the people who think in tools and the people who think in circuits by dissolving the eda entirely: a macropad designed in a browser canvas that feels like figma comes out the other end as a manufacturable, fab-ready pcb.
+«a visual, parametric way to design custom macropads, keyboards, and other little physical input devices without manually rebuilding the same stuff every single time»
 
-or simply put, we basically think the reason only engineers make circuit boards isn't that circuit boards are hard — it's that the software is. so instead of building yet another eda with friendlier paint on top, keeberia removes the eda from the picture completely. users draw logical objects. the backend does the electrical engineering. copper becomes a compilation artifact, not a craft.
+custom keyboard design currently involves a weird collection of tools that each know about one part of the device — kicad knows the pcb, fusion knows the case, a spreadsheet knows the parts, some website knows the footprints — and somehow the person making the keyboard is responsible for making sure all of those things agree with each other.
 
-## the idea behind traceparency
+or simply put, the human becomes the middleware. the layout knows where the keys are, the pcb knows where the footprints are, the cad file knows where the case is, but none of them know about each other, so every time something moves you translate the same information between five programs by hand. and keyboards are structured enough that a lot of this could just be generated. so... why not?
 
-we started from a simple position: **the copper path is not creative work.** placing a switch, fanning it out to an mcu, routing the matrix, pulling silk — this is deterministic transformation of intent, closer to a compiler than a collaborator. every ai-authored pcb tool on the market right now treats routing as a generation problem, which means every board ships with artifacts nobody can explain.
+## the actual abstraction isn't keyboard
 
-keeberia instead compiles. a layout is source code; the pcb is the binary; the engine is the compiler. the same layout always compiles to the same board, today and in two years — which is the only way a hobbyist can trust what comes out, and the only way a second tool (protoflow) can meaningfully verify it. we call this **traceparency**: nothing in the copper path is generated, guessed, or probabilistic, so every trace on the board has a reason you can point to in the pipeline.
+a switch has a footprint. a switch has a known spacing. a 2u key has predictable geometry. an encoder has predictable mounting requirements. a display has predictable dimensions. a usb connector needs a predictable opening. a screw needs a hole. a standoff needs somewhere to go. a case needs clearance around the pcb.
 
-## what's the goal
+these are not random artistic decisions — **they're relationships**, and computers are very good at relationships. that's why the system won't stay keyboards: midi controllers, stream decks, sim panels, synth interfaces, accessibility interfaces, weird one-off control panels. the common abstraction is *a bunch of physical inputs arranged into a device.*
 
-a world where designing a macropad for yourself is exactly as approachable as designing a canva poster: you pick a shape, drop keys and knobs and a screen where you want them, hit generate, and download gerbers a fab will accept. micropads first (they're the tractable, useful, delightful end of the problem) — full keebs later. never, at any point, does the user learn what a net is.
+## the canvas is the interface
 
-## pillars
+you don't start by staring at a schematic. you make a grid, then select two cells, merge them, and say «make this an oled» — and the merged region becomes an oled. click another one and it's a knob. select every key, switch mx → choc. the existing objects are the building blocks; the grid is the starting point, not a prison. notion-ish property editing, canva-ish manipulation, never a form with 700 dimensions.
 
-- **logical objects** — the ui speaks in keys, knobs, and oleds. each one resolves internally into its manufacturing footprint + circuit, but that resolution never leaks into the interface
-- **determinism** — no ai in the copper path. same input, same board, forever. ai sits one layer out, at verification, never generation
-- **traceparency** — an inspectable pipeline: placement → netlist → fan-out → negotiated-congestion routing → kicad 8 export, every stage explicable
-- **zero-eda** — the vocabulary of ecad (nets, footprints, drc) is backend vocabulary. the frontend's vocabulary is shapes and labels
-- **the loop** — the website is the product; the repo serves it. every backend milestone ends with something the site can show
+five flows — **layout → components → pcb → case → keys + knobs** — but they're five ways of looking at the same device, not five separate programs. change mx → choc and the footprint, plate, switch height, keycap clearance, and case height all know. move an encoder and its pcb footprint, case opening, and 3d knob move together. the project is one object. the flows are just views into it.
 
-## the loop
+## traceparency
+
+we started from a simple position: **the copper path is not creative work.** routing a macropad is deterministic transformation of intent, closer to a compiler than a collaborator — and every ai-authored pcb tool treats it as a generation problem, which means boards ship with artifacts nobody can explain.
+
+keeberia instead compiles. a layout is source code, the pcb is the binary, the engine is the compiler. the same layout always compiles to the same board, today and in two years. no ai in the copper path, ever — it sits one layer out, at verification (protoflow may veto a board; it can never draw one). we call this **traceparency**: nothing in the copper path is generated, guessed, or probabilistic, so every trace has a reason you can point to in the pipeline.
+
+## the loop (live today)
 
 ```
-keeberia website (layout-to-device.lovable.app)
-   │  user designs a micropad — notion/canva vibes, zero eda concepts
+keeberia-front (lovable)      the canvas: five flows, 2d/3d preview, the device front and center
+   │  design a device — figma vibes, zero eda concepts
    ▼
-xano api — validate + queue the job (POST /generate → design_jobs)
+xano api                     validate + queue the job (POST /generate → design_jobs)
    ▼
-autolayout daemon — runs pcb-engine, retry ladder, persists artifacts
+autolayout daemon            claims the job, runs the engines, persists every artifact
+   │   pcb engine — placement → netlist → fan-out → negotiated-congestion routing → kicad 8
+   │   case compiler — pcb result → parametric openscad → verified stls
+   │   fab exports — rs-274x gerbers + excellon drills, validated on all reference boards
    ▼
-protoflow — verification only: exported boards get run through its
-            drc/erc + footprint cross-checks (via its mcp). protoflow
-            can veto a board; it can never draw one
+protoflow                    drc/erc + footprint cross-check on exported boards (verification only)
    ▼
-back to the website — preview, bom, case, firmware config
+back to the website          preview, bom, case, firmware config (qmk / kmk / rmk) —
+                             and in the end the download is a .zip file :3
 ```
+
+job #4 ran this end to end: 17 artifacts, gerbers through drills, one queue round trip.
 
 ## repo
 
 ```
 backend/
   engines/pcb/
-    pcb-engine/    ← the compiler: layout → netlist → routing → kicad 8 (ts)
-    research/      ← footprint geometry research: verified, with provenance
+    pcb-engine/    the pcb compiler: layout → netlist → routing → kicad 8 + gerbers (ts)
+    pcb-engine/fab/ gerber + excellon export, stroke-font silk
+    case/          the case compiler: parametric openscad from pcb results
+    research/      footprint geometry + firmware + community research, verified with provenance
   daemons/
-    autolayout/    ← job worker: queue → engine run → artifacts persisted
+    autolayout/    the worker: xano queue → engines → artifacts, with a retry ladder
+  xano/            deployed xanoscripts + the deploy gotchas (live state, versioned)
 scope/
-  versions/        ← v0.md (done) · v1.md (micropad mvp) · v2.md (keebs later)
-  roadmap.md       ← the five flows mapped to versions + standing decisions
+  product.md       the canonical product spec — five flows, the build contract
+  vision.md        the manifesto, verbatim
+  firmware.md     qmk / kmk / rmk comparison (decision pending)
+  versions/        v0 (done) · v1 (micropad mvp) · v2 (keebs later)
+  roadmap.md       the five flows mapped to versions + standing decisions
 ```
 
-- **frontend** — [layout-to-device.lovable.app](https://layout-to-device.lovable.app)
+- **frontend** — keeberia-front (lovable app, layout-to-device)
 - **journal** — [journal.md](journal.md), the build log (failures included)
-- **scope** — [scope/roadmap.md](scope/roadmap.md) + per-version definitions of done
-- **product** — [scope/product.md](scope/product.md), the working spec: what keeberia is, its five flows, and the rules that must not be compromised
-- **agents** — [AGENTS.md](AGENTS.md), the build contract for humans and coding agents
-- **reference** — [scope/reference/](scope/reference/), raw provenance exports (chatgpt editor architecture, lovable ux prompts)
-- **vision** — [scope/vision.md](scope/vision.md), the manifesto (the authoritative product spec)
+- **spec** — [scope/product.md](scope/product.md) + [scope/vision.md](scope/vision.md)
+- **decisions** — [scope/roadmap.md](scope/roadmap.md)
 
 ## inspired by
 
-keeberia is a sibling of *sculptura* — same belief that tools should dissolve into the work, same build-in-public journal, same lowercase energy. it also owes a debt to the hack club care package and every keyboard person who ever posted a board file so the next person didn't have to start from zero.
+sibling of *sculptura* — same belief that tools should dissolve into the work, same build-in-public journal, same lowercase energy. indebted to the hack club care package, the hackpad parts ecosystem, and every keyboard person who ever posted a board file so the next person didn't have to start from zero.
