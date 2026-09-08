@@ -75,6 +75,17 @@ these are not five separate files. changing something in one flow should update 
 - **case** — *how do i physically house this thing?* parametric and pcb-aware: pcb resizes → case reacts, encoder moves → its opening moves. configurable style, walls, margin, typing angle, mounting, screw size, heatsets, usb cutout, feet. the source is readable openscad with named parameters (pcb_width, wall_thickness, ...), plus stl/3mf/dxf exports.
 - **keys + knobs** — *what does the finished device look and feel like?* keycap profiles (cherry, oem, xda, dsa, sa, choc), materials, legends, knob styles/diameter/height. changing a profile changes the actual preview.
 
+## the cad universe (cases are just the beginning)
+
+the case compiler is the first cad generator, not the last. the same parametric openscad approach ultimately covers:
+
+- **cases** — v0 done: trays, standoffs, usb cutouts, switch plates
+- **keycaps** — generated, printable caps in standard profiles and custom colors/legends, parametric like everything else
+- **knob covers** — encoder caps in styles, diameters, heights, matched to the board's colorway
+- **artisan bespoke keycaps** — custom-requested, commission-style: a user describes or picks a theme, keeberia generates a printable (or printable-then-castable) bespoke cap for their build. the artisan keycap scene is commission/raffle-driven today; a generator that turns "make me a matching cap" into files is the keeberia move
+
+keeberia is a canva-esque builder for the whole macropad/keyboard universe: layout → components → pcb → case → caps + knobs + covers, one project model underneath.
+
 ## the preview
 
 persistent across the application — not a preview button, the live representation of the project. three.js/webgl, driven by the same project model that drives the engineering files. 2d (layout, outlines, silkscreen, exact placement), 3d (clearance, case geometry, keycaps, finished device), exploded view (keycaps → switches → plate → pcb → case).
