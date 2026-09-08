@@ -114,3 +114,10 @@ known gap, documented in the roadmap: the B.Cu ground pour still lives only in t
 - second finding: openscad-wasm (official, 424 stars) means the .scad can be compiled in the browser — same file the daemon verifies, rendered live in the frontend. the preview is never a fake mockup because it's literally the same file.
 - prior art filed: gleorepo's 2019 layout-syntax case generator (the keeberia pattern, minus the project model), daprice/keyboard_parts (switch cutouts as a scad library), riskable/keycap_playground (547 stars, parametric keycap profiles — flow 05's geometry basis), BOSL2 (excellent, deliberately not a dependency), CADAM (the llm text-to-cad road we're not taking).
 - note: no tensormux key in env yet — glm thinking credits on standby until anne saves it. openscad docs were static enough that browserbase stayed parked; firecrawl handled the smithery skill.
+
+## day four, evening: the customizer pass (case engine)
+
+- the annotation scheme was designed by glm (tensormux, first real job): two community tabs — [Case] and [Mounting] — sliders with print-safe floors (wall ≥ 1.6, standoff ≥ 4.5 so the usb shell never breaches the floor), board-derived params under [Hidden]. it also argued against exposing usb_slot_z and the derived screw_hole/standoff_radius, which is right: those are the generator's job.
+- one glm correction applied: its string dropdowns ("1.5mm") would break the arithmetic — dropdowns assign strings, and plate_thickness is used in boolean ops. kept numeric sliders with mx/choc hints in the description instead. the llm thinks around the pipeline; the geometry stays deterministic.
+- implementation: ~30 lines of emit changes in the case engine, nothing else. every keeberia case is now a configurator object — paste the .scad into the openscad customizer or a makerlab configurator and the sliders appear.
+- verification: apt is broken in this sandbox, so openscad 2021.01 runs from the extracted appimage. all three reference cases recompile to real stls (394–452 kb), and a -D override (corner_radius = 15, wall = 5) changes the mesh — the sliders drive geometry, annotations included.
