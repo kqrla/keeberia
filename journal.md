@@ -106,3 +106,11 @@ known gap, documented in the roadmap: the B.Cu ground pour still lives only in t
 - adaption labs turned out to be a dataset-adaptation platform (adaptive data + autoscientist), not a research api — noted for later (generated layout datasets), but for this one it was firecrawl's job. lesson reconfirmed: github scrapes via firecrawl return page chrome; raw.githubusercontent.com is free and correct.
 - rmk teardown via its llms.txt (best docs setup of the three, honestly): keyboard.toml covers matrix, encoder with per-detent resolution, our exact ssd1306 — and vial ships enabled by default. but zero ws2812 support anywhere in the docs index, which kills it as the sole default for now.
 - report written: kmk as v1 default (zero build infra, full delight trio, plain python in the zip), qmk as the via-remap polish path, rmk on the watchlist. decision pending anne's.
+
+## day four, later: generative openscad research (the cad universe)
+
+- the assignment: makerlab-configurator pattern, but no rodin/multimodal — openscad as compilation target only. our case compiler already emits vanilla dependency-free parametric scad, so the research confirmed the direction rather than redirecting it.
+- highest-leverage finding: openscad's customizer syntax (/* [Tab] */ + [0:0.5:6] sliders + dropdowns, verified against the wikibooks manual) is exactly what makerworld configurators consume. an afternoon of *comments* makes every keeberia case a makerlab-configurable object.
+- second finding: openscad-wasm (official, 424 stars) means the .scad can be compiled in the browser — same file the daemon verifies, rendered live in the frontend. the preview is never a fake mockup because it's literally the same file.
+- prior art filed: gleorepo's 2019 layout-syntax case generator (the keeberia pattern, minus the project model), daprice/keyboard_parts (switch cutouts as a scad library), riskable/keycap_playground (547 stars, parametric keycap profiles — flow 05's geometry basis), BOSL2 (excellent, deliberately not a dependency), CADAM (the llm text-to-cad road we're not taking).
+- note: no tensormux key in env yet — glm thinking credits on standby until anne saves it. openscad docs were static enough that browserbase stayed parked; firecrawl handled the smithery skill.
