@@ -16,7 +16,15 @@ or simply put: case flow cuts the holes, cap flow fills them.
 
 **mint three.js skills** (mintdotgg/mint-threejs-skills, installed sept 9 to /root/.agents/skills/mint-threejs-skills — skills/ + references/ + scripts/). for keeberia-front's result viewer: three.js is webgl (it's the standard abstraction layer, not an alternative to it), so these apply directly. use when the viewer/wasm-preview spike starts.
 
-## the caps engine, spec'd (next build)
+## the caps engine (BUILT sept 9 — spec below, delivered as-is)
+
+`backend/engines/cad/caps-engine/` exists and renders all reference boards: `generateCaps(pcb, options)` → customizer-annotated .scad, stl-verified per layout (hackpad 3 caps, ninepad 8 caps + 1 knob, streamdeck 10 + 1, choc ninepad 9 with honest mx-stem warnings). the profile table ships as data with per-profile provenance: dsa measured (keycap_playground module defaults, MIT owner-confirmed on the keycap playground discord sept 9 2026 — not yet in-repo, so values-as-data only until it lands there), cherry/oem/sa/xda viz-grade from nur-modkeys' PROFILES table (unit-converted, flagged for calibration before production). the mx cross stem: 4.1mm cross standard, insertion depth + tolerance pattern from keycap_playground stem defaults. choc stems warn honestly and land with the choc flow. knob covers: ridged cylinder + d-shaft bore (6.2mm common EC11 spec — datasheet check pending).
+
+**license note, updated sept 9:** keycap_playground's owner confirmed MIT on the project discord (anne relayed it). nur-modkeys still has no license on record — data-as-facts, code never ported, unchanged.
+
+**makerlab, looked at properly (browserbase, sept 9):** the configurator pages themselves (multiboard) 404 from here, but the makerlab index is public and the pattern is exactly what the case engine already does — "just drag a slider to resize and reshape parametric 3D models," live 3d preview, per-tool pages, community gallery. notable: makerlab already hosts a **keycap legend generator** — flow 05 has a natural publish target there someday, which was the roadmap's ambition all along. the customizer block we emit is the makerlab bridge.
+
+## the caps engine, spec (delivered)
 
 `backend/engines/cad/caps-engine/` mirroring the case engine's shape:
 
