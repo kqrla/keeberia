@@ -38,3 +38,14 @@ or simply put: case flow cuts the holes, cap flow fills them.
 ## the viz path (keeberia-front)
 
 the same cap/case/board geometry the engine generates gets rendered by three.js in the lovable front end — flow four's wasm preview spike (openscad-wasm) covers the .scad; the three.js skills cover scene composition, materials (pbt roughness vs abs sheen — nur-modkeys' material table is a good reference point), and lighting. what the user sees: their macropad, capped and colored, rotating — never an eda.
+
+## the real makerlab .scad format, verified (anne's example — stamp creator)
+
+anne passed a live parametric model maker url (design 481351, "Stamp Creator.scad"); the configurator ui is auth-gated, but the signed scad url behind it fetches with plain curl. what a real makerlab parametric model looks like, confirmed:
+
+- **the comment above each variable is its ui label** — `// cap wall thickness, mm` renders as the field name. labeled dropdowns: `Type = "ET"; // [E:Emoji mode, T:Text mode]` — value:Label pairs, richer than our plain id lists.
+- **sections are ui groups**: `/* [Select modes] */`, `/* [Emoji mode] */` … exactly the section pattern we emit.
+- **bosl2 is available in their runtime**: `include <BOSL2/std.scad>` + `screws.scad` — when keeberia publishes to makerlab, generated files may use the parametric powerhouse library. our own appimage renders stay vanilla for portability.
+- emoji annotations in field comments are allowed (`//😄 > emojihub.org <`) — the customizer format tolerates personality.
+
+the caps engine now emits this format (labeled profile dropdown, hint-comment labels, sections). the case engine's customizer block predates this and should get the same annotation pass.

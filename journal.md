@@ -144,3 +144,9 @@ known gap, documented in the roadmap: the B.Cu ground pour still lives only in t
 - caps engine built: backend/engines/cad/caps-engine — generateCaps() mirrors the case engine, profile dropdown + wall/knob sliders, pcb-derived positions under [Hidden]. profile data with per-profile provenance (dsa measured from keycap_playground module defaults; cherry/oem/sa/xda viz-grade unit-converted from nur-modkeys, flagged for calibration).
 - all four reference boards render caps to stl: 3 / 8+1 knob / 10+1 / 9 choc (with honest "mx cross for now" warnings until the choc stem lands).
 - nur-modkeys has no license either — same rule as before: data as physical facts, code never ported.
+
+## day five, small hours continued: the real makerlab format, from anne's own example
+
+- anne passed the parametric model maker url for stamp creator.scad; ui is auth-gated but the signed scad url fetches directly. the makerlab customizer format verified from a real model: hint-comments as field labels, value:Label dropdowns, section headers, and — the big one — **bosl2 is available in their runtime**.
+- caps engine customizer upgraded to that format (labeled profile dropdown, per-field hint comments) and re-verified: all four boards still compile.
+- case engine's older annotation style flagged for the same pass.

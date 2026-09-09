@@ -3,14 +3,21 @@
 // cap positions/rows derive from THIS board's pcb (regenerate to change them)
 
 /* [Caps] */
-profile_id = "dsa"; // [dsa,cherry,oem,sa,xda]
-wall = 1.5;  // [1:0.1:2.5] cap wall thickness, mm
-cap_gap = 0.5;  // [0.2:0.1:1] gap between caps, mm
-dish_scale = 1;  // [0.5:0.1:2] dish depth multiplier
+// keycap profile for every cap on the board
+profile_id = "dsa"; // [dsa:DSA, cherry:Cherry, oem:OEM, sa:SA, xda:XDA]
+// cap wall thickness, mm
+wall = 1.5;  // [1:0.1:2.5]
+// gap between neighboring caps, mm
+cap_gap = 0.5;  // [0.2:0.1:1]
+// dish depth multiplier (1 = profile spec)
+dish_scale = 1;  // [0.5:0.1:2]
 /* [Knob] */
-knob_d = 22;  // [16:1:30] knob diameter, mm
-knob_h = 14;  // [8:1:24] knob height above plate, mm
-knob_bore = 6.2;  // [5.5:0.1:7] d-shaft bore, mm
+// knob diameter, mm
+knob_d = 22;  // [16:1:30]
+// knob height above the plate, mm
+knob_h = 14;  // [8:1:24]
+// d-shaft bore diameter, mm
+knob_bore = 6.2;  // [5.5:0.1:7]
 
 /* [Hidden] */
 $fn = 48;
