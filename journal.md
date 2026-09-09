@@ -136,3 +136,11 @@ known gap, documented in the roadmap: the B.Cu ground pour still lives only in t
 - anne pointed two things at the caps flow: the mint three.js skills pack (installed — three.js IS webgl, so it applies directly to the front-end viewer) and nur-modkeys as prior art, explicitly study-not-copy.
 - nur-modkeys distilled: the profile data model (h/taper/dish/tilt-per-row) and the cap-building technique (tapered rounded-rect extrusion, dish by radial falloff). keycap_playground re-confirmed as the parametrization source — but it has NO license on record, so values-as-data with provenance, code never ported.
 - flow 05 spec'd in research: caps as the LAST projection of the component records (switch family → stem, cell row → tilt, profile → the rest), caps-engine mirroring the case engine, knob covers off the encoder record. doc: backend/engines/cad/research/notes/flow-05-caps-and-viz.md
+
+## day five, small hours: the caps engine — flow 05 builds its first artifacts
+
+- keycap_playground license resolved: MIT confirmed by the owner on the discord (anne relayed) — recorded in the research note as owner-confirmed, not in-repo.
+- makerlab checked properly via browserbase (anne challenged whether i'd skipped it for auth reasons — fair): index is public, multiboard configurator 404s, but the pattern is confirmed: slider-driven parametric + live preview, and a keycap legend generator already lives there — flow 05's publish target, someday.
+- caps engine built: backend/engines/cad/caps-engine — generateCaps() mirrors the case engine, profile dropdown + wall/knob sliders, pcb-derived positions under [Hidden]. profile data with per-profile provenance (dsa measured from keycap_playground module defaults; cherry/oem/sa/xda viz-grade unit-converted from nur-modkeys, flagged for calibration).
+- all four reference boards render caps to stl: 3 / 8+1 knob / 10+1 / 9 choc (with honest "mx cross for now" warnings until the choc stem lands).
+- nur-modkeys has no license either — same rule as before: data as physical facts, code never ported.
