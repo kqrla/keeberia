@@ -130,3 +130,9 @@ known gap, documented in the roadmap: the B.Cu ground pour still lives only in t
 - the proof: same ninepad, switchType flipped — mx case = 14×14 openings @ 1.5mm plate, choc case = 13.8×13.8 @ 1.2, both auto-derived. choc board routes (147 segments) and validates clean. all reference boards unchanged.
 - also fixed a v0 fixture bug by the way: streamdeck had 14 keys stacked on 12 grid positions.
 - doc: backend/engines/pcb/research/notes/component-geometry-pipeline.md — the projections table, the sourcing chain per layer, and what it unlocks (flow 05 cap projections hang off switch records the same way).
+
+## day five, early hours: flow 05 research — caps and the viz that sells them
+
+- anne pointed two things at the caps flow: the mint three.js skills pack (installed — three.js IS webgl, so it applies directly to the front-end viewer) and nur-modkeys as prior art, explicitly study-not-copy.
+- nur-modkeys distilled: the profile data model (h/taper/dish/tilt-per-row) and the cap-building technique (tapered rounded-rect extrusion, dish by radial falloff). keycap_playground re-confirmed as the parametrization source — but it has NO license on record, so values-as-data with provenance, code never ported.
+- flow 05 spec'd in research: caps as the LAST projection of the component records (switch family → stem, cell row → tilt, profile → the rest), caps-engine mirroring the case engine, knob covers off the encoder record. doc: backend/engines/cad/research/notes/flow-05-caps-and-viz.md
