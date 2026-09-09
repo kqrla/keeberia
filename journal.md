@@ -121,3 +121,12 @@ known gap, documented in the roadmap: the B.Cu ground pour still lives only in t
 - one glm correction applied: its string dropdowns ("1.5mm") would break the arithmetic — dropdowns assign strings, and plate_thickness is used in boolean ops. kept numeric sliders with mx/choc hints in the description instead. the llm thinks around the pipeline; the geometry stays deterministic.
 - implementation: ~30 lines of emit changes in the case engine, nothing else. every keeberia case is now a configurator object — paste the .scad into the openscad customizer or a makerlab configurator and the sliders appear.
 - verification: apt is broken in this sandbox, so openscad 2021.01 runs from the extracted appimage. all three reference cases recompile to real stls (394–452 kb), and a -D override (corner_radius = 15, wall = 5) changes the mesh — the sliders drive geometry, annotations included.
+
+## day four, night: the component geometry pipeline (anne's architecture ask)
+
+- anne's point: the engine should *understand* how changing the switch changes the cutout, and where all this geometry comes from — the roadmap line (marbastlib first, snappeda fallback, grabcad 3d) was the seed.
+- the architecture: one record, many projections. CaseProjection (plateOpening, plateHole, plateWindow, plateThickness, usbShell) now lives on every FootprintDef, and the case engine consumes the registry instead of hardcoded constants. classification is category-driven everywhere — the id-list filters went stale the moment they were written (choc keys had zero nets until netlist.ts stopped enumerating switch ids).
+- footprint drift caught in the act: the old CHOC_V1 record reused mx pin geometry with an mx peg. replaced verbatim from marbastlib's SW_choc_v1_1u (pins (-5,3.8)+(0,5.9), pegs ±5.5, LED hole 3.4). the roadmap's provenance rule earned its keep.
+- the proof: same ninepad, switchType flipped — mx case = 14×14 openings @ 1.5mm plate, choc case = 13.8×13.8 @ 1.2, both auto-derived. choc board routes (147 segments) and validates clean. all reference boards unchanged.
+- also fixed a v0 fixture bug by the way: streamdeck had 14 keys stacked on 12 grid positions.
+- doc: backend/engines/pcb/research/notes/component-geometry-pipeline.md — the projections table, the sourcing chain per layer, and what it unlocks (flow 05 cap projections hang off switch records the same way).

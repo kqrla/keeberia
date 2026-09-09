@@ -27,9 +27,9 @@ export function buildBom(ctx: BoardCtx): PcbResult["bom"] {
 
 export function buildQmkInfo(ctx: BoardCtx, netlist: NetlistResult): Record<string, unknown> {
   const switches = ctx.placements.filter(
-    (p) => p.library === MX_SOLDER.id || p.library === MX_HOTSWAP.id);
-  const encoders = ctx.placements.filter((p) => p.library === EC11.id);
-  const hasOled = ctx.placements.some((p) => p.library === OLED_091.id);
+    (p) => FOOTPRINTS[p.library]?.category === "switch");
+  const encoders = ctx.placements.filter((p) => FOOTPRINTS[p.library]?.category === "encoder");
+  const hasOled = ctx.placements.some((p) => FOOTPRINTS[p.library]?.category === "display");
 
   // key matrix positions in grid units
   const layoutKeys = ctx.cells

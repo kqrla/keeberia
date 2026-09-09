@@ -30,9 +30,9 @@ export function generatePcb(layout: KeeberiaLayout): EngineOutput {
   // 3. route
   const route = routeAll(ctx, netlist.nets);
   // 4. assemble
-  const keys = ctx.placements.filter((p) => p.library === MX_SOLDER.id || p.library === MX_HOTSWAP.id).length;
-  const encoders = ctx.placements.filter((p) => p.library === EC11.id).length;
-  const oleds = ctx.placements.filter((p) => p.library === OLED_091.id).length;
+  const keys = ctx.placements.filter((p) => FOOTPRINTS[p.library]?.category === "switch").length;
+  const encoders = ctx.placements.filter((p) => FOOTPRINTS[p.library]?.category === "encoder").length;
+  const oleds = ctx.placements.filter((p) => FOOTPRINTS[p.library]?.category === "display").length;
   const result: PcbResult = {
     boardName: ctx.options.boardName,
     outline: ctx.outline,

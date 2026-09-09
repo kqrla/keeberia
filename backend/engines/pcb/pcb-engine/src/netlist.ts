@@ -38,9 +38,12 @@ export function buildNetlist(ctx: BoardCtx): NetlistResult {
 
   const placements = ctx.placements;
   const mcu = placements.find((p) => p.ref === "U1")!;
-  const switches = placements.filter((p) => p.library === MX_SOLDER.id || p.library === MX_HOTSWAP.id);
-  const encoders = placements.filter((p) => p.library === "keeberia:EC11");
-  const oleds = placements.filter((p) => p.library === "keeberia:OLED_091");
+  // classification is category-driven, never id-driven: a switch is any
+  // part whose record says category "switch" — new families (choc, ...)
+  // join by existing, not by being enumerated here
+  const switches = placements.filter((p) => FOOTPRINTS[p.library]?.category === "switch");
+  const encoders = placements.filter((p) => FOOTPRINTS[p.library]?.category === "encoder");
+  const oleds = placements.filter((p) => FOOTPRINTS[p.library]?.category === "display");
 
   const hasOled = oleds.length > 0;
   let freeGpios = [...XIAO_GPIOS];

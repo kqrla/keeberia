@@ -37,7 +37,7 @@ function parseSexpr(text: string): any {
   return node;
 }
 
-for (const name of ["hackpad-3key", "ninepad", "streamdeck"]) {
+for (const name of ["hackpad-3key", "ninepad", "streamdeck", "ninepad-choc"]) {
   const text = readFileSync(`out/${name}.kicad_pcb`, "utf8");
   const root = parseSexpr(text);
   const tags = root.filter(Array.isArray).map((n: any) => n[0]);

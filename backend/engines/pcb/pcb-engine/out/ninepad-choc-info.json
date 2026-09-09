@@ -1,0 +1,74 @@
+{
+  "keyboard_name": "keeberia-ninepad-choc",
+  "manufacturer": "keeberia",
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x0001",
+    "device_version": "1.0.0"
+  },
+  "processor": "RP2040",
+  "bootloader": "rp2040-bootloader",
+  "features": {},
+  "matrix_pins": {
+    "direct": [
+      "GP26",
+      "GP27",
+      "GP28",
+      "GP29",
+      "GP6",
+      "GP7",
+      "GP8",
+      "GP9",
+      "GP4"
+    ]
+  },
+  "layout": {
+    "LAYOUT_direct": [
+      {
+        "x": 0,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "w": 1
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "w": 1
+      }
+    ]
+  }
+}
