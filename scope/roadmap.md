@@ -27,6 +27,18 @@
 5. ~~case generator~~ — done (sept 7): `backend/engines/cad/case-engine/` compiles a board into readable, dependency-free openscad (named slider params, usb slot derived from the mcu placement, standoffs on the mounting holes, switch plate with key/encoder/oled openings). all three reference boards compile to real stls (openscad verified in sandbox). job #2 (ninepad) went queued → done with case_scad + case_params artifacts. print test on the a1 mini still pending
 6. **frontend wiring** — job flow + webgl result viewer (board + case), notion/canva vibes strictly enforced
 
+## future options — after macropads are perfect
+
+the roadmap's law is one flow perfect end to end before the next; this section is the parking lot for what comes after the macropad milestone. nothing here gets built early, but nothing here gets forgotten either.
+
+- **custom keyboard sets** — first one-piece non-split keyboards (the classics), then expansion from there. same five flows, bigger grids
+- **individual keycap + artisanal pieces** — customizing single caps, artisan bespoke keycaps; still openscad, still the same caps engine, just user-facing per-cap control
+- **split keys / split keyboards** — two-piece boards with a joining connector, the ergo community's home turf
+- **wired / wireless variants** — battery + wireless mcu lines in the bom, case space for batteries, different firmware profiles
+- **layout standards** — iso vs ansi (and the rest: jis, iso-uk, …) as first-class layout presets, not just grid shapes
+- **legends in other scripts** — non-latin legends (devanagari, arabic, cjk…) on caps and silkscreen; font support verified before it ships
+- **fabrication tolerances, accounted for** — a footprint may fit pixel-perfect and still not fit after fabrication. printed parts need tolerances (fit gaps, shrink), press-fit/heat-set inserts consideration, plate-mount realities. every generated artifact carries the tolerances its manufacturing process actually needs, not the ideal geometry
+
 ## standing decisions (don't re-litigate)
 
 - no ai in the copper path. ever. protoflow is the ai one; keeberia is the deterministic one — but protoflow **stays in the loop as the verifier**: every exported board gets cross-checked by protoflow's drc/erc + part library (its mcp) before it's called done. it can veto boards; it can't draw them
