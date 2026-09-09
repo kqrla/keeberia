@@ -17,7 +17,7 @@ rear_height    = 10;     // [5:1:30] wall height, far edge
 standoff_height = 5;  // [4.5:0.5:12] pcb floats above the floor (xiao stack needs 4.3)
 /* [Mounting] */
 screw_size     = 2.2;    // [2:0.1:3.2] drill (m2 = 2.2, m2.5 = 2.7, m3 = 3.2)
-plate_thickness = 1.5;  // [1:0.1:2] switch plate (mx = 1.5, choc = 1.2)
+plate_thickness = 1.5;  // [1:0.1:2] switch plate (default from the board's switch records)
 
 // ── derived from the board (regenerate the case to change these) ──
 /* [Hidden] */
@@ -26,7 +26,7 @@ pcb_height     = 92.45;
 pcb_thickness  = 1.6;    // 2-layer, 1.6mm fr4
 pcb_corner_radius = 2.5;
 $fn = 48;
-usb_slot_width  = 10.6;   // xiao usb-c shell + clearance
+usb_slot_width  = 10.6;   // usb-c shell from the mcu record + clearance
 usb_slot_z     = [2.54, 7];
 usb_slot_along = -5.2;   // usb-c center along the front (+y) wall
 screw_hole     = screw_size + 0.2;
@@ -95,25 +95,25 @@ module top_plate() {
     linear_extrude(plate_thickness)
       rounded_rect(outer_width, outer_height, corner_radius);
     translate([-40.78, -31.72, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW1
+      cube([14, 14, plate_thickness + 2]);  // SW1 (Kailh MX hotswap socket)
     translate([-21.72, -31.72, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW2
+      cube([14, 14, plate_thickness + 2]);  // SW2 (Kailh MX hotswap socket)
     translate([-40.78, -12.67, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW3
+      cube([14, 14, plate_thickness + 2]);  // SW3 (Kailh MX hotswap socket)
     translate([-21.72, -12.67, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW4
+      cube([14, 14, plate_thickness + 2]);  // SW4 (Kailh MX hotswap socket)
     translate([-2.68, -12.67, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW5
+      cube([14, 14, plate_thickness + 2]);  // SW5 (Kailh MX hotswap socket)
     translate([16.38, -12.67, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW6
+      cube([14, 14, plate_thickness + 2]);  // SW6 (Kailh MX hotswap socket)
     translate([-40.78, 6.38, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW7
+      cube([14, 14, plate_thickness + 2]);  // SW7 (Kailh MX hotswap socket)
     translate([-21.72, 6.38, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW8
+      cube([14, 14, plate_thickness + 2]);  // SW8 (Kailh MX hotswap socket)
     translate([-2.68, 6.38, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW9
+      cube([14, 14, plate_thickness + 2]);  // SW9 (Kailh MX hotswap socket)
     translate([16.38, 6.38, -1])
-      cube([14, 14, plate_thickness + 2]);  // SW10
+      cube([14, 14, plate_thickness + 2]);  // SW10 (Kailh MX hotswap socket)
     translate([4.32, -24.72, -1])
       cylinder(h = plate_thickness + 2, d = 10);  // ENC1 knob shaft
     translate([10.38, -28.72, -1])

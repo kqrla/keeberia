@@ -1,0 +1,11 @@
+Ref(s),Value,Footprint,Qty
+"SW1","1","keeberia:SW_Kailh_Choc_V1","1"
+"SW2","2","keeberia:SW_Kailh_Choc_V1","1"
+"SW3","3","keeberia:SW_Kailh_Choc_V1","1"
+"SW4","4","keeberia:SW_Kailh_Choc_V1","1"
+"SW5","5","keeberia:SW_Kailh_Choc_V1","1"
+"SW6","6","keeberia:SW_Kailh_Choc_V1","1"
+"SW7","7","keeberia:SW_Kailh_Choc_V1","1"
+"SW8","8","keeberia:SW_Kailh_Choc_V1","1"
+"SW9","9","keeberia:SW_Kailh_Choc_V1","1"
+"U1","XIAO RP2040","keeberia:Module_Seeed_XIAO","1"

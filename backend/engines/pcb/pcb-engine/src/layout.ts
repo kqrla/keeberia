@@ -4,7 +4,7 @@
  * Board coords: re-centered so the board outline is centered at (0,0), KiCad y-down.
  */
 import { Cell, KeeberiaLayout, LayoutOptions, Placement, Pt, PcbResult } from "./types.ts";
-import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, EC11, OLED_091, XIAO, M2_HOLE } from "./footprints.ts";
+import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, CHOC_V1, EC11, OLED_091, XIAO, M2_HOLE } from "./footprints.ts";
 
 export const DEFAULT_PITCH = 19.05;
 
@@ -92,14 +92,22 @@ export function placeComponents(layout: KeeberiaLayout): BoardCtx {
     const center = cellCenter(cell, pitch);
     if (cell.type === "key") {
       swN++;
-      const fp = opts.hotswap ? MX_HOTSWAP : MX_SOLDER;
+      // the switch resolution joint — this is where "changing the switch"
+      // actually happens. the record carries every projection with it:
+      // copper (pads), case (plate cutout + thickness), bom (part), so the
+      // downstream engines never hardcode switch geometry again.
+      // (component-geometry-pipeline.md)
+      const mount = cell.mount ?? (opts.hotswap ? "hotswap" : "soldered");
+      const fp =
+        cell.switchType === "choc_v1" ? CHOC_V1 :          // choc v1 is solder-only for now (hotswap choc record pending)
+        mount === "hotswap" ? MX_HOTSWAP : MX_SOLDER;
       placements.push({
         ref: cell.ref ?? `SW${swN}`,
         library: fp.id,
         kicadFootprintName: fp.kicadName,
         pos: center,
         rotation: 0,
-        side: opts.hotswap ? "B" : "F", // hotswap sockets solder on back
+        side: fp === MX_HOTSWAP ? "B" : "F", // hotswap sockets solder on back
         value: cell.label ?? `SW${swN}`,
         nets: {},
         cellRef: cell,

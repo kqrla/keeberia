@@ -38,6 +38,7 @@ export const MX_SOLDER: FootprintDef = {
     { pad: "peg2", pos: { x: 5.08, y: 0 }, size: { w: 1.7, h: 1.7 }, shape: "circle", type: "thru_hole", drill: 1.7, layer: "*.Cu" },
   ],
   silks: rectSilks(14, 14),
+  case: { plateOpening: { w: 14, h: 14 }, plateThickness: 1.5 },  // cherry mx datasheet
 };
 
 /** Kailh MX hotswap socket — solder pads offset outside the 14mm window
@@ -58,22 +59,35 @@ export const MX_HOTSWAP: FootprintDef = {
   ],
   silks: rectSilks(14, 14),
   flipSilkWhenBack: true,
+  case: { plateOpening: { w: 14, h: 14 }, plateThickness: 1.5 },  // same switch family as MX_SOLDER
 };
 
 /** Kailh Choc v1 (CPG1353, low profile) — 15×15 window */
+/** Kailh Choc v1 (PG1350) — geometry verbatim from marbastlib
+ *  SW_choc_v1_1u.kicad_mod (ebastler/marbastlib, pulled sept 8 2026):
+ *  pins at (-5, 3.8) and (0, 5.9), 2mm pads / 1.2mm drills; two 1.7mm
+ *  locating pegs at ±5.5; 3.4mm center LED hole. plate cutout 13.8×13.8
+ *  in a 1.2mm plate (kailh datasheet, cross-checked against community
+ *  choc plate specs). the previous record here reused MX pin geometry —
+ *  that was footprint drift, caught sept 8. */
 export const CHOC_V1: FootprintDef = {
   id: "keeberia:Choc_v1",
   kicadName: "keeberia:SW_Kailh_Choc_V1",
   description: "Kailh Choc v1 low-profile switch",
-  size: { w: 15, h: 15 },
-  keepoutRadius: 7.8,
+  size: { w: 13.8, h: 13.8 },
+  keepoutRadius: 7.0,   // marbastlib courtyard is 14×14
   category: "switch",
   pads: [
-    { pad: "1", pos: { x: -3.81, y: -2.54 }, size: { w: 1.75, h: 1.75 }, shape: "circle", type: "thru_hole", drill: 1.0, layer: "*.Cu" },
-    { pad: "2", pos: { x: 2.54, y: -5.08 }, size: { w: 1.75, h: 1.75 }, shape: "circle", type: "thru_hole", drill: 1.0, layer: "*.Cu" },
-    { pad: "peg", pos: { x: 0, y: 0 }, size: { w: 3.8, h: 3.8 }, shape: "circle", type: "thru_hole", drill: 3.8, layer: "*.Cu" },
+    { pad: "1", pos: { x: -5, y: 3.8 }, size: { w: 2.0, h: 2.0 }, shape: "circle", type: "thru_hole", drill: 1.2, layer: "*.Cu" },
+    { pad: "2", pos: { x: 0, y: 5.9 }, size: { w: 2.0, h: 2.0 }, shape: "circle", type: "thru_hole", drill: 1.2, layer: "*.Cu" },
+    // locating pegs (np_thru_hole in the source)
+    { pad: "peg1", pos: { x: -5.5, y: 0 }, size: { w: 1.7, h: 1.7 }, shape: "circle", type: "thru_hole", drill: 1.7, layer: "*.Cu" },
+    { pad: "peg2", pos: { x: 5.5, y: 0 }, size: { w: 1.7, h: 1.7 }, shape: "circle", type: "thru_hole", drill: 1.7, layer: "*.Cu" },
+    // center hole for the choc LED
+    { pad: "led", pos: { x: 0, y: 0 }, size: { w: 3.4, h: 3.4 }, shape: "circle", type: "thru_hole", drill: 3.4, layer: "*.Cu" },
   ],
-  silks: rectSilks(15, 15),
+  silks: rectSilks(13.8, 13.8),
+  case: { plateOpening: { w: 13.8, h: 13.8 }, plateThickness: 1.2 },
 };
 
 /** Alps EC11 vertical rotary encoder (switched, 5-pin + 2 mounting slots) */
@@ -97,6 +111,7 @@ export const EC11: FootprintDef = {
     { pad: "MP2", pos: { x: 5.6, y: 3.0 }, size: { w: 3.05, h: 2.2 }, shape: "oval", type: "thru_hole", drill: 1.2, layer: "*.Cu" },
   ],
   silks: [...rectSilks(11.9, 13.2), { kind: "circle" as const, center: { x: 0, y: 0 }, radius: 3.75 }],
+  case: { plateHole: 10.0 },  // d-shaft 6/7mm + knob hub clearance
 };
 
 /** Seeed XIAO (RP2040 / SAMD21 / nRF52840 / ESP32-C3 common carrier):
@@ -121,6 +136,7 @@ export const XIAO: FootprintDef = {
   })(),
   silks: [...rectSilks(21, 17.5), { kind: "line" as const, start: { x: -3.0, y: -9.6 }, end: { x: 3.0, y: -9.6 } }],
   flipSilkWhenBack: true,
+  case: { usbShell: { w: 9.4, h: 3.26, moduleThickness: 1.0 } },  // typical usb-c midmount receptacle on the module face
 };
 
 /** 0.91" 128×32 SSD1306 OLED on a 38×12mm breakout, 4-pin header at the
@@ -139,6 +155,7 @@ export const OLED_128X32_091: FootprintDef = {
     { pad: "SDA", pos: { x: 17.5, y: 3.81 }, size: { w: 1.8, h: 1.8 }, shape: "circle", type: "thru_hole", drill: 1.0, layer: "*.Cu" },
   ],
   silks: [...rectSilks(38, 12), ...rectSilks(22.4, 10, -0.15)],
+  case: { plateWindow: { w: 26, h: 8 } },  // visible window over the 0.91" display
 };
 
 /** 1.3" 128×64 SSD1306 OLED, 36×33mm breakout, 4-pin header at bottom edge */

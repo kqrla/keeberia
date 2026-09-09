@@ -7,6 +7,7 @@
  * case is parametric source, not a dead mesh).
  */
 import type { PcbResult, Placement } from "../../../pcb/pcb-engine/src/types.ts";
+import { FOOTPRINTS } from "../../../pcb/pcb-engine/src/footprints.ts";
 
 export interface CaseOptions {
   wallThickness: number;   // mm, side walls
@@ -50,30 +51,36 @@ export interface CaseResult {
   };
 }
 
-/** usb-c shell: 8.94 × 3.26mm typical midmount receptacle on the xiao */
-const USB_SHELL_W = 9.4;
-const USB_SHELL_H = 3.26;
-/** xiao module thickness sits between the carrier pcb and the usb shell */
-const MODULE_THICKNESS = 1.0;
-/** ec11 shaft + knob hub clearance in the top plate */
-const ENCODER_HOLE = 10.0;
-/** visible window over the 0.91" oled breakout */
-const OLED_WINDOW_W = 26;
-const OLED_WINDOW_H = 8;
-/** mx switch opening in the plate */
-const MX_OPENING = 14;
+// one record, many projections: this engine never hardcodes component
+// geometry. cutouts, windows, usb shells all come from the component
+// records' case projections (CaseProjection, pcb engine) — change the
+// switch and the cutout changes, because they are the same data.
+// (backend/engines/pcb/research/notes/component-geometry-pipeline.md)
+const REC = (libId: string) => FOOTPRINTS[libId];
 
 const fmt = (n: number) => (Math.round(n * 100) / 100).toString();
 
 export function generateCase(pcb: PcbResult, partial?: Partial<CaseOptions>): CaseResult {
-  const opts = { ...DEFAULT_CASE_OPTIONS, ...partial };
   const warnings: CaseWarning[] = [];
 
   const holes = pcb.placements.filter((p) => p.library === "keeberia:Mount_M2");
-  const mcu = pcb.placements.find((p) => p.library === "keeberia:XIAO");
-  const encoders = pcb.placements.filter((p) => p.library === "keeberia:EC11");
-  const displays = pcb.placements.filter((p) => p.library === "keeberia:OLED_091" || p.library === "keeberia:OLED_13");
-  const keys = pcb.placements.filter((p) => p.library === "keeberia:MX_solder" || p.library === "keeberia:MX_hotswap");
+  const mcu = pcb.placements.find((p) => REC(p.library)?.category === "mcu");
+  const encoders = pcb.placements.filter((p) => REC(p.library)?.category === "encoder");
+  const displays = pcb.placements.filter((p) => REC(p.library)?.category === "display");
+  const keys = pcb.placements.filter((p) => REC(p.library)?.category === "switch");
+
+  // the plate thickness default follows the board's switches — the record
+  // knows what plate its family clips into (mx 1.5, choc 1.2)
+  const familyPlates = [...new Set(keys
+    .map((k) => REC(k.library)?.case?.plateThickness)
+    .filter((v): v is number => v !== undefined))];
+  let plateDefault: number | undefined;
+  if (familyPlates.length === 1) plateDefault = familyPlates[0];
+  else if (familyPlates.length > 1) {
+    plateDefault = Math.max(...familyPlates);
+    warnings.push({ level: "warning", message: `mixed switch families want different plate thicknesses (${familyPlates.join(", ")}mm) — using the thickest for now; per-family plates arrive with the split-plate flow` });
+  }
+  const opts = { ...DEFAULT_CASE_OPTIONS, ...(plateDefault !== undefined ? { plateThickness: plateDefault } : {}), ...partial };
 
   if (holes.length === 0) {
     warnings.push({ level: "error", message: "this board has no mounting holes — the case cannot anchor the pcb. enable corner mounting in the pcb flow first" });
@@ -89,8 +96,12 @@ export function generateCase(pcb: PcbResult, partial?: Partial<CaseOptions>): Ca
   // ── usb slot: derived from the mcu placement, not hardcoded ──
   // the xiao's usb-c sits on the module edge whose outward normal is
   // local (0,-1); rotate by the placement rotation to find the wall.
+  const usbShell = mcu ? REC(mcu.library)?.case?.usbShell : undefined;
+  if (mcu && !usbShell) {
+    warnings.push({ level: "warning", message: "the mcu record carries no usb shell projection — no wall slot is cut" });
+  }
   let usb: { wall: "y+" | "y-" | "x+" | "x-"; along: number } | null = null;
-  if (mcu) {
+  if (mcu && usbShell) {
     const rad = (mcu.rotation * Math.PI) / 180;
     const nx = Math.sin(rad);            // 0*cos - (-1)*sin
     const ny = -Math.cos(rad);           // 0*sin + (-1)*cos
@@ -101,9 +112,10 @@ export function generateCase(pcb: PcbResult, partial?: Partial<CaseOptions>): Ca
 
   // slot z: the shell hangs off the module face on the pcb's back, so it
   // sits standoff height above the floor, just below the pcb.
-  const shellCenterZ = opts.baseThickness + opts.standoffHeight - MODULE_THICKNESS - USB_SHELL_H / 2;
-  const slotZ0 = shellCenterZ - USB_SHELL_H / 2 - opts.usbClearance;
-  const slotZ1 = shellCenterZ + USB_SHELL_H / 2 + opts.usbClearance;
+  const shellH = usbShell?.h ?? 0;
+  const shellCenterZ = opts.baseThickness + opts.standoffHeight - (usbShell?.moduleThickness ?? 0) - shellH / 2;
+  const slotZ0 = shellCenterZ - shellH / 2 - opts.usbClearance;
+  const slotZ1 = shellCenterZ + shellH / 2 + opts.usbClearance;
   if (slotZ0 < opts.baseThickness) {
     warnings.push({ level: "error", message: "the usb port would breach the case floor — raise the standoff height above 4.3mm so the xiao and its shell fit inside" });
   }
@@ -137,7 +149,7 @@ export function generateCase(pcb: PcbResult, partial?: Partial<CaseOptions>): Ca
   L.push(`standoff_height = ${fmt(opts.standoffHeight)};  // [4.5:0.5:12] pcb floats above the floor (xiao stack needs 4.3)`);
   L.push(`/* [Mounting] */`);
   L.push(`screw_size     = ${fmt(opts.screwSize)};    // [2:0.1:3.2] drill (m2 = 2.2, m2.5 = 2.7, m3 = 3.2)`);
-  L.push(`plate_thickness = ${fmt(opts.plateThickness)};  // [1:0.1:2] switch plate (mx = 1.5, choc = 1.2)`);
+  L.push(`plate_thickness = ${fmt(opts.plateThickness)};  // [1:0.1:2] switch plate (default from the board's switch records)`);
   L.push(``);
   L.push(`// ── derived from the board (regenerate the case to change these) ──`);
   L.push(`/* [Hidden] */`);
@@ -146,7 +158,7 @@ export function generateCase(pcb: PcbResult, partial?: Partial<CaseOptions>): Ca
   L.push(`pcb_thickness  = 1.6;    // 2-layer, 1.6mm fr4`);
   L.push(`pcb_corner_radius = ${fmt(pcb.outline.cornerRadius)};`);
   L.push(`$fn = 48;`);
-  L.push(`usb_slot_width  = ${fmt(USB_SHELL_W + 2 * opts.usbClearance)};   // xiao usb-c shell + clearance`);
+  if (usbShell) L.push(`usb_slot_width  = ${fmt(usbShell.w + 2 * opts.usbClearance)};   // usb-c shell from the mcu record + clearance`);
   L.push(`usb_slot_z     = [${fmt(Math.max(slotZ0, 0.5))}, ${fmt(slotZ1)}];`);
   if (usb) L.push(`usb_slot_along = ${fmt(usb.along)};   // usb-c center along the ${wallName(usb.wall)} wall`);
   L.push(`screw_hole     = screw_size + 0.2;`);
@@ -227,16 +239,22 @@ export function generateCase(pcb: PcbResult, partial?: Partial<CaseOptions>): Ca
   L.push(`    linear_extrude(plate_thickness)`);
   L.push(`      rounded_rect(outer_width, outer_height, corner_radius);`);
   for (const k of keys) {
-    L.push(`    translate([${fmt(k.pos.x - MX_OPENING / 2)}, ${fmt(k.pos.y - MX_OPENING / 2)}, -1])`);
-    L.push(`      cube([${MX_OPENING}, ${MX_OPENING}, plate_thickness + 2]);  // ${k.ref}`);
+    const o = REC(k.library)?.case?.plateOpening;
+    if (!o) { warnings.push({ level: "error", message: `switch record ${k.library} has no plate opening — the case flow needs a case projection for every switch family` }); continue; }
+    L.push(`    translate([${fmt(k.pos.x - o.w / 2)}, ${fmt(k.pos.y - o.h / 2)}, -1])`);
+    L.push(`      cube([${fmt(o.w)}, ${fmt(o.h)}, plate_thickness + 2]);  // ${k.ref} (${REC(k.library)?.description})`);
   }
   for (const e of encoders) {
+    const hole = REC(e.library)?.case?.plateHole;
+    if (hole === undefined) { warnings.push({ level: "error", message: `encoder record ${e.library} has no plate hole projection` }); continue; }
     L.push(`    translate([${fmt(e.pos.x)}, ${fmt(e.pos.y)}, -1])`);
-    L.push(`      cylinder(h = plate_thickness + 2, d = ${ENCODER_HOLE});  // ${e.ref} knob shaft`);
+    L.push(`      cylinder(h = plate_thickness + 2, d = ${fmt(hole)});  // ${e.ref} knob shaft`);
   }
   for (const d of displays) {
-    L.push(`    translate([${fmt(d.pos.x - OLED_WINDOW_W / 2)}, ${fmt(d.pos.y - OLED_WINDOW_H / 2)}, -1])`);
-    L.push(`      cube([${OLED_WINDOW_W}, ${OLED_WINDOW_H}, plate_thickness + 2]);  // ${d.ref} window`);
+    const win = REC(d.library)?.case?.plateWindow;
+    if (!win) { warnings.push({ level: "error", message: `display record ${d.library} has no plate window projection` }); continue; }
+    L.push(`    translate([${fmt(d.pos.x - win.w / 2)}, ${fmt(d.pos.y - win.h / 2)}, -1])`);
+    L.push(`      cube([${fmt(win.w)}, ${fmt(win.h)}, plate_thickness + 2]);  // ${d.ref} window`);
   }
   for (const h of holes) {
     L.push(`    translate([${fmt(h.pos.x)}, ${fmt(h.pos.y)}, -1])`);

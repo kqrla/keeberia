@@ -143,6 +143,24 @@ export interface PcbResult {
 }
 
 /** Physical footprint definition (geometry centered on part origin). */
+/** case-side projection: what this component demands of the enclosure.
+ *  one record, many projections — the plate cutout is a projection of the
+ *  component exactly like the pads are. change the switch, the cutout
+ *  changes, because they are the same data. sources + policy:
+ *  backend/engines/pcb/research/notes/component-geometry-pipeline.md */
+export interface CaseProjection {
+  /** square switch-plate opening, mm (mx 14×14, choc v1 13.8×13.8) */
+  plateOpening?: { w: number; h: number };
+  /** round plate hole, mm diameter (encoder shaft + knob hub clearance) */
+  plateHole?: number;
+  /** rectangular plate window, mm (display breakouts) */
+  plateWindow?: { w: number; h: number };
+  /** switch-plate thickness this part family is designed for (mx 1.5, choc 1.2) */
+  plateThickness?: number;
+  /** usb-c shell + module stack hanging off the pcb's back (mcu carriers) */
+  usbShell?: { w: number; h: number; moduleThickness: number };
+}
+
 export interface FootprintDef {
   id: string;
   kicadName: string;      // "keeberia:Kailh_MX_Hotswap"
@@ -163,4 +181,6 @@ export interface FootprintDef {
   silks: Array<{ kind: "line" | "circle"; start?: Pt; end?: Pt; center?: Pt; radius?: number }>;
   category: "switch" | "mcu" | "encoder" | "display" | "hole" | "led" | "diode" | "passive";
   flipSilkWhenBack?: boolean;
+  /** enclosure demands of this part (see CaseProjection) */
+  case?: CaseProjection;
 }
