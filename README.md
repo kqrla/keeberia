@@ -4,19 +4,14 @@
 
 ## what is this
 
-keeberia is basically me trying to make the process of making a keyboard less annoying.
+keeberia is basically me trying to make the process of making a keyboard less annoying. <br>
+for context, i loooove keyboards, and i've made end-to-end macropad pcbs + cases before, and while making them is really fun, there is also a very specific point each type where i'm like *"ugh. there's got to be a better way than this"* because so much of the process is repetitive, which, my adhd be damned, feels like walking on legos to me. i mean, come on, we
 
-i've made macropad pcbs + cases before, and while making them is really fun, there is also a very specific point where i'm like
-
-«wait. why am i doing this manually again»
-
-because so much of the process is repetitive.
-
-- you have a layout.
-- you place switches.
-- you place their footprints.
-- you make the matrix.
-- you route it.
+- have a layout.
+- place switches.
+- place their footprints.
+- make the matrix.
+- route it.
 - then you go make a plate.
 - then you go make a case.
 - then you add screw holes.
@@ -97,16 +92,11 @@ keeberia is a design environment where you describe the device at a higher level
 
 instead of starting with:
 
-«place footprint
-assign net
-route trace
-draw wall
-cut hole
-measure clearance»
+*"place footprint + assign net + route trace + draw wall + cut hole + measure clearance"*
 
 you start with:
 
-«i want a 4x4 macropad»
+*"i want a 4x4 macropad"*
 
 then:
 
@@ -121,13 +111,14 @@ and keeberia figures out how those decisions translate into the actual hardware.
 
 ---
 
-## the five flows
+# the five flows
 
 keeberia is split into five major design flows.
 
 they aren't meant to be five separate files or five completely separate programs.
 
 they're five ways of looking at the same device.
+
 
 ```
 layout
@@ -151,7 +142,7 @@ the project is one object. the flows are just different views into it.
 
 ---
 
-## 01 — layout
+## the first flow — layout
 
 this is the "where does everything go" part.
 
@@ -194,7 +185,7 @@ i just want to figure out the shape and arrangement of the device first.
 
 ---
 
-## 02 — components
+## the second flow — components
 
 now we figure out what everything actually is.
 
@@ -202,10 +193,10 @@ the layout might know that something is a key.
 
 components tells keeberia:
 
-- «okay, this is a cherry mx switch.»
-- «this is a kailh choc v1.»
-- «this is an ec11 encoder.»
-- «this is a 128x64 oled.»
+- "okay, this is a cherry mx switch"
+- "this is a kailh choc v1"
+- "this is an ec11 encoder"
+- "this is a 128x64 oled"
 
 this is where you choose things like:
 
@@ -260,7 +251,7 @@ if i choose an ec11, keeberia should know what an ec11 requires.
 
 ---
 
-## 03 — pcb
+## the third flow — pcb
 
 this is where the abstract design becomes an actual board.
 
@@ -277,7 +268,7 @@ the user should be able to control things like:
 
 but i don't want the first experience to be:
 
-«congratulations, here are 900 traces»
+"congratulations, here are 900 traces"
 
 the repetitive pcb work should be generated from the component information.
 
@@ -298,7 +289,7 @@ i just don't want every person making a tiny macropad to have to manually deal w
 
 ---
 
-## 04 — case
+## the forth flow — case
 
 this is probably where the whole idea gets even more useful.
 
@@ -573,7 +564,7 @@ which is exactly the kind of thing a parametric system can handle.
 
 i want it to feel like:
 
-«i have a weird little device idea»
+"i have a weird little device idea"
 
 and then i can just start making it.
 
