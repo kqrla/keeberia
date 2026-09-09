@@ -155,3 +155,8 @@ known gap, documented in the roadmap: the B.Cu ground pour still lives only in t
 
 - roadmap gained its parking lot: after macropads are perfect — keyboard sets (one-piece non-split first, then expansion), per-cap + artisanal customization (still openscad), splits, wired/wireless, iso/ansi/jis presets, non-latin legends, and the fabrication-tolerance principle: pixel-perfect footprints don't fit real prints; tolerances, inserts and fit gaps are part of the artifact, not an afterthought.
 - backend/engines/cad/stack/tradeoffs.md — the openscad vs cadquery call, written down so it never gets re-argued from scratch: mesh-first csg (cgal/manifold) over b-rep (occt) because a standalone binary beats sandboxing python; the honest cost is step files, and the revisit trigger is cnc demand.
+
+## day five, night: the readme found anne's voice
+
+- the old readme was memorium-serious; anne wrote the new one herself — first person, casual, bullet points, the whole «wait. why am i doing this manually again» origin story. landed verbatim (headers + code fences only), her words untouched.
+- one honest fix while landing it: her "under the hood" draft still said cadquery/step — swapped to openscad + stl/3mf with a link to the tradeoffs doc, since that call is now on record. everything else is hers.
