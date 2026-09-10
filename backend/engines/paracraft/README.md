@@ -1,9 +1,9 @@
-# case-engine
+# paracraft
 
-the parametric case compiler: `pcb result → openscad source`. pure, synchronous, deterministic — same input, same case, forever.
+**paracraft** — the scad engine. the parametric case compiler (and, later, keycaps + knob covers): `pcb result → openscad source`. pure, synchronous, deterministic — same input, same case, forever.
 
 ```
-backend/engines/cad/case-engine/
+backend/engines/paracraft/
   src/index.ts        generateCase(pcb, options?) → { scad, params, warnings, stats }
   test/render.ts      reference boards → out/*-case.scad (+ stl when openscad is available)
 ```

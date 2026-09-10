@@ -1,4 +1,18 @@
 solid OpenSCAD_Model
+  facet normal -0.442238 -0.896898 0
+    outer loop
+      vertex -31.75 -25.5391 0
+      vertex -31.2807 -25.7705 10
+      vertex -31.75 -25.5391 10
+    endloop
+  endfacet
+  facet normal -0.442238 -0.896898 -0
+    outer loop
+      vertex -31.2807 -25.7705 10
+      vertex -31.75 -25.5391 0
+      vertex -31.2807 -25.7705 0
+    endloop
+  endfacet
   facet normal -0.321498 -0.94691 0
     outer loop
       vertex -31.2807 -25.7705 0
@@ -11,6 +25,118 @@ solid OpenSCAD_Model
       vertex -30.7853 -25.9387 10
       vertex -31.2807 -25.7705 0
       vertex -30.7853 -25.9387 0
+    endloop
+  endfacet
+  facet normal -0.555626 -0.831432 0
+    outer loop
+      vertex -32.185 -25.2484 0
+      vertex -31.75 -25.5391 10
+      vertex -32.185 -25.2484 10
+    endloop
+  endfacet
+  facet normal -0.555626 -0.831432 -0
+    outer loop
+      vertex -31.75 -25.5391 10
+      vertex -32.185 -25.2484 0
+      vertex -31.75 -25.5391 0
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 33.75 22.075 10
+      vertex 33.75 -4.37 1.5
+      vertex 33.75 22.075 1.5
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 33.75 -4.37 1.5
+      vertex 33.75 -18.37 1.5
+      vertex 33.75 -4.37 0
+    endloop
+  endfacet
+  facet normal 1 -0 0
+    outer loop
+      vertex 33.75 -22.075 10
+      vertex 33.75 -4.37 1.5
+      vertex 33.75 22.075 10
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 33.75 -4.37 1.5
+      vertex 33.75 -22.075 10
+      vertex 33.75 -18.37 1.5
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 33.75 -18.37 1.5
+      vertex 33.75 -22.075 10
+      vertex 33.75 -22.075 1.5
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 33.75 -4.37 0
+      vertex 33.75 -18.37 1.5
+      vertex 33.75 -18.37 0
+    endloop
+  endfacet
+  facet normal 0.659343 -0.751842 0
+    outer loop
+      vertex 32.185 -25.2484 1.5
+      vertex 32.5784 -24.9034 10
+      vertex 32.185 -25.2484 10
+    endloop
+  endfacet
+  facet normal 0.659343 -0.751842 0
+    outer loop
+      vertex 32.5784 -24.9034 10
+      vertex 32.185 -25.2484 1.5
+      vertex 32.5784 -24.9034 1.5
+    endloop
+  endfacet
+  facet normal -0.997861 -0.0653646 0
+    outer loop
+      vertex -33.7158 -22.5971 0
+      vertex -33.75 -22.075 10
+      vertex -33.75 -22.075 0
+    endloop
+  endfacet
+  facet normal -0.997861 -0.0653646 0
+    outer loop
+      vertex -33.75 -22.075 10
+      vertex -33.7158 -22.5971 0
+      vertex -33.7158 -22.5971 10
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex -29.75 -26.075 10
+      vertex 29.75 -26.075 1.5
+      vertex 29.75 -26.075 10
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex -29.75 -26.075 0
+      vertex 29.75 -26.075 1.5
+      vertex -29.75 -26.075 10
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 78.5 -26.075 0
+      vertex 29.75 -26.075 1.5
+      vertex -29.75 -26.075 0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 29.75 -26.075 1.5
+      vertex 78.5 -26.075 0
+      vertex 78.5 -26.075 1.5
     endloop
   endfacet
   facet normal 0 0 1
@@ -741,6 +867,34 @@ solid OpenSCAD_Model
       vertex -33.6137 -23.1103 10
     endloop
   endfacet
+  facet normal 0.896898 0.442238 0
+    outer loop
+      vertex 33.4455 23.6057 10
+      vertex 33.2141 24.075 1.5
+      vertex 33.2141 24.075 10
+    endloop
+  endfacet
+  facet normal 0.896898 0.442238 0
+    outer loop
+      vertex 33.2141 24.075 1.5
+      vertex 33.4455 23.6057 10
+      vertex 33.4455 23.6057 1.5
+    endloop
+  endfacet
+  facet normal -0.195124 -0.980779 0
+    outer loop
+      vertex -30.7853 -25.9387 0
+      vertex -30.2721 -26.0408 10
+      vertex -30.7853 -25.9387 10
+    endloop
+  endfacet
+  facet normal -0.195124 -0.980779 -0
+    outer loop
+      vertex -30.2721 -26.0408 10
+      vertex -30.7853 -25.9387 0
+      vertex -30.2721 -26.0408 0
+    endloop
+  endfacet
   facet normal -1 0 0
     outer loop
       vertex -33.75 -22.075 0
@@ -825,60 +979,74 @@ solid OpenSCAD_Model
       vertex -5.3 26.075 2.04
     endloop
   endfacet
-  facet normal 0.896898 0.442238 0
+  facet normal -0.555626 0.831432 0
     outer loop
-      vertex 33.4455 23.6057 10
-      vertex 33.2141 24.075 1.5
-      vertex 33.2141 24.075 10
+      vertex -31.75 25.5391 0
+      vertex -32.185 25.2484 10
+      vertex -31.75 25.5391 10
     endloop
   endfacet
-  facet normal 0.896898 0.442238 0
+  facet normal -0.555626 0.831432 0
     outer loop
-      vertex 33.2141 24.075 1.5
-      vertex 33.4455 23.6057 10
-      vertex 33.4455 23.6057 1.5
+      vertex -32.185 25.2484 10
+      vertex -31.75 25.5391 0
+      vertex -32.185 25.2484 0
     endloop
   endfacet
-  facet normal 1 0 0
+  facet normal 0.659343 0.751842 -0
     outer loop
-      vertex 33.75 22.075 10
-      vertex 33.75 -4.37 1.5
-      vertex 33.75 22.075 1.5
+      vertex 32.5784 24.9034 1.5
+      vertex 32.185 25.2484 10
+      vertex 32.5784 24.9034 10
     endloop
   endfacet
-  facet normal 1 0 0
+  facet normal 0.659343 0.751842 0
     outer loop
-      vertex 33.75 -4.37 1.5
-      vertex 33.75 -18.37 1.5
-      vertex 33.75 -4.37 0
+      vertex 32.185 25.2484 10
+      vertex 32.5784 24.9034 1.5
+      vertex 32.185 25.2484 1.5
     endloop
   endfacet
-  facet normal 1 -0 0
+  facet normal 0.321498 -0.94691 0
     outer loop
-      vertex 33.75 -22.075 10
-      vertex 33.75 -4.37 1.5
-      vertex 33.75 22.075 10
+      vertex 30.7853 -25.9387 1.5
+      vertex 31.2807 -25.7705 10
+      vertex 30.7853 -25.9387 10
     endloop
   endfacet
-  facet normal 1 0 0
+  facet normal 0.321498 -0.94691 0
     outer loop
-      vertex 33.75 -4.37 1.5
-      vertex 33.75 -22.075 10
-      vertex 33.75 -18.37 1.5
+      vertex 31.2807 -25.7705 10
+      vertex 30.7853 -25.9387 1.5
+      vertex 31.2807 -25.7705 1.5
     endloop
   endfacet
-  facet normal 1 0 0
+  facet normal -0.831432 -0.555626 0
     outer loop
-      vertex 33.75 -18.37 1.5
-      vertex 33.75 -22.075 10
-      vertex 33.75 -22.075 1.5
+      vertex -32.9234 -24.51 0
+      vertex -33.2141 -24.075 10
+      vertex -33.2141 -24.075 0
     endloop
   endfacet
-  facet normal 1 0 0
+  facet normal -0.831432 -0.555626 0
     outer loop
-      vertex 33.75 -4.37 0
-      vertex 33.75 -18.37 1.5
-      vertex 33.75 -18.37 0
+      vertex -33.2141 -24.075 10
+      vertex -32.9234 -24.51 0
+      vertex -32.9234 -24.51 10
+    endloop
+  endfacet
+  facet normal -0.94691 -0.321498 0
+    outer loop
+      vertex -33.4455 -23.6057 0
+      vertex -33.6137 -23.1103 10
+      vertex -33.6137 -23.1103 0
+    endloop
+  endfacet
+  facet normal -0.94691 -0.321498 0
+    outer loop
+      vertex -33.6137 -23.1103 10
+      vertex -33.4455 -23.6057 0
+      vertex -33.4455 -23.6057 10
     endloop
   endfacet
   facet normal 0 0 -1
@@ -1931,76 +2099,6 @@ solid OpenSCAD_Model
       vertex -33.7158 22.5971 0
     endloop
   endfacet
-  facet normal 0.555626 0.831432 -0
-    outer loop
-      vertex 32.185 25.2484 1.5
-      vertex 31.75 25.5391 10
-      vertex 32.185 25.2484 10
-    endloop
-  endfacet
-  facet normal 0.555626 0.831432 0
-    outer loop
-      vertex 31.75 25.5391 10
-      vertex 32.185 25.2484 1.5
-      vertex 31.75 25.5391 1.5
-    endloop
-  endfacet
-  facet normal 0.997861 0.0653646 0
-    outer loop
-      vertex 33.75 22.075 10
-      vertex 33.7158 22.5971 1.5
-      vertex 33.7158 22.5971 10
-    endloop
-  endfacet
-  facet normal 0.997861 0.0653646 0
-    outer loop
-      vertex 33.7158 22.5971 1.5
-      vertex 33.75 22.075 10
-      vertex 33.75 22.075 1.5
-    endloop
-  endfacet
-  facet normal -0.442238 -0.896898 0
-    outer loop
-      vertex -31.75 -25.5391 0
-      vertex -31.2807 -25.7705 10
-      vertex -31.75 -25.5391 10
-    endloop
-  endfacet
-  facet normal -0.442238 -0.896898 -0
-    outer loop
-      vertex -31.2807 -25.7705 10
-      vertex -31.75 -25.5391 0
-      vertex -31.2807 -25.7705 0
-    endloop
-  endfacet
-  facet normal -0.195124 -0.980779 0
-    outer loop
-      vertex -30.7853 -25.9387 0
-      vertex -30.2721 -26.0408 10
-      vertex -30.7853 -25.9387 10
-    endloop
-  endfacet
-  facet normal -0.195124 -0.980779 -0
-    outer loop
-      vertex -30.2721 -26.0408 10
-      vertex -30.7853 -25.9387 0
-      vertex -30.2721 -26.0408 0
-    endloop
-  endfacet
-  facet normal -0.94691 -0.321498 0
-    outer loop
-      vertex -33.4455 -23.6057 0
-      vertex -33.6137 -23.1103 10
-      vertex -33.6137 -23.1103 0
-    endloop
-  endfacet
-  facet normal -0.94691 -0.321498 0
-    outer loop
-      vertex -33.6137 -23.1103 10
-      vertex -33.4455 -23.6057 0
-      vertex -33.4455 -23.6057 10
-    endloop
-  endfacet
   facet normal -0.896898 -0.442238 0
     outer loop
       vertex -33.2141 -24.075 0
@@ -2043,32 +2141,18 @@ solid OpenSCAD_Model
       vertex 29.75 26.075 1.5
     endloop
   endfacet
-  facet normal -0.555626 0.831432 0
+  facet normal -0.321498 0.94691 0
     outer loop
-      vertex -31.75 25.5391 0
-      vertex -32.185 25.2484 10
-      vertex -31.75 25.5391 10
-    endloop
-  endfacet
-  facet normal -0.555626 0.831432 0
-    outer loop
-      vertex -32.185 25.2484 10
-      vertex -31.75 25.5391 0
-      vertex -32.185 25.2484 0
-    endloop
-  endfacet
-  facet normal -0.442238 0.896898 0
-    outer loop
-      vertex -31.2807 25.7705 0
-      vertex -31.75 25.5391 10
+      vertex -30.7853 25.9387 0
       vertex -31.2807 25.7705 10
+      vertex -30.7853 25.9387 10
     endloop
   endfacet
-  facet normal -0.442238 0.896898 0
+  facet normal -0.321498 0.94691 0
     outer loop
-      vertex -31.75 25.5391 10
+      vertex -31.2807 25.7705 10
+      vertex -30.7853 25.9387 0
       vertex -31.2807 25.7705 0
-      vertex -31.75 25.5391 0
     endloop
   endfacet
   facet normal -0.0653646 0.997861 0
@@ -2085,18 +2169,18 @@ solid OpenSCAD_Model
       vertex -30.2721 26.0408 0
     endloop
   endfacet
-  facet normal -0.321498 0.94691 0
+  facet normal -0.442238 0.896898 0
     outer loop
-      vertex -30.7853 25.9387 0
+      vertex -31.2807 25.7705 0
+      vertex -31.75 25.5391 10
       vertex -31.2807 25.7705 10
-      vertex -30.7853 25.9387 10
     endloop
   endfacet
-  facet normal -0.321498 0.94691 0
+  facet normal -0.442238 0.896898 0
     outer loop
-      vertex -31.2807 25.7705 10
-      vertex -30.7853 25.9387 0
+      vertex -31.75 25.5391 10
       vertex -31.2807 25.7705 0
+      vertex -31.75 25.5391 0
     endloop
   endfacet
   facet normal 0.442238 0.896898 -0
@@ -2113,20 +2197,6 @@ solid OpenSCAD_Model
       vertex 31.2807 25.7705 1.5
     endloop
   endfacet
-  facet normal 0.94691 0.321498 0
-    outer loop
-      vertex 33.6137 23.1103 10
-      vertex 33.4455 23.6057 1.5
-      vertex 33.4455 23.6057 10
-    endloop
-  endfacet
-  facet normal 0.94691 0.321498 0
-    outer loop
-      vertex 33.4455 23.6057 1.5
-      vertex 33.6137 23.1103 10
-      vertex 33.6137 23.1103 1.5
-    endloop
-  endfacet
   facet normal 0.980779 0.195124 0
     outer loop
       vertex 33.7158 22.5971 10
@@ -2141,18 +2211,32 @@ solid OpenSCAD_Model
       vertex 33.7158 22.5971 1.5
     endloop
   endfacet
-  facet normal 0.0653646 -0.997861 0
+  facet normal 0.997861 0.0653646 0
     outer loop
-      vertex 29.75 -26.075 1.5
-      vertex 30.2721 -26.0408 10
-      vertex 29.75 -26.075 10
+      vertex 33.75 22.075 10
+      vertex 33.7158 22.5971 1.5
+      vertex 33.7158 22.5971 10
     endloop
   endfacet
-  facet normal 0.0653646 -0.997861 0
+  facet normal 0.997861 0.0653646 0
     outer loop
-      vertex 30.2721 -26.0408 10
-      vertex 29.75 -26.075 1.5
-      vertex 30.2721 -26.0408 1.5
+      vertex 33.7158 22.5971 1.5
+      vertex 33.75 22.075 10
+      vertex 33.75 22.075 1.5
+    endloop
+  endfacet
+  facet normal 0.94691 0.321498 0
+    outer loop
+      vertex 33.6137 23.1103 10
+      vertex 33.4455 23.6057 1.5
+      vertex 33.4455 23.6057 10
+    endloop
+  endfacet
+  facet normal 0.94691 0.321498 0
+    outer loop
+      vertex 33.4455 23.6057 1.5
+      vertex 33.6137 23.1103 10
+      vertex 33.6137 23.1103 1.5
     endloop
   endfacet
   facet normal 0.555626 -0.831432 0
@@ -2169,18 +2253,18 @@ solid OpenSCAD_Model
       vertex 32.185 -25.2484 1.5
     endloop
   endfacet
-  facet normal 0.442238 -0.896898 0
+  facet normal 0.0653646 -0.997861 0
     outer loop
-      vertex 31.2807 -25.7705 1.5
-      vertex 31.75 -25.5391 10
-      vertex 31.2807 -25.7705 10
+      vertex 29.75 -26.075 1.5
+      vertex 30.2721 -26.0408 10
+      vertex 29.75 -26.075 10
     endloop
   endfacet
-  facet normal 0.442238 -0.896898 0
+  facet normal 0.0653646 -0.997861 0
     outer loop
-      vertex 31.75 -25.5391 10
-      vertex 31.2807 -25.7705 1.5
-      vertex 31.75 -25.5391 1.5
+      vertex 30.2721 -26.0408 10
+      vertex 29.75 -26.075 1.5
+      vertex 30.2721 -26.0408 1.5
     endloop
   endfacet
   facet normal -0.659343 -0.751842 0
@@ -2197,34 +2281,6 @@ solid OpenSCAD_Model
       vertex -32.185 -25.2484 0
     endloop
   endfacet
-  facet normal -0.831432 -0.555626 0
-    outer loop
-      vertex -32.9234 -24.51 0
-      vertex -33.2141 -24.075 10
-      vertex -33.2141 -24.075 0
-    endloop
-  endfacet
-  facet normal -0.831432 -0.555626 0
-    outer loop
-      vertex -33.2141 -24.075 10
-      vertex -32.9234 -24.51 0
-      vertex -32.9234 -24.51 10
-    endloop
-  endfacet
-  facet normal -0.555626 -0.831432 0
-    outer loop
-      vertex -32.185 -25.2484 0
-      vertex -31.75 -25.5391 10
-      vertex -32.185 -25.2484 10
-    endloop
-  endfacet
-  facet normal -0.555626 -0.831432 -0
-    outer loop
-      vertex -31.75 -25.5391 10
-      vertex -32.185 -25.2484 0
-      vertex -31.75 -25.5391 0
-    endloop
-  endfacet
   facet normal -0.980779 -0.195124 0
     outer loop
       vertex -33.6137 -23.1103 0
@@ -2237,20 +2293,6 @@ solid OpenSCAD_Model
       vertex -33.7158 -22.5971 10
       vertex -33.6137 -23.1103 0
       vertex -33.6137 -23.1103 10
-    endloop
-  endfacet
-  facet normal -0.997861 -0.0653646 0
-    outer loop
-      vertex -33.7158 -22.5971 0
-      vertex -33.75 -22.075 10
-      vertex -33.75 -22.075 0
-    endloop
-  endfacet
-  facet normal -0.997861 -0.0653646 0
-    outer loop
-      vertex -33.75 -22.075 10
-      vertex -33.7158 -22.5971 0
-      vertex -33.7158 -22.5971 10
     endloop
   endfacet
   facet normal -0.831432 0.555626 0
@@ -2323,34 +2365,6 @@ solid OpenSCAD_Model
       vertex -30.7853 25.9387 0
     endloop
   endfacet
-  facet normal 0.659343 0.751842 -0
-    outer loop
-      vertex 32.5784 24.9034 1.5
-      vertex 32.185 25.2484 10
-      vertex 32.5784 24.9034 10
-    endloop
-  endfacet
-  facet normal 0.659343 0.751842 0
-    outer loop
-      vertex 32.185 25.2484 10
-      vertex 32.5784 24.9034 1.5
-      vertex 32.185 25.2484 1.5
-    endloop
-  endfacet
-  facet normal 0.659343 -0.751842 0
-    outer loop
-      vertex 32.185 -25.2484 1.5
-      vertex 32.5784 -24.9034 10
-      vertex 32.185 -25.2484 10
-    endloop
-  endfacet
-  facet normal 0.659343 -0.751842 0
-    outer loop
-      vertex 32.5784 -24.9034 10
-      vertex 32.185 -25.2484 1.5
-      vertex 32.5784 -24.9034 1.5
-    endloop
-  endfacet
   facet normal 0.980779 -0.195124 0
     outer loop
       vertex 33.6137 -23.1103 10
@@ -2365,32 +2379,60 @@ solid OpenSCAD_Model
       vertex 33.6137 -23.1103 1.5
     endloop
   endfacet
-  facet normal 0 -1 0
+  facet normal 0.751842 -0.659343 0
     outer loop
-      vertex -29.75 -26.075 10
-      vertex 29.75 -26.075 1.5
-      vertex 29.75 -26.075 10
+      vertex 32.5784 -24.9034 10
+      vertex 32.9234 -24.51 1.5
+      vertex 32.9234 -24.51 10
     endloop
   endfacet
-  facet normal 0 -1 0
+  facet normal 0.751842 -0.659343 0
     outer loop
-      vertex -29.75 -26.075 0
-      vertex 29.75 -26.075 1.5
-      vertex -29.75 -26.075 10
+      vertex 32.9234 -24.51 1.5
+      vertex 32.5784 -24.9034 10
+      vertex 32.5784 -24.9034 1.5
     endloop
   endfacet
-  facet normal 0 -1 0
+  facet normal 0.555626 0.831432 -0
     outer loop
-      vertex 78.5 -26.075 0
-      vertex 29.75 -26.075 1.5
-      vertex -29.75 -26.075 0
+      vertex 32.185 25.2484 1.5
+      vertex 31.75 25.5391 10
+      vertex 32.185 25.2484 10
     endloop
   endfacet
-  facet normal 0 -1 0
+  facet normal 0.555626 0.831432 0
     outer loop
-      vertex 29.75 -26.075 1.5
-      vertex 78.5 -26.075 0
-      vertex 78.5 -26.075 1.5
+      vertex 31.75 25.5391 10
+      vertex 32.185 25.2484 1.5
+      vertex 31.75 25.5391 1.5
+    endloop
+  endfacet
+  facet normal 0.442238 -0.896898 0
+    outer loop
+      vertex 31.2807 -25.7705 1.5
+      vertex 31.75 -25.5391 10
+      vertex 31.2807 -25.7705 10
+    endloop
+  endfacet
+  facet normal 0.442238 -0.896898 0
+    outer loop
+      vertex 31.75 -25.5391 10
+      vertex 31.2807 -25.7705 1.5
+      vertex 31.75 -25.5391 1.5
+    endloop
+  endfacet
+  facet normal 0.195124 -0.980779 0
+    outer loop
+      vertex 30.2721 -26.0408 1.5
+      vertex 30.7853 -25.9387 10
+      vertex 30.2721 -26.0408 10
+    endloop
+  endfacet
+  facet normal 0.195124 -0.980779 0
+    outer loop
+      vertex 30.7853 -25.9387 10
+      vertex 30.2721 -26.0408 1.5
+      vertex 30.7853 -25.9387 1.5
     endloop
   endfacet
   facet normal -0.751842 -0.659343 0
@@ -2405,20 +2447,6 @@ solid OpenSCAD_Model
       vertex -32.9234 -24.51 10
       vertex -32.5784 -24.9034 0
       vertex -32.5784 -24.9034 10
-    endloop
-  endfacet
-  facet normal -0.751842 0.659343 0
-    outer loop
-      vertex -32.9234 24.51 0
-      vertex -32.5784 24.9034 10
-      vertex -32.5784 24.9034 0
-    endloop
-  endfacet
-  facet normal -0.751842 0.659343 0
-    outer loop
-      vertex -32.5784 24.9034 10
-      vertex -32.9234 24.51 0
-      vertex -32.9234 24.51 10
     endloop
   endfacet
   facet normal -0.980779 0.195124 0
@@ -2463,32 +2491,18 @@ solid OpenSCAD_Model
       vertex -33.4455 23.6057 10
     endloop
   endfacet
-  facet normal 0.751842 0.659343 0
+  facet normal -0.751842 0.659343 0
     outer loop
-      vertex 32.9234 24.51 10
-      vertex 32.5784 24.9034 1.5
-      vertex 32.5784 24.9034 10
+      vertex -32.9234 24.51 0
+      vertex -32.5784 24.9034 10
+      vertex -32.5784 24.9034 0
     endloop
   endfacet
-  facet normal 0.751842 0.659343 0
+  facet normal -0.751842 0.659343 0
     outer loop
-      vertex 32.5784 24.9034 1.5
-      vertex 32.9234 24.51 10
-      vertex 32.9234 24.51 1.5
-    endloop
-  endfacet
-  facet normal 0.831432 0.555626 0
-    outer loop
-      vertex 33.2141 24.075 10
-      vertex 32.9234 24.51 1.5
-      vertex 32.9234 24.51 10
-    endloop
-  endfacet
-  facet normal 0.831432 0.555626 0
-    outer loop
-      vertex 32.9234 24.51 1.5
-      vertex 33.2141 24.075 10
-      vertex 33.2141 24.075 1.5
+      vertex -32.5784 24.9034 10
+      vertex -32.9234 24.51 0
+      vertex -32.9234 24.51 10
     endloop
   endfacet
   facet normal 0.896898 -0.442238 0
@@ -2519,46 +2533,32 @@ solid OpenSCAD_Model
       vertex 33.4455 -23.6057 1.5
     endloop
   endfacet
-  facet normal 0.831432 -0.555626 0
+  facet normal 0.751842 0.659343 0
     outer loop
-      vertex 32.9234 -24.51 10
-      vertex 33.2141 -24.075 1.5
-      vertex 33.2141 -24.075 10
+      vertex 32.9234 24.51 10
+      vertex 32.5784 24.9034 1.5
+      vertex 32.5784 24.9034 10
     endloop
   endfacet
-  facet normal 0.831432 -0.555626 0
+  facet normal 0.751842 0.659343 0
     outer loop
-      vertex 33.2141 -24.075 1.5
-      vertex 32.9234 -24.51 10
-      vertex 32.9234 -24.51 1.5
+      vertex 32.5784 24.9034 1.5
+      vertex 32.9234 24.51 10
+      vertex 32.9234 24.51 1.5
     endloop
   endfacet
-  facet normal 0.321498 -0.94691 0
+  facet normal 0.831432 0.555626 0
     outer loop
-      vertex 30.7853 -25.9387 1.5
-      vertex 31.2807 -25.7705 10
-      vertex 30.7853 -25.9387 10
+      vertex 33.2141 24.075 10
+      vertex 32.9234 24.51 1.5
+      vertex 32.9234 24.51 10
     endloop
   endfacet
-  facet normal 0.321498 -0.94691 0
+  facet normal 0.831432 0.555626 0
     outer loop
-      vertex 31.2807 -25.7705 10
-      vertex 30.7853 -25.9387 1.5
-      vertex 31.2807 -25.7705 1.5
-    endloop
-  endfacet
-  facet normal 0.195124 -0.980779 0
-    outer loop
-      vertex 30.2721 -26.0408 1.5
-      vertex 30.7853 -25.9387 10
-      vertex 30.2721 -26.0408 10
-    endloop
-  endfacet
-  facet normal 0.195124 -0.980779 0
-    outer loop
-      vertex 30.7853 -25.9387 10
-      vertex 30.2721 -26.0408 1.5
-      vertex 30.7853 -25.9387 1.5
+      vertex 32.9234 24.51 1.5
+      vertex 33.2141 24.075 10
+      vertex 33.2141 24.075 1.5
     endloop
   endfacet
   facet normal -0.0653646 -0.997861 0
@@ -2589,18 +2589,18 @@ solid OpenSCAD_Model
       vertex 33.7158 -22.5971 1.5
     endloop
   endfacet
-  facet normal 0.751842 -0.659343 0
+  facet normal 0.831432 -0.555626 0
     outer loop
-      vertex 32.5784 -24.9034 10
-      vertex 32.9234 -24.51 1.5
       vertex 32.9234 -24.51 10
+      vertex 33.2141 -24.075 1.5
+      vertex 33.2141 -24.075 10
     endloop
   endfacet
-  facet normal 0.751842 -0.659343 0
+  facet normal 0.831432 -0.555626 0
     outer loop
+      vertex 33.2141 -24.075 1.5
+      vertex 32.9234 -24.51 10
       vertex 32.9234 -24.51 1.5
-      vertex 32.5784 -24.9034 10
-      vertex 32.5784 -24.9034 1.5
     endloop
   endfacet
   facet normal 0 0 1
@@ -3051,20 +3051,6 @@ solid OpenSCAD_Model
       vertex -30.25 22.941 2.4
     endloop
   endfacet
-  facet normal 0.0657577 0.997836 -0
-    outer loop
-      vertex -29.75 -23.075 2.4
-      vertex -29.8805 -23.0664 10
-      vertex -29.75 -23.075 10
-    endloop
-  endfacet
-  facet normal 0.0657577 0.997836 0
-    outer loop
-      vertex -29.8805 -23.0664 10
-      vertex -29.75 -23.075 2.4
-      vertex -29.8805 -23.0664 2.4
-    endloop
-  endfacet
   facet normal -0.0657577 -0.997836 0
     outer loop
       vertex 29.75 23.075 2.4
@@ -3135,20 +3121,6 @@ solid OpenSCAD_Model
       vertex -30.75 22.075 2.4
     endloop
   endfacet
-  facet normal -0.997836 0.0657577 0
-    outer loop
-      vertex 30.7414 -22.2055 2.4
-      vertex 30.75 -22.075 10
-      vertex 30.75 -22.075 2.4
-    endloop
-  endfacet
-  facet normal -0.997836 0.0657577 0
-    outer loop
-      vertex 30.75 -22.075 10
-      vertex 30.7414 -22.2055 2.4
-      vertex 30.7414 -22.2055 10
-    endloop
-  endfacet
   facet normal -1 0 0
     outer loop
       vertex 30.75 -22.075 2.4
@@ -3177,60 +3149,88 @@ solid OpenSCAD_Model
       vertex -29.75 -23.075 2.4
     endloop
   endfacet
-  facet normal 0.658937 0.752198 -0
+  facet normal -0.896709 -0.442621 0
     outer loop
-      vertex -30.3587 -22.8683 2.4
-      vertex -30.4571 -22.7821 10
-      vertex -30.3587 -22.8683 10
+      vertex 30.6739 22.4577 2.4
+      vertex 30.616 22.575 10
+      vertex 30.616 22.575 2.4
     endloop
   endfacet
-  facet normal 0.658937 0.752198 0
+  facet normal -0.896709 -0.442621 0
     outer loop
-      vertex -30.4571 -22.7821 10
-      vertex -30.3587 -22.8683 2.4
-      vertex -30.4571 -22.7821 2.4
+      vertex 30.616 22.575 10
+      vertex 30.6739 22.4577 2.4
+      vertex 30.6739 22.4577 10
     endloop
   endfacet
-  facet normal -0.751819 -0.65937 0
+  facet normal 0.831579 -0.555406 0
     outer loop
-      vertex 30.5434 22.6837 2.4
-      vertex 30.4571 22.7821 10
-      vertex 30.4571 22.7821 2.4
-    endloop
-  endfacet
-  facet normal -0.751819 -0.65937 0
-    outer loop
-      vertex 30.4571 22.7821 10
-      vertex 30.5434 22.6837 2.4
-      vertex 30.5434 22.6837 10
-    endloop
-  endfacet
-  facet normal 0.896709 -0.442621 0
-    outer loop
-      vertex -30.6739 22.4577 10
-      vertex -30.616 22.575 2.4
       vertex -30.616 22.575 10
+      vertex -30.5434 22.6837 2.4
+      vertex -30.5434 22.6837 10
     endloop
   endfacet
-  facet normal 0.896709 -0.442621 0
+  facet normal 0.831579 -0.555406 0
     outer loop
+      vertex -30.5434 22.6837 2.4
+      vertex -30.616 22.575 10
       vertex -30.616 22.575 2.4
-      vertex -30.6739 22.4577 10
-      vertex -30.6739 22.4577 2.4
     endloop
   endfacet
-  facet normal 0.831579 0.555406 0
+  facet normal -0.831579 0.555406 0
     outer loop
-      vertex -30.5434 -22.6837 10
-      vertex -30.616 -22.575 2.4
+      vertex 30.5434 -22.6837 2.4
+      vertex 30.616 -22.575 10
+      vertex 30.616 -22.575 2.4
+    endloop
+  endfacet
+  facet normal -0.831579 0.555406 0
+    outer loop
+      vertex 30.616 -22.575 10
+      vertex 30.5434 -22.6837 2.4
+      vertex 30.5434 -22.6837 10
+    endloop
+  endfacet
+  facet normal -0.555935 0.831226 0
+    outer loop
+      vertex 30.3587 -22.8683 2.4
+      vertex 30.25 -22.941 10
+      vertex 30.3587 -22.8683 10
+    endloop
+  endfacet
+  facet normal -0.555935 0.831226 0
+    outer loop
+      vertex 30.25 -22.941 10
+      vertex 30.3587 -22.8683 2.4
+      vertex 30.25 -22.941 2.4
+    endloop
+  endfacet
+  facet normal 0.0657577 0.997836 -0
+    outer loop
+      vertex -29.75 -23.075 2.4
+      vertex -29.8805 -23.0664 10
+      vertex -29.75 -23.075 10
+    endloop
+  endfacet
+  facet normal 0.0657577 0.997836 0
+    outer loop
+      vertex -29.8805 -23.0664 10
+      vertex -29.75 -23.075 2.4
+      vertex -29.8805 -23.0664 2.4
+    endloop
+  endfacet
+  facet normal 0.896709 0.442621 0
+    outer loop
       vertex -30.616 -22.575 10
+      vertex -30.6739 -22.4577 2.4
+      vertex -30.6739 -22.4577 10
     endloop
   endfacet
-  facet normal 0.831579 0.555406 0
+  facet normal 0.896709 0.442621 0
     outer loop
+      vertex -30.6739 -22.4577 2.4
+      vertex -30.616 -22.575 10
       vertex -30.616 -22.575 2.4
-      vertex -30.5434 -22.6837 10
-      vertex -30.5434 -22.6837 2.4
     endloop
   endfacet
   facet normal -0.947066 -0.321039 0
@@ -3261,18 +3261,32 @@ solid OpenSCAD_Model
       vertex 30.7414 22.2055 10
     endloop
   endfacet
-  facet normal -0.442621 -0.896709 0
+  facet normal -0.751819 -0.65937 0
     outer loop
-      vertex 30.1327 22.9989 2.4
-      vertex 30.25 22.941 10
-      vertex 30.1327 22.9989 10
+      vertex 30.5434 22.6837 2.4
+      vertex 30.4571 22.7821 10
+      vertex 30.4571 22.7821 2.4
     endloop
   endfacet
-  facet normal -0.442621 -0.896709 -0
+  facet normal -0.751819 -0.65937 0
     outer loop
-      vertex 30.25 22.941 10
-      vertex 30.1327 22.9989 2.4
+      vertex 30.4571 22.7821 10
+      vertex 30.5434 22.6837 2.4
+      vertex 30.5434 22.6837 10
+    endloop
+  endfacet
+  facet normal -0.555935 -0.831226 0
+    outer loop
       vertex 30.25 22.941 2.4
+      vertex 30.3587 22.8683 10
+      vertex 30.25 22.941 10
+    endloop
+  endfacet
+  facet normal -0.555935 -0.831226 -0
+    outer loop
+      vertex 30.3587 22.8683 10
+      vertex 30.25 22.941 2.4
+      vertex 30.3587 22.8683 2.4
     endloop
   endfacet
   facet normal -0.321039 -0.947066 0
@@ -3289,18 +3303,18 @@ solid OpenSCAD_Model
       vertex 30.1327 22.9989 2.4
     endloop
   endfacet
-  facet normal -0.555935 -0.831226 0
+  facet normal -0.442621 -0.896709 0
     outer loop
-      vertex 30.25 22.941 2.4
-      vertex 30.3587 22.8683 10
+      vertex 30.1327 22.9989 2.4
       vertex 30.25 22.941 10
+      vertex 30.1327 22.9989 10
     endloop
   endfacet
-  facet normal -0.555935 -0.831226 -0
+  facet normal -0.442621 -0.896709 -0
     outer loop
-      vertex 30.3587 22.8683 10
+      vertex 30.25 22.941 10
+      vertex 30.1327 22.9989 2.4
       vertex 30.25 22.941 2.4
-      vertex 30.3587 22.8683 2.4
     endloop
   endfacet
   facet normal 0.19494 -0.980815 0
@@ -3359,32 +3373,18 @@ solid OpenSCAD_Model
       vertex -30.3587 22.8683 2.4
     endloop
   endfacet
-  facet normal 0.831579 -0.555406 0
+  facet normal 0.896709 -0.442621 0
     outer loop
-      vertex -30.616 22.575 10
-      vertex -30.5434 22.6837 2.4
-      vertex -30.5434 22.6837 10
-    endloop
-  endfacet
-  facet normal 0.831579 -0.555406 0
-    outer loop
-      vertex -30.5434 22.6837 2.4
-      vertex -30.616 22.575 10
+      vertex -30.6739 22.4577 10
       vertex -30.616 22.575 2.4
+      vertex -30.616 22.575 10
     endloop
   endfacet
-  facet normal 0.980815 -0.19494 0
+  facet normal 0.896709 -0.442621 0
     outer loop
-      vertex -30.7414 22.2055 10
-      vertex -30.7159 22.3338 2.4
-      vertex -30.7159 22.3338 10
-    endloop
-  endfacet
-  facet normal 0.980815 -0.19494 0
-    outer loop
-      vertex -30.7159 22.3338 2.4
-      vertex -30.7414 22.2055 10
-      vertex -30.7414 22.2055 2.4
+      vertex -30.616 22.575 2.4
+      vertex -30.6739 22.4577 10
+      vertex -30.6739 22.4577 2.4
     endloop
   endfacet
   facet normal 0.947066 -0.321039 0
@@ -3401,6 +3401,20 @@ solid OpenSCAD_Model
       vertex -30.7159 22.3338 2.4
     endloop
   endfacet
+  facet normal 0.980815 -0.19494 0
+    outer loop
+      vertex -30.7414 22.2055 10
+      vertex -30.7159 22.3338 2.4
+      vertex -30.7159 22.3338 10
+    endloop
+  endfacet
+  facet normal 0.980815 -0.19494 0
+    outer loop
+      vertex -30.7159 22.3338 2.4
+      vertex -30.7414 22.2055 10
+      vertex -30.7414 22.2055 2.4
+    endloop
+  endfacet
   facet normal -0.658937 0.752198 0
     outer loop
       vertex 30.4571 -22.7821 2.4
@@ -3415,18 +3429,18 @@ solid OpenSCAD_Model
       vertex 30.3587 -22.8683 2.4
     endloop
   endfacet
-  facet normal -0.831579 0.555406 0
+  facet normal -0.751819 0.65937 0
     outer loop
+      vertex 30.4571 -22.7821 2.4
+      vertex 30.5434 -22.6837 10
       vertex 30.5434 -22.6837 2.4
-      vertex 30.616 -22.575 10
-      vertex 30.616 -22.575 2.4
     endloop
   endfacet
-  facet normal -0.831579 0.555406 0
+  facet normal -0.751819 0.65937 0
     outer loop
-      vertex 30.616 -22.575 10
-      vertex 30.5434 -22.6837 2.4
       vertex 30.5434 -22.6837 10
+      vertex 30.4571 -22.7821 2.4
+      vertex 30.4571 -22.7821 10
     endloop
   endfacet
   facet normal -0.947066 0.321039 0
@@ -3443,6 +3457,48 @@ solid OpenSCAD_Model
       vertex 30.6739 -22.4577 10
     endloop
   endfacet
+  facet normal -0.997836 0.0657577 0
+    outer loop
+      vertex 30.7414 -22.2055 2.4
+      vertex 30.75 -22.075 10
+      vertex 30.75 -22.075 2.4
+    endloop
+  endfacet
+  facet normal -0.997836 0.0657577 0
+    outer loop
+      vertex 30.75 -22.075 10
+      vertex 30.7414 -22.2055 2.4
+      vertex 30.7414 -22.2055 10
+    endloop
+  endfacet
+  facet normal -0.980815 0.19494 0
+    outer loop
+      vertex 30.7159 -22.3338 2.4
+      vertex 30.7414 -22.2055 10
+      vertex 30.7414 -22.2055 2.4
+    endloop
+  endfacet
+  facet normal -0.980815 0.19494 0
+    outer loop
+      vertex 30.7414 -22.2055 10
+      vertex 30.7159 -22.3338 2.4
+      vertex 30.7159 -22.3338 10
+    endloop
+  endfacet
+  facet normal -0.19494 0.980815 0
+    outer loop
+      vertex 30.0088 -23.0409 2.4
+      vertex 29.8805 -23.0664 10
+      vertex 30.0088 -23.0409 10
+    endloop
+  endfacet
+  facet normal -0.19494 0.980815 0
+    outer loop
+      vertex 29.8805 -23.0664 10
+      vertex 30.0088 -23.0409 2.4
+      vertex 29.8805 -23.0664 2.4
+    endloop
+  endfacet
   facet normal -0.0657577 0.997836 0
     outer loop
       vertex 29.8805 -23.0664 2.4
@@ -3455,6 +3511,20 @@ solid OpenSCAD_Model
       vertex 29.75 -23.075 10
       vertex 29.8805 -23.0664 2.4
       vertex 29.75 -23.075 2.4
+    endloop
+  endfacet
+  facet normal 0.321039 0.947066 -0
+    outer loop
+      vertex -30.0088 -23.0409 2.4
+      vertex -30.1327 -22.9989 10
+      vertex -30.0088 -23.0409 10
+    endloop
+  endfacet
+  facet normal 0.321039 0.947066 0
+    outer loop
+      vertex -30.1327 -22.9989 10
+      vertex -30.0088 -23.0409 2.4
+      vertex -30.1327 -22.9989 2.4
     endloop
   endfacet
   facet normal 0.555935 0.831226 -0
@@ -3499,6 +3569,20 @@ solid OpenSCAD_Model
       vertex -30.4571 -22.7821 2.4
     endloop
   endfacet
+  facet normal 0.658937 0.752198 -0
+    outer loop
+      vertex -30.3587 -22.8683 2.4
+      vertex -30.4571 -22.7821 10
+      vertex -30.3587 -22.8683 10
+    endloop
+  endfacet
+  facet normal 0.658937 0.752198 0
+    outer loop
+      vertex -30.4571 -22.7821 10
+      vertex -30.3587 -22.8683 2.4
+      vertex -30.4571 -22.7821 2.4
+    endloop
+  endfacet
   facet normal 0.947066 0.321039 0
     outer loop
       vertex -30.6739 -22.4577 10
@@ -3525,34 +3609,6 @@ solid OpenSCAD_Model
       vertex 30.5434 22.6837 10
       vertex 30.616 22.575 2.4
       vertex 30.616 22.575 10
-    endloop
-  endfacet
-  facet normal -0.896709 -0.442621 0
-    outer loop
-      vertex 30.6739 22.4577 2.4
-      vertex 30.616 22.575 10
-      vertex 30.616 22.575 2.4
-    endloop
-  endfacet
-  facet normal -0.896709 -0.442621 0
-    outer loop
-      vertex 30.616 22.575 10
-      vertex 30.6739 22.4577 2.4
-      vertex 30.6739 22.4577 10
-    endloop
-  endfacet
-  facet normal -0.19494 -0.980815 0
-    outer loop
-      vertex 29.8805 23.0664 2.4
-      vertex 30.0088 23.0409 10
-      vertex 29.8805 23.0664 10
-    endloop
-  endfacet
-  facet normal -0.19494 -0.980815 -0
-    outer loop
-      vertex 30.0088 23.0409 10
-      vertex 29.8805 23.0664 2.4
-      vertex 30.0088 23.0409 2.4
     endloop
   endfacet
   facet normal -0.658937 -0.752198 0
@@ -3597,20 +3653,6 @@ solid OpenSCAD_Model
       vertex -30.1327 22.9989 2.4
     endloop
   endfacet
-  facet normal -0.751819 0.65937 0
-    outer loop
-      vertex 30.4571 -22.7821 2.4
-      vertex 30.5434 -22.6837 10
-      vertex 30.5434 -22.6837 2.4
-    endloop
-  endfacet
-  facet normal -0.751819 0.65937 0
-    outer loop
-      vertex 30.5434 -22.6837 10
-      vertex 30.4571 -22.7821 2.4
-      vertex 30.4571 -22.7821 10
-    endloop
-  endfacet
   facet normal -0.896709 0.442621 0
     outer loop
       vertex 30.616 -22.575 2.4
@@ -3625,34 +3667,6 @@ solid OpenSCAD_Model
       vertex 30.616 -22.575 10
     endloop
   endfacet
-  facet normal -0.980815 0.19494 0
-    outer loop
-      vertex 30.7159 -22.3338 2.4
-      vertex 30.7414 -22.2055 10
-      vertex 30.7414 -22.2055 2.4
-    endloop
-  endfacet
-  facet normal -0.980815 0.19494 0
-    outer loop
-      vertex 30.7414 -22.2055 10
-      vertex 30.7159 -22.3338 2.4
-      vertex 30.7159 -22.3338 10
-    endloop
-  endfacet
-  facet normal -0.19494 0.980815 0
-    outer loop
-      vertex 30.0088 -23.0409 2.4
-      vertex 29.8805 -23.0664 10
-      vertex 30.0088 -23.0409 10
-    endloop
-  endfacet
-  facet normal -0.19494 0.980815 0
-    outer loop
-      vertex 29.8805 -23.0664 10
-      vertex 30.0088 -23.0409 2.4
-      vertex 29.8805 -23.0664 2.4
-    endloop
-  endfacet
   facet normal -0.321039 0.947066 0
     outer loop
       vertex 30.1327 -22.9989 2.4
@@ -3665,20 +3679,6 @@ solid OpenSCAD_Model
       vertex 30.0088 -23.0409 10
       vertex 30.1327 -22.9989 2.4
       vertex 30.0088 -23.0409 2.4
-    endloop
-  endfacet
-  facet normal -0.555935 0.831226 0
-    outer loop
-      vertex 30.3587 -22.8683 2.4
-      vertex 30.25 -22.941 10
-      vertex 30.3587 -22.8683 10
-    endloop
-  endfacet
-  facet normal -0.555935 0.831226 0
-    outer loop
-      vertex 30.25 -22.941 10
-      vertex 30.3587 -22.8683 2.4
-      vertex 30.25 -22.941 2.4
     endloop
   endfacet
   facet normal 0.442621 0.896709 -0
@@ -3695,18 +3695,18 @@ solid OpenSCAD_Model
       vertex -30.25 -22.941 2.4
     endloop
   endfacet
-  facet normal 0.896709 0.442621 0
+  facet normal -0.19494 -0.980815 0
     outer loop
-      vertex -30.616 -22.575 10
-      vertex -30.6739 -22.4577 2.4
-      vertex -30.6739 -22.4577 10
+      vertex 29.8805 23.0664 2.4
+      vertex 30.0088 23.0409 10
+      vertex 29.8805 23.0664 10
     endloop
   endfacet
-  facet normal 0.896709 0.442621 0
+  facet normal -0.19494 -0.980815 -0
     outer loop
-      vertex -30.6739 -22.4577 2.4
-      vertex -30.616 -22.575 10
-      vertex -30.616 -22.575 2.4
+      vertex 30.0088 23.0409 10
+      vertex 29.8805 23.0664 2.4
+      vertex 30.0088 23.0409 2.4
     endloop
   endfacet
   facet normal -0.442621 0.896709 0
@@ -3723,18 +3723,18 @@ solid OpenSCAD_Model
       vertex 30.1327 -22.9989 2.4
     endloop
   endfacet
-  facet normal 0.321039 0.947066 -0
+  facet normal 0.831579 0.555406 0
     outer loop
-      vertex -30.0088 -23.0409 2.4
-      vertex -30.1327 -22.9989 10
-      vertex -30.0088 -23.0409 10
+      vertex -30.5434 -22.6837 10
+      vertex -30.616 -22.575 2.4
+      vertex -30.616 -22.575 10
     endloop
   endfacet
-  facet normal 0.321039 0.947066 0
+  facet normal 0.831579 0.555406 0
     outer loop
-      vertex -30.1327 -22.9989 10
-      vertex -30.0088 -23.0409 2.4
-      vertex -30.1327 -22.9989 2.4
+      vertex -30.616 -22.575 2.4
+      vertex -30.5434 -22.6837 10
+      vertex -30.5434 -22.6837 2.4
     endloop
   endfacet
   facet normal 0.997859 0.0654055 0
@@ -5488,6 +5488,8 @@ solid OpenSCAD_Model
     endloop
   endfacet
   facet normal 0.442365 -0.896835 0
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+=======
     outer loop
       vertex -24.2723 -21.306 2.4
       vertex -23.85 -21.0977 7.4
@@ -5501,6 +5503,50 @@ solid OpenSCAD_Model
       vertex -23.85 -21.0977 2.4
     endloop
   endfacet
+  facet normal -0.946993 0.321256 0
+    outer loop
+      vertex -29.1273 -17.0483 2.4
+      vertex -28.976 -16.6023 7.4
+      vertex -28.976 -16.6023 2.4
+    endloop
+  endfacet
+  facet normal -0.946993 0.321256 0
+    outer loop
+      vertex -28.976 -16.6023 7.4
+      vertex -29.1273 -17.0483 2.4
+      vertex -29.1273 -17.0483 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex -22.7939 -20.1715 7.4
+      vertex -22.5323 -19.78 2.4
+      vertex -22.5323 -19.78 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex -22.5323 -19.78 2.4
+      vertex -22.7939 -20.1715 7.4
+      vertex -22.7939 -20.1715 2.4
+    endloop
+  endfacet
+  facet normal 0.997859 -0.0654055 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    outer loop
+      vertex -24.2723 -21.306 2.4
+      vertex -23.85 -21.0977 7.4
+      vertex -24.2723 -21.306 7.4
+    endloop
+  endfacet
+  facet normal 0.442365 -0.896835 0
+    outer loop
+      vertex -23.85 -21.0977 7.4
+      vertex -24.2723 -21.306 2.4
+      vertex -23.85 -21.0977 2.4
+    endloop
+  endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal -0.946993 0.321256 0
     outer loop
       vertex -29.1273 -17.0483 2.4
@@ -5552,6 +5598,17 @@ solid OpenSCAD_Model
   endfacet
   facet normal -0.321256 -0.946993 -0
     outer loop
+=======
+  facet normal -0.321256 -0.946993 0
+    outer loop
+      vertex -27.0277 -21.306 2.4
+      vertex -26.5817 -21.4573 7.4
+      vertex -27.0277 -21.306 7.4
+    endloop
+  endfacet
+  facet normal -0.321256 -0.946993 -0
+    outer loop
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
       vertex -26.5817 -21.4573 7.4
       vertex -27.0277 -21.306 2.4
       vertex -26.5817 -21.4573 2.4
@@ -5795,6 +5852,7 @@ solid OpenSCAD_Model
       vertex -25.4934 -16.7903 2.4
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.751787 0.659406 0
     outer loop
       vertex -26.4985 -18.8285 7.4
@@ -5807,6 +5865,20 @@ solid OpenSCAD_Model
       vertex -26.602 -18.7105 2.4
       vertex -26.4985 -18.8285 7.4
       vertex -26.4985 -18.8285 2.4
+=======
+  facet normal 0.0656309 0.997844 -0
+    outer loop
+      vertex -25.65 -19.18 2.4
+      vertex -25.8066 -19.1697 7.4
+      vertex -25.65 -19.18 7.4
+    endloop
+  endfacet
+  facet normal 0.0656309 0.997844 0
+    outer loop
+      vertex -25.8066 -19.1697 7.4
+      vertex -25.65 -19.18 2.4
+      vertex -25.8066 -19.1697 2.4
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
     endloop
   endfacet
   facet normal -0.751787 -0.659406 0
@@ -6299,6 +6371,7 @@ solid OpenSCAD_Model
       vertex -26.1092 -19.0887 2.4
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.0656309 0.997844 -0
     outer loop
       vertex -25.65 -19.18 2.4
@@ -6313,6 +6386,8 @@ solid OpenSCAD_Model
       vertex -25.8066 -19.1697 2.4
     endloop
   endfacet
+=======
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
   facet normal 0.831462 0.555582 0
     outer loop
       vertex -26.602 -18.7105 7.4
@@ -6425,6 +6500,20 @@ solid OpenSCAD_Model
       vertex -25.9606 -19.1391 2.4
     endloop
   endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex -26.4985 -18.8285 7.4
+      vertex -26.602 -18.7105 2.4
+      vertex -26.602 -18.7105 7.4
+    endloop
+  endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex -26.602 -18.7105 2.4
+      vertex -26.4985 -18.8285 7.4
+      vertex -26.4985 -18.8285 2.4
+    endloop
+  endfacet
   facet normal 0.997859 0.0654055 0
     outer loop
       vertex 29.25 -17.98 7.4
@@ -8176,6 +8265,8 @@ solid OpenSCAD_Model
     endloop
   endfacet
   facet normal 0.442365 -0.896835 0
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+=======
     outer loop
       vertex 27.0277 -21.306 2.4
       vertex 27.45 -21.0977 7.4
@@ -8189,6 +8280,50 @@ solid OpenSCAD_Model
       vertex 27.45 -21.0977 2.4
     endloop
   endfacet
+  facet normal -0.946993 0.321256 0
+    outer loop
+      vertex 22.1727 -17.0483 2.4
+      vertex 22.324 -16.6023 7.4
+      vertex 22.324 -16.6023 2.4
+    endloop
+  endfacet
+  facet normal -0.946993 0.321256 0
+    outer loop
+      vertex 22.324 -16.6023 7.4
+      vertex 22.1727 -17.0483 2.4
+      vertex 22.1727 -17.0483 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex 28.5061 -20.1715 7.4
+      vertex 28.7677 -19.78 2.4
+      vertex 28.7677 -19.78 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex 28.7677 -19.78 2.4
+      vertex 28.5061 -20.1715 7.4
+      vertex 28.5061 -20.1715 2.4
+    endloop
+  endfacet
+  facet normal 0.997859 -0.0654055 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    outer loop
+      vertex 27.0277 -21.306 2.4
+      vertex 27.45 -21.0977 7.4
+      vertex 27.0277 -21.306 7.4
+    endloop
+  endfacet
+  facet normal 0.442365 -0.896835 0
+    outer loop
+      vertex 27.45 -21.0977 7.4
+      vertex 27.0277 -21.306 2.4
+      vertex 27.45 -21.0977 2.4
+    endloop
+  endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal -0.946993 0.321256 0
     outer loop
       vertex 22.1727 -17.0483 2.4
@@ -8240,6 +8375,17 @@ solid OpenSCAD_Model
   endfacet
   facet normal -0.321256 -0.946993 -0
     outer loop
+=======
+  facet normal -0.321256 -0.946993 0
+    outer loop
+      vertex 24.2723 -21.306 2.4
+      vertex 24.7183 -21.4573 7.4
+      vertex 24.2723 -21.306 7.4
+    endloop
+  endfacet
+  facet normal -0.321256 -0.946993 -0
+    outer loop
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
       vertex 24.7183 -21.4573 7.4
       vertex 24.2723 -21.306 2.4
       vertex 24.7183 -21.4573 2.4
@@ -8483,6 +8629,7 @@ solid OpenSCAD_Model
       vertex 25.8066 -16.7903 2.4
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.751787 0.659406 0
     outer loop
       vertex 24.8015 -18.8285 7.4
@@ -8495,6 +8642,20 @@ solid OpenSCAD_Model
       vertex 24.698 -18.7105 2.4
       vertex 24.8015 -18.8285 7.4
       vertex 24.8015 -18.8285 2.4
+=======
+  facet normal 0.0656309 0.997844 -0
+    outer loop
+      vertex 25.65 -19.18 2.4
+      vertex 25.4934 -19.1697 7.4
+      vertex 25.65 -19.18 7.4
+    endloop
+  endfacet
+  facet normal 0.0656309 0.997844 0
+    outer loop
+      vertex 25.4934 -19.1697 7.4
+      vertex 25.65 -19.18 2.4
+      vertex 25.4934 -19.1697 2.4
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
     endloop
   endfacet
   facet normal -0.751787 -0.659406 0
@@ -8987,6 +9148,7 @@ solid OpenSCAD_Model
       vertex 25.1908 -19.0887 2.4
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.0656309 0.997844 -0
     outer loop
       vertex 25.65 -19.18 2.4
@@ -9001,6 +9163,8 @@ solid OpenSCAD_Model
       vertex 25.4934 -19.1697 2.4
     endloop
   endfacet
+=======
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
   facet normal 0.831462 0.555582 0
     outer loop
       vertex 24.698 -18.7105 7.4
@@ -9113,6 +9277,20 @@ solid OpenSCAD_Model
       vertex 25.3394 -19.1391 2.4
     endloop
   endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex 24.8015 -18.8285 7.4
+      vertex 24.698 -18.7105 2.4
+      vertex 24.698 -18.7105 7.4
+    endloop
+  endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex 24.698 -18.7105 2.4
+      vertex 24.8015 -18.8285 7.4
+      vertex 24.8015 -18.8285 2.4
+    endloop
+  endfacet
   facet normal 0.997859 0.0654055 0
     outer loop
       vertex -22.05 17.98 7.4
@@ -10864,6 +11042,8 @@ solid OpenSCAD_Model
     endloop
   endfacet
   facet normal 0.442365 -0.896835 0
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+=======
     outer loop
       vertex -24.2723 14.654 2.4
       vertex -23.85 14.8623 7.4
@@ -10877,6 +11057,50 @@ solid OpenSCAD_Model
       vertex -23.85 14.8623 2.4
     endloop
   endfacet
+  facet normal -0.946993 0.321256 0
+    outer loop
+      vertex -29.1273 18.9117 2.4
+      vertex -28.976 19.3577 7.4
+      vertex -28.976 19.3577 2.4
+    endloop
+  endfacet
+  facet normal -0.946993 0.321256 0
+    outer loop
+      vertex -28.976 19.3577 7.4
+      vertex -29.1273 18.9117 2.4
+      vertex -29.1273 18.9117 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex -22.7939 15.7885 7.4
+      vertex -22.5323 16.18 2.4
+      vertex -22.5323 16.18 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex -22.5323 16.18 2.4
+      vertex -22.7939 15.7885 7.4
+      vertex -22.7939 15.7885 2.4
+    endloop
+  endfacet
+  facet normal 0.997859 -0.0654055 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    outer loop
+      vertex -24.2723 14.654 2.4
+      vertex -23.85 14.8623 7.4
+      vertex -24.2723 14.654 7.4
+    endloop
+  endfacet
+  facet normal 0.442365 -0.896835 0
+    outer loop
+      vertex -23.85 14.8623 7.4
+      vertex -24.2723 14.654 2.4
+      vertex -23.85 14.8623 2.4
+    endloop
+  endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal -0.946993 0.321256 0
     outer loop
       vertex -29.1273 18.9117 2.4
@@ -10928,6 +11152,17 @@ solid OpenSCAD_Model
   endfacet
   facet normal -0.321256 -0.946993 -0
     outer loop
+=======
+  facet normal -0.321256 -0.946993 0
+    outer loop
+      vertex -27.0277 14.654 2.4
+      vertex -26.5817 14.5027 7.4
+      vertex -27.0277 14.654 7.4
+    endloop
+  endfacet
+  facet normal -0.321256 -0.946993 -0
+    outer loop
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
       vertex -26.5817 14.5027 7.4
       vertex -27.0277 14.654 2.4
       vertex -26.5817 14.5027 2.4
@@ -11171,6 +11406,7 @@ solid OpenSCAD_Model
       vertex -25.4934 19.1697 2.4
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.751787 0.659406 0
     outer loop
       vertex -26.4985 17.1315 7.4
@@ -11183,6 +11419,20 @@ solid OpenSCAD_Model
       vertex -26.602 17.2495 2.4
       vertex -26.4985 17.1315 7.4
       vertex -26.4985 17.1315 2.4
+=======
+  facet normal 0.0656309 0.997844 -0
+    outer loop
+      vertex -25.65 16.78 2.4
+      vertex -25.8066 16.7903 7.4
+      vertex -25.65 16.78 7.4
+    endloop
+  endfacet
+  facet normal 0.0656309 0.997844 0
+    outer loop
+      vertex -25.8066 16.7903 7.4
+      vertex -25.65 16.78 2.4
+      vertex -25.8066 16.7903 2.4
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
     endloop
   endfacet
   facet normal -0.751787 -0.659406 0
@@ -11675,6 +11925,7 @@ solid OpenSCAD_Model
       vertex -26.1092 16.8713 2.4
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.0656309 0.997844 -0
     outer loop
       vertex -25.65 16.78 2.4
@@ -11689,6 +11940,8 @@ solid OpenSCAD_Model
       vertex -25.8066 16.7903 2.4
     endloop
   endfacet
+=======
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
   facet normal 0.831462 0.555582 0
     outer loop
       vertex -26.602 17.2495 7.4
@@ -11799,6 +12052,20 @@ solid OpenSCAD_Model
       vertex -25.9606 16.8209 7.4
       vertex -25.8066 16.7903 2.4
       vertex -25.9606 16.8209 2.4
+    endloop
+  endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex -26.4985 17.1315 7.4
+      vertex -26.602 17.2495 2.4
+      vertex -26.602 17.2495 7.4
+    endloop
+  endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex -26.602 17.2495 2.4
+      vertex -26.4985 17.1315 7.4
+      vertex -26.4985 17.1315 2.4
     endloop
   endfacet
   facet normal 0.997859 0.0654055 0
@@ -13552,6 +13819,8 @@ solid OpenSCAD_Model
     endloop
   endfacet
   facet normal 0.442365 -0.896835 0
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+=======
     outer loop
       vertex 27.0277 14.654 2.4
       vertex 27.45 14.8623 7.4
@@ -13565,6 +13834,50 @@ solid OpenSCAD_Model
       vertex 27.45 14.8623 2.4
     endloop
   endfacet
+  facet normal -0.946993 0.321256 0
+    outer loop
+      vertex 22.1727 18.9117 2.4
+      vertex 22.324 19.3577 7.4
+      vertex 22.324 19.3577 2.4
+    endloop
+  endfacet
+  facet normal -0.946993 0.321256 0
+    outer loop
+      vertex 22.324 19.3577 7.4
+      vertex 22.1727 18.9117 2.4
+      vertex 22.1727 18.9117 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex 28.5061 15.7885 7.4
+      vertex 28.7677 16.18 2.4
+      vertex 28.7677 16.18 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex 28.7677 16.18 2.4
+      vertex 28.5061 15.7885 7.4
+      vertex 28.5061 15.7885 2.4
+    endloop
+  endfacet
+  facet normal 0.997859 -0.0654055 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    outer loop
+      vertex 27.0277 14.654 2.4
+      vertex 27.45 14.8623 7.4
+      vertex 27.0277 14.654 7.4
+    endloop
+  endfacet
+  facet normal 0.442365 -0.896835 0
+    outer loop
+      vertex 27.45 14.8623 7.4
+      vertex 27.0277 14.654 2.4
+      vertex 27.45 14.8623 2.4
+    endloop
+  endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal -0.946993 0.321256 0
     outer loop
       vertex 22.1727 18.9117 2.4
@@ -13616,6 +13929,17 @@ solid OpenSCAD_Model
   endfacet
   facet normal -0.321256 -0.946993 -0
     outer loop
+=======
+  facet normal -0.321256 -0.946993 0
+    outer loop
+      vertex 24.2723 14.654 2.4
+      vertex 24.7183 14.5027 7.4
+      vertex 24.2723 14.654 7.4
+    endloop
+  endfacet
+  facet normal -0.321256 -0.946993 -0
+    outer loop
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
       vertex 24.7183 14.5027 7.4
       vertex 24.2723 14.654 2.4
       vertex 24.7183 14.5027 2.4
@@ -13859,6 +14183,7 @@ solid OpenSCAD_Model
       vertex 25.8066 19.1697 2.4
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.751787 0.659406 0
     outer loop
       vertex 24.8015 17.1315 7.4
@@ -13871,6 +14196,20 @@ solid OpenSCAD_Model
       vertex 24.698 17.2495 2.4
       vertex 24.8015 17.1315 7.4
       vertex 24.8015 17.1315 2.4
+=======
+  facet normal 0.0656309 0.997844 -0
+    outer loop
+      vertex 25.65 16.78 2.4
+      vertex 25.4934 16.7903 7.4
+      vertex 25.65 16.78 7.4
+    endloop
+  endfacet
+  facet normal 0.0656309 0.997844 0
+    outer loop
+      vertex 25.4934 16.7903 7.4
+      vertex 25.65 16.78 2.4
+      vertex 25.4934 16.7903 2.4
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
     endloop
   endfacet
   facet normal -0.751787 -0.659406 0
@@ -14363,6 +14702,7 @@ solid OpenSCAD_Model
       vertex 25.1908 16.8713 2.4
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.0656309 0.997844 -0
     outer loop
       vertex 25.65 16.78 2.4
@@ -14377,6 +14717,8 @@ solid OpenSCAD_Model
       vertex 25.4934 16.7903 2.4
     endloop
   endfacet
+=======
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
   facet normal 0.831462 0.555582 0
     outer loop
       vertex 24.698 17.2495 7.4
@@ -14487,6 +14829,20 @@ solid OpenSCAD_Model
       vertex 25.3394 16.8209 7.4
       vertex 25.4934 16.7903 2.4
       vertex 25.3394 16.8209 2.4
+    endloop
+  endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex 24.8015 17.1315 7.4
+      vertex 24.698 17.2495 2.4
+      vertex 24.698 17.2495 7.4
+    endloop
+  endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex 24.698 17.2495 2.4
+      vertex 24.8015 17.1315 7.4
+      vertex 24.8015 17.1315 2.4
     endloop
   endfacet
   facet normal 1 0 0
@@ -14585,6 +14941,20 @@ solid OpenSCAD_Model
       vertex -5.3 22.075 2.4
       vertex 5.3 22.075 2.04
       vertex -5.3 22.075 2.04
+    endloop
+  endfacet
+  facet normal 0.0653646 0.997861 -0
+    outer loop
+      vertex 79.0221 26.0408 0
+      vertex 78.5 26.075 1.5
+      vertex 79.0221 26.0408 1.5
+    endloop
+  endfacet
+  facet normal 0.0653646 0.997861 0
+    outer loop
+      vertex 78.5 26.075 1.5
+      vertex 79.0221 26.0408 0
+      vertex 78.5 26.075 0
     endloop
   endfacet
   facet normal 0 0 1
@@ -15679,6 +16049,7 @@ solid OpenSCAD_Model
       vertex 82.5 22.075 0
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.195124 -0.980779 0
     outer loop
       vertex 79.0221 -26.0408 0
@@ -15707,6 +16078,8 @@ solid OpenSCAD_Model
       vertex 78.5 26.075 0
     endloop
   endfacet
+=======
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
   facet normal 0.442238 0.896898 -0
     outer loop
       vertex 80.5 25.5391 0
@@ -15945,6 +16318,23 @@ solid OpenSCAD_Model
       vertex 80.0307 -25.7705 0
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+=======
+  facet normal 0.195124 -0.980779 0
+    outer loop
+      vertex 79.0221 -26.0408 0
+      vertex 79.5353 -25.9387 1.5
+      vertex 79.0221 -26.0408 1.5
+    endloop
+  endfacet
+  facet normal 0.195124 -0.980779 0
+    outer loop
+      vertex 79.5353 -25.9387 1.5
+      vertex 79.0221 -26.0408 0
+      vertex 79.5353 -25.9387 0
+    endloop
+  endfacet
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
   facet normal 0.997861 -0.0653646 0
     outer loop
       vertex 82.4658 -22.5971 1.5
@@ -16122,51 +16512,42 @@ solid OpenSCAD_Model
   endfacet
   facet normal 0 1 0
     outer loop
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
       vertex 60.8 -18.37 1.5
       vertex 73.2678 -18.37 0
       vertex 60.8 -18.37 0
+=======
+      vertex 75.5897 -17.8234 1.5
+      vertex 75.6 -17.98 0
+      vertex 75.6 -17.98 1.5
     endloop
   endfacet
-  facet normal -0.555582 -0.831462 0
+  facet normal 0.0656309 0.997844 -0
     outer loop
-      vertex 75 -16.9408 0
-      vertex 75.1305 -17.028 1.5
-      vertex 75 -16.9408 1.5
+      vertex 74.4 -19.18 0
+      vertex 74.2434 -19.1697 1.5
+      vertex 74.4 -19.18 1.5
     endloop
   endfacet
-  facet normal -0.555582 -0.831462 -0
+  facet normal 0.0656309 0.997844 0
     outer loop
-      vertex 75.1305 -17.028 1.5
-      vertex 75 -16.9408 0
+      vertex 74.2434 -19.1697 1.5
+      vertex 74.4 -19.18 0
+      vertex 74.2434 -19.1697 0
+    endloop
+  endfacet
+  facet normal -0.659406 -0.751787 0
+    outer loop
       vertex 75.1305 -17.028 0
+      vertex 75.2485 -17.1315 1.5
+      vertex 75.1305 -17.028 1.5
     endloop
   endfacet
-  facet normal -0.980825 0.194891 0
+  facet normal -0.659406 -0.751787 -0
     outer loop
-      vertex 75.5591 -18.2906 0
-      vertex 75.5897 -18.1366 1.5
-      vertex 75.5897 -18.1366 0
-    endloop
-  endfacet
-  facet normal -0.980825 0.194891 0
-    outer loop
-      vertex 75.5897 -18.1366 1.5
-      vertex 75.5591 -18.2906 0
-      vertex 75.5591 -18.2906 1.5
-    endloop
-  endfacet
-  facet normal 0.321194 0.947013 -0
-    outer loop
-      vertex 74.0894 -19.1391 0
-      vertex 73.9408 -19.0887 1.5
-      vertex 74.0894 -19.1391 1.5
-    endloop
-  endfacet
-  facet normal 0.321194 0.947013 0
-    outer loop
-      vertex 73.9408 -19.0887 1.5
-      vertex 74.0894 -19.1391 0
-      vertex 73.9408 -19.0887 0
+      vertex 75.2485 -17.1315 1.5
+      vertex 75.1305 -17.028 0
+      vertex 75.2485 -17.1315 0
     endloop
   endfacet
   facet normal -0.896708 -0.442622 0
@@ -16197,34 +16578,6 @@ solid OpenSCAD_Model
       vertex 75.5897 -17.8234 1.5
     endloop
   endfacet
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex 75.4392 -17.38 0
-      vertex 75.352 -17.2495 1.5
-      vertex 75.352 -17.2495 0
-    endloop
-  endfacet
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex 75.352 -17.2495 1.5
-      vertex 75.4392 -17.38 0
-      vertex 75.4392 -17.38 1.5
-    endloop
-  endfacet
-  facet normal -0.659406 -0.751787 0
-    outer loop
-      vertex 75.1305 -17.028 0
-      vertex 75.2485 -17.1315 1.5
-      vertex 75.1305 -17.028 1.5
-    endloop
-  endfacet
-  facet normal -0.659406 -0.751787 -0
-    outer loop
-      vertex 75.2485 -17.1315 1.5
-      vertex 75.1305 -17.028 0
-      vertex 75.2485 -17.1315 0
-    endloop
-  endfacet
   facet normal -0.442622 -0.896708 0
     outer loop
       vertex 74.8592 -16.8713 0
@@ -16251,6 +16604,201 @@ solid OpenSCAD_Model
       vertex 74.8592 -16.8713 1.5
       vertex 74.8 -16.8512 0
       vertex 74.8592 -16.8713 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    endloop
+  endfacet
+  facet normal -0.555582 -0.831462 0
+    outer loop
+      vertex 75 -16.9408 0
+      vertex 75.1305 -17.028 1.5
+      vertex 75 -16.9408 1.5
+    endloop
+  endfacet
+  facet normal -0.555582 -0.831462 -0
+    outer loop
+      vertex 75.1305 -17.028 1.5
+      vertex 75 -16.9408 0
+      vertex 75.1305 -17.028 0
+    endloop
+  endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+=======
+  facet normal -0.896708 0.442622 0
+    outer loop
+      vertex 75.4392 -18.58 0
+      vertex 75.5087 -18.4392 1.5
+      vertex 75.5087 -18.4392 0
+    endloop
+  endfacet
+  facet normal -0.896708 0.442622 0
+    outer loop
+      vertex 75.5087 -18.4392 1.5
+      vertex 75.4392 -18.58 0
+      vertex 75.4392 -18.58 1.5
+    endloop
+  endfacet
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+  facet normal -0.980825 0.194891 0
+    outer loop
+      vertex 75.5591 -18.2906 0
+      vertex 75.5897 -18.1366 1.5
+      vertex 75.5897 -18.1366 0
+    endloop
+  endfacet
+  facet normal -0.980825 0.194891 0
+    outer loop
+      vertex 75.5897 -18.1366 1.5
+      vertex 75.5591 -18.2906 0
+      vertex 75.5591 -18.2906 1.5
+    endloop
+  endfacet
+  facet normal 0.442622 0.896708 -0
+    outer loop
+      vertex 73.9408 -19.0887 0
+      vertex 73.8 -19.0192 1.5
+      vertex 73.9408 -19.0887 1.5
+    endloop
+  endfacet
+  facet normal 0.442622 0.896708 0
+    outer loop
+      vertex 73.8 -19.0192 1.5
+      vertex 73.9408 -19.0887 0
+      vertex 73.8 -19.0192 0
+    endloop
+  endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+  facet normal -0.896708 -0.442622 0
+=======
+  facet normal 0.659406 0.751787 -0
+    outer loop
+      vertex 73.6695 -18.932 0
+      vertex 73.5515 -18.8285 1.5
+      vertex 73.6695 -18.932 1.5
+    endloop
+  endfacet
+  facet normal 0.659406 0.751787 0
+    outer loop
+      vertex 73.5515 -18.8285 1.5
+      vertex 73.6695 -18.932 0
+      vertex 73.5515 -18.8285 0
+    endloop
+  endfacet
+  facet normal 0.321194 0.947013 -0
+    outer loop
+      vertex 74.0894 -19.1391 0
+      vertex 73.9408 -19.0887 1.5
+      vertex 74.0894 -19.1391 1.5
+    endloop
+  endfacet
+  facet normal 0.321194 0.947013 0
+    outer loop
+      vertex 73.9408 -19.0887 1.5
+      vertex 74.0894 -19.1391 0
+      vertex 73.9408 -19.0887 0
+    endloop
+  endfacet
+  facet normal 0.751787 0.659406 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    outer loop
+      vertex 73.5515 -18.8285 1.5
+      vertex 73.448 -18.7105 0
+      vertex 73.448 -18.7105 1.5
+    endloop
+  endfacet
+  facet normal 0.751787 0.659406 0
+    outer loop
+      vertex 73.448 -18.7105 0
+      vertex 73.5515 -18.8285 1.5
+      vertex 73.5515 -18.8285 0
+    endloop
+  endfacet
+  facet normal -0.947013 -0.321194 0
+    outer loop
+      vertex 75.5591 -17.6694 0
+      vertex 75.5087 -17.5208 1.5
+      vertex 75.5087 -17.5208 0
+    endloop
+  endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+  facet normal -0.980825 -0.194891 0
+    outer loop
+      vertex 75.5897 -17.8234 0
+      vertex 75.5591 -17.6694 1.5
+      vertex 75.5591 -17.6694 0
+    endloop
+  endfacet
+  facet normal -0.980825 -0.194891 0
+    outer loop
+      vertex 75.5591 -17.6694 1.5
+      vertex 75.5897 -17.8234 0
+      vertex 75.5897 -17.8234 1.5
+    endloop
+  endfacet
+  facet normal -0.831462 -0.555582 0
+=======
+  facet normal -0.947013 -0.321194 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    outer loop
+      vertex 75.5087 -17.5208 1.5
+      vertex 75.5591 -17.6694 0
+      vertex 75.5591 -17.6694 1.5
+    endloop
+  endfacet
+  facet normal -0.659406 -0.751787 0
+    outer loop
+      vertex 75.1305 -17.028 0
+      vertex 75.2485 -17.1315 1.5
+      vertex 75.1305 -17.028 1.5
+    endloop
+  endfacet
+  facet normal -0.659406 -0.751787 -0
+    outer loop
+      vertex 75.2485 -17.1315 1.5
+      vertex 75.1305 -17.028 0
+      vertex 75.2485 -17.1315 0
+    endloop
+  endfacet
+  facet normal -0.442622 -0.896708 0
+    outer loop
+      vertex 74.8592 -16.8713 0
+      vertex 75 -16.9408 1.5
+      vertex 74.8592 -16.8713 1.5
+    endloop
+  endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+  facet normal -0.442622 -0.896708 -0
+    outer loop
+      vertex 75 -16.9408 1.5
+      vertex 74.8592 -16.8713 0
+      vertex 75 -16.9408 0
+    endloop
+  endfacet
+  facet normal -0.321501 -0.946909 0
+    outer loop
+      vertex 74.8 -16.8512 0
+      vertex 74.8592 -16.8713 1.5
+      vertex 74.8 -16.8512 1.5
+=======
+  facet normal -0.831462 -0.555582 0
+    outer loop
+      vertex 75.4392 -17.38 0
+      vertex 75.352 -17.2495 1.5
+      vertex 75.352 -17.2495 0
+    endloop
+  endfacet
+  facet normal -0.831462 -0.555582 0
+    outer loop
+      vertex 75.352 -17.2495 1.5
+      vertex 75.4392 -17.38 0
+      vertex 75.4392 -17.38 1.5
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    endloop
+  endfacet
+  facet normal -0.321501 -0.946909 -0
+    outer loop
+      vertex 74.8592 -16.8713 1.5
+      vertex 74.8 -16.8512 0
+      vertex 74.8592 -16.8713 0
     endloop
   endfacet
   facet normal -0.997844 -0.0656309 0
@@ -16260,11 +16808,180 @@ solid OpenSCAD_Model
       vertex 75.5897 -17.8234 0
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal -0.997844 -0.0656309 0
     outer loop
       vertex 75.5897 -17.8234 1.5
       vertex 75.6 -17.98 0
       vertex 75.6 -17.98 1.5
+=======
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex 74.8592 -19.0887 0
+      vertex 74.7106 -19.1391 1.5
+      vertex 74.8592 -19.0887 1.5
+    endloop
+  endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex 74.7106 -19.1391 1.5
+      vertex 74.8592 -19.0887 0
+      vertex 74.7106 -19.1391 0
+    endloop
+  endfacet
+  facet normal -0.442622 0.896708 0
+    outer loop
+      vertex 75 -19.0192 0
+      vertex 74.8592 -19.0887 1.5
+      vertex 75 -19.0192 1.5
+    endloop
+  endfacet
+  facet normal -0.442622 0.896708 0
+    outer loop
+      vertex 74.8592 -19.0887 1.5
+      vertex 75 -19.0192 0
+      vertex 74.8592 -19.0887 0
+    endloop
+  endfacet
+  facet normal -0.659406 0.751787 0
+    outer loop
+      vertex 75.2485 -18.8285 0
+      vertex 75.1305 -18.932 1.5
+      vertex 75.2485 -18.8285 1.5
+    endloop
+  endfacet
+  facet normal -0.659406 0.751787 0
+    outer loop
+      vertex 75.1305 -18.932 1.5
+      vertex 75.2485 -18.8285 0
+      vertex 75.1305 -18.932 0
+    endloop
+  endfacet
+  facet normal -0.751787 0.659406 0
+    outer loop
+      vertex 75.2485 -18.8285 0
+      vertex 75.352 -18.7105 1.5
+      vertex 75.352 -18.7105 0
+    endloop
+  endfacet
+  facet normal -0.751787 0.659406 0
+    outer loop
+      vertex 75.352 -18.7105 1.5
+      vertex 75.2485 -18.8285 0
+      vertex 75.2485 -18.8285 1.5
+    endloop
+  endfacet
+  facet normal -0.831462 0.555582 0
+    outer loop
+      vertex 75.352 -18.7105 0
+      vertex 75.4392 -18.58 1.5
+      vertex 75.4392 -18.58 0
+    endloop
+  endfacet
+  facet normal -0.831462 0.555582 0
+    outer loop
+      vertex 75.4392 -18.58 1.5
+      vertex 75.352 -18.7105 0
+      vertex 75.352 -18.7105 1.5
+    endloop
+  endfacet
+  facet normal 0.555582 0.831462 -0
+    outer loop
+      vertex 73.8 -19.0192 0
+      vertex 73.6695 -18.932 1.5
+      vertex 73.8 -19.0192 1.5
+    endloop
+  endfacet
+  facet normal 0.555582 0.831462 0
+    outer loop
+      vertex 73.6695 -18.932 1.5
+      vertex 73.8 -19.0192 0
+      vertex 73.6695 -18.932 0
+    endloop
+  endfacet
+  facet normal 0.194891 0.980825 -0
+    outer loop
+      vertex 74.2434 -19.1697 0
+      vertex 74.0894 -19.1391 1.5
+      vertex 74.2434 -19.1697 1.5
+    endloop
+  endfacet
+  facet normal 0.194891 0.980825 0
+    outer loop
+      vertex 74.0894 -19.1391 1.5
+      vertex 74.2434 -19.1697 0
+      vertex 74.0894 -19.1391 0
+    endloop
+  endfacet
+  facet normal 0.896708 0.442622 0
+    outer loop
+      vertex 73.3608 -18.58 1.5
+      vertex 73.2913 -18.4392 0
+      vertex 73.2913 -18.4392 1.5
+    endloop
+  endfacet
+  facet normal 0.896708 0.442622 0
+    outer loop
+      vertex 73.2913 -18.4392 0
+      vertex 73.3608 -18.58 1.5
+      vertex 73.3608 -18.58 0
+    endloop
+  endfacet
+  facet normal 0.946889 0.321559 0
+    outer loop
+      vertex 73.2913 -18.4392 1.5
+      vertex 73.2678 -18.37 0
+      vertex 73.2678 -18.37 1.5
+    endloop
+  endfacet
+  facet normal 0.946889 0.321559 0
+    outer loop
+      vertex 73.2678 -18.37 0
+      vertex 73.2913 -18.4392 1.5
+      vertex 73.2913 -18.4392 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
+    endloop
+  endfacet
+  facet normal -0.997844 0.0656309 0
+    outer loop
+      vertex 75.5897 -18.1366 0
+      vertex 75.6 -17.98 1.5
+      vertex 75.6 -17.98 0
+    endloop
+  endfacet
+  facet normal -0.997844 0.0656309 0
+    outer loop
+      vertex 75.6 -17.98 1.5
+      vertex 75.5897 -18.1366 0
+      vertex 75.5897 -18.1366 1.5
+    endloop
+  endfacet
+  facet normal -0.194891 0.980825 0
+    outer loop
+      vertex 74.7106 -19.1391 0
+      vertex 74.5566 -19.1697 1.5
+      vertex 74.7106 -19.1391 1.5
+    endloop
+  endfacet
+  facet normal -0.194891 0.980825 0
+    outer loop
+      vertex 74.5566 -19.1697 1.5
+      vertex 74.7106 -19.1391 0
+      vertex 74.5566 -19.1697 0
+    endloop
+  endfacet
+  facet normal -0.555582 0.831462 0
+    outer loop
+      vertex 75.1305 -18.932 0
+      vertex 75 -19.0192 1.5
+      vertex 75.1305 -18.932 1.5
+    endloop
+  endfacet
+  facet normal -0.555582 0.831462 0
+    outer loop
+      vertex 75 -19.0192 1.5
+      vertex 75.1305 -18.932 0
+      vertex 75 -19.0192 0
     endloop
   endfacet
   facet normal -0.947013 0.321194 0
@@ -16855,6 +17572,37 @@ solid OpenSCAD_Model
       vertex 75.5591 17.6694 1.5
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+=======
+  facet normal 0.442622 0.896708 -0
+    outer loop
+      vertex 73.9408 16.8713 0
+      vertex 73.8 16.9408 1.5
+      vertex 73.9408 16.8713 1.5
+    endloop
+  endfacet
+  facet normal 0.442622 0.896708 0
+    outer loop
+      vertex 73.8 16.9408 1.5
+      vertex 73.9408 16.8713 0
+      vertex 73.8 16.9408 0
+    endloop
+  endfacet
+  facet normal 0.659406 0.751787 -0
+    outer loop
+      vertex 73.6695 17.028 0
+      vertex 73.5515 17.1315 1.5
+      vertex 73.6695 17.028 1.5
+    endloop
+  endfacet
+  facet normal 0.659406 0.751787 0
+    outer loop
+      vertex 73.5515 17.1315 1.5
+      vertex 73.6695 17.028 0
+      vertex 73.5515 17.1315 0
+    endloop
+  endfacet
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
   facet normal 0.321194 0.947013 -0
     outer loop
       vertex 74.0894 16.8209 0
@@ -16967,6 +17715,7 @@ solid OpenSCAD_Model
       vertex 73.2103 18.1366 0
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
   facet normal 0.442622 -0.896708 0
     outer loop
       vertex 73.8 19.0192 0
@@ -16982,6 +17731,9 @@ solid OpenSCAD_Model
     endloop
   endfacet
   facet normal 0.194891 -0.980825 0
+=======
+  facet normal 0.0656309 -0.997844 0
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
     outer loop
       vertex 74.0894 19.1391 0
       vertex 74.2434 19.1697 1.5
@@ -17191,6 +17943,37 @@ solid OpenSCAD_Model
       vertex 75 19.0192 0
     endloop
   endfacet
+<<<<<<< HEAD:backend/engines/cad/case-engine/out/hackpad-3key-case.stl
+=======
+  facet normal 0.442622 -0.896708 0
+    outer loop
+      vertex 73.8 19.0192 0
+      vertex 73.9408 19.0887 1.5
+      vertex 73.8 19.0192 1.5
+    endloop
+  endfacet
+  facet normal 0.442622 -0.896708 0
+    outer loop
+      vertex 73.9408 19.0887 1.5
+      vertex 73.8 19.0192 0
+      vertex 73.9408 19.0887 0
+    endloop
+  endfacet
+  facet normal -0.194891 0.980825 0
+    outer loop
+      vertex 74.7106 16.8209 0
+      vertex 74.5566 16.7903 1.5
+      vertex 74.7106 16.8209 1.5
+    endloop
+  endfacet
+  facet normal -0.194891 0.980825 0
+    outer loop
+      vertex 74.5566 16.7903 1.5
+      vertex 74.7106 16.8209 0
+      vertex 74.5566 16.7903 0
+    endloop
+  endfacet
+>>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/hackpad-3key-case.stl
   facet normal -0.947013 0.321194 0
     outer loop
       vertex 75.5087 17.5208 0
@@ -17205,18 +17988,18 @@ solid OpenSCAD_Model
       vertex 75.5087 17.5208 1.5
     endloop
   endfacet
-  facet normal 0.442622 0.896708 -0
+  facet normal 0.0656309 0.997844 -0
     outer loop
-      vertex 73.9408 16.8713 0
-      vertex 73.8 16.9408 1.5
-      vertex 73.9408 16.8713 1.5
+      vertex 74.4 16.78 0
+      vertex 74.2434 16.7903 1.5
+      vertex 74.4 16.78 1.5
     endloop
   endfacet
-  facet normal 0.442622 0.896708 0
+  facet normal 0.0656309 0.997844 0
     outer loop
-      vertex 73.8 16.9408 1.5
-      vertex 73.9408 16.8713 0
-      vertex 73.8 16.9408 0
+      vertex 74.2434 16.7903 1.5
+      vertex 74.4 16.78 0
+      vertex 74.2434 16.7903 0
     endloop
   endfacet
   facet normal 0.831462 0.555582 0

@@ -7,11 +7,11 @@
  * ladder. hosting: render.com (see render.yaml); denser boards move to
  * amd cloud hardware later without changing a line of the ladder.
  */
-import { generatePcb } from "../../engines/pcb/pcb-engine/src/index.ts";
-import { generateCase } from "../../engines/cad/case-engine/src/index.ts";
-import { exportGerbers } from "../../engines/pcb/pcb-engine/src/gerber.ts";
-import { placeComponents } from "../../engines/pcb/pcb-engine/src/layout.ts";
-import { renderSvg } from "../../engines/pcb/pcb-engine/src/preview.ts";
+import { generatePcb } from "../../engines/circuitron/src/index.ts";
+import { generateCase } from "../../engines/paracraft/src/index.ts";
+import { exportGerbers } from "../../engines/circuitron/src/gerber.ts";
+import { placeComponents } from "../../engines/circuitron/src/layout.ts";
+import { renderSvg } from "../../engines/circuitron/src/preview.ts";
 
 export interface DesignJob {
   id: number;

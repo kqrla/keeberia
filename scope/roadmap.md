@@ -4,7 +4,7 @@
 
 ## where we are
 
-**v0 done** (see [versions/v0.md](versions/v0.md)) — deterministic pcb engine routes three test boards clean and exports kicad 8. engine lives at `backend/engines/pcb/pcb-engine/`.
+**v0 done** (see [versions/v0.md](versions/v0.md)) — deterministic pcb engine routes three test boards clean and exports kicad 8. engine lives at `backend/engines/circuitron/`.
 
 ## phase map
 
@@ -24,7 +24,7 @@
 2. ~~autolayout daemon~~ — done (sept 7): portable worker behind a queue interface, xano-rest transport, render.com blueprint. job #1 went queued → done end to end with artifacts
 3. **freerouting bridge** — the deterministic autorouting partner: engine emits placement + netlist as dsn, freerouting routes headless (java, render/amd — not xano), ses applies back to the board. until it lands, the engine's own a* router stays the v1 router and retry-ladder fallback
 4. ~~gerber + excellon export~~ — done (sept 7): `src/gerber.ts` emits rs-274x (mm, 3.5) for copper/mask/paste/silk/edge + excellon drills; structural validation passes on all reference boards and the daemon persists every fab file as an artifact. the B.Cu ground pour stays kicad-only until the zone engine lands
-5. ~~case generator~~ — done (sept 7): `backend/engines/cad/case-engine/` compiles a board into readable, dependency-free openscad (named slider params, usb slot derived from the mcu placement, standoffs on the mounting holes, switch plate with key/encoder/oled openings). all three reference boards compile to real stls (openscad verified in sandbox). job #2 (ninepad) went queued → done with case_scad + case_params artifacts. print test on the a1 mini still pending
+5. ~~case generator~~ — done (sept 7): `backend/engines/paracraft/` compiles a board into readable, dependency-free openscad (named slider params, usb slot derived from the mcu placement, standoffs on the mounting holes, switch plate with key/encoder/oled openings). all three reference boards compile to real stls (openscad verified in sandbox). job #2 (ninepad) went queued → done with case_scad + case_params artifacts. print test on the a1 mini still pending
 6. **frontend wiring** — job flow + webgl result viewer (board + case), notion/canva vibes strictly enforced
 
 ## future options — after macropads are perfect
@@ -54,6 +54,8 @@ the roadmap's law is one flow perfect end to end before the next; this section i
 - reference designs (hackpad, blueprint, hwdocs) are examples to learn from, never guidelines: keeberia doesn't inherit hack club's component or microcontroller restrictions. what generalizes is the practice (data-driven part metadata, parametric cases); what doesn't (their exact parts, dims, vendors) stays in research notes
 - protoflow keeps its role (verifier only, anne has credits); tensormux glm credits available for non-copper llm work; browserbase/firecrawl on request for scraping (jlc parts library, community builds)
 - design language: notion/figma/canva. never kicad/eda
+- data layer: a graph db, not a generic relational store — falkordb. the project model is a dependency graph; "what depends on what" is the product, and the graph keeps those relationships first-class instead of flattening them into tables
+- engine names: circuitron (pcb + schematic), paracraft (scad — cases now, keycaps + knob covers later)
 
 ## risks to watch
 

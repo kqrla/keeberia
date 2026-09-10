@@ -1,6 +1,6 @@
-# pcb-engine
+# circuitron
 
-the deterministic pcb generator. typescript, zero runtime deps. **no ai anywhere in here** — same layout in, same board out, every time.
+**circuitron** — the pcb + schematic engine. the deterministic pcb generator. typescript, zero runtime deps. **no ai anywhere in here** — same layout in, same board out, every time.
 
 ## pipeline
 
@@ -19,7 +19,7 @@ entry: `generateBoard(layout)` → `{ kicadPcb, bom, previewSvg, drc, outline, m
 ## run tests
 
 ```bash
-cd backend/engines/pcb/pcb-engine
+cd backend/engines/circuitron
 npx tsx test/run.ts        # 3 boards: hackpad-3key, ninepad, streamdeck → out/
 npx tsx test/validate.ts   # s-expression balance + net/pad reference checks
 npx tsx test/render.ts     # svg renders

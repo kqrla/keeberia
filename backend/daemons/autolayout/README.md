@@ -1,6 +1,6 @@
 # autolayout daemon
 
-the background worker that turns design jobs into manufactured artifacts. the engine (`backend/engines/pcb/pcb-engine/`) is pure and synchronous — this daemon is what makes it a service: claim a job, run the engine, retry with adjusted parameters when routing struggles, persist the outputs.
+the background worker that turns design jobs into manufactured artifacts. the engine (`backend/engines/circuitron/`) is pure and synchronous — this daemon is what makes it a service: claim a job, run the engine, retry with adjusted parameters when routing struggles, persist the outputs.
 
 ## why a daemon (and not just an endpoint)
 
