@@ -1,0 +1,40 @@
+{
+  "keyboard_name": "keeberia-hackpad",
+  "manufacturer": "keeberia",
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x1381",
+    "device_version": "1.0.0"
+  },
+  "processor": "RP2040",
+  "bootloader": "rp2040-bootloader",
+  "features": {},
+  "matrix_pins": {
+    "direct": [
+      "GP26",
+      "GP27",
+      "GP28"
+    ]
+  },
+  "layout": {
+    "LAYOUT_direct": [
+      {
+        "x": 0,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "w": 1
+      }
+    ]
+  },
+  "keyboard_folder": "keeberia/keeberia_hackpad",
+  "board": "seeed_xiao_rp2040"
+}

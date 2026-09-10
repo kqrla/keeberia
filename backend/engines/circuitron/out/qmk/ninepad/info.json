@@ -1,0 +1,82 @@
+{
+  "keyboard_name": "keeberia-ninepad",
+  "manufacturer": "keeberia",
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x1450",
+    "device_version": "1.0.0"
+  },
+  "processor": "RP2040",
+  "bootloader": "rp2040-bootloader",
+  "features": {
+    "encoder_keys": true,
+    "extrakey": true
+  },
+  "matrix_pins": {
+    "direct": [
+      "GP28",
+      "GP29",
+      "GP6",
+      "GP7",
+      "GP8",
+      "GP9",
+      "GP4",
+      "GP2"
+    ]
+  },
+  "layout": {
+    "LAYOUT_direct": [
+      {
+        "x": 0,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "w": 1
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "w": 1
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "w": 1
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "w": 1
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "w": 1
+      }
+    ]
+  },
+  "encoder": {
+    "enabled": true,
+    "encoder_pins": [
+      [
+        "GP26",
+        "GP27"
+      ]
+    ]
+  },
+  "keyboard_folder": "keeberia/keeberia_ninepad",
+  "board": "seeed_xiao_rp2040"
+}

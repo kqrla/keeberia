@@ -1,0 +1,40 @@
+{
+  "name": "keeberia-hackpad",
+  "vendorId": "0xFEED",
+  "productId": "0x1381",
+  "lighting": "none",
+  "uid": [
+    "0xade542b8",
+    "0xbc1b0000",
+    "0x11fe42b8"
+  ],
+  "matrix": {
+    "rows": 1,
+    "cols": 3
+  },
+  "layouts": {
+    "keymap": [
+      [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1
+        }
+      ],
+      [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1
+        }
+      ],
+      [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1
+        }
+      ]
+    ]
+  }
+}

@@ -10,6 +10,7 @@
 import { generatePcb } from "../../engines/circuitron/src/index.ts";
 import { generateCase } from "../../engines/paracraft/src/index.ts";
 import { exportGerbers } from "../../engines/circuitron/src/gerber.ts";
+import { buildQmkBundle } from "../../engines/circuitron/src/firmware.ts";
 import { placeComponents } from "../../engines/circuitron/src/layout.ts";
 import { renderSvg } from "../../engines/circuitron/src/preview.ts";
 
@@ -57,6 +58,8 @@ export async function runJob(job: DesignJob): Promise<JobResult> {
       }
       const ctx = placeComponents(job.layout);
       const svg = renderSvg(ctx, out.result, 720);
+      // firmware: qmk + vial bundle (anne's call — performance + live remap first)
+      const fw = buildQmkBundle(ctx, out.netlist, out.qmkInfo as Record<string, unknown>);
       const artifacts: Record<string, string> = {
         kicad_pcb: out.kicadPcb,
         case_scad: caseOut.scad,
@@ -68,6 +71,9 @@ export async function runJob(job: DesignJob): Promise<JobResult> {
       };
       for (const [fname, content] of Object.entries(gerbs.files)) {
         artifacts[`gerber_${fname.replace(/[^A-Za-z0-9._-]/g, "_")}`] = content;
+      }
+      for (const [fname, content] of Object.entries(fw.files)) {
+        artifacts[`firmware_${fname.replace(/[^A-Za-z0-9._-]/g, "_")}`] = content;
       }
       return {
         jobId: job.id,

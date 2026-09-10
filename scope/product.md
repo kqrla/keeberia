@@ -111,6 +111,10 @@ schematic  pcb       cad
 
 if something changes, the dependent representations update. do not maintain separate unrelated copies of the same geometry.
 
+## version history
+
+canva and figma got this right and keeberia needs it too: every project has version history. save a version before a big change, restore when it goes wrong, diff two versions to see what moved. a version is a snapshot of the whole project model — layout, components, pcb, case, keys, all of it — never a partial export. the graph data layer (falkordb) stores versions as graph snapshots, so "what changed between these two" is a traversal, not a table join. forked designs carry the history of the board they forked.
+
 ## portability is a feature
 
 a user's design should never be trapped inside keeberia. a complete project should be exportable as: keeberia project, kicad schematic, kicad pcb, openscad case, dxf plate/outline, stl/3mf geometry, gerbers, bom, cpl, firmware configuration.

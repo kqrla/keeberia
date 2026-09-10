@@ -6243,8 +6243,6 @@ solid OpenSCAD_Model
       vertex -37.8927 -43.6517 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.896835 -0.442365 0
     outer loop
       vertex -44.4877 -44.52 2.4
@@ -6259,7 +6257,6 @@ solid OpenSCAD_Model
       vertex -44.4877 -44.52 7.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.555582 -0.831462 0
     outer loop
       vertex -39.57 -45.8377 2.4
@@ -6274,79 +6271,6 @@ solid OpenSCAD_Model
       vertex -39.1785 -45.5761 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.442365 -0.896835 0
-    outer loop
-      vertex -39.9923 -46.046 2.4
-      vertex -39.57 -45.8377 7.4
-      vertex -39.9923 -46.046 7.4
-    endloop
-  endfacet
-  facet normal 0.442365 -0.896835 0
-    outer loop
-      vertex -39.57 -45.8377 7.4
-      vertex -39.9923 -46.046 2.4
-      vertex -39.57 -45.8377 2.4
-    endloop
-  endfacet
-  facet normal -0.659301 0.751879 0
-    outer loop
-      vertex -43.5615 -39.8639 2.4
-      vertex -43.9156 -40.1744 7.4
-      vertex -43.5615 -39.8639 7.4
-    endloop
-  endfacet
-  facet normal -0.659301 0.751879 0
-    outer loop
-      vertex -43.9156 -40.1744 7.4
-      vertex -43.5615 -39.8639 2.4
-      vertex -43.9156 -40.1744 2.4
-    endloop
-  endfacet
-  facet normal -0.32132 -0.946971 0
-    outer loop
-      vertex -42.7477 -46.046 2.4
-      vertex -42.3018 -46.1973 7.4
-      vertex -42.7477 -46.046 7.4
-    endloop
-  endfacet
-  facet normal -0.32132 -0.946971 -0
-    outer loop
-      vertex -42.3018 -46.1973 7.4
-      vertex -42.7477 -46.046 2.4
-      vertex -42.3018 -46.1973 2.4
-    endloop
-  endfacet
-  facet normal -0.751879 -0.659301 0
-    outer loop
-      vertex -43.9156 -45.2656 2.4
-      vertex -44.2261 -44.9115 7.4
-      vertex -44.2261 -44.9115 2.4
-    endloop
-  endfacet
-  facet normal -0.751879 -0.659301 0
-    outer loop
-      vertex -44.2261 -44.9115 7.4
-      vertex -43.9156 -45.2656 2.4
-      vertex -43.9156 -45.2656 7.4
-    endloop
-  endfacet
-  facet normal -0.997859 -0.0654055 0
-    outer loop
-      vertex -44.9392 -43.1899 2.4
-      vertex -44.97 -42.72 7.4
-      vertex -44.97 -42.72 2.4
-    endloop
-  endfacet
-  facet normal -0.997859 -0.0654055 0
-    outer loop
-      vertex -44.97 -42.72 7.4
-      vertex -44.9392 -43.1899 2.4
-      vertex -44.9392 -43.1899 7.4
-    endloop
-  endfacet
-=======
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.980768 -0.195177 0
     outer loop
       vertex -44.8473 -43.6517 2.4
@@ -6515,25 +6439,7 @@ solid OpenSCAD_Model
       vertex -43.5615 -45.5761 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex -44.2261 -44.9115 2.4
-      vertex -44.4877 -44.52 7.4
-      vertex -44.4877 -44.52 2.4
-    endloop
-  endfacet
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex -44.4877 -44.52 7.4
-      vertex -44.2261 -44.9115 2.4
-      vertex -44.2261 -44.9115 7.4
-    endloop
-  endfacet
-  facet normal -0.896835 -0.442365 0
-=======
   facet normal 0.751879 -0.659301 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
       vertex -38.8244 -45.2656 7.4
       vertex -38.5139 -44.9115 2.4
@@ -6547,8 +6453,6 @@ solid OpenSCAD_Model
       vertex -38.8244 -45.2656 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.831462 -0.555582 0
     outer loop
       vertex -44.2261 -44.9115 2.4
@@ -6591,7 +6495,6 @@ solid OpenSCAD_Model
       vertex -43.17 -45.8377 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.997844 -0.0656309 0
     outer loop
       vertex -40.17 -42.72 2.4
@@ -6634,18 +6537,18 @@ solid OpenSCAD_Model
       vertex -41.2134 -41.5303 2.4
     endloop
   endfacet
-  facet normal 0.0656309 0.997844 -0
+  facet normal 0.751787 0.659406 0
     outer loop
-      vertex -41.37 -43.92 2.4
-      vertex -41.5266 -43.9097 7.4
-      vertex -41.37 -43.92 7.4
+      vertex -42.2185 -43.5685 7.4
+      vertex -42.322 -43.4505 2.4
+      vertex -42.322 -43.4505 7.4
     endloop
   endfacet
-  facet normal 0.0656309 0.997844 0
+  facet normal 0.751787 0.659406 0
     outer loop
-      vertex -41.5266 -43.9097 7.4
-      vertex -41.37 -43.92 2.4
-      vertex -41.5266 -43.9097 2.4
+      vertex -42.322 -43.4505 2.4
+      vertex -42.2185 -43.5685 7.4
+      vertex -42.2185 -43.5685 2.4
     endloop
   endfacet
   facet normal -0.751787 -0.659406 0
@@ -6802,20 +6705,6 @@ solid OpenSCAD_Model
       vertex -41.37 -41.52 2.4
     endloop
   endfacet
-  facet normal -0.321194 0.947013 0
-    outer loop
-      vertex -40.9108 -43.8287 2.4
-      vertex -41.0594 -43.8791 7.4
-      vertex -40.9108 -43.8287 7.4
-    endloop
-  endfacet
-  facet normal -0.321194 0.947013 0
-    outer loop
-      vertex -41.0594 -43.8791 7.4
-      vertex -40.9108 -43.8287 2.4
-      vertex -41.0594 -43.8791 2.4
-    endloop
-  endfacet
   facet normal -0.0656309 0.997844 0
     outer loop
       vertex -41.2134 -43.9097 2.4
@@ -6942,7 +6831,20 @@ solid OpenSCAD_Model
       vertex -40.5215 -41.8715 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex -42.4092 -42.12 7.4
+      vertex -42.322 -41.9895 2.4
+      vertex -42.322 -41.9895 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex -42.322 -41.9895 2.4
+      vertex -42.4092 -42.12 7.4
+      vertex -42.4092 -42.12 2.4
+    endloop
+  endfacet
   facet normal 0.751787 -0.659406 0
     outer loop
       vertex -42.322 -41.9895 7.4
@@ -6955,155 +6857,6 @@ solid OpenSCAD_Model
       vertex -42.2185 -41.8715 2.4
       vertex -42.322 -41.9895 7.4
       vertex -42.322 -41.9895 2.4
-    endloop
-  endfacet
-  facet normal 0.980825 -0.194891 0
-=======
-  facet normal 0.831462 -0.555582 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-    outer loop
-      vertex -42.4092 -42.12 7.4
-      vertex -42.322 -41.9895 2.4
-      vertex -42.322 -41.9895 7.4
-    endloop
-  endfacet
-  facet normal 0.831462 -0.555582 0
-    outer loop
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-      vertex -42.5291 -42.4094 2.4
-      vertex -42.5597 -42.5634 7.4
-      vertex -42.5597 -42.5634 2.4
-    endloop
-  endfacet
-  facet normal 0.555582 -0.831462 0
-    outer loop
-      vertex -42.1005 -41.768 2.4
-      vertex -41.97 -41.6808 7.4
-      vertex -42.1005 -41.768 7.4
-    endloop
-  endfacet
-  facet normal 0.555582 -0.831462 0
-    outer loop
-      vertex -41.97 -41.6808 7.4
-      vertex -42.1005 -41.768 2.4
-      vertex -41.97 -41.6808 2.4
-    endloop
-  endfacet
-  facet normal -0.555582 0.831462 0
-    outer loop
-      vertex -40.6395 -43.672 2.4
-      vertex -40.77 -43.7592 7.4
-      vertex -40.6395 -43.672 7.4
-    endloop
-  endfacet
-  facet normal -0.555582 0.831462 0
-    outer loop
-      vertex -40.77 -43.7592 7.4
-      vertex -40.6395 -43.672 2.4
-      vertex -40.77 -43.7592 2.4
-    endloop
-  endfacet
-  facet normal -0.896708 0.442622 0
-    outer loop
-      vertex -40.3308 -43.32 2.4
-      vertex -40.2613 -43.1792 7.4
-      vertex -40.2613 -43.1792 2.4
-    endloop
-  endfacet
-  facet normal -0.896708 0.442622 0
-    outer loop
-      vertex -40.2613 -43.1792 7.4
-      vertex -40.3308 -43.32 2.4
-      vertex -40.3308 -43.32 7.4
-    endloop
-  endfacet
-  facet normal -0.751787 0.659406 0
-    outer loop
-      vertex -40.5215 -43.5685 2.4
-      vertex -40.418 -43.4505 7.4
-      vertex -40.418 -43.4505 2.4
-    endloop
-  endfacet
-  facet normal -0.751787 0.659406 0
-    outer loop
-      vertex -40.418 -43.4505 7.4
-      vertex -40.5215 -43.5685 2.4
-      vertex -40.5215 -43.5685 7.4
-    endloop
-  endfacet
-  facet normal -0.831462 0.555582 0
-    outer loop
-      vertex -40.418 -43.4505 2.4
-      vertex -40.3308 -43.32 7.4
-      vertex -40.3308 -43.32 2.4
-    endloop
-  endfacet
-  facet normal -0.831462 0.555582 0
-    outer loop
-      vertex -40.3308 -43.32 7.4
-      vertex -40.418 -43.4505 2.4
-      vertex -40.418 -43.4505 7.4
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 -0
-    outer loop
-      vertex -42.1005 -43.672 2.4
-      vertex -42.2185 -43.5685 7.4
-      vertex -42.1005 -43.672 7.4
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 0
-    outer loop
-      vertex -42.2185 -43.5685 7.4
-      vertex -42.1005 -43.672 2.4
-      vertex -42.2185 -43.5685 2.4
-    endloop
-  endfacet
-  facet normal 0.555582 0.831462 -0
-    outer loop
-      vertex -41.97 -43.7592 2.4
-      vertex -42.1005 -43.672 7.4
-      vertex -41.97 -43.7592 7.4
-    endloop
-  endfacet
-  facet normal 0.555582 0.831462 0
-    outer loop
-      vertex -42.1005 -43.672 7.4
-      vertex -41.97 -43.7592 2.4
-      vertex -42.1005 -43.672 2.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex -42.2185 -43.5685 7.4
-      vertex -42.322 -43.4505 2.4
-      vertex -42.322 -43.4505 7.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex -42.322 -43.4505 2.4
-      vertex -42.2185 -43.5685 7.4
-      vertex -42.2185 -43.5685 2.4
-    endloop
-  endfacet
-  facet normal -0.321194 -0.947013 0
-    outer loop
-      vertex -41.0594 -41.5609 2.4
-      vertex -40.9108 -41.6113 7.4
-      vertex -41.0594 -41.5609 7.4
-    endloop
-  endfacet
-  facet normal -0.321194 -0.947013 -0
-    outer loop
-      vertex -40.9108 -41.6113 7.4
-      vertex -41.0594 -41.5609 2.4
-      vertex -40.9108 -41.6113 2.4
-=======
-      vertex -42.322 -41.9895 2.4
-      vertex -42.4092 -42.12 7.4
-      vertex -42.4092 -42.12 2.4
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal 0.947013 -0.321194 0
@@ -7120,8 +6873,6 @@ solid OpenSCAD_Model
       vertex -42.5291 -42.4094 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal 0.980825 -0.194891 0
     outer loop
       vertex -42.5597 -42.5634 7.4
@@ -7150,7 +6901,6 @@ solid OpenSCAD_Model
       vertex -41.97 -41.6808 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.194891 -0.980825 0
     outer loop
       vertex -41.6806 -41.5609 2.4
@@ -7305,6 +7055,20 @@ solid OpenSCAD_Model
       vertex -42.5291 -43.0306 2.4
     endloop
   endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex -40.9108 -43.8287 2.4
+      vertex -41.0594 -43.8791 7.4
+      vertex -40.9108 -43.8287 7.4
+    endloop
+  endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex -41.0594 -43.8791 7.4
+      vertex -40.9108 -43.8287 2.4
+      vertex -41.0594 -43.8791 2.4
+    endloop
+  endfacet
   facet normal -0.659406 0.751787 0
     outer loop
       vertex -40.5215 -43.5685 2.4
@@ -7347,8 +7111,6 @@ solid OpenSCAD_Model
       vertex -40.2109 -43.0306 7.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.947013 0.321194 0
     outer loop
       vertex -40.2613 -43.1792 2.4
@@ -7363,7 +7125,6 @@ solid OpenSCAD_Model
       vertex -40.2613 -43.1792 7.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.997844 0.0656309 0
     outer loop
       vertex -40.1803 -42.8766 2.4
@@ -7378,8 +7139,6 @@ solid OpenSCAD_Model
       vertex -40.1803 -42.8766 7.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal 0.555582 0.831462 -0
     outer loop
       vertex -41.97 -43.7592 2.4
@@ -7394,7 +7153,6 @@ solid OpenSCAD_Model
       vertex -42.1005 -43.672 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.194891 0.980825 -0
     outer loop
       vertex -41.5266 -43.9097 2.4
@@ -7407,35 +7165,6 @@ solid OpenSCAD_Model
       vertex -41.6806 -43.8791 7.4
       vertex -41.5266 -43.9097 2.4
       vertex -41.6806 -43.8791 2.4
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.947013 0.321194 0
-    outer loop
-      vertex -42.4787 -43.1792 7.4
-      vertex -42.5291 -43.0306 2.4
-      vertex -42.5291 -43.0306 7.4
-    endloop
-  endfacet
-  facet normal 0.947013 0.321194 0
-    outer loop
-      vertex -42.5291 -43.0306 2.4
-      vertex -42.4787 -43.1792 7.4
-      vertex -42.4787 -43.1792 2.4
-=======
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex -42.2185 -43.5685 7.4
-      vertex -42.322 -43.4505 2.4
-      vertex -42.322 -43.4505 7.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex -42.322 -43.4505 2.4
-      vertex -42.2185 -43.5685 7.4
-      vertex -42.2185 -43.5685 2.4
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal 0.997859 0.0654055 0
@@ -9202,8 +8931,6 @@ solid OpenSCAD_Model
       vertex 44.8573 -43.6517 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.896835 -0.442365 0
     outer loop
       vertex 38.2623 -44.52 2.4
@@ -9218,7 +8945,6 @@ solid OpenSCAD_Model
       vertex 38.2623 -44.52 7.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.555582 -0.831462 0
     outer loop
       vertex 43.18 -45.8377 2.4
@@ -9233,79 +8959,6 @@ solid OpenSCAD_Model
       vertex 43.5715 -45.5761 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.442365 -0.896835 0
-    outer loop
-      vertex 42.7577 -46.046 2.4
-      vertex 43.18 -45.8377 7.4
-      vertex 42.7577 -46.046 7.4
-    endloop
-  endfacet
-  facet normal 0.442365 -0.896835 0
-    outer loop
-      vertex 43.18 -45.8377 7.4
-      vertex 42.7577 -46.046 2.4
-      vertex 43.18 -45.8377 2.4
-    endloop
-  endfacet
-  facet normal -0.659301 0.751879 0
-    outer loop
-      vertex 39.1885 -39.8639 2.4
-      vertex 38.8344 -40.1744 7.4
-      vertex 39.1885 -39.8639 7.4
-    endloop
-  endfacet
-  facet normal -0.659301 0.751879 0
-    outer loop
-      vertex 38.8344 -40.1744 7.4
-      vertex 39.1885 -39.8639 2.4
-      vertex 38.8344 -40.1744 2.4
-    endloop
-  endfacet
-  facet normal -0.32132 -0.946971 0
-    outer loop
-      vertex 40.0023 -46.046 2.4
-      vertex 40.4482 -46.1973 7.4
-      vertex 40.0023 -46.046 7.4
-    endloop
-  endfacet
-  facet normal -0.32132 -0.946971 -0
-    outer loop
-      vertex 40.4482 -46.1973 7.4
-      vertex 40.0023 -46.046 2.4
-      vertex 40.4482 -46.1973 2.4
-    endloop
-  endfacet
-  facet normal -0.751879 -0.659301 0
-    outer loop
-      vertex 38.8344 -45.2656 2.4
-      vertex 38.5239 -44.9115 7.4
-      vertex 38.5239 -44.9115 2.4
-    endloop
-  endfacet
-  facet normal -0.751879 -0.659301 0
-    outer loop
-      vertex 38.5239 -44.9115 7.4
-      vertex 38.8344 -45.2656 2.4
-      vertex 38.8344 -45.2656 7.4
-    endloop
-  endfacet
-  facet normal -0.997859 -0.0654055 0
-    outer loop
-      vertex 37.8108 -43.1899 2.4
-      vertex 37.78 -42.72 7.4
-      vertex 37.78 -42.72 2.4
-    endloop
-  endfacet
-  facet normal -0.997859 -0.0654055 0
-    outer loop
-      vertex 37.78 -42.72 7.4
-      vertex 37.8108 -43.1899 2.4
-      vertex 37.8108 -43.1899 7.4
-    endloop
-  endfacet
-=======
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.980768 -0.195177 0
     outer loop
       vertex 37.9027 -43.6517 2.4
@@ -9474,25 +9127,7 @@ solid OpenSCAD_Model
       vertex 39.1885 -45.5761 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex 38.5239 -44.9115 2.4
-      vertex 38.2623 -44.52 7.4
-      vertex 38.2623 -44.52 2.4
-    endloop
-  endfacet
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex 38.2623 -44.52 7.4
-      vertex 38.5239 -44.9115 2.4
-      vertex 38.5239 -44.9115 7.4
-    endloop
-  endfacet
-  facet normal -0.896835 -0.442365 0
-=======
   facet normal 0.751879 -0.659301 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
       vertex 43.9256 -45.2656 7.4
       vertex 44.2361 -44.9115 2.4
@@ -9506,8 +9141,6 @@ solid OpenSCAD_Model
       vertex 43.9256 -45.2656 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.831462 -0.555582 0
     outer loop
       vertex 38.5239 -44.9115 2.4
@@ -9550,7 +9183,6 @@ solid OpenSCAD_Model
       vertex 39.58 -45.8377 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.997844 -0.0656309 0
     outer loop
       vertex 42.58 -42.72 2.4
@@ -9593,18 +9225,18 @@ solid OpenSCAD_Model
       vertex 41.5366 -41.5303 2.4
     endloop
   endfacet
-  facet normal 0.0656309 0.997844 -0
+  facet normal 0.751787 0.659406 0
     outer loop
-      vertex 41.38 -43.92 2.4
-      vertex 41.2234 -43.9097 7.4
-      vertex 41.38 -43.92 7.4
+      vertex 40.5315 -43.5685 7.4
+      vertex 40.428 -43.4505 2.4
+      vertex 40.428 -43.4505 7.4
     endloop
   endfacet
-  facet normal 0.0656309 0.997844 0
+  facet normal 0.751787 0.659406 0
     outer loop
-      vertex 41.2234 -43.9097 7.4
-      vertex 41.38 -43.92 2.4
-      vertex 41.2234 -43.9097 2.4
+      vertex 40.428 -43.4505 2.4
+      vertex 40.5315 -43.5685 7.4
+      vertex 40.5315 -43.5685 2.4
     endloop
   endfacet
   facet normal -0.751787 -0.659406 0
@@ -9761,20 +9393,6 @@ solid OpenSCAD_Model
       vertex 41.38 -41.52 2.4
     endloop
   endfacet
-  facet normal -0.321194 0.947013 0
-    outer loop
-      vertex 41.8392 -43.8287 2.4
-      vertex 41.6906 -43.8791 7.4
-      vertex 41.8392 -43.8287 7.4
-    endloop
-  endfacet
-  facet normal -0.321194 0.947013 0
-    outer loop
-      vertex 41.6906 -43.8791 7.4
-      vertex 41.8392 -43.8287 2.4
-      vertex 41.6906 -43.8791 2.4
-    endloop
-  endfacet
   facet normal -0.0656309 0.997844 0
     outer loop
       vertex 41.5366 -43.9097 2.4
@@ -9901,7 +9519,20 @@ solid OpenSCAD_Model
       vertex 42.2285 -41.8715 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex 40.3408 -42.12 7.4
+      vertex 40.428 -41.9895 2.4
+      vertex 40.428 -41.9895 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex 40.428 -41.9895 2.4
+      vertex 40.3408 -42.12 7.4
+      vertex 40.3408 -42.12 2.4
+    endloop
+  endfacet
   facet normal 0.751787 -0.659406 0
     outer loop
       vertex 40.428 -41.9895 7.4
@@ -9914,155 +9545,6 @@ solid OpenSCAD_Model
       vertex 40.5315 -41.8715 2.4
       vertex 40.428 -41.9895 7.4
       vertex 40.428 -41.9895 2.4
-    endloop
-  endfacet
-  facet normal 0.980825 -0.194891 0
-=======
-  facet normal 0.831462 -0.555582 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-    outer loop
-      vertex 40.3408 -42.12 7.4
-      vertex 40.428 -41.9895 2.4
-      vertex 40.428 -41.9895 7.4
-    endloop
-  endfacet
-  facet normal 0.831462 -0.555582 0
-    outer loop
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-      vertex 40.2209 -42.4094 2.4
-      vertex 40.1903 -42.5634 7.4
-      vertex 40.1903 -42.5634 2.4
-    endloop
-  endfacet
-  facet normal 0.555582 -0.831462 0
-    outer loop
-      vertex 40.6495 -41.768 2.4
-      vertex 40.78 -41.6808 7.4
-      vertex 40.6495 -41.768 7.4
-    endloop
-  endfacet
-  facet normal 0.555582 -0.831462 0
-    outer loop
-      vertex 40.78 -41.6808 7.4
-      vertex 40.6495 -41.768 2.4
-      vertex 40.78 -41.6808 2.4
-    endloop
-  endfacet
-  facet normal -0.555582 0.831462 0
-    outer loop
-      vertex 42.1105 -43.672 2.4
-      vertex 41.98 -43.7592 7.4
-      vertex 42.1105 -43.672 7.4
-    endloop
-  endfacet
-  facet normal -0.555582 0.831462 0
-    outer loop
-      vertex 41.98 -43.7592 7.4
-      vertex 42.1105 -43.672 2.4
-      vertex 41.98 -43.7592 2.4
-    endloop
-  endfacet
-  facet normal -0.896708 0.442622 0
-    outer loop
-      vertex 42.4192 -43.32 2.4
-      vertex 42.4887 -43.1792 7.4
-      vertex 42.4887 -43.1792 2.4
-    endloop
-  endfacet
-  facet normal -0.896708 0.442622 0
-    outer loop
-      vertex 42.4887 -43.1792 7.4
-      vertex 42.4192 -43.32 2.4
-      vertex 42.4192 -43.32 7.4
-    endloop
-  endfacet
-  facet normal -0.751787 0.659406 0
-    outer loop
-      vertex 42.2285 -43.5685 2.4
-      vertex 42.332 -43.4505 7.4
-      vertex 42.332 -43.4505 2.4
-    endloop
-  endfacet
-  facet normal -0.751787 0.659406 0
-    outer loop
-      vertex 42.332 -43.4505 7.4
-      vertex 42.2285 -43.5685 2.4
-      vertex 42.2285 -43.5685 7.4
-    endloop
-  endfacet
-  facet normal -0.831462 0.555582 0
-    outer loop
-      vertex 42.332 -43.4505 2.4
-      vertex 42.4192 -43.32 7.4
-      vertex 42.4192 -43.32 2.4
-    endloop
-  endfacet
-  facet normal -0.831462 0.555582 0
-    outer loop
-      vertex 42.4192 -43.32 7.4
-      vertex 42.332 -43.4505 2.4
-      vertex 42.332 -43.4505 7.4
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 -0
-    outer loop
-      vertex 40.6495 -43.672 2.4
-      vertex 40.5315 -43.5685 7.4
-      vertex 40.6495 -43.672 7.4
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 0
-    outer loop
-      vertex 40.5315 -43.5685 7.4
-      vertex 40.6495 -43.672 2.4
-      vertex 40.5315 -43.5685 2.4
-    endloop
-  endfacet
-  facet normal 0.555582 0.831462 -0
-    outer loop
-      vertex 40.78 -43.7592 2.4
-      vertex 40.6495 -43.672 7.4
-      vertex 40.78 -43.7592 7.4
-    endloop
-  endfacet
-  facet normal 0.555582 0.831462 0
-    outer loop
-      vertex 40.6495 -43.672 7.4
-      vertex 40.78 -43.7592 2.4
-      vertex 40.6495 -43.672 2.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex 40.5315 -43.5685 7.4
-      vertex 40.428 -43.4505 2.4
-      vertex 40.428 -43.4505 7.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex 40.428 -43.4505 2.4
-      vertex 40.5315 -43.5685 7.4
-      vertex 40.5315 -43.5685 2.4
-    endloop
-  endfacet
-  facet normal -0.321194 -0.947013 0
-    outer loop
-      vertex 41.6906 -41.5609 2.4
-      vertex 41.8392 -41.6113 7.4
-      vertex 41.6906 -41.5609 7.4
-    endloop
-  endfacet
-  facet normal -0.321194 -0.947013 -0
-    outer loop
-      vertex 41.8392 -41.6113 7.4
-      vertex 41.6906 -41.5609 2.4
-      vertex 41.8392 -41.6113 2.4
-=======
-      vertex 40.428 -41.9895 2.4
-      vertex 40.3408 -42.12 7.4
-      vertex 40.3408 -42.12 2.4
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal 0.947013 -0.321194 0
@@ -10079,8 +9561,6 @@ solid OpenSCAD_Model
       vertex 40.2209 -42.4094 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal 0.980825 -0.194891 0
     outer loop
       vertex 40.1903 -42.5634 7.4
@@ -10109,7 +9589,6 @@ solid OpenSCAD_Model
       vertex 40.78 -41.6808 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.194891 -0.980825 0
     outer loop
       vertex 41.0694 -41.5609 2.4
@@ -10264,6 +9743,20 @@ solid OpenSCAD_Model
       vertex 40.2209 -43.0306 2.4
     endloop
   endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex 41.8392 -43.8287 2.4
+      vertex 41.6906 -43.8791 7.4
+      vertex 41.8392 -43.8287 7.4
+    endloop
+  endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex 41.6906 -43.8791 7.4
+      vertex 41.8392 -43.8287 2.4
+      vertex 41.6906 -43.8791 2.4
+    endloop
+  endfacet
   facet normal -0.659406 0.751787 0
     outer loop
       vertex 42.2285 -43.5685 2.4
@@ -10306,8 +9799,6 @@ solid OpenSCAD_Model
       vertex 42.5391 -43.0306 7.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.947013 0.321194 0
     outer loop
       vertex 42.4887 -43.1792 2.4
@@ -10322,7 +9813,6 @@ solid OpenSCAD_Model
       vertex 42.4887 -43.1792 7.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.997844 0.0656309 0
     outer loop
       vertex 42.5697 -42.8766 2.4
@@ -10337,8 +9827,6 @@ solid OpenSCAD_Model
       vertex 42.5697 -42.8766 7.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal 0.555582 0.831462 -0
     outer loop
       vertex 40.78 -43.7592 2.4
@@ -10353,7 +9841,6 @@ solid OpenSCAD_Model
       vertex 40.6495 -43.672 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.194891 0.980825 -0
     outer loop
       vertex 41.2234 -43.9097 2.4
@@ -10366,35 +9853,6 @@ solid OpenSCAD_Model
       vertex 41.0694 -43.8791 7.4
       vertex 41.2234 -43.9097 2.4
       vertex 41.0694 -43.8791 2.4
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.947013 0.321194 0
-    outer loop
-      vertex 40.2713 -43.1792 7.4
-      vertex 40.2209 -43.0306 2.4
-      vertex 40.2209 -43.0306 7.4
-    endloop
-  endfacet
-  facet normal 0.947013 0.321194 0
-    outer loop
-      vertex 40.2209 -43.0306 2.4
-      vertex 40.2713 -43.1792 7.4
-      vertex 40.2713 -43.1792 2.4
-=======
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex 40.5315 -43.5685 7.4
-      vertex 40.428 -43.4505 2.4
-      vertex 40.428 -43.4505 7.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex 40.428 -43.4505 2.4
-      vertex 40.5315 -43.5685 7.4
-      vertex 40.5315 -43.5685 2.4
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal 0.997859 0.0654055 0
@@ -12161,8 +11619,6 @@ solid OpenSCAD_Model
       vertex -37.8927 41.7983 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.896835 -0.442365 0
     outer loop
       vertex -44.4877 40.93 2.4
@@ -12177,7 +11633,6 @@ solid OpenSCAD_Model
       vertex -44.4877 40.93 7.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.555582 -0.831462 0
     outer loop
       vertex -39.57 39.6123 2.4
@@ -12192,79 +11647,6 @@ solid OpenSCAD_Model
       vertex -39.1785 39.8739 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.442365 -0.896835 0
-    outer loop
-      vertex -39.9923 39.404 2.4
-      vertex -39.57 39.6123 7.4
-      vertex -39.9923 39.404 7.4
-    endloop
-  endfacet
-  facet normal 0.442365 -0.896835 0
-    outer loop
-      vertex -39.57 39.6123 7.4
-      vertex -39.9923 39.404 2.4
-      vertex -39.57 39.6123 2.4
-    endloop
-  endfacet
-  facet normal -0.659301 0.751879 0
-    outer loop
-      vertex -43.5615 45.5861 2.4
-      vertex -43.9156 45.2756 7.4
-      vertex -43.5615 45.5861 7.4
-    endloop
-  endfacet
-  facet normal -0.659301 0.751879 0
-    outer loop
-      vertex -43.9156 45.2756 7.4
-      vertex -43.5615 45.5861 2.4
-      vertex -43.9156 45.2756 2.4
-    endloop
-  endfacet
-  facet normal -0.32132 -0.946971 0
-    outer loop
-      vertex -42.7477 39.404 2.4
-      vertex -42.3018 39.2527 7.4
-      vertex -42.7477 39.404 7.4
-    endloop
-  endfacet
-  facet normal -0.32132 -0.946971 -0
-    outer loop
-      vertex -42.3018 39.2527 7.4
-      vertex -42.7477 39.404 2.4
-      vertex -42.3018 39.2527 2.4
-    endloop
-  endfacet
-  facet normal -0.751879 -0.659301 0
-    outer loop
-      vertex -43.9156 40.1844 2.4
-      vertex -44.2261 40.5385 7.4
-      vertex -44.2261 40.5385 2.4
-    endloop
-  endfacet
-  facet normal -0.751879 -0.659301 0
-    outer loop
-      vertex -44.2261 40.5385 7.4
-      vertex -43.9156 40.1844 2.4
-      vertex -43.9156 40.1844 7.4
-    endloop
-  endfacet
-  facet normal -0.997859 -0.0654055 0
-    outer loop
-      vertex -44.9392 42.2601 2.4
-      vertex -44.97 42.73 7.4
-      vertex -44.97 42.73 2.4
-    endloop
-  endfacet
-  facet normal -0.997859 -0.0654055 0
-    outer loop
-      vertex -44.97 42.73 7.4
-      vertex -44.9392 42.2601 2.4
-      vertex -44.9392 42.2601 7.4
-    endloop
-  endfacet
-=======
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.980768 -0.195177 0
     outer loop
       vertex -44.8473 41.7983 2.4
@@ -12433,25 +11815,7 @@ solid OpenSCAD_Model
       vertex -43.5615 39.8739 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex -44.2261 40.5385 2.4
-      vertex -44.4877 40.93 7.4
-      vertex -44.4877 40.93 2.4
-    endloop
-  endfacet
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex -44.4877 40.93 7.4
-      vertex -44.2261 40.5385 2.4
-      vertex -44.2261 40.5385 7.4
-    endloop
-  endfacet
-  facet normal -0.896835 -0.442365 0
-=======
   facet normal 0.751879 -0.659301 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
       vertex -38.8244 40.1844 7.4
       vertex -38.5139 40.5385 2.4
@@ -12493,8 +11857,6 @@ solid OpenSCAD_Model
       vertex -42.7477 39.404 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.555582 -0.831462 0
     outer loop
       vertex -43.5615 39.8739 2.4
@@ -12509,7 +11871,6 @@ solid OpenSCAD_Model
       vertex -43.17 39.6123 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.997844 -0.0656309 0
     outer loop
       vertex -40.17 42.73 2.4
@@ -12552,18 +11913,18 @@ solid OpenSCAD_Model
       vertex -41.2134 43.9197 2.4
     endloop
   endfacet
-  facet normal 0.0656309 0.997844 -0
+  facet normal 0.751787 0.659406 0
     outer loop
-      vertex -41.37 41.53 2.4
-      vertex -41.5266 41.5403 7.4
-      vertex -41.37 41.53 7.4
+      vertex -42.2185 41.8815 7.4
+      vertex -42.322 41.9995 2.4
+      vertex -42.322 41.9995 7.4
     endloop
   endfacet
-  facet normal 0.0656309 0.997844 0
+  facet normal 0.751787 0.659406 0
     outer loop
-      vertex -41.5266 41.5403 7.4
-      vertex -41.37 41.53 2.4
-      vertex -41.5266 41.5403 2.4
+      vertex -42.322 41.9995 2.4
+      vertex -42.2185 41.8815 7.4
+      vertex -42.2185 41.8815 2.4
     endloop
   endfacet
   facet normal -0.751787 -0.659406 0
@@ -12720,20 +12081,6 @@ solid OpenSCAD_Model
       vertex -41.37 43.93 2.4
     endloop
   endfacet
-  facet normal -0.321194 0.947013 0
-    outer loop
-      vertex -40.9108 41.6213 2.4
-      vertex -41.0594 41.5709 7.4
-      vertex -40.9108 41.6213 7.4
-    endloop
-  endfacet
-  facet normal -0.321194 0.947013 0
-    outer loop
-      vertex -41.0594 41.5709 7.4
-      vertex -40.9108 41.6213 2.4
-      vertex -41.0594 41.5709 2.4
-    endloop
-  endfacet
   facet normal -0.0656309 0.997844 0
     outer loop
       vertex -41.2134 41.5403 2.4
@@ -12860,7 +12207,20 @@ solid OpenSCAD_Model
       vertex -40.5215 43.5785 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex -42.4092 43.33 7.4
+      vertex -42.322 43.4605 2.4
+      vertex -42.322 43.4605 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex -42.322 43.4605 2.4
+      vertex -42.4092 43.33 7.4
+      vertex -42.4092 43.33 2.4
+    endloop
+  endfacet
   facet normal 0.751787 -0.659406 0
     outer loop
       vertex -42.322 43.4605 7.4
@@ -12873,155 +12233,6 @@ solid OpenSCAD_Model
       vertex -42.2185 43.5785 2.4
       vertex -42.322 43.4605 7.4
       vertex -42.322 43.4605 2.4
-    endloop
-  endfacet
-  facet normal 0.980825 -0.194891 0
-=======
-  facet normal 0.831462 -0.555582 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-    outer loop
-      vertex -42.4092 43.33 7.4
-      vertex -42.322 43.4605 2.4
-      vertex -42.322 43.4605 7.4
-    endloop
-  endfacet
-  facet normal 0.831462 -0.555582 0
-    outer loop
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-      vertex -42.5291 43.0406 2.4
-      vertex -42.5597 42.8866 7.4
-      vertex -42.5597 42.8866 2.4
-    endloop
-  endfacet
-  facet normal 0.555582 -0.831462 0
-    outer loop
-      vertex -42.1005 43.682 2.4
-      vertex -41.97 43.7692 7.4
-      vertex -42.1005 43.682 7.4
-    endloop
-  endfacet
-  facet normal 0.555582 -0.831462 0
-    outer loop
-      vertex -41.97 43.7692 7.4
-      vertex -42.1005 43.682 2.4
-      vertex -41.97 43.7692 2.4
-    endloop
-  endfacet
-  facet normal -0.555582 0.831462 0
-    outer loop
-      vertex -40.6395 41.778 2.4
-      vertex -40.77 41.6908 7.4
-      vertex -40.6395 41.778 7.4
-    endloop
-  endfacet
-  facet normal -0.555582 0.831462 0
-    outer loop
-      vertex -40.77 41.6908 7.4
-      vertex -40.6395 41.778 2.4
-      vertex -40.77 41.6908 2.4
-    endloop
-  endfacet
-  facet normal -0.896708 0.442622 0
-    outer loop
-      vertex -40.3308 42.13 2.4
-      vertex -40.2613 42.2708 7.4
-      vertex -40.2613 42.2708 2.4
-    endloop
-  endfacet
-  facet normal -0.896708 0.442622 0
-    outer loop
-      vertex -40.2613 42.2708 7.4
-      vertex -40.3308 42.13 2.4
-      vertex -40.3308 42.13 7.4
-    endloop
-  endfacet
-  facet normal -0.751787 0.659406 0
-    outer loop
-      vertex -40.5215 41.8815 2.4
-      vertex -40.418 41.9995 7.4
-      vertex -40.418 41.9995 2.4
-    endloop
-  endfacet
-  facet normal -0.751787 0.659406 0
-    outer loop
-      vertex -40.418 41.9995 7.4
-      vertex -40.5215 41.8815 2.4
-      vertex -40.5215 41.8815 7.4
-    endloop
-  endfacet
-  facet normal -0.831462 0.555582 0
-    outer loop
-      vertex -40.418 41.9995 2.4
-      vertex -40.3308 42.13 7.4
-      vertex -40.3308 42.13 2.4
-    endloop
-  endfacet
-  facet normal -0.831462 0.555582 0
-    outer loop
-      vertex -40.3308 42.13 7.4
-      vertex -40.418 41.9995 2.4
-      vertex -40.418 41.9995 7.4
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 -0
-    outer loop
-      vertex -42.1005 41.778 2.4
-      vertex -42.2185 41.8815 7.4
-      vertex -42.1005 41.778 7.4
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 0
-    outer loop
-      vertex -42.2185 41.8815 7.4
-      vertex -42.1005 41.778 2.4
-      vertex -42.2185 41.8815 2.4
-    endloop
-  endfacet
-  facet normal 0.555582 0.831462 -0
-    outer loop
-      vertex -41.97 41.6908 2.4
-      vertex -42.1005 41.778 7.4
-      vertex -41.97 41.6908 7.4
-    endloop
-  endfacet
-  facet normal 0.555582 0.831462 0
-    outer loop
-      vertex -42.1005 41.778 7.4
-      vertex -41.97 41.6908 2.4
-      vertex -42.1005 41.778 2.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex -42.2185 41.8815 7.4
-      vertex -42.322 41.9995 2.4
-      vertex -42.322 41.9995 7.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex -42.322 41.9995 2.4
-      vertex -42.2185 41.8815 7.4
-      vertex -42.2185 41.8815 2.4
-    endloop
-  endfacet
-  facet normal -0.321194 -0.947013 0
-    outer loop
-      vertex -41.0594 43.8891 2.4
-      vertex -40.9108 43.8387 7.4
-      vertex -41.0594 43.8891 7.4
-    endloop
-  endfacet
-  facet normal -0.321194 -0.947013 -0
-    outer loop
-      vertex -40.9108 43.8387 7.4
-      vertex -41.0594 43.8891 2.4
-      vertex -40.9108 43.8387 2.4
-=======
-      vertex -42.322 43.4605 2.4
-      vertex -42.4092 43.33 7.4
-      vertex -42.4092 43.33 2.4
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal 0.947013 -0.321194 0
@@ -13038,8 +12249,6 @@ solid OpenSCAD_Model
       vertex -42.5291 43.0406 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal 0.980825 -0.194891 0
     outer loop
       vertex -42.5597 42.8866 7.4
@@ -13068,7 +12277,6 @@ solid OpenSCAD_Model
       vertex -41.97 43.7692 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.194891 -0.980825 0
     outer loop
       vertex -41.6806 43.8891 2.4
@@ -13223,6 +12431,20 @@ solid OpenSCAD_Model
       vertex -42.5291 42.4194 2.4
     endloop
   endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex -40.9108 41.6213 2.4
+      vertex -41.0594 41.5709 7.4
+      vertex -40.9108 41.6213 7.4
+    endloop
+  endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex -41.0594 41.5709 7.4
+      vertex -40.9108 41.6213 2.4
+      vertex -41.0594 41.5709 2.4
+    endloop
+  endfacet
   facet normal -0.659406 0.751787 0
     outer loop
       vertex -40.5215 41.8815 2.4
@@ -13265,8 +12487,6 @@ solid OpenSCAD_Model
       vertex -40.2109 42.4194 7.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.947013 0.321194 0
     outer loop
       vertex -40.2613 42.2708 2.4
@@ -13281,7 +12501,6 @@ solid OpenSCAD_Model
       vertex -40.2613 42.2708 7.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.997844 0.0656309 0
     outer loop
       vertex -40.1803 42.5734 2.4
@@ -13296,8 +12515,6 @@ solid OpenSCAD_Model
       vertex -40.1803 42.5734 7.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal 0.555582 0.831462 -0
     outer loop
       vertex -41.97 41.6908 2.4
@@ -13312,7 +12529,6 @@ solid OpenSCAD_Model
       vertex -42.1005 41.778 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.194891 0.980825 -0
     outer loop
       vertex -41.5266 41.5403 2.4
@@ -13325,35 +12541,6 @@ solid OpenSCAD_Model
       vertex -41.6806 41.5709 7.4
       vertex -41.5266 41.5403 2.4
       vertex -41.6806 41.5709 2.4
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.947013 0.321194 0
-    outer loop
-      vertex -42.4787 42.2708 7.4
-      vertex -42.5291 42.4194 2.4
-      vertex -42.5291 42.4194 7.4
-    endloop
-  endfacet
-  facet normal 0.947013 0.321194 0
-    outer loop
-      vertex -42.5291 42.4194 2.4
-      vertex -42.4787 42.2708 7.4
-      vertex -42.4787 42.2708 2.4
-=======
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex -42.2185 41.8815 7.4
-      vertex -42.322 41.9995 2.4
-      vertex -42.322 41.9995 7.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex -42.322 41.9995 2.4
-      vertex -42.2185 41.8815 7.4
-      vertex -42.2185 41.8815 2.4
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal 0.997859 0.0654055 0
@@ -15120,8 +14307,6 @@ solid OpenSCAD_Model
       vertex 44.8573 41.7983 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.896835 -0.442365 0
     outer loop
       vertex 38.2623 40.93 2.4
@@ -15136,7 +14321,6 @@ solid OpenSCAD_Model
       vertex 38.2623 40.93 7.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.555582 -0.831462 0
     outer loop
       vertex 43.18 39.6123 2.4
@@ -15151,79 +14335,6 @@ solid OpenSCAD_Model
       vertex 43.5715 39.8739 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.442365 -0.896835 0
-    outer loop
-      vertex 42.7577 39.404 2.4
-      vertex 43.18 39.6123 7.4
-      vertex 42.7577 39.404 7.4
-    endloop
-  endfacet
-  facet normal 0.442365 -0.896835 0
-    outer loop
-      vertex 43.18 39.6123 7.4
-      vertex 42.7577 39.404 2.4
-      vertex 43.18 39.6123 2.4
-    endloop
-  endfacet
-  facet normal -0.659301 0.751879 0
-    outer loop
-      vertex 39.1885 45.5861 2.4
-      vertex 38.8344 45.2756 7.4
-      vertex 39.1885 45.5861 7.4
-    endloop
-  endfacet
-  facet normal -0.659301 0.751879 0
-    outer loop
-      vertex 38.8344 45.2756 7.4
-      vertex 39.1885 45.5861 2.4
-      vertex 38.8344 45.2756 2.4
-    endloop
-  endfacet
-  facet normal -0.32132 -0.946971 0
-    outer loop
-      vertex 40.0023 39.404 2.4
-      vertex 40.4482 39.2527 7.4
-      vertex 40.0023 39.404 7.4
-    endloop
-  endfacet
-  facet normal -0.32132 -0.946971 -0
-    outer loop
-      vertex 40.4482 39.2527 7.4
-      vertex 40.0023 39.404 2.4
-      vertex 40.4482 39.2527 2.4
-    endloop
-  endfacet
-  facet normal -0.751879 -0.659301 0
-    outer loop
-      vertex 38.8344 40.1844 2.4
-      vertex 38.5239 40.5385 7.4
-      vertex 38.5239 40.5385 2.4
-    endloop
-  endfacet
-  facet normal -0.751879 -0.659301 0
-    outer loop
-      vertex 38.5239 40.5385 7.4
-      vertex 38.8344 40.1844 2.4
-      vertex 38.8344 40.1844 7.4
-    endloop
-  endfacet
-  facet normal -0.997859 -0.0654055 0
-    outer loop
-      vertex 37.8108 42.2601 2.4
-      vertex 37.78 42.73 7.4
-      vertex 37.78 42.73 2.4
-    endloop
-  endfacet
-  facet normal -0.997859 -0.0654055 0
-    outer loop
-      vertex 37.78 42.73 7.4
-      vertex 37.8108 42.2601 2.4
-      vertex 37.8108 42.2601 7.4
-    endloop
-  endfacet
-=======
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.980768 -0.195177 0
     outer loop
       vertex 37.9027 41.7983 2.4
@@ -15392,25 +14503,7 @@ solid OpenSCAD_Model
       vertex 39.1885 39.8739 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex 38.5239 40.5385 2.4
-      vertex 38.2623 40.93 7.4
-      vertex 38.2623 40.93 2.4
-    endloop
-  endfacet
-  facet normal -0.831462 -0.555582 0
-    outer loop
-      vertex 38.2623 40.93 7.4
-      vertex 38.5239 40.5385 2.4
-      vertex 38.5239 40.5385 7.4
-    endloop
-  endfacet
-  facet normal -0.896835 -0.442365 0
-=======
   facet normal 0.751879 -0.659301 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
       vertex 43.9256 40.1844 7.4
       vertex 44.2361 40.5385 2.4
@@ -15452,8 +14545,6 @@ solid OpenSCAD_Model
       vertex 40.0023 39.404 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.555582 -0.831462 0
     outer loop
       vertex 39.1885 39.8739 2.4
@@ -15468,7 +14559,6 @@ solid OpenSCAD_Model
       vertex 39.58 39.6123 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.997844 -0.0656309 0
     outer loop
       vertex 42.58 42.73 2.4
@@ -15511,18 +14601,18 @@ solid OpenSCAD_Model
       vertex 41.5366 43.9197 2.4
     endloop
   endfacet
-  facet normal 0.0656309 0.997844 -0
+  facet normal 0.751787 0.659406 0
     outer loop
-      vertex 41.38 41.53 2.4
-      vertex 41.2234 41.5403 7.4
-      vertex 41.38 41.53 7.4
+      vertex 40.5315 41.8815 7.4
+      vertex 40.428 41.9995 2.4
+      vertex 40.428 41.9995 7.4
     endloop
   endfacet
-  facet normal 0.0656309 0.997844 0
+  facet normal 0.751787 0.659406 0
     outer loop
-      vertex 41.2234 41.5403 7.4
-      vertex 41.38 41.53 2.4
-      vertex 41.2234 41.5403 2.4
+      vertex 40.428 41.9995 2.4
+      vertex 40.5315 41.8815 7.4
+      vertex 40.5315 41.8815 2.4
     endloop
   endfacet
   facet normal -0.751787 -0.659406 0
@@ -15679,20 +14769,6 @@ solid OpenSCAD_Model
       vertex 41.38 43.93 2.4
     endloop
   endfacet
-  facet normal -0.321194 0.947013 0
-    outer loop
-      vertex 41.8392 41.6213 2.4
-      vertex 41.6906 41.5709 7.4
-      vertex 41.8392 41.6213 7.4
-    endloop
-  endfacet
-  facet normal -0.321194 0.947013 0
-    outer loop
-      vertex 41.6906 41.5709 7.4
-      vertex 41.8392 41.6213 2.4
-      vertex 41.6906 41.5709 2.4
-    endloop
-  endfacet
   facet normal -0.0656309 0.997844 0
     outer loop
       vertex 41.5366 41.5403 2.4
@@ -15819,7 +14895,20 @@ solid OpenSCAD_Model
       vertex 42.2285 43.5785 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex 40.3408 43.33 7.4
+      vertex 40.428 43.4605 2.4
+      vertex 40.428 43.4605 7.4
+    endloop
+  endfacet
+  facet normal 0.831462 -0.555582 0
+    outer loop
+      vertex 40.428 43.4605 2.4
+      vertex 40.3408 43.33 7.4
+      vertex 40.3408 43.33 2.4
+    endloop
+  endfacet
   facet normal 0.751787 -0.659406 0
     outer loop
       vertex 40.428 43.4605 7.4
@@ -15832,155 +14921,6 @@ solid OpenSCAD_Model
       vertex 40.5315 43.5785 2.4
       vertex 40.428 43.4605 7.4
       vertex 40.428 43.4605 2.4
-    endloop
-  endfacet
-  facet normal 0.980825 -0.194891 0
-=======
-  facet normal 0.831462 -0.555582 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-    outer loop
-      vertex 40.3408 43.33 7.4
-      vertex 40.428 43.4605 2.4
-      vertex 40.428 43.4605 7.4
-    endloop
-  endfacet
-  facet normal 0.831462 -0.555582 0
-    outer loop
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-      vertex 40.2209 43.0406 2.4
-      vertex 40.1903 42.8866 7.4
-      vertex 40.1903 42.8866 2.4
-    endloop
-  endfacet
-  facet normal 0.555582 -0.831462 0
-    outer loop
-      vertex 40.6495 43.682 2.4
-      vertex 40.78 43.7692 7.4
-      vertex 40.6495 43.682 7.4
-    endloop
-  endfacet
-  facet normal 0.555582 -0.831462 0
-    outer loop
-      vertex 40.78 43.7692 7.4
-      vertex 40.6495 43.682 2.4
-      vertex 40.78 43.7692 2.4
-    endloop
-  endfacet
-  facet normal -0.555582 0.831462 0
-    outer loop
-      vertex 42.1105 41.778 2.4
-      vertex 41.98 41.6908 7.4
-      vertex 42.1105 41.778 7.4
-    endloop
-  endfacet
-  facet normal -0.555582 0.831462 0
-    outer loop
-      vertex 41.98 41.6908 7.4
-      vertex 42.1105 41.778 2.4
-      vertex 41.98 41.6908 2.4
-    endloop
-  endfacet
-  facet normal -0.896708 0.442622 0
-    outer loop
-      vertex 42.4192 42.13 2.4
-      vertex 42.4887 42.2708 7.4
-      vertex 42.4887 42.2708 2.4
-    endloop
-  endfacet
-  facet normal -0.896708 0.442622 0
-    outer loop
-      vertex 42.4887 42.2708 7.4
-      vertex 42.4192 42.13 2.4
-      vertex 42.4192 42.13 7.4
-    endloop
-  endfacet
-  facet normal -0.751787 0.659406 0
-    outer loop
-      vertex 42.2285 41.8815 2.4
-      vertex 42.332 41.9995 7.4
-      vertex 42.332 41.9995 2.4
-    endloop
-  endfacet
-  facet normal -0.751787 0.659406 0
-    outer loop
-      vertex 42.332 41.9995 7.4
-      vertex 42.2285 41.8815 2.4
-      vertex 42.2285 41.8815 7.4
-    endloop
-  endfacet
-  facet normal -0.831462 0.555582 0
-    outer loop
-      vertex 42.332 41.9995 2.4
-      vertex 42.4192 42.13 7.4
-      vertex 42.4192 42.13 2.4
-    endloop
-  endfacet
-  facet normal -0.831462 0.555582 0
-    outer loop
-      vertex 42.4192 42.13 7.4
-      vertex 42.332 41.9995 2.4
-      vertex 42.332 41.9995 7.4
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 -0
-    outer loop
-      vertex 40.6495 41.778 2.4
-      vertex 40.5315 41.8815 7.4
-      vertex 40.6495 41.778 7.4
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 0
-    outer loop
-      vertex 40.5315 41.8815 7.4
-      vertex 40.6495 41.778 2.4
-      vertex 40.5315 41.8815 2.4
-    endloop
-  endfacet
-  facet normal 0.555582 0.831462 -0
-    outer loop
-      vertex 40.78 41.6908 2.4
-      vertex 40.6495 41.778 7.4
-      vertex 40.78 41.6908 7.4
-    endloop
-  endfacet
-  facet normal 0.555582 0.831462 0
-    outer loop
-      vertex 40.6495 41.778 7.4
-      vertex 40.78 41.6908 2.4
-      vertex 40.6495 41.778 2.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex 40.5315 41.8815 7.4
-      vertex 40.428 41.9995 2.4
-      vertex 40.428 41.9995 7.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex 40.428 41.9995 2.4
-      vertex 40.5315 41.8815 7.4
-      vertex 40.5315 41.8815 2.4
-    endloop
-  endfacet
-  facet normal -0.321194 -0.947013 0
-    outer loop
-      vertex 41.6906 43.8891 2.4
-      vertex 41.8392 43.8387 7.4
-      vertex 41.6906 43.8891 7.4
-    endloop
-  endfacet
-  facet normal -0.321194 -0.947013 -0
-    outer loop
-      vertex 41.8392 43.8387 7.4
-      vertex 41.6906 43.8891 2.4
-      vertex 41.8392 43.8387 2.4
-=======
-      vertex 40.428 43.4605 2.4
-      vertex 40.3408 43.33 7.4
-      vertex 40.3408 43.33 2.4
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal 0.947013 -0.321194 0
@@ -15997,8 +14937,6 @@ solid OpenSCAD_Model
       vertex 40.2209 43.0406 2.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal 0.980825 -0.194891 0
     outer loop
       vertex 40.1903 42.8866 7.4
@@ -16027,7 +14965,6 @@ solid OpenSCAD_Model
       vertex 40.78 43.7692 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.194891 -0.980825 0
     outer loop
       vertex 41.0694 43.8891 2.4
@@ -16182,6 +15119,20 @@ solid OpenSCAD_Model
       vertex 40.2209 42.4194 2.4
     endloop
   endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex 41.8392 41.6213 2.4
+      vertex 41.6906 41.5709 7.4
+      vertex 41.8392 41.6213 7.4
+    endloop
+  endfacet
+  facet normal -0.321194 0.947013 0
+    outer loop
+      vertex 41.6906 41.5709 7.4
+      vertex 41.8392 41.6213 2.4
+      vertex 41.6906 41.5709 2.4
+    endloop
+  endfacet
   facet normal -0.659406 0.751787 0
     outer loop
       vertex 42.2285 41.8815 2.4
@@ -16224,8 +15175,6 @@ solid OpenSCAD_Model
       vertex 42.5391 42.4194 7.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal -0.947013 0.321194 0
     outer loop
       vertex 42.4887 42.2708 2.4
@@ -16240,7 +15189,6 @@ solid OpenSCAD_Model
       vertex 42.4887 42.2708 7.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal -0.997844 0.0656309 0
     outer loop
       vertex 42.5697 42.5734 2.4
@@ -16255,8 +15203,6 @@ solid OpenSCAD_Model
       vertex 42.5697 42.5734 7.4
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-=======
   facet normal 0.555582 0.831462 -0
     outer loop
       vertex 40.78 41.6908 2.4
@@ -16271,7 +15217,6 @@ solid OpenSCAD_Model
       vertex 40.6495 41.778 2.4
     endloop
   endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
   facet normal 0.194891 0.980825 -0
     outer loop
       vertex 41.2234 41.5403 2.4
@@ -16284,35 +15229,6 @@ solid OpenSCAD_Model
       vertex 41.0694 41.5709 7.4
       vertex 41.2234 41.5403 2.4
       vertex 41.0694 41.5709 2.4
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.947013 0.321194 0
-    outer loop
-      vertex 40.2713 42.2708 7.4
-      vertex 40.2209 42.4194 2.4
-      vertex 40.2209 42.4194 7.4
-    endloop
-  endfacet
-  facet normal 0.947013 0.321194 0
-    outer loop
-      vertex 40.2209 42.4194 2.4
-      vertex 40.2713 42.2708 7.4
-      vertex 40.2713 42.2708 2.4
-=======
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex 40.5315 41.8815 7.4
-      vertex 40.428 41.9995 2.4
-      vertex 40.428 41.9995 7.4
-    endloop
-  endfacet
-  facet normal 0.751787 0.659406 0
-    outer loop
-      vertex 40.428 41.9995 2.4
-      vertex 40.5315 41.8815 7.4
-      vertex 40.5315 41.8815 2.4
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal 1 0 0
@@ -18135,6 +17051,20 @@ solid OpenSCAD_Model
       vertex 113.916 47.3471 0
     endloop
   endfacet
+  facet normal 0.831167 0.556022 0
+    outer loop
+      vertex 113.414 48.825 1.5
+      vertex 113.123 49.26 0
+      vertex 113.123 49.26 1.5
+    endloop
+  endfacet
+  facet normal 0.831167 0.556022 0
+    outer loop
+      vertex 113.123 49.26 0
+      vertex 113.414 48.825 1.5
+      vertex 113.414 48.825 0
+    endloop
+  endfacet
   facet normal 0.947026 0.321156 0
     outer loop
       vertex 113.814 47.8603 1.5
@@ -18345,20 +17275,6 @@ solid OpenSCAD_Model
       vertex 111.95 -50.2891 0
     endloop
   endfacet
-  facet normal 0.831167 0.556022 0
-    outer loop
-      vertex 113.414 48.825 1.5
-      vertex 113.123 49.26 0
-      vertex 113.123 49.26 1.5
-    endloop
-  endfacet
-  facet normal 0.831167 0.556022 0
-    outer loop
-      vertex 113.123 49.26 0
-      vertex 113.414 48.825 1.5
-      vertex 113.414 48.825 0
-    endloop
-  endfacet
   facet normal 0.195197 0.980764 -0
     outer loop
       vertex 110.985 50.6887 0
@@ -18513,20 +17429,6 @@ solid OpenSCAD_Model
       vertex 56.755 -12.67 1.5
     endloop
   endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 49.475 1.33 0
-      vertex 56.755 1.33 1.5
-      vertex 49.475 1.33 1.5
-    endloop
-  endfacet
-  facet normal 0 -1 -0
-    outer loop
-      vertex 56.755 1.33 1.5
-      vertex 49.475 1.33 0
-      vertex 56.755 1.33 0
-    endloop
-  endfacet
   facet normal 0 1 -0
     outer loop
       vertex 56.755 -12.67 0
@@ -18541,6 +17443,20 @@ solid OpenSCAD_Model
       vertex 49.475 -12.67 0
     endloop
   endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 49.475 1.33 0
+      vertex 56.755 1.33 1.5
+      vertex 49.475 1.33 1.5
+    endloop
+  endfacet
+  facet normal 0 -1 -0
+    outer loop
+      vertex 56.755 1.33 1.5
+      vertex 49.475 1.33 0
+      vertex 56.755 1.33 0
+    endloop
+  endfacet
   facet normal 1 -0 0
     outer loop
       vertex 61.795 -12.67 1.5
@@ -18569,20 +17485,6 @@ solid OpenSCAD_Model
       vertex 75.795 -12.67 1.5
     endloop
   endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 61.795 1.33 0
-      vertex 75.795 1.33 1.5
-      vertex 61.795 1.33 1.5
-    endloop
-  endfacet
-  facet normal 0 -1 -0
-    outer loop
-      vertex 75.795 1.33 1.5
-      vertex 61.795 1.33 0
-      vertex 75.795 1.33 0
-    endloop
-  endfacet
   facet normal 0 1 -0
     outer loop
       vertex 75.795 -12.67 0
@@ -18595,6 +17497,20 @@ solid OpenSCAD_Model
       vertex 61.795 -12.67 1.5
       vertex 75.795 -12.67 0
       vertex 61.795 -12.67 0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 61.795 1.33 0
+      vertex 75.795 1.33 1.5
+      vertex 61.795 1.33 1.5
+    endloop
+  endfacet
+  facet normal 0 -1 -0
+    outer loop
+      vertex 75.795 1.33 1.5
+      vertex 61.795 1.33 0
+      vertex 75.795 1.33 0
     endloop
   endfacet
   facet normal 1 -0 0
@@ -18625,20 +17541,6 @@ solid OpenSCAD_Model
       vertex 94.855 -12.67 1.5
     endloop
   endfacet
-  facet normal 0 1 -0
-    outer loop
-      vertex 94.855 -12.67 0
-      vertex 80.855 -12.67 1.5
-      vertex 94.855 -12.67 1.5
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 80.855 -12.67 1.5
-      vertex 94.855 -12.67 0
-      vertex 80.855 -12.67 0
-    endloop
-  endfacet
   facet normal 0 -1 0
     outer loop
       vertex 80.855 1.33 0
@@ -18651,6 +17553,20 @@ solid OpenSCAD_Model
       vertex 94.855 1.33 1.5
       vertex 80.855 1.33 0
       vertex 94.855 1.33 0
+    endloop
+  endfacet
+  facet normal 0 1 -0
+    outer loop
+      vertex 94.855 -12.67 0
+      vertex 80.855 -12.67 1.5
+      vertex 94.855 -12.67 1.5
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 80.855 -12.67 1.5
+      vertex 94.855 -12.67 0
+      vertex 80.855 -12.67 0
     endloop
   endfacet
   facet normal -1 0 0
@@ -18779,20 +17695,6 @@ solid OpenSCAD_Model
       vertex 94.855 6.38 1.5
     endloop
   endfacet
-  facet normal 0 1 -0
-    outer loop
-      vertex 94.855 6.38 0
-      vertex 80.855 6.38 1.5
-      vertex 94.855 6.38 1.5
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 80.855 6.38 1.5
-      vertex 94.855 6.38 0
-      vertex 80.855 6.38 0
-    endloop
-  endfacet
   facet normal 0 -1 0
     outer loop
       vertex 80.855 20.38 0
@@ -18807,6 +17709,20 @@ solid OpenSCAD_Model
       vertex 94.855 20.38 0
     endloop
   endfacet
+  facet normal 0 1 -0
+    outer loop
+      vertex 94.855 6.38 0
+      vertex 80.855 6.38 1.5
+      vertex 94.855 6.38 1.5
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 80.855 6.38 1.5
+      vertex 94.855 6.38 0
+      vertex 80.855 6.38 0
+    endloop
+  endfacet
   facet normal -0.555512 -0.831509 0
     outer loop
       vertex 71.295 -20.3899 0
@@ -18819,20 +17735,6 @@ solid OpenSCAD_Model
       vertex 71.8388 -20.7532 1.5
       vertex 71.295 -20.3899 0
       vertex 71.8388 -20.7532 0
-    endloop
-  endfacet
-  facet normal 0.980786 -0.195087 0
-    outer loop
-      vertex 63.8378 -24.0674 1.5
-      vertex 63.9654 -23.4259 0
-      vertex 63.9654 -23.4259 1.5
-    endloop
-  endfacet
-  facet normal 0.980786 -0.195087 0
-    outer loop
-      vertex 63.9654 -23.4259 0
-      vertex 63.8378 -24.0674 1.5
-      vertex 63.8378 -24.0674 0
     endloop
   endfacet
   facet normal -0.980786 0.195087 0
@@ -18989,9 +17891,6 @@ solid OpenSCAD_Model
       vertex 63.795 -24.72 0
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.555512 -0.831509 0
-=======
   facet normal 0.831509 -0.555512 0
     outer loop
       vertex 64.4649 -22.22 1.5
@@ -19007,7 +17906,6 @@ solid OpenSCAD_Model
     endloop
   endfacet
   facet normal 0.195087 -0.980786 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
       vertex 67.5009 -19.8904 0
       vertex 68.1424 -19.7628 1.5
@@ -19021,25 +17919,7 @@ solid OpenSCAD_Model
       vertex 68.1424 -19.7628 0
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.321407 -0.946941 0
-    outer loop
-      vertex 66.8816 -20.1006 0
-      vertex 67.5009 -19.8904 1.5
-      vertex 66.8816 -20.1006 1.5
-    endloop
-  endfacet
-  facet normal 0.321407 -0.946941 0
-    outer loop
-      vertex 67.5009 -19.8904 1.5
-      vertex 66.8816 -20.1006 0
-      vertex 67.5009 -19.8904 0
-    endloop
-  endfacet
-  facet normal -0.442314 0.89686 0
-=======
   facet normal 0.751771 -0.659424 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
       vertex 64.8282 -21.6762 1.5
       vertex 65.2595 -21.1845 0
@@ -19065,6 +17945,20 @@ solid OpenSCAD_Model
       vertex 73.7522 -24.0674 1.5
       vertex 73.795 -24.72 0
       vertex 73.795 -24.72 1.5
+    endloop
+  endfacet
+  facet normal -0.831509 0.555512 0
+    outer loop
+      vertex 72.7618 -27.7638 0
+      vertex 73.1251 -27.22 1.5
+      vertex 73.1251 -27.22 0
+    endloop
+  endfacet
+  facet normal -0.831509 0.555512 0
+    outer loop
+      vertex 73.1251 -27.22 1.5
+      vertex 72.7618 -27.7638 0
+      vertex 72.7618 -27.7638 1.5
     endloop
   endfacet
   facet normal -0.946941 0.321407 0
@@ -19221,6 +18115,34 @@ solid OpenSCAD_Model
       vertex 69.4476 -19.7628 0
     endloop
   endfacet
+  facet normal 0.997856 0.0654432 0
+    outer loop
+      vertex 63.8378 -25.3726 1.5
+      vertex 63.795 -24.72 0
+      vertex 63.795 -24.72 1.5
+    endloop
+  endfacet
+  facet normal 0.997856 0.0654432 0
+    outer loop
+      vertex 63.795 -24.72 0
+      vertex 63.8378 -25.3726 1.5
+      vertex 63.8378 -25.3726 0
+    endloop
+  endfacet
+  facet normal 0.980786 -0.195087 0
+    outer loop
+      vertex 63.8378 -24.0674 1.5
+      vertex 63.9654 -23.4259 0
+      vertex 63.9654 -23.4259 1.5
+    endloop
+  endfacet
+  facet normal 0.980786 -0.195087 0
+    outer loop
+      vertex 63.9654 -23.4259 0
+      vertex 63.8378 -24.0674 1.5
+      vertex 63.8378 -24.0674 0
+    endloop
+  endfacet
   facet normal 0.89686 -0.442314 0
     outer loop
       vertex 64.1756 -22.8066 1.5
@@ -19277,6 +18199,20 @@ solid OpenSCAD_Model
       vertex 66.295 -20.3899 0
     endloop
   endfacet
+  facet normal -0.997856 0.0654432 0
+    outer loop
+      vertex 73.7522 -25.3726 0
+      vertex 73.795 -24.72 1.5
+      vertex 73.795 -24.72 0
+    endloop
+  endfacet
+  facet normal -0.997856 0.0654432 0
+    outer loop
+      vertex 73.795 -24.72 1.5
+      vertex 73.7522 -25.3726 0
+      vertex 73.7522 -25.3726 1.5
+    endloop
+  endfacet
   facet normal -0.195087 0.980786 0
     outer loop
       vertex 70.0891 -29.5496 0
@@ -19291,6 +18227,20 @@ solid OpenSCAD_Model
       vertex 69.4476 -29.6772 0
     endloop
   endfacet
+  facet normal -0.321407 0.946941 0
+    outer loop
+      vertex 70.7084 -29.3394 0
+      vertex 70.0891 -29.5496 1.5
+      vertex 70.7084 -29.3394 1.5
+    endloop
+  endfacet
+  facet normal -0.321407 0.946941 0
+    outer loop
+      vertex 70.0891 -29.5496 1.5
+      vertex 70.7084 -29.3394 0
+      vertex 70.0891 -29.5496 0
+    endloop
+  endfacet
   facet normal -0.659424 0.751771 0
     outer loop
       vertex 72.3305 -28.2555 0
@@ -19303,6 +18253,20 @@ solid OpenSCAD_Model
       vertex 71.8388 -28.6868 1.5
       vertex 72.3305 -28.2555 0
       vertex 71.8388 -28.6868 0
+    endloop
+  endfacet
+  facet normal -0.0654432 0.997856 0
+    outer loop
+      vertex 69.4476 -29.6772 0
+      vertex 68.795 -29.72 1.5
+      vertex 69.4476 -29.6772 1.5
+    endloop
+  endfacet
+  facet normal -0.0654432 0.997856 0
+    outer loop
+      vertex 68.795 -29.72 1.5
+      vertex 69.4476 -29.6772 0
+      vertex 68.795 -29.72 0
     endloop
   endfacet
   facet normal 0.321407 0.946941 -0
@@ -19361,79 +18325,18 @@ solid OpenSCAD_Model
       vertex 65.2595 -28.2555 0
     endloop
   endfacet
-  facet normal 0.997856 0.0654432 0
+  facet normal 0.659424 0.751771 -0
     outer loop
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-      vertex 70.7084 -20.1006 0
-      vertex 71.295 -20.3899 1.5
-      vertex 70.7084 -20.1006 1.5
+      vertex 65.7512 -28.6868 0
+      vertex 65.2595 -28.2555 1.5
+      vertex 65.7512 -28.6868 1.5
     endloop
   endfacet
-  facet normal -0.442314 -0.89686 -0
+  facet normal 0.659424 0.751771 0
     outer loop
-      vertex 71.295 -20.3899 1.5
-      vertex 70.7084 -20.1006 0
-      vertex 71.295 -20.3899 0
-    endloop
-  endfacet
-  facet normal 0.831509 -0.555512 0
-    outer loop
-      vertex 64.4649 -22.22 1.5
-      vertex 64.8282 -21.6762 0
-      vertex 64.8282 -21.6762 1.5
-    endloop
-  endfacet
-  facet normal 0.831509 -0.555512 0
-    outer loop
-      vertex 64.8282 -21.6762 0
-      vertex 64.4649 -22.22 1.5
-      vertex 64.4649 -22.22 0
-    endloop
-  endfacet
-  facet normal 0.997856 -0.0654432 0
-    outer loop
-      vertex 63.795 -24.72 1.5
-      vertex 63.8378 -24.0674 0
-      vertex 63.8378 -24.0674 1.5
-    endloop
-  endfacet
-  facet normal 0.997856 -0.0654432 0
-    outer loop
-      vertex 63.8378 -24.0674 0
-      vertex 63.795 -24.72 1.5
-=======
-      vertex 63.8378 -25.3726 1.5
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-      vertex 63.795 -24.72 0
-      vertex 63.795 -24.72 1.5
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.980786 0.195087 0
-    outer loop
-      vertex 73.6246 -26.0141 0
-      vertex 73.7522 -25.3726 1.5
-=======
-  facet normal 0.997856 0.0654432 0
-    outer loop
-      vertex 63.795 -24.72 0
-      vertex 63.8378 -25.3726 1.5
-      vertex 63.8378 -25.3726 0
-    endloop
-  endfacet
-  facet normal -0.997856 0.0654432 0
-    outer loop
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-      vertex 73.7522 -25.3726 0
-      vertex 73.795 -24.72 1.5
-      vertex 73.795 -24.72 0
-    endloop
-  endfacet
-  facet normal -0.997856 0.0654432 0
-    outer loop
-      vertex 73.795 -24.72 1.5
-      vertex 73.7522 -25.3726 0
-      vertex 73.7522 -25.3726 1.5
+      vertex 65.2595 -28.2555 1.5
+      vertex 65.7512 -28.6868 0
+      vertex 65.2595 -28.2555 0
     endloop
   endfacet
   facet normal -0.89686 0.442314 0
@@ -19450,34 +18353,6 @@ solid OpenSCAD_Model
       vertex 73.1251 -27.22 1.5
     endloop
   endfacet
-  facet normal -0.831509 0.555512 0
-    outer loop
-      vertex 72.7618 -27.7638 0
-      vertex 73.1251 -27.22 1.5
-      vertex 73.1251 -27.22 0
-    endloop
-  endfacet
-  facet normal -0.831509 0.555512 0
-    outer loop
-      vertex 73.1251 -27.22 1.5
-      vertex 72.7618 -27.7638 0
-      vertex 72.7618 -27.7638 1.5
-    endloop
-  endfacet
-  facet normal -0.321407 0.946941 0
-    outer loop
-      vertex 70.7084 -29.3394 0
-      vertex 70.0891 -29.5496 1.5
-      vertex 70.7084 -29.3394 1.5
-    endloop
-  endfacet
-  facet normal -0.321407 0.946941 0
-    outer loop
-      vertex 70.0891 -29.5496 1.5
-      vertex 70.7084 -29.3394 0
-      vertex 70.0891 -29.5496 0
-    endloop
-  endfacet
   facet normal -0.751771 0.659424 0
     outer loop
       vertex 72.3305 -28.2555 0
@@ -19490,20 +18365,6 @@ solid OpenSCAD_Model
       vertex 72.7618 -27.7638 1.5
       vertex 72.3305 -28.2555 0
       vertex 72.3305 -28.2555 1.5
-    endloop
-  endfacet
-  facet normal -0.0654432 0.997856 0
-    outer loop
-      vertex 69.4476 -29.6772 0
-      vertex 68.795 -29.72 1.5
-      vertex 69.4476 -29.6772 1.5
-    endloop
-  endfacet
-  facet normal -0.0654432 0.997856 0
-    outer loop
-      vertex 68.795 -29.72 1.5
-      vertex 69.4476 -29.6772 0
-      vertex 68.795 -29.72 0
     endloop
   endfacet
   facet normal 0.442314 0.89686 -0
@@ -19534,20 +18395,6 @@ solid OpenSCAD_Model
       vertex 64.1756 -26.6334 0
     endloop
   endfacet
-  facet normal 0.659424 0.751771 -0
-    outer loop
-      vertex 65.7512 -28.6868 0
-      vertex 65.2595 -28.2555 1.5
-      vertex 65.7512 -28.6868 1.5
-    endloop
-  endfacet
-  facet normal 0.659424 0.751771 0
-    outer loop
-      vertex 65.2595 -28.2555 1.5
-      vertex 65.7512 -28.6868 0
-      vertex 65.2595 -28.2555 0
-    endloop
-  endfacet
   facet normal 1 -0 0
     outer loop
       vertex 74.855 -28.72 1.5
@@ -19576,6 +18423,20 @@ solid OpenSCAD_Model
       vertex 100.855 -28.72 1.5
     endloop
   endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 74.855 -20.72 0
+      vertex 100.855 -20.72 1.5
+      vertex 74.855 -20.72 1.5
+    endloop
+  endfacet
+  facet normal 0 -1 -0
+    outer loop
+      vertex 100.855 -20.72 1.5
+      vertex 74.855 -20.72 0
+      vertex 100.855 -20.72 0
+    endloop
+  endfacet
   facet normal 0 1 -0
     outer loop
       vertex 100.855 -28.72 0
@@ -19590,96 +18451,6 @@ solid OpenSCAD_Model
       vertex 74.855 -28.72 0
     endloop
   endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 74.855 -20.72 0
-      vertex 100.855 -20.72 1.5
-      vertex 74.855 -20.72 1.5
-    endloop
-  endfacet
-  facet normal 0 -1 -0
-    outer loop
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-      vertex 107.045 -42.5634 1.5
-      vertex 107.055 -42.72 0
-      vertex 107.055 -42.72 1.5
-    endloop
-  endfacet
-  facet normal 0.997967 -0.0637272 0
-    outer loop
-      vertex 104.655 -42.72 1.5
-      vertex 104.665 -42.5634 0
-      vertex 104.665 -42.5634 1.5
-    endloop
-  endfacet
-  facet normal 0.997967 -0.0637272 0
-    outer loop
-      vertex 104.665 -42.5634 0
-      vertex 104.655 -42.72 1.5
-      vertex 104.655 -42.72 0
-    endloop
-  endfacet
-  facet normal -0.0654644 -0.997855 0
-    outer loop
-      vertex 105.855 -41.52 0
-      vertex 106.012 -41.5303 1.5
-      vertex 105.855 -41.52 1.5
-    endloop
-  endfacet
-  facet normal -0.0654644 -0.997855 -0
-    outer loop
-      vertex 106.012 -41.5303 1.5
-      vertex 105.855 -41.52 0
-      vertex 106.012 -41.5303 0
-    endloop
-  endfacet
-  facet normal -0.753367 -0.6576 0
-    outer loop
-      vertex 106.807 -41.9895 0
-      vertex 106.704 -41.8715 1.5
-      vertex 106.704 -41.8715 0
-    endloop
-  endfacet
-  facet normal -0.753367 -0.6576 0
-    outer loop
-      vertex 106.704 -41.8715 1.5
-      vertex 106.807 -41.9895 0
-      vertex 106.807 -41.9895 1.5
-    endloop
-  endfacet
-  facet normal 0.659406 -0.751787 0
-    outer loop
-      vertex 105.006 -41.8715 0
-      vertex 105.124 -41.768 1.5
-      vertex 105.006 -41.8715 1.5
-    endloop
-  endfacet
-  facet normal 0.659406 -0.751787 0
-    outer loop
-      vertex 105.124 -41.768 1.5
-      vertex 105.006 -41.8715 0
-      vertex 105.124 -41.768 0
-    endloop
-  endfacet
-  facet normal 0.322361 -0.946617 0
-    outer loop
-      vertex 105.396 -41.6113 0
-      vertex 105.544 -41.5609 1.5
-      vertex 105.396 -41.6113 1.5
-    endloop
-  endfacet
-  facet normal 0.322361 -0.946617 0
-    outer loop
-      vertex 105.544 -41.5609 1.5
-      vertex 105.396 -41.6113 0
-      vertex 105.544 -41.5609 0
-=======
-      vertex 100.855 -20.72 1.5
-      vertex 74.855 -20.72 0
-      vertex 100.855 -20.72 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-    endloop
-  endfacet
   facet normal -0.895442 -0.445177 0
     outer loop
       vertex 106.964 -42.2608 0
@@ -19720,20 +18491,6 @@ solid OpenSCAD_Model
       vertex 106.807 -41.9895 1.5
       vertex 106.894 -42.12 0
       vertex 106.894 -42.12 1.5
-    endloop
-  endfacet
-  facet normal -0.322361 -0.946617 0
-    outer loop
-      vertex 106.166 -41.5609 0
-      vertex 106.314 -41.6113 1.5
-      vertex 106.166 -41.5609 1.5
-    endloop
-  endfacet
-  facet normal -0.322361 -0.946617 -0
-    outer loop
-      vertex 106.314 -41.6113 1.5
-      vertex 106.166 -41.5609 0
-      vertex 106.314 -41.6113 0
     endloop
   endfacet
   facet normal -0.442117 -0.896957 0
@@ -19778,6 +18535,20 @@ solid OpenSCAD_Model
       vertex 104.746 -42.2608 0
     endloop
   endfacet
+  facet normal -0.997967 0.0637272 0
+    outer loop
+      vertex 107.045 -42.8766 0
+      vertex 107.055 -42.72 1.5
+      vertex 107.055 -42.72 0
+    endloop
+  endfacet
+  facet normal -0.997967 0.0637272 0
+    outer loop
+      vertex 107.055 -42.72 1.5
+      vertex 107.045 -42.8766 0
+      vertex 107.045 -42.8766 1.5
+    endloop
+  endfacet
   facet normal -0.753367 -0.6576 0
     outer loop
       vertex 106.807 -41.9895 0
@@ -19804,146 +18575,6 @@ solid OpenSCAD_Model
       vertex 106.166 -41.5609 1.5
       vertex 106.012 -41.5303 0
       vertex 106.166 -41.5609 0
-    endloop
-  endfacet
-  facet normal -0.659406 -0.751787 0
-    outer loop
-      vertex 106.586 -41.768 0
-      vertex 106.704 -41.8715 1.5
-      vertex 106.586 -41.768 1.5
-    endloop
-  endfacet
-  facet normal -0.659406 -0.751787 -0
-    outer loop
-      vertex 106.704 -41.8715 1.5
-      vertex 106.586 -41.768 0
-      vertex 106.704 -41.8715 0
-    endloop
-  endfacet
-  facet normal 0.980335 -0.19734 0
-    outer loop
-      vertex 104.665 -42.5634 1.5
-      vertex 104.696 -42.4094 0
-      vertex 104.696 -42.4094 1.5
-    endloop
-  endfacet
-  facet normal 0.980335 -0.19734 0
-    outer loop
-      vertex 104.696 -42.4094 0
-      vertex 104.665 -42.5634 1.5
-      vertex 104.665 -42.5634 0
-    endloop
-  endfacet
-  facet normal 0.753367 -0.6576 0
-    outer loop
-      vertex 104.903 -41.9895 1.5
-      vertex 105.006 -41.8715 0
-      vertex 105.006 -41.8715 1.5
-    endloop
-  endfacet
-  facet normal 0.753367 -0.6576 0
-    outer loop
-      vertex 105.006 -41.8715 0
-      vertex 104.903 -41.9895 1.5
-      vertex 104.903 -41.9895 0
-    endloop
-  endfacet
-  facet normal 0.442117 -0.896957 0
-    outer loop
-      vertex 105.255 -41.6808 0
-      vertex 105.396 -41.6113 1.5
-      vertex 105.255 -41.6808 1.5
-    endloop
-  endfacet
-  facet normal 0.442117 -0.896957 0
-    outer loop
-      vertex 105.396 -41.6113 1.5
-      vertex 105.255 -41.6808 0
-      vertex 105.396 -41.6113 0
-    endloop
-  endfacet
-  facet normal 0.0654644 -0.997855 0
-    outer loop
-      vertex 105.698 -41.5303 0
-      vertex 105.855 -41.52 1.5
-      vertex 105.698 -41.5303 1.5
-    endloop
-  endfacet
-  facet normal 0.0654644 -0.997855 0
-    outer loop
-      vertex 105.855 -41.52 1.5
-      vertex 105.698 -41.5303 0
-      vertex 105.855 -41.52 0
-    endloop
-  endfacet
-  facet normal 0.194891 0.980825 -0
-    outer loop
-      vertex 105.698 -43.9097 0
-      vertex 105.544 -43.8791 1.5
-      vertex 105.698 -43.9097 1.5
-    endloop
-  endfacet
-  facet normal 0.194891 0.980825 0
-    outer loop
-      vertex 105.544 -43.8791 1.5
-      vertex 105.698 -43.9097 0
-      vertex 105.544 -43.8791 0
-    endloop
-  endfacet
-  facet normal 0.895442 0.445177 0
-    outer loop
-      vertex 104.816 -43.32 1.5
-      vertex 104.746 -43.1792 0
-      vertex 104.746 -43.1792 1.5
-    endloop
-  endfacet
-  facet normal 0.895442 0.445177 0
-    outer loop
-      vertex 104.746 -43.1792 0
-      vertex 104.816 -43.32 1.5
-      vertex 104.816 -43.32 0
-    endloop
-  endfacet
-  facet normal -0.980335 -0.19734 0
-    outer loop
-      vertex 107.045 -42.5634 0
-      vertex 107.014 -42.4094 1.5
-      vertex 107.014 -42.4094 0
-    endloop
-  endfacet
-  facet normal -0.980335 -0.19734 0
-    outer loop
-      vertex 107.014 -42.4094 1.5
-      vertex 107.045 -42.5634 0
-      vertex 107.045 -42.5634 1.5
-    endloop
-  endfacet
-  facet normal -0.947787 -0.318905 0
-    outer loop
-      vertex 107.014 -42.4094 0
-      vertex 106.964 -42.2608 1.5
-      vertex 106.964 -42.2608 0
-    endloop
-  endfacet
-  facet normal -0.947787 -0.318905 0
-    outer loop
-      vertex 106.964 -42.2608 1.5
-      vertex 107.014 -42.4094 0
-      vertex 107.014 -42.4094 1.5
-    endloop
-  endfacet
-  facet normal -0.0654644 -0.997855 0
-    outer loop
-      vertex 105.855 -41.52 0
-      vertex 106.012 -41.5303 1.5
-      vertex 105.855 -41.52 1.5
-    endloop
-  endfacet
-  facet normal -0.0654644 -0.997855 -0
-    outer loop
-      vertex 106.012 -41.5303 1.5
-      vertex 105.855 -41.52 0
-      vertex 106.012 -41.5303 0
     endloop
   endfacet
   facet normal -0.554113 -0.832441 0
@@ -19960,6 +18591,118 @@ solid OpenSCAD_Model
       vertex 106.586 -41.768 0
     endloop
   endfacet
+  facet normal 0.980335 -0.19734 0
+    outer loop
+      vertex 104.665 -42.5634 1.5
+      vertex 104.696 -42.4094 0
+      vertex 104.696 -42.4094 1.5
+    endloop
+  endfacet
+  facet normal 0.980335 -0.19734 0
+    outer loop
+      vertex 104.696 -42.4094 0
+      vertex 104.665 -42.5634 1.5
+      vertex 104.665 -42.5634 0
+    endloop
+  endfacet
+  facet normal 0.753367 -0.6576 0
+    outer loop
+      vertex 104.903 -41.9895 1.5
+      vertex 105.006 -41.8715 0
+      vertex 105.006 -41.8715 1.5
+    endloop
+  endfacet
+  facet normal 0.753367 -0.6576 0
+    outer loop
+      vertex 105.006 -41.8715 0
+      vertex 104.903 -41.9895 1.5
+      vertex 104.903 -41.9895 0
+    endloop
+  endfacet
+  facet normal 0.442117 -0.896957 0
+    outer loop
+      vertex 105.255 -41.6808 0
+      vertex 105.396 -41.6113 1.5
+      vertex 105.255 -41.6808 1.5
+    endloop
+  endfacet
+  facet normal 0.442117 -0.896957 0
+    outer loop
+      vertex 105.396 -41.6113 1.5
+      vertex 105.255 -41.6808 0
+      vertex 105.396 -41.6113 0
+    endloop
+  endfacet
+  facet normal 0.194891 -0.980825 0
+    outer loop
+      vertex 105.544 -41.5609 0
+      vertex 105.698 -41.5303 1.5
+      vertex 105.544 -41.5609 1.5
+    endloop
+  endfacet
+  facet normal 0.194891 -0.980825 0
+    outer loop
+      vertex 105.698 -41.5303 1.5
+      vertex 105.544 -41.5609 0
+      vertex 105.698 -41.5303 0
+    endloop
+  endfacet
+  facet normal -0.947787 -0.318905 0
+    outer loop
+      vertex 107.014 -42.4094 0
+      vertex 106.964 -42.2608 1.5
+      vertex 106.964 -42.2608 0
+    endloop
+  endfacet
+  facet normal -0.947787 -0.318905 0
+    outer loop
+      vertex 106.964 -42.2608 1.5
+      vertex 107.014 -42.4094 0
+      vertex 107.014 -42.4094 1.5
+    endloop
+  endfacet
+  facet normal -0.0654644 -0.997855 0
+    outer loop
+      vertex 105.855 -41.52 0
+      vertex 106.012 -41.5303 1.5
+      vertex 105.855 -41.52 1.5
+    endloop
+  endfacet
+  facet normal -0.0654644 -0.997855 -0
+    outer loop
+      vertex 106.012 -41.5303 1.5
+      vertex 105.855 -41.52 0
+      vertex 106.012 -41.5303 0
+    endloop
+  endfacet
+  facet normal -0.322361 -0.946617 0
+    outer loop
+      vertex 106.166 -41.5609 0
+      vertex 106.314 -41.6113 1.5
+      vertex 106.166 -41.5609 1.5
+    endloop
+  endfacet
+  facet normal -0.322361 -0.946617 -0
+    outer loop
+      vertex 106.314 -41.6113 1.5
+      vertex 106.166 -41.5609 0
+      vertex 106.314 -41.6113 0
+    endloop
+  endfacet
+  facet normal -0.659406 -0.751787 0
+    outer loop
+      vertex 106.586 -41.768 0
+      vertex 106.704 -41.8715 1.5
+      vertex 106.586 -41.768 1.5
+    endloop
+  endfacet
+  facet normal -0.659406 -0.751787 -0
+    outer loop
+      vertex 106.704 -41.8715 1.5
+      vertex 106.586 -41.768 0
+      vertex 106.704 -41.8715 0
+    endloop
+  endfacet
   facet normal 0.997967 -0.0637272 0
     outer loop
       vertex 104.655 -42.72 1.5
@@ -19988,32 +18731,18 @@ solid OpenSCAD_Model
       vertex 104.816 -42.12 0
     endloop
   endfacet
-  facet normal 0.554113 -0.832441 0
+  facet normal 0.0654644 -0.997855 0
     outer loop
-      vertex 105.124 -41.768 0
-      vertex 105.255 -41.6808 1.5
-      vertex 105.124 -41.768 1.5
-    endloop
-  endfacet
-  facet normal 0.554113 -0.832441 0
-    outer loop
-      vertex 105.255 -41.6808 1.5
-      vertex 105.124 -41.768 0
-      vertex 105.255 -41.6808 0
-    endloop
-  endfacet
-  facet normal 0.194891 -0.980825 0
-    outer loop
-      vertex 105.544 -41.5609 0
-      vertex 105.698 -41.5303 1.5
-      vertex 105.544 -41.5609 1.5
-    endloop
-  endfacet
-  facet normal 0.194891 -0.980825 0
-    outer loop
-      vertex 105.698 -41.5303 1.5
-      vertex 105.544 -41.5609 0
       vertex 105.698 -41.5303 0
+      vertex 105.855 -41.52 1.5
+      vertex 105.698 -41.5303 1.5
+    endloop
+  endfacet
+  facet normal 0.0654644 -0.997855 0
+    outer loop
+      vertex 105.855 -41.52 1.5
+      vertex 105.698 -41.5303 0
+      vertex 105.855 -41.52 0
     endloop
   endfacet
   facet normal 0.554113 -0.832441 0
@@ -20058,34 +18787,6 @@ solid OpenSCAD_Model
       vertex 107.055 -42.72 1.5
     endloop
   endfacet
-  facet normal -0.997967 0.0637272 0
-    outer loop
-      vertex 107.045 -42.8766 0
-      vertex 107.055 -42.72 1.5
-      vertex 107.055 -42.72 0
-    endloop
-  endfacet
-  facet normal -0.997967 0.0637272 0
-    outer loop
-      vertex 107.055 -42.72 1.5
-      vertex 107.045 -42.8766 0
-      vertex 107.045 -42.8766 1.5
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.554113 0.832441 0
-    outer loop
-      vertex 106.586 -43.672 0
-      vertex 106.455 -43.7592 1.5
-      vertex 106.586 -43.672 1.5
-    endloop
-  endfacet
-  facet normal -0.554113 0.832441 0
-    outer loop
-      vertex 106.455 -43.7592 1.5
-      vertex 106.586 -43.672 0
-      vertex 106.455 -43.7592 0
-=======
   facet normal -0.980335 0.19734 0
     outer loop
       vertex 107.014 -43.0306 0
@@ -20098,20 +18799,6 @@ solid OpenSCAD_Model
       vertex 107.045 -42.8766 1.5
       vertex 107.014 -43.0306 0
       vertex 107.014 -43.0306 1.5
-    endloop
-  endfacet
-  facet normal -0.0654644 0.997855 0
-    outer loop
-      vertex 106.012 -43.9097 0
-      vertex 105.855 -43.92 1.5
-      vertex 106.012 -43.9097 1.5
-    endloop
-  endfacet
-  facet normal -0.0654644 0.997855 0
-    outer loop
-      vertex 105.855 -43.92 1.5
-      vertex 106.012 -43.9097 0
-      vertex 105.855 -43.92 0
     endloop
   endfacet
   facet normal 0.83205 0.5547 0
@@ -20142,19 +18829,18 @@ solid OpenSCAD_Model
       vertex 106.012 -43.9097 0
     endloop
   endfacet
-  facet normal -0.442117 0.896957 0
+  facet normal -0.980335 -0.19734 0
     outer loop
-      vertex 106.455 -43.7592 0
-      vertex 106.314 -43.8287 1.5
-      vertex 106.455 -43.7592 1.5
+      vertex 107.045 -42.5634 0
+      vertex 107.014 -42.4094 1.5
+      vertex 107.014 -42.4094 0
     endloop
   endfacet
-  facet normal -0.442117 0.896957 0
+  facet normal -0.980335 -0.19734 0
     outer loop
-      vertex 106.314 -43.8287 1.5
-      vertex 106.455 -43.7592 0
-      vertex 106.314 -43.8287 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
+      vertex 107.014 -42.4094 1.5
+      vertex 107.045 -42.5634 0
+      vertex 107.045 -42.5634 1.5
     endloop
   endfacet
   facet normal -0.895442 0.445177 0
@@ -20171,61 +18857,18 @@ solid OpenSCAD_Model
       vertex 106.894 -43.32 1.5
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.0654644 0.997855 -0
+  facet normal -0.947787 0.318905 0
     outer loop
-      vertex 105.855 -43.92 0
-      vertex 105.698 -43.9097 1.5
-      vertex 105.855 -43.92 1.5
+      vertex 106.964 -43.1792 0
+      vertex 107.014 -43.0306 1.5
+      vertex 107.014 -43.0306 0
     endloop
   endfacet
-  facet normal 0.0654644 0.997855 0
+  facet normal -0.947787 0.318905 0
     outer loop
-      vertex 105.698 -43.9097 1.5
-      vertex 105.855 -43.92 0
-      vertex 105.698 -43.9097 0
-    endloop
-  endfacet
-  facet normal 0.947787 0.318905 0
-    outer loop
-      vertex 104.746 -43.1792 1.5
-      vertex 104.696 -43.0306 0
-      vertex 104.696 -43.0306 1.5
-    endloop
-  endfacet
-  facet normal 0.947787 0.318905 0
-    outer loop
-      vertex 104.696 -43.0306 0
-      vertex 104.746 -43.1792 1.5
-      vertex 104.746 -43.1792 0
-    endloop
-  endfacet
-  facet normal -0.442117 0.896957 0
-    outer loop
-      vertex 106.455 -43.7592 0
-      vertex 106.314 -43.8287 1.5
-      vertex 106.455 -43.7592 1.5
-    endloop
-  endfacet
-  facet normal -0.442117 0.896957 0
-    outer loop
-      vertex 106.314 -43.8287 1.5
-      vertex 106.455 -43.7592 0
-      vertex 106.314 -43.8287 0
-    endloop
-  endfacet
-  facet normal -0.322361 0.946617 0
-    outer loop
-      vertex 106.314 -43.8287 0
-      vertex 106.166 -43.8791 1.5
-      vertex 106.314 -43.8287 1.5
-    endloop
-  endfacet
-  facet normal -0.322361 0.946617 0
-    outer loop
-      vertex 106.166 -43.8791 1.5
-      vertex 106.314 -43.8287 0
-      vertex 106.166 -43.8791 0
+      vertex 107.014 -43.0306 1.5
+      vertex 106.964 -43.1792 0
+      vertex 106.964 -43.1792 1.5
     endloop
   endfacet
   facet normal -0.83205 0.5547 0
@@ -20242,46 +18885,18 @@ solid OpenSCAD_Model
       vertex 106.807 -43.4505 1.5
     endloop
   endfacet
-  facet normal -0.659406 0.751787 0
+  facet normal 0.0654644 0.997855 -0
     outer loop
-      vertex 106.704 -43.5685 0
-      vertex 106.586 -43.672 1.5
-      vertex 106.704 -43.5685 1.5
+      vertex 105.855 -43.92 0
+      vertex 105.698 -43.9097 1.5
+      vertex 105.855 -43.92 1.5
     endloop
   endfacet
-  facet normal -0.659406 0.751787 0
+  facet normal 0.0654644 0.997855 0
     outer loop
-      vertex 106.586 -43.672 1.5
-      vertex 106.704 -43.5685 0
-      vertex 106.586 -43.672 0
-    endloop
-  endfacet
-  facet normal 0.322361 0.946617 -0
-    outer loop
-      vertex 105.544 -43.8791 0
-      vertex 105.396 -43.8287 1.5
-      vertex 105.544 -43.8791 1.5
-    endloop
-  endfacet
-  facet normal 0.322361 0.946617 0
-    outer loop
-      vertex 105.396 -43.8287 1.5
-      vertex 105.544 -43.8791 0
-      vertex 105.396 -43.8287 0
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 -0
-    outer loop
-      vertex 105.124 -43.672 0
-      vertex 105.006 -43.5685 1.5
-      vertex 105.124 -43.672 1.5
-    endloop
-  endfacet
-  facet normal 0.659406 0.751787 0
-    outer loop
-      vertex 105.006 -43.5685 1.5
-      vertex 105.124 -43.672 0
-      vertex 105.006 -43.5685 0
+      vertex 105.698 -43.9097 1.5
+      vertex 105.855 -43.92 0
+      vertex 105.698 -43.9097 0
     endloop
   endfacet
   facet normal 0.997967 0.0637272 0
@@ -20312,97 +18927,7 @@ solid OpenSCAD_Model
       vertex 104.696 -43.0306 0
     endloop
   endfacet
-=======
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-  facet normal -0.947787 0.318905 0
-    outer loop
-      vertex 106.964 -43.1792 0
-      vertex 107.014 -43.0306 1.5
-      vertex 107.014 -43.0306 0
-    endloop
-  endfacet
-  facet normal -0.947787 0.318905 0
-    outer loop
-      vertex 107.014 -43.0306 1.5
-      vertex 106.964 -43.1792 0
-      vertex 106.964 -43.1792 1.5
-    endloop
-  endfacet
-  facet normal -0.753367 0.6576 0
-    outer loop
-      vertex 106.704 -43.5685 0
-      vertex 106.807 -43.4505 1.5
-      vertex 106.807 -43.4505 0
-    endloop
-  endfacet
-  facet normal -0.753367 0.6576 0
-    outer loop
-      vertex 106.807 -43.4505 1.5
-      vertex 106.704 -43.5685 0
-      vertex 106.704 -43.5685 1.5
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.0654644 0.997855 0
-    outer loop
-      vertex 106.012 -43.9097 0
-      vertex 105.855 -43.92 1.5
-      vertex 106.012 -43.9097 1.5
-    endloop
-  endfacet
-  facet normal -0.0654644 0.997855 0
-    outer loop
-      vertex 105.855 -43.92 1.5
-      vertex 106.012 -43.9097 0
-      vertex 105.855 -43.92 0
-    endloop
-  endfacet
-  facet normal 0.554113 0.832441 -0
-    outer loop
-      vertex 105.255 -43.7592 0
-      vertex 105.124 -43.672 1.5
-      vertex 105.255 -43.7592 1.5
-    endloop
-  endfacet
-  facet normal 0.554113 0.832441 0
-    outer loop
-      vertex 105.124 -43.672 1.5
-      vertex 105.255 -43.7592 0
-      vertex 105.124 -43.672 0
-    endloop
-  endfacet
-  facet normal 0.83205 0.5547 0
-=======
-  facet normal -0.83205 0.5547 0
-    outer loop
-      vertex 106.807 -43.4505 0
-      vertex 106.894 -43.32 1.5
-      vertex 106.894 -43.32 0
-    endloop
-  endfacet
-  facet normal -0.83205 0.5547 0
-    outer loop
-      vertex 106.894 -43.32 1.5
-      vertex 106.807 -43.4505 0
-      vertex 106.807 -43.4505 1.5
-    endloop
-  endfacet
-  facet normal 0.194891 0.980825 -0
-    outer loop
-      vertex 105.698 -43.9097 0
-      vertex 105.544 -43.8791 1.5
-      vertex 105.698 -43.9097 1.5
-    endloop
-  endfacet
-  facet normal 0.194891 0.980825 0
-    outer loop
-      vertex 105.544 -43.8791 1.5
-      vertex 105.698 -43.9097 0
-      vertex 105.544 -43.8791 0
-    endloop
-  endfacet
   facet normal 0.895442 0.445177 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
       vertex 104.816 -43.32 1.5
       vertex 104.746 -43.1792 0
@@ -20428,6 +18953,20 @@ solid OpenSCAD_Model
       vertex 105.006 -43.5685 1.5
       vertex 105.124 -43.672 0
       vertex 105.006 -43.5685 0
+    endloop
+  endfacet
+  facet normal -0.442117 0.896957 0
+    outer loop
+      vertex 106.455 -43.7592 0
+      vertex 106.314 -43.8287 1.5
+      vertex 106.455 -43.7592 1.5
+    endloop
+  endfacet
+  facet normal -0.442117 0.896957 0
+    outer loop
+      vertex 106.314 -43.8287 1.5
+      vertex 106.455 -43.7592 0
+      vertex 106.314 -43.8287 0
     endloop
   endfacet
   facet normal -0.322361 0.946617 0
@@ -20486,18 +19025,32 @@ solid OpenSCAD_Model
       vertex 105.396 -43.8287 0
     endloop
   endfacet
-  facet normal 0.0654644 0.997855 -0
+  facet normal -0.0654644 0.997855 0
     outer loop
-      vertex 105.855 -43.92 0
-      vertex 105.698 -43.9097 1.5
+      vertex 106.012 -43.9097 0
       vertex 105.855 -43.92 1.5
+      vertex 106.012 -43.9097 1.5
     endloop
   endfacet
-  facet normal 0.0654644 0.997855 0
+  facet normal -0.0654644 0.997855 0
     outer loop
-      vertex 105.698 -43.9097 1.5
+      vertex 105.855 -43.92 1.5
+      vertex 106.012 -43.9097 0
       vertex 105.855 -43.92 0
+    endloop
+  endfacet
+  facet normal 0.194891 0.980825 -0
+    outer loop
       vertex 105.698 -43.9097 0
+      vertex 105.544 -43.8791 1.5
+      vertex 105.698 -43.9097 1.5
+    endloop
+  endfacet
+  facet normal 0.194891 0.980825 0
+    outer loop
+      vertex 105.544 -43.8791 1.5
+      vertex 105.698 -43.9097 0
+      vertex 105.544 -43.8791 0
     endloop
   endfacet
   facet normal -0.753367 0.6576 0
@@ -20542,9 +19095,6 @@ solid OpenSCAD_Model
       vertex 105.006 -43.5685 0
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.997967 -0.0637272 0
-=======
   facet normal 0.442117 0.896957 -0
     outer loop
       vertex 105.396 -43.8287 0
@@ -20560,7 +19110,6 @@ solid OpenSCAD_Model
     endloop
   endfacet
   facet normal 0.554113 0.832441 -0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
       vertex 105.255 -43.7592 0
       vertex 105.124 -43.672 1.5
@@ -20569,66 +19118,23 @@ solid OpenSCAD_Model
   endfacet
   facet normal 0.554113 0.832441 0
     outer loop
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-      vertex 107.045 42.8866 1.5
-      vertex 107.055 42.73 0
-      vertex 107.055 42.73 1.5
+      vertex 105.124 -43.672 1.5
+      vertex 105.255 -43.7592 0
+      vertex 105.124 -43.672 0
     endloop
   endfacet
-  facet normal 0.997967 -0.0637272 0
+  facet normal -0.554113 -0.832441 0
     outer loop
-      vertex 104.655 42.73 1.5
-      vertex 104.665 42.8866 0
-      vertex 104.665 42.8866 1.5
-    endloop
-  endfacet
-  facet normal 0.997967 -0.0637272 0
-    outer loop
-      vertex 104.665 42.8866 0
-      vertex 104.655 42.73 1.5
-      vertex 104.655 42.73 0
-    endloop
-  endfacet
-  facet normal -0.0654644 -0.997855 0
-    outer loop
-      vertex 105.855 43.93 0
-      vertex 106.012 43.9197 1.5
-      vertex 105.855 43.93 1.5
-    endloop
-  endfacet
-  facet normal -0.0654644 -0.997855 -0
-    outer loop
-      vertex 106.012 43.9197 1.5
-      vertex 105.855 43.93 0
-      vertex 106.012 43.9197 0
-    endloop
-  endfacet
-  facet normal -0.659406 -0.751787 0
-    outer loop
-      vertex 106.586 43.682 0
-      vertex 106.704 43.5785 1.5
+      vertex 106.455 43.7692 0
       vertex 106.586 43.682 1.5
+      vertex 106.455 43.7692 1.5
     endloop
   endfacet
-  facet normal -0.659406 -0.751787 -0
+  facet normal -0.554113 -0.832441 -0
     outer loop
-      vertex 106.704 43.5785 1.5
+      vertex 106.586 43.682 1.5
+      vertex 106.455 43.7692 0
       vertex 106.586 43.682 0
-      vertex 106.704 43.5785 0
-    endloop
-  endfacet
-  facet normal 0.659406 -0.751787 0
-    outer loop
-      vertex 105.006 43.5785 0
-      vertex 105.124 43.682 1.5
-      vertex 105.006 43.5785 1.5
-    endloop
-  endfacet
-  facet normal 0.659406 -0.751787 0
-    outer loop
-      vertex 105.124 43.682 1.5
-      vertex 105.006 43.5785 0
-      vertex 105.124 43.682 0
     endloop
   endfacet
   facet normal 0.322361 -0.946617 0
@@ -20645,6 +19151,34 @@ solid OpenSCAD_Model
       vertex 105.544 43.8891 0
     endloop
   endfacet
+  facet normal 0.895442 -0.445177 0
+    outer loop
+      vertex 104.746 43.1892 1.5
+      vertex 104.816 43.33 0
+      vertex 104.816 43.33 1.5
+    endloop
+  endfacet
+  facet normal 0.895442 -0.445177 0
+    outer loop
+      vertex 104.816 43.33 0
+      vertex 104.746 43.1892 1.5
+      vertex 104.746 43.1892 0
+    endloop
+  endfacet
+  facet normal 0.442117 0.896957 -0
+    outer loop
+      vertex 105.396 41.6213 0
+      vertex 105.255 41.6908 1.5
+      vertex 105.396 41.6213 1.5
+    endloop
+  endfacet
+  facet normal 0.442117 0.896957 0
+    outer loop
+      vertex 105.255 41.6908 1.5
+      vertex 105.396 41.6213 0
+      vertex 105.255 41.6908 0
+    endloop
+  endfacet
   facet normal -0.895442 -0.445177 0
     outer loop
       vertex 106.964 43.1892 0
@@ -20657,6 +19191,34 @@ solid OpenSCAD_Model
       vertex 106.894 43.33 1.5
       vertex 106.964 43.1892 0
       vertex 106.964 43.1892 1.5
+    endloop
+  endfacet
+  facet normal -0.83205 -0.5547 0
+    outer loop
+      vertex 106.894 43.33 0
+      vertex 106.807 43.4605 1.5
+      vertex 106.807 43.4605 0
+    endloop
+  endfacet
+  facet normal -0.83205 -0.5547 0
+    outer loop
+      vertex 106.807 43.4605 1.5
+      vertex 106.894 43.33 0
+      vertex 106.894 43.33 1.5
+    endloop
+  endfacet
+  facet normal -0.659406 -0.751787 0
+    outer loop
+      vertex 106.586 43.682 0
+      vertex 106.704 43.5785 1.5
+      vertex 106.586 43.682 1.5
+    endloop
+  endfacet
+  facet normal -0.659406 -0.751787 -0
+    outer loop
+      vertex 106.704 43.5785 1.5
+      vertex 106.586 43.682 0
+      vertex 106.704 43.5785 0
     endloop
   endfacet
   facet normal -0.322361 -0.946617 0
@@ -20673,6 +19235,20 @@ solid OpenSCAD_Model
       vertex 106.314 43.8387 0
     endloop
   endfacet
+  facet normal -0.0654644 -0.997855 0
+    outer loop
+      vertex 105.855 43.93 0
+      vertex 106.012 43.9197 1.5
+      vertex 105.855 43.93 1.5
+    endloop
+  endfacet
+  facet normal -0.0654644 -0.997855 -0
+    outer loop
+      vertex 106.012 43.9197 1.5
+      vertex 105.855 43.93 0
+      vertex 106.012 43.9197 0
+    endloop
+  endfacet
   facet normal -0.194891 -0.980825 0
     outer loop
       vertex 106.012 43.9197 0
@@ -20687,80 +19263,18 @@ solid OpenSCAD_Model
       vertex 106.166 43.8891 0
     endloop
   endfacet
-  facet normal -0.442117 -0.896957 0
+  facet normal 0.753367 -0.6576 0
     outer loop
-      vertex 106.314 43.8387 0
-      vertex 106.455 43.7692 1.5
-      vertex 106.314 43.8387 1.5
-    endloop
-  endfacet
-  facet normal -0.442117 -0.896957 -0
-    outer loop
-      vertex 106.455 43.7692 1.5
-      vertex 106.314 43.8387 0
-      vertex 106.455 43.7692 0
-    endloop
-  endfacet
-  facet normal 0.895442 -0.445177 0
-    outer loop
-      vertex 104.746 43.1892 1.5
-      vertex 104.816 43.33 0
-      vertex 104.816 43.33 1.5
-    endloop
-  endfacet
-  facet normal 0.895442 -0.445177 0
-    outer loop
-      vertex 104.816 43.33 0
-      vertex 104.746 43.1892 1.5
-      vertex 104.746 43.1892 0
-    endloop
-  endfacet
-  facet normal 0.83205 -0.5547 0
-    outer loop
-      vertex 104.816 43.33 1.5
-      vertex 104.903 43.4605 0
       vertex 104.903 43.4605 1.5
+      vertex 105.006 43.5785 0
+      vertex 105.006 43.5785 1.5
     endloop
   endfacet
-  facet normal 0.83205 -0.5547 0
+  facet normal 0.753367 -0.6576 0
     outer loop
+      vertex 105.006 43.5785 0
+      vertex 104.903 43.4605 1.5
       vertex 104.903 43.4605 0
-      vertex 104.816 43.33 1.5
-      vertex 104.816 43.33 0
-=======
-      vertex 105.124 -43.672 1.5
-      vertex 105.255 -43.7592 0
-      vertex 105.124 -43.672 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-    endloop
-  endfacet
-  facet normal 0.947787 -0.318905 0
-    outer loop
-      vertex 104.696 43.0406 1.5
-      vertex 104.746 43.1892 0
-      vertex 104.746 43.1892 1.5
-    endloop
-  endfacet
-  facet normal 0.947787 -0.318905 0
-    outer loop
-      vertex 104.746 43.1892 0
-      vertex 104.696 43.0406 1.5
-      vertex 104.696 43.0406 0
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.554113 -0.832441 0
-    outer loop
-      vertex 105.124 43.682 0
-      vertex 105.255 43.7692 1.5
-      vertex 105.124 43.682 1.5
-    endloop
-  endfacet
-  facet normal 0.554113 -0.832441 0
-    outer loop
-      vertex 105.255 43.7692 1.5
-      vertex 105.124 43.682 0
-      vertex 105.255 43.7692 0
     endloop
   endfacet
   facet normal 0.194891 -0.980825 0
@@ -20777,187 +19291,6 @@ solid OpenSCAD_Model
       vertex 105.698 43.9197 0
     endloop
   endfacet
-  facet normal -0.947787 0.318905 0
-    outer loop
-      vertex 106.964 42.2708 0
-      vertex 107.014 42.4194 1.5
-      vertex 107.014 42.4194 0
-    endloop
-  endfacet
-  facet normal -0.947787 0.318905 0
-    outer loop
-      vertex 107.014 42.4194 1.5
-      vertex 106.964 42.2708 0
-      vertex 106.964 42.2708 1.5
-=======
-  facet normal 0.322361 0.946617 -0
-    outer loop
-      vertex 105.544 41.5709 0
-      vertex 105.396 41.6213 1.5
-      vertex 105.544 41.5709 1.5
-    endloop
-  endfacet
-  facet normal 0.322361 0.946617 0
-    outer loop
-      vertex 105.396 41.6213 1.5
-      vertex 105.544 41.5709 0
-      vertex 105.396 41.6213 0
-    endloop
-  endfacet
-  facet normal -0.442117 -0.896957 0
-    outer loop
-      vertex 106.314 43.8387 0
-      vertex 106.455 43.7692 1.5
-      vertex 106.314 43.8387 1.5
-    endloop
-  endfacet
-  facet normal -0.442117 -0.896957 -0
-    outer loop
-      vertex 106.455 43.7692 1.5
-      vertex 106.314 43.8387 0
-      vertex 106.455 43.7692 0
-    endloop
-  endfacet
-  facet normal 0.322361 -0.946617 0
-    outer loop
-      vertex 105.396 43.8387 0
-      vertex 105.544 43.8891 1.5
-      vertex 105.396 43.8387 1.5
-    endloop
-  endfacet
-  facet normal 0.322361 -0.946617 0
-    outer loop
-      vertex 105.544 43.8891 1.5
-      vertex 105.396 43.8387 0
-      vertex 105.544 43.8891 0
-    endloop
-  endfacet
-  facet normal 0.895442 -0.445177 0
-    outer loop
-      vertex 104.746 43.1892 1.5
-      vertex 104.816 43.33 0
-      vertex 104.816 43.33 1.5
-    endloop
-  endfacet
-  facet normal 0.895442 -0.445177 0
-    outer loop
-      vertex 104.816 43.33 0
-      vertex 104.746 43.1892 1.5
-      vertex 104.746 43.1892 0
-    endloop
-  endfacet
-  facet normal 0.895442 0.445177 0
-    outer loop
-      vertex 104.816 42.13 1.5
-      vertex 104.746 42.2708 0
-      vertex 104.746 42.2708 1.5
-    endloop
-  endfacet
-  facet normal 0.895442 0.445177 0
-    outer loop
-      vertex 104.746 42.2708 0
-      vertex 104.816 42.13 1.5
-      vertex 104.816 42.13 0
-    endloop
-  endfacet
-  facet normal -0.947787 -0.318905 0
-    outer loop
-      vertex 107.014 43.0406 0
-      vertex 106.964 43.1892 1.5
-      vertex 106.964 43.1892 0
-    endloop
-  endfacet
-  facet normal -0.947787 -0.318905 0
-    outer loop
-      vertex 106.964 43.1892 1.5
-      vertex 107.014 43.0406 0
-      vertex 107.014 43.0406 1.5
-    endloop
-  endfacet
-  facet normal -0.895442 -0.445177 0
-    outer loop
-      vertex 106.964 43.1892 0
-      vertex 106.894 43.33 1.5
-      vertex 106.894 43.33 0
-    endloop
-  endfacet
-  facet normal -0.895442 -0.445177 0
-    outer loop
-      vertex 106.894 43.33 1.5
-      vertex 106.964 43.1892 0
-      vertex 106.964 43.1892 1.5
-    endloop
-  endfacet
-  facet normal -0.659406 -0.751787 0
-    outer loop
-      vertex 106.586 43.682 0
-      vertex 106.704 43.5785 1.5
-      vertex 106.586 43.682 1.5
-    endloop
-  endfacet
-  facet normal -0.659406 -0.751787 -0
-    outer loop
-      vertex 106.704 43.5785 1.5
-      vertex 106.586 43.682 0
-      vertex 106.704 43.5785 0
-    endloop
-  endfacet
-  facet normal -0.322361 -0.946617 0
-    outer loop
-      vertex 106.166 43.8891 0
-      vertex 106.314 43.8387 1.5
-      vertex 106.166 43.8891 1.5
-    endloop
-  endfacet
-  facet normal -0.322361 -0.946617 -0
-    outer loop
-      vertex 106.314 43.8387 1.5
-      vertex 106.166 43.8891 0
-      vertex 106.314 43.8387 0
-    endloop
-  endfacet
-  facet normal -0.0654644 -0.997855 0
-    outer loop
-      vertex 105.855 43.93 0
-      vertex 106.012 43.9197 1.5
-      vertex 105.855 43.93 1.5
-    endloop
-  endfacet
-  facet normal -0.0654644 -0.997855 -0
-    outer loop
-      vertex 106.012 43.9197 1.5
-      vertex 105.855 43.93 0
-      vertex 106.012 43.9197 0
-    endloop
-  endfacet
-  facet normal -0.194891 -0.980825 0
-    outer loop
-      vertex 106.012 43.9197 0
-      vertex 106.166 43.8891 1.5
-      vertex 106.012 43.9197 1.5
-    endloop
-  endfacet
-  facet normal -0.194891 -0.980825 -0
-    outer loop
-      vertex 106.166 43.8891 1.5
-      vertex 106.012 43.9197 0
-      vertex 106.166 43.8891 0
-    endloop
-  endfacet
-  facet normal 0.753367 -0.6576 0
-    outer loop
-      vertex 104.903 43.4605 1.5
-      vertex 105.006 43.5785 0
-      vertex 105.006 43.5785 1.5
-    endloop
-  endfacet
-  facet normal 0.753367 -0.6576 0
-    outer loop
-      vertex 105.006 43.5785 0
-      vertex 104.903 43.4605 1.5
-      vertex 104.903 43.4605 0
-    endloop
-  endfacet
   facet normal 0.659406 -0.751787 0
     outer loop
       vertex 105.006 43.5785 0
@@ -20970,6 +19303,20 @@ solid OpenSCAD_Model
       vertex 105.124 43.682 1.5
       vertex 105.006 43.5785 0
       vertex 105.124 43.682 0
+    endloop
+  endfacet
+  facet normal -0.997967 0.0637272 0
+    outer loop
+      vertex 107.045 42.5734 0
+      vertex 107.055 42.73 1.5
+      vertex 107.055 42.73 0
+    endloop
+  endfacet
+  facet normal -0.997967 0.0637272 0
+    outer loop
+      vertex 107.055 42.73 1.5
+      vertex 107.045 42.5734 0
+      vertex 107.045 42.5734 1.5
     endloop
   endfacet
   facet normal -0.322361 0.946617 0
@@ -20998,7 +19345,20 @@ solid OpenSCAD_Model
       vertex 106.807 41.9995 1.5
       vertex 106.704 41.8815 0
       vertex 106.704 41.8815 1.5
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
+    endloop
+  endfacet
+  facet normal 0.0654644 0.997855 -0
+    outer loop
+      vertex 105.855 41.53 0
+      vertex 105.698 41.5403 1.5
+      vertex 105.855 41.53 1.5
+    endloop
+  endfacet
+  facet normal 0.0654644 0.997855 0
+    outer loop
+      vertex 105.698 41.5403 1.5
+      vertex 105.855 41.53 0
+      vertex 105.698 41.5403 0
     endloop
   endfacet
   facet normal 0.659406 0.751787 -0
@@ -21015,21 +19375,6 @@ solid OpenSCAD_Model
       vertex 105.006 41.8815 0
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.322361 0.946617 -0
-    outer loop
-      vertex 105.544 41.5709 0
-      vertex 105.396 41.6213 1.5
-      vertex 105.544 41.5709 1.5
-    endloop
-  endfacet
-  facet normal 0.322361 0.946617 0
-    outer loop
-      vertex 105.396 41.6213 1.5
-      vertex 105.544 41.5709 0
-      vertex 105.396 41.6213 0
-    endloop
-  endfacet
   facet normal 0.895442 0.445177 0
     outer loop
       vertex 104.816 42.13 1.5
@@ -21044,18 +19389,18 @@ solid OpenSCAD_Model
       vertex 104.816 42.13 0
     endloop
   endfacet
-  facet normal 0.83205 0.5547 0
+  facet normal 0.980335 0.19734 0
     outer loop
-      vertex 104.903 41.9995 1.5
-      vertex 104.816 42.13 0
-      vertex 104.816 42.13 1.5
+      vertex 104.696 42.4194 1.5
+      vertex 104.665 42.5734 0
+      vertex 104.665 42.5734 1.5
     endloop
   endfacet
-  facet normal 0.83205 0.5547 0
+  facet normal 0.980335 0.19734 0
     outer loop
-      vertex 104.816 42.13 0
-      vertex 104.903 41.9995 1.5
-      vertex 104.903 41.9995 0
+      vertex 104.665 42.5734 0
+      vertex 104.696 42.4194 1.5
+      vertex 104.696 42.4194 0
     endloop
   endfacet
   facet normal -0.947787 -0.318905 0
@@ -21072,36 +19417,6 @@ solid OpenSCAD_Model
       vertex 107.014 43.0406 1.5
     endloop
   endfacet
-=======
-  facet normal 0.980335 0.19734 0
-    outer loop
-      vertex 104.696 42.4194 1.5
-      vertex 104.665 42.5734 0
-      vertex 104.665 42.5734 1.5
-    endloop
-  endfacet
-  facet normal 0.980335 0.19734 0
-    outer loop
-      vertex 104.665 42.5734 0
-      vertex 104.696 42.4194 1.5
-      vertex 104.696 42.4194 0
-    endloop
-  endfacet
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-  facet normal -0.980335 -0.19734 0
-    outer loop
-      vertex 107.045 42.8866 0
-      vertex 107.014 43.0406 1.5
-      vertex 107.014 43.0406 0
-    endloop
-  endfacet
-  facet normal -0.980335 -0.19734 0
-    outer loop
-      vertex 107.014 43.0406 1.5
-      vertex 107.045 42.8866 0
-      vertex 107.045 42.8866 1.5
-    endloop
-  endfacet
   facet normal -0.753367 -0.6576 0
     outer loop
       vertex 106.807 43.4605 0
@@ -21116,48 +19431,20 @@ solid OpenSCAD_Model
       vertex 106.807 43.4605 1.5
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.83205 -0.5547 0
+  facet normal -0.442117 -0.896957 0
     outer loop
-      vertex 106.894 43.33 0
-      vertex 106.807 43.4605 1.5
-      vertex 106.807 43.4605 0
-    endloop
-  endfacet
-  facet normal -0.83205 -0.5547 0
-    outer loop
-      vertex 106.807 43.4605 1.5
-      vertex 106.894 43.33 0
-      vertex 106.894 43.33 1.5
-    endloop
-  endfacet
-  facet normal -0.554113 -0.832441 0
-    outer loop
-      vertex 106.455 43.7692 0
-      vertex 106.586 43.682 1.5
+      vertex 106.314 43.8387 0
       vertex 106.455 43.7692 1.5
+      vertex 106.314 43.8387 1.5
     endloop
   endfacet
-  facet normal -0.554113 -0.832441 -0
+  facet normal -0.442117 -0.896957 -0
     outer loop
-      vertex 106.586 43.682 1.5
+      vertex 106.455 43.7692 1.5
+      vertex 106.314 43.8387 0
       vertex 106.455 43.7692 0
-      vertex 106.586 43.682 0
     endloop
   endfacet
-  facet normal 0.753367 -0.6576 0
-    outer loop
-      vertex 104.903 43.4605 1.5
-      vertex 105.006 43.5785 0
-      vertex 105.006 43.5785 1.5
-    endloop
-  endfacet
-  facet normal 0.753367 -0.6576 0
-    outer loop
-      vertex 105.006 43.5785 0
-      vertex 104.903 43.4605 1.5
-      vertex 104.903 43.4605 0
-=======
   facet normal 0.997967 -0.0637272 0
     outer loop
       vertex 104.655 42.73 1.5
@@ -21170,26 +19457,22 @@ solid OpenSCAD_Model
       vertex 104.665 42.8866 0
       vertex 104.655 42.73 1.5
       vertex 104.655 42.73 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
-  facet normal 0.980335 -0.19734 0
+  facet normal 0.947787 -0.318905 0
     outer loop
-      vertex 104.665 42.8866 1.5
-      vertex 104.696 43.0406 0
       vertex 104.696 43.0406 1.5
+      vertex 104.746 43.1892 0
+      vertex 104.746 43.1892 1.5
     endloop
   endfacet
-  facet normal 0.980335 -0.19734 0
+  facet normal 0.947787 -0.318905 0
     outer loop
+      vertex 104.746 43.1892 0
+      vertex 104.696 43.0406 1.5
       vertex 104.696 43.0406 0
-      vertex 104.665 42.8866 1.5
-      vertex 104.665 42.8866 0
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.442117 -0.896957 0
-=======
   facet normal 0.83205 -0.5547 0
     outer loop
       vertex 104.816 43.33 1.5
@@ -21218,63 +19501,6 @@ solid OpenSCAD_Model
       vertex 105.855 43.93 0
     endloop
   endfacet
-  facet normal 0.194891 -0.980825 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
-    outer loop
-      vertex 105.255 43.7692 0
-      vertex 105.396 43.8387 1.5
-      vertex 105.255 43.7692 1.5
-    endloop
-  endfacet
-  facet normal 0.442117 -0.896957 0
-    outer loop
-      vertex 105.396 43.8387 1.5
-      vertex 105.255 43.7692 0
-      vertex 105.396 43.8387 0
-    endloop
-  endfacet
-  facet normal 0.0654644 -0.997855 0
-    outer loop
-      vertex 105.698 43.9197 0
-      vertex 105.855 43.93 1.5
-      vertex 105.698 43.9197 1.5
-    endloop
-  endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.0654644 -0.997855 0
-    outer loop
-      vertex 105.855 43.93 1.5
-      vertex 105.698 43.9197 0
-      vertex 105.855 43.93 0
-    endloop
-  endfacet
-  facet normal -0.997967 0.0637272 0
-    outer loop
-      vertex 107.045 42.5734 0
-      vertex 107.055 42.73 1.5
-      vertex 107.055 42.73 0
-    endloop
-  endfacet
-  facet normal -0.997967 0.0637272 0
-    outer loop
-      vertex 107.055 42.73 1.5
-      vertex 107.045 42.5734 0
-      vertex 107.045 42.5734 1.5
-=======
-  facet normal 0.442117 -0.896957 0
-    outer loop
-      vertex 105.255 43.7692 0
-      vertex 105.396 43.8387 1.5
-      vertex 105.255 43.7692 1.5
-    endloop
-  endfacet
-  facet normal 0.442117 -0.896957 0
-    outer loop
-      vertex 105.396 43.8387 1.5
-      vertex 105.255 43.7692 0
-      vertex 105.396 43.8387 0
-    endloop
-  endfacet
   facet normal 0.554113 -0.832441 0
     outer loop
       vertex 105.124 43.682 0
@@ -21289,6 +19515,20 @@ solid OpenSCAD_Model
       vertex 105.255 43.7692 0
     endloop
   endfacet
+  facet normal 0.442117 -0.896957 0
+    outer loop
+      vertex 105.255 43.7692 0
+      vertex 105.396 43.8387 1.5
+      vertex 105.255 43.7692 1.5
+    endloop
+  endfacet
+  facet normal 0.442117 -0.896957 0
+    outer loop
+      vertex 105.396 43.8387 1.5
+      vertex 105.255 43.7692 0
+      vertex 105.396 43.8387 0
+    endloop
+  endfacet
   facet normal -0.997967 -0.0637272 0
     outer loop
       vertex 107.055 42.73 0
@@ -21301,7 +19541,6 @@ solid OpenSCAD_Model
       vertex 107.045 42.8866 1.5
       vertex 107.055 42.73 0
       vertex 107.055 42.73 1.5
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     endloop
   endfacet
   facet normal -0.0654644 0.997855 0
@@ -21318,9 +19557,6 @@ solid OpenSCAD_Model
       vertex 105.855 41.53 0
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.322361 0.946617 0
-=======
   facet normal -0.947787 0.318905 0
     outer loop
       vertex 106.964 42.2708 0
@@ -21336,32 +19572,17 @@ solid OpenSCAD_Model
     endloop
   endfacet
   facet normal -0.194891 0.980825 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
     outer loop
-      vertex 106.314 41.6213 0
-      vertex 106.166 41.5709 1.5
-      vertex 106.314 41.6213 1.5
-    endloop
-  endfacet
-  facet normal -0.322361 0.946617 0
-    outer loop
-      vertex 106.166 41.5709 1.5
-      vertex 106.314 41.6213 0
       vertex 106.166 41.5709 0
+      vertex 106.012 41.5403 1.5
+      vertex 106.166 41.5709 1.5
     endloop
   endfacet
-  facet normal -0.442117 0.896957 0
+  facet normal -0.194891 0.980825 0
     outer loop
-      vertex 106.455 41.6908 0
-      vertex 106.314 41.6213 1.5
-      vertex 106.455 41.6908 1.5
-    endloop
-  endfacet
-  facet normal -0.442117 0.896957 0
-    outer loop
-      vertex 106.314 41.6213 1.5
-      vertex 106.455 41.6908 0
-      vertex 106.314 41.6213 0
+      vertex 106.012 41.5403 1.5
+      vertex 106.166 41.5709 0
+      vertex 106.012 41.5403 0
     endloop
   endfacet
   facet normal -0.659406 0.751787 0
@@ -21378,6 +19599,20 @@ solid OpenSCAD_Model
       vertex 106.586 41.778 0
     endloop
   endfacet
+  facet normal -0.442117 0.896957 0
+    outer loop
+      vertex 106.455 41.6908 0
+      vertex 106.314 41.6213 1.5
+      vertex 106.455 41.6908 1.5
+    endloop
+  endfacet
+  facet normal -0.442117 0.896957 0
+    outer loop
+      vertex 106.314 41.6213 1.5
+      vertex 106.455 41.6908 0
+      vertex 106.314 41.6213 0
+    endloop
+  endfacet
   facet normal -0.895442 0.445177 0
     outer loop
       vertex 106.894 42.13 0
@@ -21392,74 +19627,32 @@ solid OpenSCAD_Model
       vertex 106.894 42.13 1.5
     endloop
   endfacet
-  facet normal -0.83205 0.5547 0
+  facet normal 0.322361 0.946617 -0
     outer loop
-      vertex 106.807 41.9995 0
-      vertex 106.894 42.13 1.5
-      vertex 106.894 42.13 0
-    endloop
-  endfacet
-  facet normal -0.83205 0.5547 0
-    outer loop
-      vertex 106.894 42.13 1.5
-      vertex 106.807 41.9995 0
-      vertex 106.807 41.9995 1.5
-    endloop
-  endfacet
-  facet normal 0.554113 0.832441 -0
-    outer loop
-      vertex 105.255 41.6908 0
-      vertex 105.124 41.778 1.5
-      vertex 105.255 41.6908 1.5
-    endloop
-  endfacet
-  facet normal 0.554113 0.832441 0
-    outer loop
-      vertex 105.124 41.778 1.5
-      vertex 105.255 41.6908 0
-      vertex 105.124 41.778 0
-    endloop
-  endfacet
-  facet normal 0.0654644 0.997855 -0
-    outer loop
-      vertex 105.855 41.53 0
-      vertex 105.698 41.5403 1.5
-      vertex 105.855 41.53 1.5
-    endloop
-  endfacet
-  facet normal 0.0654644 0.997855 0
-    outer loop
-      vertex 105.698 41.5403 1.5
-      vertex 105.855 41.53 0
-      vertex 105.698 41.5403 0
-    endloop
-  endfacet
-  facet normal 0.554113 0.832441 -0
-    outer loop
-      vertex 105.255 41.6908 0
-      vertex 105.124 41.778 1.5
-      vertex 105.255 41.6908 1.5
-    endloop
-  endfacet
-  facet normal 0.554113 0.832441 0
-    outer loop
-      vertex 105.124 41.778 1.5
-      vertex 105.255 41.6908 0
-      vertex 105.124 41.778 0
-    endloop
-  endfacet
-  facet normal 0.442117 0.896957 -0
-    outer loop
-      vertex 105.396 41.6213 0
-      vertex 105.255 41.6908 1.5
+      vertex 105.544 41.5709 0
       vertex 105.396 41.6213 1.5
+      vertex 105.544 41.5709 1.5
     endloop
   endfacet
-  facet normal 0.442117 0.896957 0
+  facet normal 0.322361 0.946617 0
     outer loop
-      vertex 105.255 41.6908 1.5
+      vertex 105.396 41.6213 1.5
+      vertex 105.544 41.5709 0
       vertex 105.396 41.6213 0
+    endloop
+  endfacet
+  facet normal 0.554113 0.832441 -0
+    outer loop
       vertex 105.255 41.6908 0
+      vertex 105.124 41.778 1.5
+      vertex 105.255 41.6908 1.5
+    endloop
+  endfacet
+  facet normal 0.554113 0.832441 0
+    outer loop
+      vertex 105.124 41.778 1.5
+      vertex 105.255 41.6908 0
+      vertex 105.124 41.778 0
     endloop
   endfacet
   facet normal 0.947787 0.318905 0
@@ -21490,34 +19683,6 @@ solid OpenSCAD_Model
       vertex 104.665 42.5734 0
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal -0.194891 0.980825 0
-    outer loop
-      vertex 106.166 41.5709 0
-      vertex 106.012 41.5403 1.5
-      vertex 106.166 41.5709 1.5
-    endloop
-  endfacet
-  facet normal -0.194891 0.980825 0
-    outer loop
-      vertex 106.012 41.5403 1.5
-      vertex 106.166 41.5709 0
-      vertex 106.012 41.5403 0
-    endloop
-  endfacet
-  facet normal -0.554113 0.832441 0
-    outer loop
-      vertex 106.586 41.778 0
-      vertex 106.455 41.6908 1.5
-      vertex 106.586 41.778 1.5
-    endloop
-  endfacet
-  facet normal -0.554113 0.832441 0
-    outer loop
-      vertex 106.455 41.6908 1.5
-      vertex 106.586 41.778 0
-      vertex 106.455 41.6908 0
-=======
   facet normal 0.83205 0.5547 0
     outer loop
       vertex 104.903 41.9995 1.5
@@ -21546,19 +19711,32 @@ solid OpenSCAD_Model
       vertex 105.006 41.8815 0
     endloop
   endfacet
-  facet normal -0.554113 -0.832441 0
+  facet normal -0.980335 -0.19734 0
     outer loop
-      vertex 106.455 43.7692 0
-      vertex 106.586 43.682 1.5
-      vertex 106.455 43.7692 1.5
+      vertex 107.045 42.8866 0
+      vertex 107.014 43.0406 1.5
+      vertex 107.014 43.0406 0
     endloop
   endfacet
-  facet normal -0.554113 -0.832441 -0
+  facet normal -0.980335 -0.19734 0
     outer loop
-      vertex 106.586 43.682 1.5
-      vertex 106.455 43.7692 0
-      vertex 106.586 43.682 0
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
+      vertex 107.014 43.0406 1.5
+      vertex 107.045 42.8866 0
+      vertex 107.045 42.8866 1.5
+    endloop
+  endfacet
+  facet normal 0.980335 -0.19734 0
+    outer loop
+      vertex 104.665 42.8866 1.5
+      vertex 104.696 43.0406 0
+      vertex 104.696 43.0406 1.5
+    endloop
+  endfacet
+  facet normal 0.980335 -0.19734 0
+    outer loop
+      vertex 104.696 43.0406 0
+      vertex 104.665 42.8866 1.5
+      vertex 104.665 42.8866 0
     endloop
   endfacet
   facet normal -0.980335 0.19734 0
@@ -21575,20 +19753,6 @@ solid OpenSCAD_Model
       vertex 107.014 42.4194 1.5
     endloop
   endfacet
-  facet normal 0.442117 0.896957 -0
-    outer loop
-      vertex 105.396 41.6213 0
-      vertex 105.255 41.6908 1.5
-      vertex 105.396 41.6213 1.5
-    endloop
-  endfacet
-  facet normal 0.442117 0.896957 0
-    outer loop
-      vertex 105.255 41.6908 1.5
-      vertex 105.396 41.6213 0
-      vertex 105.255 41.6908 0
-    endloop
-  endfacet
   facet normal -0.554113 0.832441 0
     outer loop
       vertex 106.586 41.778 0
@@ -21601,6 +19765,20 @@ solid OpenSCAD_Model
       vertex 106.455 41.6908 1.5
       vertex 106.586 41.778 0
       vertex 106.455 41.6908 0
+    endloop
+  endfacet
+  facet normal -0.83205 0.5547 0
+    outer loop
+      vertex 106.807 41.9995 0
+      vertex 106.894 42.13 1.5
+      vertex 106.894 42.13 0
+    endloop
+  endfacet
+  facet normal -0.83205 0.5547 0
+    outer loop
+      vertex 106.894 42.13 1.5
+      vertex 106.807 41.9995 0
+      vertex 106.807 41.9995 1.5
     endloop
   endfacet
   facet normal 0.194891 0.980825 -0
@@ -21617,21 +19795,4 @@ solid OpenSCAD_Model
       vertex 105.544 41.5709 0
     endloop
   endfacet
-<<<<<<< HEAD:backend/engines/cad/case-engine/out/streamdeck-case.stl
-  facet normal 0.980335 0.19734 0
-    outer loop
-      vertex 104.696 42.4194 1.5
-      vertex 104.665 42.5734 0
-      vertex 104.665 42.5734 1.5
-    endloop
-  endfacet
-  facet normal 0.980335 0.19734 0
-    outer loop
-      vertex 104.665 42.5734 0
-      vertex 104.696 42.4194 1.5
-      vertex 104.696 42.4194 0
-    endloop
-  endfacet
-=======
->>>>>>> b1c2f24 (names: circuitron (pcb+schematic) + paracraft (scad). falkordb as the data layer direction. community research: keeb design types, switches+sound, artisan scene, qmk-vs-kmk (vial primary for v1)):backend/engines/paracraft/out/streamdeck-case.stl
 endsolid OpenSCAD_Model
