@@ -172,3 +172,11 @@ the firecrawl research came back and it's good:
 - **firmware: qmk (with vial) as the v1 primary** — sub-ms scans, flawless encoders + oleds, live browser remapping after one flash; kmk as the parallel "hackable, zero build infra" export; zmk when wireless boards arrive → `scope/research/firmware-qmk-vs-kmk.md`
 
 and the data layer has a direction: **falkordb**. the project model is a dependency graph — "what depends on what" is the product — so the backend gets a graph db instead of a generic relational store. standing decision in the roadmap + AGENTS.md.
+
+## day five, later: the firmware call + version history
+
+anne made the firmware call: **performance plus live remap first** — qmk + vial is the v1 primary, kmk stays as the parallel hackable export, rmk watches from the sidelines (no ws2812 yet). and **version history** is now a product feature: project model snapshots with restore + diff, stored as graph snapshots in falkordb when that layer lands.
+
+the call didn't sit in a doc for long. circuitron now ships `src/firmware.ts`: a deterministic qmk bundle generator — info.json (data-driven, rp2040 matrix pins, xiao→gpio map), keymap.c with a label→keycode table, rules.mk (vial, encoder map, oled), vial.json (stable uid from the board name, live webhid remapping), and a readme. structural validation passes on all four reference boards, and the pin allocator held up under scrutiny: the streamdeck matrix skips GP6/GP7 because the oled's i2c lives there. honesty note, recorded in the module: the bundle is structurally validated, not compiled — the .uf2 compile happens in the containerized qmk worker when the render.com infra lands.
+
+job #5 (ninepad) went queued → done with 22 artifacts, firmware included. the export bundle is now: kicad pcb, gerbers + drills, openscad case, bom, qmk info, and the firmware directory. a person could actually order and flash this thing.

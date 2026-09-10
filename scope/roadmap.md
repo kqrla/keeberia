@@ -56,6 +56,8 @@ the roadmap's law is one flow perfect end to end before the next; this section i
 - design language: notion/figma/canva. never kicad/eda
 - data layer: a graph db, not a generic relational store — falkordb. the project model is a dependency graph; "what depends on what" is the product, and the graph keeps those relationships first-class instead of flattening them into tables
 - engine names: circuitron (pcb + schematic), paracraft (scad — cases now, keycaps + knob covers later)
+- firmware: qmk + vial is the v1 primary (performance + live browser remapping); kmk as the parallel hackable export. bundle generator lives in circuitron (`src/firmware.ts`), .uf2 compiled by the containerized qmk worker
+- version history is a product feature: project model snapshots, restore, diff — stored as graph snapshots in falkordb
 
 ## risks to watch
 
