@@ -118,7 +118,16 @@ project model → kicad schematic / kicad pcb / openscad cad → manufacturing
 project model → three.js / webgl → browser preview
 ```
 
+the engines have names:
+
+- **circuitron** (`backend/engines/circuitron/`) — pcb + schematic generation
+- **paracraft** (`backend/engines/paracraft/`) — scad generation: cases now, keycaps + knob covers later
+
 do not replace these engines with proprietary equivalents unless there is a very strong reason.
+
+## data layer
+
+the project model is a dependency graph — every flow is a view of the same object, and "what depends on what" is the product. the backend data layer is a **graph database, not a generic relational store: falkordb** (redis-based, cypher queries). relational tables flatten the relationships the whole product is built on; the graph keeps them first-class.
 
 ## ui philosophy
 

@@ -6,7 +6,7 @@ services:
     name: keeberia-autolayout
     runtime: node
     rootDir: backend/daemons/autolayout
-    buildCommand: npm install --prefix ../../engines/pcb/pcb-engine 2>/dev/null || true
+    buildCommand: npm install --prefix ../../engines/circuitron 2>/dev/null || true
     startCommand: npx --yes tsx worker.ts
     envVars:
       - key: KEEBERIA_XANO_BASE

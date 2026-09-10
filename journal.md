@@ -160,3 +160,15 @@ known gap, documented in the roadmap: the B.Cu ground pour still lives only in t
 
 - the old readme was memorium-serious; anne wrote the new one herself — first person, casual, bullet points, the whole «wait. why am i doing this manually again» origin story. landed verbatim (headers + code fences only), her words untouched.
 - one honest fix while landing it: her "under the hood" draft still said cadquery/step — swapped to openscad + stl/3mf with a link to the tradeoffs doc, since that call is now on record. everything else is hers.
+## day five: names, research, and a graph
+
+the engines have names now: **circuitron** (pcb + schematic) and **paracraft** (scad — cases today, keycaps + knob covers tomorrow). directories renamed, every import + doc updated, all tests green after the move — paracraft still compiles real stls with a headless openscad (reinstalled via the extracted appimage; the apt index is flaky in this sandbox).
+
+the firecrawl research came back and it's good:
+
+- **keeb design types** (~18 community board types, from 3-key artsey pads to 40% orthos and split ergos) with a preset shortlist for keeberia → `backend/engines/circuitron/research/notes/keeb-design-types.md`
+- **switches + sound**: the community sound lexicon (thock/clack/creamy/marbly...), what physically drives it (foam + plate ≈ 45% of the sound), and a metadata schema for the in-browser sound picker → `scope/research/switches-and-sound.md`
+- **artisan scene**: commission/raffle mechanics, resin vs 3d-print, and the dual model for bespoke keycaps — self-serve printable caps + a commission bridge to human casters with fit-tested spec sheets → `scope/research/artisan-scene.md`
+- **firmware: qmk (with vial) as the v1 primary** — sub-ms scans, flawless encoders + oleds, live browser remapping after one flash; kmk as the parallel "hackable, zero build infra" export; zmk when wireless boards arrive → `scope/research/firmware-qmk-vs-kmk.md`
+
+and the data layer has a direction: **falkordb**. the project model is a dependency graph — "what depends on what" is the product — so the backend gets a graph db instead of a generic relational store. standing decision in the roadmap + AGENTS.md.

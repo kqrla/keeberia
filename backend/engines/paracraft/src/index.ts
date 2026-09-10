@@ -6,8 +6,8 @@
  * guessed. the .scad file is the canonical artifact (per the spec: the
  * case is parametric source, not a dead mesh).
  */
-import type { PcbResult, Placement } from "../../../pcb/pcb-engine/src/types.ts";
-import { FOOTPRINTS } from "../../../pcb/pcb-engine/src/footprints.ts";
+import type { PcbResult, Placement } from "../../circuitron/src/types.ts";
+import { FOOTPRINTS } from "../../circuitron/src/footprints.ts";
 
 export interface CaseOptions {
   wallThickness: number;   // mm, side walls
