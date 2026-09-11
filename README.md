@@ -451,6 +451,11 @@ that's what the project model is for.
 
 ## under the hood
 
+**autorouting is a two-rung ladder.** rung one is circuitron's own a* router — fast, in-process, deterministic. when a board is too dense for it, the worker escalates to [freerouting](https://freerouting.org) (open source, battle-tested push-and-shove) through a dsn/ses bridge: the board exports to specctra dsn at kicad's exact conventions, freerouting routes it headless, and the ses session imports back into the engine's own segment/via model — then judged by the same drc as the engine's routes. wire it up with `FREEROUTING_BIN` (jar or binary) and optional `FREEROUTING_JAVA` + `FREEROUTING_TIMEOUT_MS`; the rung is skipped cleanly when unset.
+
+**all rendering happens on the viewer's hardware.** previews are client-side webgl/three.js computed from the same project model the generators consume — the server never touches a gpu.
+
+
 keeberia isn't trying to reinvent every existing hardware tool.
 
 it's more like a layer on top of them.

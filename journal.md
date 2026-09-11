@@ -200,3 +200,21 @@ job #5 (ninepad) went queued → done with 22 artifacts, firmware included. the 
 - individual-file lessons beyond round 3: corner-hull fillet recipe (no minkowski), clearance as a named plate param (cl=0.75 — anne's tolerance principle, parametrized), bounds-based column composition, print-bed sectioning for full keebs.
 - lift policy filed in the deep-dive note: keyboard_lib (mit) = values+architecture preferred, code only with THIRD_PARTY_NOTICES.md attribution; lenbok (gpl) = zero code ever; genKeyboard = study-only until anne says where it's from; kle = interop.
 - ranked lift list: height cross-check → spec suite → clearance sliders → fillet recipe → bounds composition → bed sectioning.
+
+
+## sept 11 — the freerouting bridge: dsn out, copper back
+
+anne's standing call since day one: **freerouting is the autorouter** — open source, deterministic, no ai in the copper. today the bridge landed and told the truth about four bugs on its way through.
+
+the shape of it: `circuitron/src/dsn.ts` exports the board exactly as the engine sees it (per-placement images with mirror+rotation baked into board-frame pin coordinates — zero convention drift), `src/ses.ts` parses freerouting's session back into the engine's own segment/via model, and `src/freeroute.ts` runs the jar headless between the two. `generatePcb(layout, "freerouting")` is now a first-class router; the worker's retry ladder escalates from the in-process a* to freerouting when a board is too dense (`FREEROUTING_BIN` wires the host; the rung skips cleanly when unset).
+
+the bugs it caught, honestly:
+
+1. **specctra has no oval shape.** kicad encodes ovals as stroked paths (stroke width = short axis, endpoints = ±(long-short)/2). freerouting silently refused our `(shape (oval ...))` padstacks — padstacks unregistered, nets with those pins collapsed. fixed to kicad's exact encoding.
+2. **the scale law, measured not guessed.** `(resolution um 10)` + kicad's writer conventions: coordinates are µm-valued, rule values are plain µm, and freerouting's ses comes back at ×10 the input units. everything was verified against known anchors (a switch at −33.775mm, 0.25mm traces, a 0.6mm via) instead of spec archaeology — the first run "routed" a 10× scaled board with 2.5mm traces and looked successful while being wrong.
+3. **the rounded-corner boundary was a self-intersecting polygon.** the corner arcs didn't chain — the path jumped from y=+17 to y=−19, and freerouting routed the board it *could* see, leaving hackpad's gnd net "unroutable" with zero wires. the minimal-probe + bisect hunt (pegs? nets? holes? none of them) ended at the boundary. rewritten so each arc's last point sits on the next arc's edge line — one simple polygon, and the routing boundary sits 0.3mm inside the true board edge so imported traces land with the house margin.
+4. **the house drc was dishonest about capsule pads.** it modeled every pad as a max-dimension circle; freerouting routes correctly tight past oval encoder pads (0.4mm real clearance) and tripped the crude circle check (0.18mm phantom). the drc is now shape-aware: capsule axis + halfwidth edge distance for ovals, true radius for circles. both routers are held to the same honest bar.
+
+the bar itself, enforced by `test/freeroute.ts` on all four reference boards: every net with ≥2 pads receives wires, every pad actually touches its net's copper (point-to-segment connectivity), all segments inside the outline, and the house drc passes on the imported routes. result line: hackpad 4/4, ninepad 11/11, streamdeck 23/23, ninepad-choc 10/10 — all at 0 drc errors. freerouting's own internal "violations" counter flags input board state its optimizer can't fix; our drc is the manufacture gate, and that distinction is now written down where the tests can't lose it.
+
+rebase note for the record: the two workstreams restructured the repo in parallel — anne's side kept `backend/engines/` and built the caps engine forward (now `backend/engines/cad/caps-engine` + paracraft research), mine had moved circuitron top-level. anne's layout wins; the bridge content was re-applied onto her tree, all suites green there.
