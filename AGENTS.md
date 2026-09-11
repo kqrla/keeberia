@@ -74,6 +74,10 @@ advanced users may be given access to traces, vias, nets, routing, footprint pla
 
 routing stays deterministic (traceparency): no ai in the copper path.
 
+the router is a two-rung ladder: circuitron's own in-process a* handles boards it can finish (fast, sub-second). dense boards fall through to **freerouting** (open source push-and-shove) via the dsn/ses bridge — same inputs, deterministic outputs, and the same house drc judges both. `FREEROUTING_BIN` wires the host; the rung skips cleanly when unset.
+
+rendering is the viewer's job, never the server's: every preview (2d board, 3d case, keycaps, exploded views) is client-side webgl/three.js computed from the same project model the generators consume. the backend never needs a gpu — server work is pure cpu (routing, scad codegen, compiles). "virtualized": the viewer's hardware does the drawing, deterministically, from the one model.
+
 ## pcb shape + silkscreen
 
 shape options: rectangle, rounded rectangle, generated component boundary, custom dxf outline. custom dxf geometry is actual board geometry, not a visual background.

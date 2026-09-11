@@ -1,0 +1,181 @@
+(pcb keeberia-hackpad
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "keeberia circuitron")
+    (host_version "1.0")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0 26650 -21175 28206 -20531 28850 -18975 28850 18975 28206 20531 26650 21175 -26650 21175 -28206 20531 -28850 18975 -28850 -18975 -28206 -20531 -26650 -21175 26650 -21175)
+    )
+    (via "keeberia_via")
+    (rule
+      (width 250)
+      (clearance 260)
+      (clearance 260 (type default_smd))
+      (clearance 260 (type smd_smd))
+    )
+  )
+  (placement
+    (component "img_SW1"
+      (place SW1 -19050 -11375 front 0)
+    )
+    (component "img_SW2"
+      (place SW2 0 -11375 front 0)
+    )
+    (component "img_SW3"
+      (place SW3 19050 -11375 front 0)
+    )
+    (component "img_U1"
+      (place U1 0 7975 front 0)
+    )
+    (component "img_H1"
+      (place H1 -25650 -17975 front 0)
+    )
+    (component "img_H2"
+      (place H2 25650 -17975 front 0)
+    )
+    (component "img_H3"
+      (place H3 -25650 17975 front 0)
+    )
+    (component "img_H4"
+      (place H4 25650 17975 front 0)
+    )
+  )
+  (library
+    (padstack "keeberia_via"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+    (padstack "keeberia_via_drill"
+      (shape (circle F.Cu 300))
+      (shape (circle B.Cu 300))
+      (attach off)
+    )
+    (padstack "circle_1750x1750_FCu_BCu_thru_hole"
+      (shape (circle F.Cu 1750))
+      (shape (circle B.Cu 1750))
+      (attach off)
+    )
+    (padstack "circle_4000x4000_FCu_BCu_thru_hole"
+      (shape (circle F.Cu 4000))
+      (shape (circle B.Cu 4000))
+      (attach off)
+    )
+    (padstack "circle_1700x1700_FCu_BCu_thru_hole"
+      (shape (circle F.Cu 1700))
+      (shape (circle B.Cu 1700))
+      (attach off)
+    )
+    (padstack "oval_2000x1600_BCu_smd"
+      (shape (path B.Cu 1600 -200 0 200 0))
+      (attach off)
+    )
+    (padstack "circle_4400x4400_FCu_BCu_thru_hole"
+      (shape (circle F.Cu 4400))
+      (shape (circle B.Cu 4400))
+      (attach off)
+    )
+    (image "img_SW1"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin circle_1750x1750_FCu_BCu_thru_hole 1 -3810 -2540)
+      (pin circle_1750x1750_FCu_BCu_thru_hole 2 2540 -5080)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 -5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 5080 0)
+    )
+    (image "img_SW2"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin circle_1750x1750_FCu_BCu_thru_hole 1 -3810 -2540)
+      (pin circle_1750x1750_FCu_BCu_thru_hole 2 2540 -5080)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 -5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 5080 0)
+    )
+    (image "img_SW3"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin circle_1750x1750_FCu_BCu_thru_hole 1 -3810 -2540)
+      (pin circle_1750x1750_FCu_BCu_thru_hole 2 2540 -5080)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 -5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 5080 0)
+    )
+    (image "img_U1"
+      (outline (path signal 150 -10500 -8750 10500 -8750 10500 8750 -10500 8750 -10500 -8750))
+      (pin oval_2000x1600_BCu_smd 5V -9900 6000)
+      (pin oval_2000x1600_BCu_smd GND -9900 4000)
+      (pin oval_2000x1600_BCu_smd 3V3 -9900 2000)
+      (pin oval_2000x1600_BCu_smd D0 -9900 0)
+      (pin oval_2000x1600_BCu_smd D1 -9900 -2000)
+      (pin oval_2000x1600_BCu_smd D2 -9900 -4000)
+      (pin oval_2000x1600_BCu_smd D3 -9900 -6000)
+      (pin oval_2000x1600_BCu_smd D4 9900 6000)
+      (pin oval_2000x1600_BCu_smd D5 9900 4000)
+      (pin oval_2000x1600_BCu_smd D6 9900 2000)
+      (pin oval_2000x1600_BCu_smd D7 9900 0)
+      (pin oval_2000x1600_BCu_smd D8 9900 -2000)
+      (pin oval_2000x1600_BCu_smd D9 9900 -4000)
+      (pin oval_2000x1600_BCu_smd D10 9900 -6000)
+    )
+    (image "img_H1"
+      (outline (path signal 150 -2200 -2200 2200 -2200 2200 2200 -2200 2200 -2200 -2200))
+      (pin circle_4400x4400_FCu_BCu_thru_hole 1 0 0)
+    )
+    (image "img_H2"
+      (outline (path signal 150 -2200 -2200 2200 -2200 2200 2200 -2200 2200 -2200 -2200))
+      (pin circle_4400x4400_FCu_BCu_thru_hole 1 0 0)
+    )
+    (image "img_H3"
+      (outline (path signal 150 -2200 -2200 2200 -2200 2200 2200 -2200 2200 -2200 -2200))
+      (pin circle_4400x4400_FCu_BCu_thru_hole 1 0 0)
+    )
+    (image "img_H4"
+      (outline (path signal 150 -2200 -2200 2200 -2200 2200 2200 -2200 2200 -2200 -2200))
+      (pin circle_4400x4400_FCu_BCu_thru_hole 1 0 0)
+    )
+  )
+  (network
+    (net "+3V3"
+      (pins U1-3V3)
+    )
+    (net "GND"
+      (pins U1-GND SW1-2 SW2-2 SW3-2)
+    )
+    (net "K1"
+      (pins SW1-1 U1-D0)
+    )
+    (net "K2"
+      (pins SW2-1 U1-D1)
+    )
+    (net "K3"
+      (pins SW3-1 U1-D2)
+    )
+    (class keeberia "+3V3" "GND" "K1" "K2" "K3"
+      (circuit
+        (use_via "keeberia_via")
+      )
+      (rule
+        (width 250)
+        (clearance 260)
+      )
+    )
+  )
+  (wiring
+  )
+)

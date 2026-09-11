@@ -29,17 +29,22 @@ export interface JobResult {
 }
 
 /** retry ladder: each rung relaxes routing until it succeeds or we give up */
+/**
+ * retry ladder: the engine's own a* first (fast, in-process), then
+ * freerouting's push-and-shove as the big gun for dense boards —
+ * deterministic either way, just a different (heavier) algorithm.
+ * freerouting rung is skipped when the binary isn't wired into the host.
+ */
 const RETRY_LADDER = [
-  { label: "default", opts: {} },
-  { label: "coarse-grid", opts: { resolution: 0.6 } },
-  { label: "high-congestion-budget", opts: { congestionBudget: 3 } },
-  { label: "relaxed-clearance", opts: { clearance: 0.2 } },
-] as const;
+  { label: "engine-a*", router: "engine" as const },
+  { label: "freerouting", router: "freerouting" as const },
+];
 
 export async function runJob(job: DesignJob): Promise<JobResult> {
   for (const rung of RETRY_LADDER) {
     try {
-      const out = generatePcb(job.layout);
+      if (rung.router === "freerouting" && !process.env.FREEROUTING_BIN) continue;
+      const out = generatePcb(job.layout, rung.router);
       const errors = out.result.warnings.filter((w) => w.level === "error");
       if (errors.length > 0) continue; // next rung
       // the case compiles from the same board: one model, more artifacts

@@ -19,16 +19,41 @@ function distSegPoint(a: Pt, b: Pt, p: Pt): number {
 
 export function runDrc(ctx: BoardCtx, result: PcbResult): PcbResult {
   const w = ctx.outline.width / 2, h = ctx.outline.height / 2;
-  const padList: Array<{ pos: Pt; net: string | undefined; name: string; size: number; thruHole: boolean; side: "F" | "B" }> = [];
+  // pads carry their true shape: a capsule (oval) is narrow across its short
+  // axis, and measuring it as a max-dimension circle would flag legal routes.
+  // shape-aware edge distance keeps the drc honest for both routers.
+  const padList: Array<{
+    pos: Pt; net: string | undefined; name: string;
+    radius: number;                    // circles: true radius
+    axis: [Pt, Pt] | null;             // capsules: axis segment + halfwidth
+    halfwidth: number;
+    thruHole: boolean; side: "F" | "B";
+  }> = [];
   for (const pl of ctx.placements) {
     const fp = FOOTPRINTS[pl.library];
     for (const pad of fp.pads) {
       const net = pl.nets[pad.pad];
+      const pos = padAbsPos(pl, pad.pad);
+      let axis: [Pt, Pt] | null = null;
+      let halfwidth = 0;
+      if (pad.shape === "oval") {
+        const half = Math.abs(pad.size.w - pad.size.h) / 2;
+        const rot = (pl.rotation * Math.PI) / 180;
+        const mirror = pl.side === "B" ? -1 : 1;
+        const long = pad.size.w >= pad.size.h
+          ? { x: half * mirror, y: 0 }
+          : { x: 0, y: half };
+        const rx = long.x * Math.cos(rot) - long.y * Math.sin(rot);
+        const ry = long.x * Math.sin(rot) + long.y * Math.cos(rot);
+        axis = [{ x: pos.x - rx, y: pos.y - ry }, { x: pos.x + rx, y: pos.y + ry }];
+        halfwidth = Math.min(pad.size.w, pad.size.h) / 2;
+      }
       padList.push({
-        pos: padAbsPos(pl, pad.pad),
-        net,
+        pos, net,
         name: `${pl.ref}.${pad.pad}`,
-        size: Math.max(pad.size.w, pad.size.h) / 2,
+        radius: Math.max(pad.size.w, pad.size.h) / 2,
+        axis,
+        halfwidth,
         thruHole: pad.type === "thru_hole",
         side: pl.side,
       });
@@ -48,8 +73,21 @@ export function runDrc(ctx: BoardCtx, result: PcbResult): PcbResult {
       // copper only coexists where layers overlap: thru-hole pads exist on both
       // layers, SMD pads only on their mounted side — no conflict otherwise.
       if (!pad.thruHole && pad.side !== segSide) continue;
-      const d = distSegPoint(seg.start, seg.end, pad.pos);
-      if (d < pad.size + seg.width / 2 + 0.13) {
+      // shape-aware: edge-to-edge distance between trace and pad outline
+      let d: number;
+      if (pad.axis) {
+        const ax = pad.axis;
+        let minAxis = Infinity;
+        for (let k = 0; k <= 4; k++) {
+          const t2 = k / 4;
+          const p2 = { x: ax[0].x + (ax[1].x - ax[0].x) * t2, y: ax[0].y + (ax[1].y - ax[0].y) * t2 };
+          minAxis = Math.min(minAxis, distSegPoint(seg.start, seg.end, p2));
+        }
+        d = minAxis - pad.halfwidth;
+      } else {
+        d = distSegPoint(seg.start, seg.end, pad.pos) - pad.radius;
+      }
+      if (d < seg.width / 2 + 0.13) {
         result.warnings.push({
           level: "error",
           message: `trace of net ${seg.net} clears pad ${pad.name} (net ${pad.net ?? "none"}) by only ${d.toFixed(2)}mm`,

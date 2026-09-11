@@ -1,0 +1,433 @@
+(pcb keeberia-streamdeck
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "keeberia circuitron")
+    (host_version "1.0")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0 42375 -45925 43931 -45281 44575 -43725 44575 43725 43931 45281 42375 45925 -42375 45925 -43931 45281 -44575 43725 -44575 -43725 -43931 -45281 -42375 -45925 42375 -45925)
+    )
+    (via "keeberia_via")
+    (rule
+      (width 250)
+      (clearance 260)
+      (clearance 260 (type default_smd))
+      (clearance 260 (type smd_smd))
+    )
+  )
+  (placement
+    (component "img_SW1"
+      (place SW1 -33775 -24725 front 0)
+    )
+    (component "img_SW2"
+      (place SW2 -14725 -24725 front 0)
+    )
+    (component "img_ENC1"
+      (place ENC1 4325 -24725 front 0)
+    )
+    (component "img_OLED1"
+      (place OLED1 23375 -24725 front 0)
+    )
+    (component "img_SW3"
+      (place SW3 -33775 -5675 front 0)
+    )
+    (component "img_SW4"
+      (place SW4 -14725 -5675 front 0)
+    )
+    (component "img_SW5"
+      (place SW5 4325 -5675 front 0)
+    )
+    (component "img_SW6"
+      (place SW6 23375 -5675 front 0)
+    )
+    (component "img_SW7"
+      (place SW7 -33775 13375 front 0)
+    )
+    (component "img_SW8"
+      (place SW8 -14725 13375 front 0)
+    )
+    (component "img_SW9"
+      (place SW9 4325 13375 front 0)
+    )
+    (component "img_SW10"
+      (place SW10 23375 13375 front 0)
+    )
+    (component "img_U1"
+      (place U1 -5200 32725 front 0)
+    )
+    (component "img_H1"
+      (place H1 -41375 -42725 front 0)
+    )
+    (component "img_H2"
+      (place H2 41375 -42725 front 0)
+    )
+    (component "img_H3"
+      (place H3 -41375 42725 front 0)
+    )
+    (component "img_H4"
+      (place H4 41375 42725 front 0)
+    )
+    (component "img_D1"
+      (place D1 -29575 -15125 front 0)
+    )
+    (component "img_D2"
+      (place D2 -10525 -15125 front 0)
+    )
+    (component "img_D3"
+      (place D3 -29575 3925 front 0)
+    )
+    (component "img_D4"
+      (place D4 -10525 3925 front 0)
+    )
+    (component "img_D5"
+      (place D5 8525 3925 front 0)
+    )
+    (component "img_D6"
+      (place D6 27575 3925 front 0)
+    )
+    (component "img_D7"
+      (place D7 -29575 22975 front 0)
+    )
+    (component "img_D8"
+      (place D8 -10525 22975 front 0)
+    )
+    (component "img_D9"
+      (place D9 8525 22975 front 0)
+    )
+    (component "img_D10"
+      (place D10 27575 22975 front 0)
+    )
+  )
+  (library
+    (padstack "keeberia_via"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+    (padstack "keeberia_via_drill"
+      (shape (circle F.Cu 300))
+      (shape (circle B.Cu 300))
+      (attach off)
+    )
+    (padstack "oval_3050x2000_BCu_smd"
+      (shape (path B.Cu 2000 -525 0 525 0))
+      (attach off)
+    )
+    (padstack "circle_4000x4000_FCu_BCu_thru_hole"
+      (shape (circle F.Cu 4000))
+      (shape (circle B.Cu 4000))
+      (attach off)
+    )
+    (padstack "circle_1700x1700_FCu_BCu_thru_hole"
+      (shape (circle F.Cu 1700))
+      (shape (circle B.Cu 1700))
+      (attach off)
+    )
+    (padstack "oval_1750x2200_FCu_BCu_thru_hole"
+      (shape (path F.Cu 1750 0 -225 0 225))
+      (shape (path B.Cu 1750 0 -225 0 225))
+      (attach off)
+    )
+    (padstack "oval_3050x2200_FCu_BCu_thru_hole"
+      (shape (path F.Cu 2200 -425 0 425 0))
+      (shape (path B.Cu 2200 -425 0 425 0))
+      (attach off)
+    )
+    (padstack "circle_1800x1800_FCu_BCu_thru_hole"
+      (shape (circle F.Cu 1800))
+      (shape (circle B.Cu 1800))
+      (attach off)
+    )
+    (padstack "oval_2000x1600_BCu_smd"
+      (shape (path B.Cu 1600 -200 0 200 0))
+      (attach off)
+    )
+    (padstack "circle_4400x4400_FCu_BCu_thru_hole"
+      (shape (circle F.Cu 4400))
+      (shape (circle B.Cu 4400))
+      (attach off)
+    )
+    (padstack "rect_1300x1200_BCu_smd"
+      (shape (rect B.Cu -650 -600 650 600))
+      (attach off)
+    )
+    (image "img_SW1"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_SW2"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_ENC1"
+      (outline (path signal 150 -7250 -8250 7250 -8250 7250 8250 -7250 8250 -7250 -8250))
+      (pin oval_1750x2200_FCu_BCu_thru_hole A -2540 7620)
+      (pin oval_1750x2200_FCu_BCu_thru_hole C 0 7620)
+      (pin oval_1750x2200_FCu_BCu_thru_hole B 2540 7620)
+      (pin oval_1750x2200_FCu_BCu_thru_hole D -2540 -7620)
+      (pin oval_1750x2200_FCu_BCu_thru_hole E 2540 -7620)
+      (pin oval_3050x2200_FCu_BCu_thru_hole MP1 -5600 3000)
+      (pin oval_3050x2200_FCu_BCu_thru_hole MP2 5600 3000)
+    )
+    (image "img_OLED1"
+      (outline (path signal 150 -19000 -6000 19000 -6000 19000 6000 -19000 6000 -19000 -6000))
+      (pin circle_1800x1800_FCu_BCu_thru_hole GND 17500 -3810)
+      (pin circle_1800x1800_FCu_BCu_thru_hole VCC 17500 -1270)
+      (pin circle_1800x1800_FCu_BCu_thru_hole SCL 17500 1270)
+      (pin circle_1800x1800_FCu_BCu_thru_hole SDA 17500 3810)
+    )
+    (image "img_SW3"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_SW4"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_SW5"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_SW6"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_SW7"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_SW8"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_SW9"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_SW10"
+      (outline (path signal 150 -7000 -7000 7000 -7000 7000 7000 -7000 7000 -7000 -7000))
+      (pin oval_3050x2000_BCu_smd 1 5842 -5080)
+      (pin oval_3050x2000_BCu_smd 2 -7085 -2540)
+      (pin circle_4000x4000_FCu_BCu_thru_hole peg 0 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg1 5080 0)
+      (pin circle_1700x1700_FCu_BCu_thru_hole peg2 -5080 0)
+    )
+    (image "img_U1"
+      (outline (path signal 150 -10500 -8750 10500 -8750 10500 8750 -10500 8750 -10500 -8750))
+      (pin oval_2000x1600_BCu_smd 5V -9900 6000)
+      (pin oval_2000x1600_BCu_smd GND -9900 4000)
+      (pin oval_2000x1600_BCu_smd 3V3 -9900 2000)
+      (pin oval_2000x1600_BCu_smd D0 -9900 0)
+      (pin oval_2000x1600_BCu_smd D1 -9900 -2000)
+      (pin oval_2000x1600_BCu_smd D2 -9900 -4000)
+      (pin oval_2000x1600_BCu_smd D3 -9900 -6000)
+      (pin oval_2000x1600_BCu_smd D4 9900 6000)
+      (pin oval_2000x1600_BCu_smd D5 9900 4000)
+      (pin oval_2000x1600_BCu_smd D6 9900 2000)
+      (pin oval_2000x1600_BCu_smd D7 9900 0)
+      (pin oval_2000x1600_BCu_smd D8 9900 -2000)
+      (pin oval_2000x1600_BCu_smd D9 9900 -4000)
+      (pin oval_2000x1600_BCu_smd D10 9900 -6000)
+    )
+    (image "img_H1"
+      (outline (path signal 150 -2200 -2200 2200 -2200 2200 2200 -2200 2200 -2200 -2200))
+      (pin circle_4400x4400_FCu_BCu_thru_hole 1 0 0)
+    )
+    (image "img_H2"
+      (outline (path signal 150 -2200 -2200 2200 -2200 2200 2200 -2200 2200 -2200 -2200))
+      (pin circle_4400x4400_FCu_BCu_thru_hole 1 0 0)
+    )
+    (image "img_H3"
+      (outline (path signal 150 -2200 -2200 2200 -2200 2200 2200 -2200 2200 -2200 -2200))
+      (pin circle_4400x4400_FCu_BCu_thru_hole 1 0 0)
+    )
+    (image "img_H4"
+      (outline (path signal 150 -2200 -2200 2200 -2200 2200 2200 -2200 2200 -2200 -2200))
+      (pin circle_4400x4400_FCu_BCu_thru_hole 1 0 0)
+    )
+    (image "img_D1"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D2"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D3"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D4"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D5"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D6"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D7"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D8"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D9"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+    (image "img_D10"
+      (outline (path signal 150 -1850 -1300 1850 -1300 1850 1300 -1850 1300 -1850 -1300))
+      (pin rect_1300x1200_BCu_smd A 0 1450)
+      (pin rect_1300x1200_BCu_smd K 0 -1450)
+    )
+  )
+  (network
+    (net "+3V3"
+      (pins U1-3V3 OLED1-VCC)
+    )
+    (net "GND"
+      (pins U1-GND ENC1-C ENC1-MP1 ENC1-MP2 OLED1-GND)
+    )
+    (net "COL0"
+      (pins SW1-1 SW2-1 U1-D6)
+    )
+    (net "COL1"
+      (pins SW3-1 SW4-1 U1-D7)
+    )
+    (net "COL2"
+      (pins SW5-1 SW6-1 U1-D8)
+    )
+    (net "COL3"
+      (pins SW7-1 SW8-1 U1-D9)
+    )
+    (net "COL4"
+      (pins SW9-1 SW10-1 U1-D10)
+    )
+    (net "ENC1_A"
+      (pins ENC1-A U1-D0)
+    )
+    (net "ENC1_B"
+      (pins ENC1-B U1-D1)
+    )
+    (net "N_SW1"
+      (pins SW1-2 D1-A)
+    )
+    (net "N_SW2"
+      (pins SW2-2 D2-A)
+    )
+    (net "N_SW3"
+      (pins SW3-2 D3-A)
+    )
+    (net "N_SW4"
+      (pins SW4-2 D4-A)
+    )
+    (net "N_SW5"
+      (pins SW5-2 D5-A)
+    )
+    (net "N_SW6"
+      (pins SW6-2 D6-A)
+    )
+    (net "N_SW7"
+      (pins SW7-2 D7-A)
+    )
+    (net "N_SW8"
+      (pins SW8-2 D8-A)
+    )
+    (net "N_SW9"
+      (pins SW9-2 D9-A)
+    )
+    (net "N_SW10"
+      (pins SW10-2 D10-A)
+    )
+    (net "ROW0"
+      (pins D1-K D3-K D5-K D7-K D9-K U1-D2)
+    )
+    (net "ROW1"
+      (pins D2-K D4-K D6-K D8-K D10-K U1-D3)
+    )
+    (net "SCL"
+      (pins OLED1-SCL U1-D5)
+    )
+    (net "SDA"
+      (pins OLED1-SDA U1-D4)
+    )
+    (class keeberia "+3V3" "GND" "COL0" "COL1" "COL2" "COL3" "COL4" "ENC1_A" "ENC1_B" "N_SW1" "N_SW2" "N_SW3" "N_SW4" "N_SW5" "N_SW6" "N_SW7" "N_SW8" "N_SW9" "N_SW10" "ROW0" "ROW1" "SCL" "SDA"
+      (circuit
+        (use_via "keeberia_via")
+      )
+      (rule
+        (width 250)
+        (clearance 260)
+      )
+    )
+  )
+  (wiring
+  )
+)
