@@ -1,7 +1,7 @@
 // generate caps.scad for the reference layouts; compile each to stl
-import { generatePcb } from "../../../pcb/pcb-engine/src/index.ts";
+import { generatePcb } from "../../../circuitron/src/index.ts";
 import { generateCaps } from "../src/index.ts";
-import { layouts as LAYOUTS } from "../../../pcb/pcb-engine/test/layouts.ts";
+import { layouts as LAYOUTS } from "../../../circuitron/test/layouts.ts";
 import { mkdirSync, writeFileSync, existsSync, statSync } from "node:fs";
 import { execSync } from "node:child_process";
 

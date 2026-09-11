@@ -4,8 +4,8 @@
  *  openscad codegen, customizer-annotated like the case engine — every cap
  *  set is a configurator (makerlab pattern: "just drag a slider").
  *  geometry sources + license notes: research/notes/flow-05-caps-and-viz.md */
-import type { PcbResult, Placement } from "../../../pcb/pcb-engine/src/types.ts";
-import { FOOTPRINTS } from "../../../pcb/pcb-engine/src/footprints.ts";
+import type { PcbResult, Placement } from "../../../circuitron/src/types.ts";
+import { FOOTPRINTS } from "../../../circuitron/src/footprints.ts";
 import { CAP_PROFILES, DEFAULT_PROFILE, KeycapProfile } from "./profiles.ts";
 
 export interface CapsOptions {
