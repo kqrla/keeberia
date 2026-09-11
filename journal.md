@@ -187,3 +187,10 @@ job #5 (ninepad) went queued → done with 22 artifacts, firmware included. the 
 - caps-engine moved: backend/engines/paracraft/caps-engine (the case engine's move made it homeless; imports retargeted to circuitron — the old pcb-engine path was already stale after anne's restructure). all four reference boards re-render to stl from the new home.
 - prior art round three filed (research/notes/prior-art-round-3-kle-and-scad-keyboards.md): kle (1517⭐, the community interchange — keeberia's flow 01 import/export target), scad-keyboard-cases (kle→openscad case gen, gpl study-only, validates the flow 01→04 path), keyboard_lib (print + mill), and anne's attached genKeyboard ecosystem (island records, layered prints, assembled-explode view — filed verbatim in research/reference/genkeyboard/). convergence: everyone models keys as relative-unit rectangles + rotation + legends; nobody else propagates.
 - makerlab configurator still auth-gated; browserbase session parked on the login page for anne to open the live link and sign in.
+
+## sept 11, deep dive: the scad keyboard universe → paracraft's upgrade plan
+
+- three libraries cloned and studied properly. keyboard_lib is MIT (alex ives) — code liftable with attribution, and its spec-test architecture (per-feature spec files + reference stl/svgs) is the answer to "how do we train the scad engine": golden-master testing, deterministic, no ai.
+- lenbok (gpl, patterns only): the kle json walk spec (next-key dict accumulation, rotation about rx/ry pivot) — reimplementable in TS as flow 01 import/export; chamfers/tent_support/reset holes as case-module patterns.
+- genKeyboard: the exploded view as a single call, legends as txt+svg data, base-type enum.
+- paracraft upgrade plan ranked: 1) spec suite with reference stls, 2) kle.ts, 3) case engine v1.1 (chamfers, reset hole, plate-vs-case hole audit), 4) exploded view module, 5) legends on caps, 6) cross-check height_for_style (mx 5.334, choc 2.2) vs our records.
