@@ -194,3 +194,9 @@ job #5 (ninepad) went queued → done with 22 artifacts, firmware included. the 
 - lenbok (gpl, patterns only): the kle json walk spec (next-key dict accumulation, rotation about rx/ry pivot) — reimplementable in TS as flow 01 import/export; chamfers/tent_support/reset holes as case-module patterns.
 - genKeyboard: the exploded view as a single call, legends as txt+svg data, base-type enum.
 - paracraft upgrade plan ranked: 1) spec suite with reference stls, 2) kle.ts, 3) case engine v1.1 (chamfers, reset hole, plate-vs-case hole audit), 4) exploded view module, 5) legends on caps, 6) cross-check height_for_style (mx 5.334, choc 2.2) vs our records.
+
+## sept 11, later: the genKeyboard files read properly + the lift policy on record
+
+- individual-file lessons beyond round 3: corner-hull fillet recipe (no minkowski), clearance as a named plate param (cl=0.75 — anne's tolerance principle, parametrized), bounds-based column composition, print-bed sectioning for full keebs.
+- lift policy filed in the deep-dive note: keyboard_lib (mit) = values+architecture preferred, code only with THIRD_PARTY_NOTICES.md attribution; lenbok (gpl) = zero code ever; genKeyboard = study-only until anne says where it's from; kle = interop.
+- ranked lift list: height cross-check → spec suite → clearance sliders → fillet recipe → bounds composition → bed sectioning.

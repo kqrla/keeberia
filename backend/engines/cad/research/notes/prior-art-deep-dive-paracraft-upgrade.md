@@ -47,3 +47,32 @@ three libraries, three licenses, one lesson: everyone solved *one* slice — lay
 4. **exploded view module**: `assembled(layout, explode)` equivalent as a paracraft preview-mode projection — caps/switches/plate/pcb/case stacked with z offsets + per-layer colors. feeds the three.js viewer later; genKeyboard's pattern, our records
 5. **legends as data on caps** (flow 05): txt + svg legend records on cells, projected into cap tops
 6. **component data cross-check**: keyboard_lib's `height_for_style` values (mx 5.334, choc_v1 2.2) and `hole=14` vs our marbastlib-derived records — independent confirmation or a provenance flag
+
+## update sept 11: the individual files, read properly + the lift policy
+
+### what the genKeyboard files actually teach (beyond the round-3 skim)
+
+- `key(w,d,th,r,...)` — their keycap is a **hull of four sphere∩cube corners**: rounded plate geometry without minkowski. fast, printable, simple — our profile-dished caps are more advanced; the *recipe* is the lesson (cheap fillets via corner-hull, not minkowski)
+- `keyCover(w,d,kw,kd,th,r,cl=0.75,...)` — the plate opening carries **clearance as a named param** (cl=0.75mm default). that's anne's fabrication-tolerance principle from the roadmap, parametrized — our plate openings should expose the same
+- `keypad-2x3` — **columns compose by bounds**: `genColumn(x=maxx(col1), y=miny(col1), ...)` — layouts built from relative bounds queries, the primitive non-grid boards need
+- `keyboard104` — a 104-key board split into **three sections for printable build plates**, plus `preview(hspacing, yspacing)` assembling them side by side. print-bed packing is a real export concern we haven't hit yet (macropads don't need it; keebs will)
+- base modules (`keyBaseBtn` bw=6 bh=4.3, `keyBaseDome`) — the tactile/dome family data
+
+### the lift policy (per source, agreed with provenance rules)
+
+| source | license | what we may take |
+|---|---|---|
+| keyboard_lib (alex ives) | MIT | code liftable with attribution — but prefer **values + architecture**: keep paracraft dependency-free and our own codegen; lifting files drags their conventions in. any code we do take gets a THIRD_PARTY_NOTICES.md entry + in-code provenance |
+| scad-keyboard-cases | gpl-3.0 | **zero code, ever** — patterns, module decomposition, and geometry facts only. the kle walk gets reimplemented in TS from the format spec |
+| genKeyboard (anne's files) | **unknown — ask anne the source** | study-don't-copy until the origin is known |
+| kle format | interop | a data format is interop, not copying. always fine |
+| keycap_playground | MIT (owner-confirmed on discord) | values as data with provenance — already doing this |
+
+### the concrete lift list, ranked
+
+1. `height_for_style` values (mx 5.334 / choc_v1 2.2, `hole=14`) → cross-check against our component records; agreement = confirmation, disagreement = provenance flag (data lift, free)
+2. the spec-test architecture → our `backend/engines/paracraft/specs/` suite (architecture lift, reimplemented in TS)
+3. `cl` clearance param → paracraft plate/case openings get explicit clearance sliders (the roadmap tolerance principle, made parametric)
+4. corner-hull fillet recipe → wherever case geometry needs cheap rounding without minkowski cost
+5. bounds-based column composition → layout model primitive for non-grid boards (parking lot: splits, keebs)
+6. print-bed sectioning → future export concern for full keyboards, noted not built
