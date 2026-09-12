@@ -1,0 +1,58 @@
+{
+  "case-hackpad-3key": {
+    "name": "case-hackpad-3key",
+    "scadSha": "29e0e051451c022c",
+    "stlSha": "af30cbfa9255c200",
+    "oscadVersion": "OpenSCAD version 2021.01",
+    "blessedAt": "2026-09-12"
+  },
+  "caps-hackpad-3key": {
+    "name": "caps-hackpad-3key",
+    "scadSha": "8e0839dfa3b2ec56",
+    "stlSha": "4c9d933078180ea6",
+    "oscadVersion": "OpenSCAD version 2021.01",
+    "blessedAt": "2026-09-12"
+  },
+  "case-ninepad": {
+    "name": "case-ninepad",
+    "scadSha": "97ecf20dee3cca23",
+    "stlSha": "98843295f827717b",
+    "oscadVersion": "OpenSCAD version 2021.01",
+    "blessedAt": "2026-09-12"
+  },
+  "caps-ninepad": {
+    "name": "caps-ninepad",
+    "scadSha": "fc4555acd8406500",
+    "stlSha": "49be1f88bf4f33de",
+    "oscadVersion": "OpenSCAD version 2021.01",
+    "blessedAt": "2026-09-12"
+  },
+  "case-streamdeck": {
+    "name": "case-streamdeck",
+    "scadSha": "7e51fc1153fe567e",
+    "stlSha": "fded2f219881d338",
+    "oscadVersion": "OpenSCAD version 2021.01",
+    "blessedAt": "2026-09-12"
+  },
+  "caps-streamdeck": {
+    "name": "caps-streamdeck",
+    "scadSha": "f0622f0570761693",
+    "stlSha": "329f557b7d79ff60",
+    "oscadVersion": "OpenSCAD version 2021.01",
+    "blessedAt": "2026-09-12"
+  },
+  "case-ninepad-choc": {
+    "name": "case-ninepad-choc",
+    "scadSha": "6750f80820826d0e",
+    "stlSha": "0de5b56fbc6ce86e",
+    "oscadVersion": "OpenSCAD version 2021.01",
+    "blessedAt": "2026-09-12"
+  },
+  "caps-ninepad-choc": {
+    "name": "caps-ninepad-choc",
+    "scadSha": "070592fc5b6e17d5",
+    "stlSha": "9e02881781302a37",
+    "oscadVersion": "OpenSCAD version 2021.01",
+    "blessedAt": "2026-09-12"
+  }
+}
