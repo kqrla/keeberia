@@ -218,3 +218,10 @@ the bugs it caught, honestly:
 the bar itself, enforced by `test/freeroute.ts` on all four reference boards: every net with ≥2 pads receives wires, every pad actually touches its net's copper (point-to-segment connectivity), all segments inside the outline, and the house drc passes on the imported routes. result line: hackpad 4/4, ninepad 11/11, streamdeck 23/23, ninepad-choc 10/10 — all at 0 drc errors. freerouting's own internal "violations" counter flags input board state its optimizer can't fix; our drc is the manufacture gate, and that distinction is now written down where the tests can't lose it.
 
 rebase note for the record: the two workstreams restructured the repo in parallel — anne's side kept `backend/engines/` and built the caps engine forward (now `backend/engines/cad/caps-engine` + paracraft research), mine had moved circuitron top-level. anne's layout wins; the bridge content was re-applied onto her tree, all suites green there.
+
+## sept 12: the height cross-check found a real bug — cases were mx-coincidental
+
+- pulled anne's freerouting bridge (dsn out, copper back, judged by the house drc) — the copper path now has its deterministic partner.
+- the cross-check: keyboard_lib's plateTopToPcb (mx 5.334, choc 2.2) lifted into circuitron records with provenance; our 14×14 mx plate opening independently confirmed by their hole=14.
+- the find: case walls were a free aesthetic slider and the pcb-to-plate alignment only worked by coincidence (walls 10 ≈ standoff 5 + mx 5.334). choc cases were wrong — 10mm walls put the plate ~2.8mm above where a choc stack wants it.
+- fix: wall heights derive from the switch stack now (mx → 10.334, choc → 7.2), slider-overridable with an honest warning. gerbers, qmk, cases, caps all re-verified across every reference board.
