@@ -225,3 +225,10 @@ rebase note for the record: the two workstreams restructured the repo in paralle
 - the cross-check: keyboard_lib's plateTopToPcb (mx 5.334, choc 2.2) lifted into circuitron records with provenance; our 14×14 mx plate opening independently confirmed by their hole=14.
 - the find: case walls were a free aesthetic slider and the pcb-to-plate alignment only worked by coincidence (walls 10 ≈ standoff 5 + mx 5.334). choc cases were wrong — 10mm walls put the plate ~2.8mm above where a choc stack wants it.
 - fix: wall heights derive from the switch stack now (mx → 10.334, choc → 7.2), slider-overridable with an honest warning. gerbers, qmk, cases, caps all re-verified across every reference board.
+
+## sept 12, later: the spec suite is live — and it caught its own bug before we shipped it
+
+- backend/engines/paracraft/specs/: the golden-master suite, keyboard_lib's architecture in our own form. 8 specs (case + caps × 4 reference boards), two layers: scad bytes (codegen contract, exact) + canonical stl hash (geometry contract).
+- the discovery along the way: openscad's raw stl bytes are **path-dependent** — identical scad content compiles to byte-different stls from different directories (found because the suite's own cwd fix invalidated its first blessing; proven with a controlled two-path test). so the geometry golden is a canonical hash: vertices quantized to 1µm, facets sorted, then hashed — path- and machine-independent, still catches any real change above a micron. the portability proof: two byte-different stls from the same scad canonicalize to the same hash.
+- the harness: `npx tsx specs/run.ts` (compare, exits 1 on mismatch, ci-ready) / `--update` (bless, change described in the commit). cwd-independent, runnable from the daemon. goldens + manifest (with openscad version provenance) in specs/goldens/.
+- from now on, every paracraft/circuitron geometry change lands with a spec-suite run. unintended drift fails the suite; intentional changes re-bless with a note.
