@@ -38,7 +38,7 @@ export const MX_SOLDER: FootprintDef = {
     { pad: "peg2", pos: { x: 5.08, y: 0 }, size: { w: 1.7, h: 1.7 }, shape: "circle", type: "thru_hole", drill: 1.7, layer: "*.Cu" },
   ],
   silks: rectSilks(14, 14),
-  case: { plateOpening: { w: 14, h: 14 }, plateThickness: 1.5 },  // cherry mx datasheet
+  case: { plateOpening: { w: 14, h: 14 }, plateThickness: 1.5, plateTopToPcb: 5.334 },  // cherry mx datasheet; stack = plate top above pcb, keyboard_lib (MIT, alex ives, gitlab) height_for_style, calibration-flagged until the print test
 };
 
 /** Kailh MX hotswap socket — solder pads offset outside the 14mm window
@@ -59,7 +59,7 @@ export const MX_HOTSWAP: FootprintDef = {
   ],
   silks: rectSilks(14, 14),
   flipSilkWhenBack: true,
-  case: { plateOpening: { w: 14, h: 14 }, plateThickness: 1.5 },  // same switch family as MX_SOLDER
+  case: { plateOpening: { w: 14, h: 14 }, plateThickness: 1.5, plateTopToPcb: 5.334 },  // same switch family as MX_SOLDER
 };
 
 /** Kailh Choc v1 (CPG1353, low profile) — 15×15 window */
@@ -87,7 +87,7 @@ export const CHOC_V1: FootprintDef = {
     { pad: "led", pos: { x: 0, y: 0 }, size: { w: 3.4, h: 3.4 }, shape: "circle", type: "thru_hole", drill: 3.4, layer: "*.Cu" },
   ],
   silks: rectSilks(13.8, 13.8),
-  case: { plateOpening: { w: 13.8, h: 13.8 }, plateThickness: 1.2 },
+  case: { plateOpening: { w: 13.8, h: 13.8 }, plateThickness: 1.2, plateTopToPcb: 2.2 },  // plate top above pcb, keyboard_lib (MIT, alex ives) height_for_style — choc low-profile stack; calibration-flagged until the print test
 };
 
 /** Alps EC11 vertical rotary encoder (switched, 5-pin + 2 mounting slots) */

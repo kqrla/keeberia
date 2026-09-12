@@ -76,3 +76,10 @@ three libraries, three licenses, one lesson: everyone solved *one* slice — lay
 4. corner-hull fillet recipe → wherever case geometry needs cheap rounding without minkowski cost
 5. bounds-based column composition → layout model primitive for non-grid boards (parking lot: splits, keebs)
 6. print-bed sectioning → future export concern for full keyboards, noted not built
+
+## update sept 12: the height cross-check, run — and it found a real gap
+
+- keyboard_lib's `height_for_style` lifted into the records with provenance: **mx plateTopToPcb 5.334mm** (plate top above pcb), **choc v1 2.2mm** (MIT, alex ives, gitlab — calibration-flagged until the a1 mini print test). our mx plate opening 14×14 matched their `hole=14` independently: confirmation, not drift
+- what the cross-check exposed: the case engine's plate sat on the wall tops with wall height a free aesthetic slider — the pcb-to-plate alignment was a *coincidence* (walls 10, standoff 5 ≈ mx 5.334). choc boards were wrong: 10mm walls put the plate 5mm above the pcb where the switch stack wants 2.2
+- fix landed: wall heights now **derive from the board's switch stack** (standoff + plateTopToPcb; mx case → 10.334mm walls, choc case → 7.2mm), overridable by slider with an honest warning when the override would sit the pcb off switch height. mixed-family boards warn toward the split-plate flow
+- all engines re-verified after the record change: gerbers, qmk bundles, cases, caps all pass on all reference boards

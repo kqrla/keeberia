@@ -12,8 +12,8 @@ wall_thickness = 3;   // [1.6:0.2:5] side walls (below 1.6 gets floppy)
 base_thickness = 2.4;   // [1.6:0.2:6] case floor
 case_margin    = 1.6;     // [0.2:0.1:3] pcb edge to inner wall (print tolerance)
 corner_radius  = 4;    // [0:0.5:15] outer corner radius
-front_height   = 10;     // [5:1:30] wall height, usb edge
-rear_height    = 10;     // [5:1:30] wall height, far edge
+front_height   = 10.33;     // [5:1:30] wall height, usb edge
+rear_height    = 10.33;     // [5:1:30] wall height, far edge
 standoff_height = 5;  // [4.5:0.5:12] pcb floats above the floor (xiao stack needs 4.3)
 /* [Mounting] */
 screw_size     = 2.2;    // [2:0.1:3.2] drill (m2 = 2.2, m2.5 = 2.7, m3 = 3.2)

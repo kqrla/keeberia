@@ -80,7 +80,34 @@ export function generateCase(pcb: PcbResult, partial?: Partial<CaseOptions>): Ca
     plateDefault = Math.max(...familyPlates);
     warnings.push({ level: "warning", message: `mixed switch families want different plate thicknesses (${familyPlates.join(", ")}mm) — using the thickest for now; per-family plates arrive with the split-plate flow` });
   }
-  const opts = { ...DEFAULT_CASE_OPTIONS, ...(plateDefault !== undefined ? { plateThickness: plateDefault } : {}), ...partial };
+  // the wall height follows the switch stack too — the plate sits on the
+  // wall tops and the pcb hangs from the switches, so walls must be
+  // standoffHeight + plateTopToPcb tall or the pcb won't line up
+  const familyStacks = [...new Set(keys
+    .map((k) => REC(k.library)?.case?.plateTopToPcb)
+    .filter((v): v is number => v !== undefined))];
+  let stack: number | undefined;
+  if (familyStacks.length === 1) stack = familyStacks[0];
+  else if (familyStacks.length > 1) {
+    stack = Math.max(...familyStacks);
+    warnings.push({ level: "warning", message: `mixed switch families want different plate-to-pcb stacks (${familyStacks.join(", ")}mm) — using the tallest; a true mixed board needs the split-plate flow` });
+  }
+  const requiredWall = DEFAULT_CASE_OPTIONS.standoffHeight + (stack ?? 0);
+  const wallOverride = partial?.frontHeight !== undefined || partial?.rearHeight !== undefined;
+  const wallDefault = stack !== undefined ? requiredWall : DEFAULT_CASE_OPTIONS.frontHeight;
+  const opts = {
+    ...DEFAULT_CASE_OPTIONS,
+    ...(plateDefault !== undefined ? { plateThickness: plateDefault } : {}),
+    frontHeight: wallDefault,
+    rearHeight: wallDefault,
+    ...partial,
+  };
+  const wallTop = Math.max(opts.frontHeight, opts.rearHeight);
+  if (stack !== undefined && Math.abs(wallTop - requiredWall) > 0.25) {
+    warnings.push({ level: "warning", message: `walls want ${fmt(requiredWall)}mm so the pcb lines up with the switch plate stack (standoff ${fmt(opts.standoffHeight)} + plate height ${fmt(stack)}); currently ${fmt(wallTop)} — the pcb would sit off switch height` });
+  } else if (stack !== undefined && wallOverride) {
+    warnings.push({ level: "info", message: `walls pinned to the switch stack: ${fmt(wallTop)}mm (standoff ${fmt(opts.standoffHeight)} + plate height ${fmt(stack)})` });
+  }
 
   if (holes.length === 0) {
     warnings.push({ level: "error", message: "this board has no mounting holes — the case cannot anchor the pcb. enable corner mounting in the pcb flow first" });
