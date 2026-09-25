@@ -286,3 +286,18 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   goldens had never been committed; they are now (08ebb5b).
 - restructure commit: 848e900. the fab candidates (osh park, aisler, seeed) are on disk
   from the relaunched workers, merged next.
+
+## sept 25, evening: the fab corpus is whole
+
+- osh park, aisler, and seeed are in as researched candidates, each with capabilities json + evidence lines.
+  the corpus now holds 74 evidence lines across jlcpcb, the three new fabs, and the case-fab materials track.
+- the merge was not rubber-stamped. the aisler worker's evidence lines cited discourse topic urls that do
+  not resolve (truncated/hallucinated ids) — the numbers were right, the citations were not. every line was
+  rebuilt from the real aisler knowledge-base topics (3732 ENIG, 3735 HASL, portfolio 101, shipping 672),
+  fetched via the discourse json api, excerpts verbatim against the live pages. osh park and seeed lines
+  spot-checked live (docs.oshpark.com and the fusion wiki render their spec tables server-side; the seeed
+  xiao blog excerpt verified via firecrawl). the aisler.md source list fixed (the coupon thread became
+  shipping-methods/672).
+- what this buys the engine: a second verified eu fab (aisler: 125µm enig traces, 0.25mm min via, free
+  untracked eu shipping) and the osh park premium-us option (6mil traces, 10mil min drill, published
+  hole tolerances) — three cost/service tiers around jlcpcb now.

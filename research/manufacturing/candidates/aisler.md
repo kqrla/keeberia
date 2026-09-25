@@ -50,7 +50,7 @@ import customs hassle. the numbers that matter to our boards (all two-layer, 1oz
 - [PCB Portfolio — AISLER](https://community.aisler.net/t/pcb-portfolio/101): base material, 1.6mm 2-layer thickness, surface finishes; retrieved 2026-09-25
 - [2 Layer 1.6mm 35 µm ENIG Design Rules — AISLER](https://community.aisler.net/t/2-layer-1-6mm-35-m-enig-design-rules/3732): full capability table for ENIG 2-layer; retrieved 2026-09-25
 - [2 Layer 1.6mm 35 µm HASL Design Rules — AISLER](https://community.aisler.net/t/2-layer-1-6-mm-35-m-hasl-design-rules/3735): full capability table for HASL 2-layer; retrieved 2026-09-25
-- [Logistics & Savings — AISLER](https://community.aisler.net/t/looking-for-an-aisler-coupon-code-here-s-how-to-save-on-your-next-project/5495): free EU shipping and store credit structure; retrieved 2026-09-25
+- [Shipping Methods — AISLER](https://community.aisler.net/t/shipping-methods/672): free untracked shipping (Deutsche Post Großbrief / DHL Warenpost) within their service; retrieved 2026-09-25
 
 ## how this enters the engine
 
