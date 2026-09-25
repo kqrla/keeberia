@@ -57,3 +57,12 @@ block, then nav cluster, then numpad). grounds phase 7b: the size vernacular
 (60%, 65%, 75%, 80%/tkl, 96%, 1800/98%, 100%) that non-engineers actually use
 to describe a keeb size, separate from the ansi/iso/jis physical-standard
 question phase 7 already answered.
+
+## mac-keyboard-colorcoded.png
+
+anne's fourth reference drop, a clean color-coded mac keyboard (green function
+row, cyan number row, red alpha block, purple modifiers/arrows-frame, orange
+arrow cluster). grounds phase 7c: whether mac's cmd/option modifier row and
+inverted-t arrow cluster are a real geometry difference from ansi or just a
+legend/keycode remap over the same footprint, extending the physical-vs-logical
+question phase 7 already answered for regional layouts.

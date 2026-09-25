@@ -384,6 +384,15 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       image color-codes, and how a size name maps onto phase 7's key-count data.
       product-facing: this is the language a non-engineer picks a macropad/keeb
       size by, so the builder ui should expose size names, not just key counts.
+- [ ] phase 7c: mac keyboard variant slice (anne, sept 25, from a mac layout
+      reference image): macs use ansi physical spacing but a different modifier
+      row (cmd/option replacing win/alt, fn added), no dedicated menu key, an
+      inverted-t arrow cluster with half-height left/right arrows, and historically
+      a power button or touch bar in the function row position. scope: is this a
+      real physical pcb/plate difference (modifier keycap legends + inverted-t
+      arrow cluster geometry) or purely a legend/keycode remap over the same ansi
+      footprint - the same "physical vs logical" question phase 7 already answered
+      for regional layouts, now asked of mac vs pc.
 - [ ] phase 8b: dual-legend multilingual slice (anne, sept 25, clarified from a
       bengali keyboard reference image): NOT the same as 8a. this is one physical
       key carrying two scripts at once, one primary (large, main position) + one
