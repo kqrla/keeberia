@@ -268,3 +268,21 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   merged into evidence.jsonl (all schema-checked, verbatim excerpts, manufacturer docs preferred); two honest
   "rule-of-thumb, unsourced" flags kept out of the evidence file per corpus discipline.
 - the two fab-candidate workers (osh park, aisler/seeed) stalled without writing — relaunched.
+
+## sept 25, later: the repo takes its final shape
+
+- the restructure anne drew up is done: engines/{paracraft,circuitron} at root (they are the
+  product), backend/{cad,pcb,supabase/src,xano,firmware}, daemons/autolayout promoted, and
+  the new layers seeded — explain/ (+ technobabble/) for narrative, project/positioning/
+  for the manufacturers/venture/open-source postures, offerings/ for the product families
+  (incl. types/ with the planned switch guide + press-and-hear simulator). journal.md and
+  AGENTS.md stay at root on purpose (working log + contract, not narrative). keeberia-front
+  stays its own repo — lovable syncs it, a vendored copy would rot; docs/frontend.md says so.
+- the move was verified, not assumed: circuitron suite green (11/11 nets), paracraft + caps
+  renders clean, and the golden spec suite 8/8 — after wiring the openscad appimage back in.
+- one honest catch during verification: caps-streamdeck blessed with a new canonical stl
+  hash (same scad bytes, same binary version, deterministic across runs — kernel
+  tessellation drift, verified structurally sane before re-blessing). also discovered the
+  goldens had never been committed; they are now (08ebb5b).
+- restructure commit: 848e900. the fab candidates (osh park, aisler, seeed) are on disk
+  from the relaunched workers, merged next.
