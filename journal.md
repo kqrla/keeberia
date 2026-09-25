@@ -321,3 +321,20 @@ rebase note for the record: the two workstreams restructured the repo in paralle
 - all previous commits rewritten to author kqrla <192480930+kqrla@users.noreply.github.com>
   (history rewritten + force-pushed; commit hashes cited in older journal entries refer to the
   pre-rewrite objects).
+
+## sept 25, late: the queue is live (one grant away), and the corpus gets its constitution
+
+- anne ran 0001 in the supabase dashboard: design_jobs + claim_job/complete_job/requeue_stale
+  are live on the real project (verified via the rest api — all three rpcs in the schema cache).
+- e2e surfaced a real migration bug: newer supabase projects ship without the old blanket
+  default privileges on public, so 0001's policies existed but no role could touch the table
+  (42501 for anon and service_role alike). 0002_grants.sql written: anon gets select/insert
+  (rls-gated enqueue/watch), service_role gets claim/complete/requeue, the daemon rpcs closed
+  to anon. one more paste and the 7-step e2e runs clean.
+- research/instruction.md: the keeberia research constitution, adapted from sculptura's —
+  keeberia-native and two-sided. the core of it: circuitron and paracraft are decoupled
+  engines and the corpus must serve each independently (paracraft could outlive keeberia
+  the same way it outlived sculptura's jewellery). evidence chain ends in checkman; the
+  schema extends the live corpus (scope/modality now required on new lines); the sept 25
+  aisler citation incident is codified as merge discipline; checkman's calibration flags
+  (plate undersize, ec11 shaft) are named as open research targets.
