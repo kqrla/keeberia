@@ -17,10 +17,8 @@ export const Route = createFileRoute("/bts/")({
         content: "layout json in, copper and plastic out. no ai in the copper path.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://layout-to-device.lovable.app/bts" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://layout-to-device.lovable.app/bts" }],
   }),
   component: BehindTheScenes,
 });

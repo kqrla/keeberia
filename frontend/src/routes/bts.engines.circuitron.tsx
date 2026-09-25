@@ -17,10 +17,8 @@ export const Route = createFileRoute("/bts/engines/circuitron")({
         content: "layout in, manufacturable board out. deterministic, zero runtime dependencies.",
       },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "https://layout-to-device.lovable.app/bts/engines/circuitron" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://layout-to-device.lovable.app/bts/engines/circuitron" }],
   }),
   component: CircuitronPage,
 });

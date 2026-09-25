@@ -17,10 +17,8 @@ export const Route = createFileRoute("/bts/engines/paracraft")({
         content: "the board becomes an enclosure. parametric, deterministic, printable.",
       },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "https://layout-to-device.lovable.app/bts/engines/paracraft" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://layout-to-device.lovable.app/bts/engines/paracraft" }],
   }),
   component: ParacraftPage,
 });

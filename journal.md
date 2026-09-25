@@ -370,3 +370,22 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   contract, ported-not-yet-wired status. next frontend step: wire to the supabase
   queue + artifact download flow.
 - .gitignore untracked from the repo (local copy keeps ignoring itself + node_modules).
+
+## sept 25, night iv: the shell, deplatformed
+
+- anne: don't pull in every single file — strip the platform bits properly. done:
+  the port carried lovable's fingerprints and they're all gone now.
+- removed: .lovable/ (platform project config + plan doc), wrangler.jsonc +
+  @cloudflare/vite-plugin (old hosting deploy plumbing), bun.lock (stale after dep
+  changes, regenerates on install), src/lib/lovable-error-reporting.ts (orphaned —
+  zero imports, hooked a platform error bus).
+- rewritten: vite.config.ts — the whole config was @lovable.dev/vite-tanstack-config,
+  a wrapper bundling tanstackStart + react + tailwind + tsconfig paths + platform
+  dev plugins. now a plain five-plugin vite config, plugins verified against
+  package.json. the server-entry redirect (src/server.ts SSR wrapper) is preserved.
+- patched: package.json (two platform deps out), bunfig.toml (platform exclude out,
+  supply-chain guard stays), three bts routes (old-host og:url + canonical links
+  dropped — they pointed at the retired deployment), frontend/README.md +
+  docs/frontend.md (provenance now cites the kqrla/keeberia-front repo, not the
+  platform that hosted it).
+- verified: grep -ri lovable frontend/ → clean. zero dangling imports.

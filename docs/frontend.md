@@ -1,18 +1,22 @@
 # frontend
 
-the frontend shell now lives in this repo: **/frontend**.
+the frontend shell lives in this repo: **/frontend**.
 
-it was born in [kqrla/keeberia-front](https://github.com/kqrla/keeberia-front),
-a lovable project synced through lovable's github connection. as of sept 25
-2026 lovable is out of the loop — no more changes happen there — so the
-shell was ported verbatim into /frontend (from commit 9e483e5, the last
-synced state). keeberia-front remains as the frozen provenance snapshot of
-the lovable era; /frontend is the living source.
+it was born in [kqrla/keeberia-front](https://github.com/kqrla/keeberia-front)
+and ported verbatim from that repo's final state (commit 9e483e5, "added BTS
+engine pages"). the platform-specific parts were stripped in the port: the
+build wrapper, deploy config, lockfile, and error-reporting stub are gone —
+what remains is a plain react + vite + tailwind + shadcn app (tanstack start,
+bun) with a standard vite config and no external platform in the build.
+kqrla/keeberia-front stays frozen as the provenance snapshot; /frontend is
+the living source.
 
-what the shell is: react + vite + tailwind + shadcn, bun for packages. it is
-a client of the engines — it submits layouts through the supabase queue
-(anon key enqueues + watches design_jobs) and renders what circuitron +
-paracraft deterministically produce. no design intelligence lives in it, and
-the no-ai-in-the-copper-path rule holds at this boundary too.
+what the shell is: a client of the engines. it submits layouts through the
+supabase queue (anon key enqueues + watches design_jobs) and renders what
+circuitron + paracraft deterministically produce. no design intelligence
+lives in it, and the no-ai-in-the-copper-path rule holds at this boundary
+too.
 
-current state: ported, not yet wired to the queue — see /frontend/README.md.
+current state: ported, stripped, not yet wired — see /frontend/README.md.
+next: bun install (lockfile regenerates), wire to the queue, artifact
+download flow.
