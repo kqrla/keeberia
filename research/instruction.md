@@ -444,26 +444,32 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       pcb clearance, mounting holes vs case standoffs (ties to keyboard_lib
       stack heights already in circuitron records), bare mcu vs castellated
       modules (xiao rp2040/samd21) as the solderable controller options.
-- [ ] phase 14 — technical depth (anne, sept 25, for later): the engineering
+- [ ] phase 14 — technical depth (anne, sept 25, for later). deliverable
+      pages live in research/deep-dive/technical-depth/: the engineering
       under the engines, properly sourced. routing algorithms (negotiated
       congestion a* vs the alternatives, rip-up/reroute), the dsn/ses bridge
       as a format (what specctra interchange carries and drops), freeroute
       under the hood (history, algorithm, license situation), and the scad
       expressiveness frontier (what parametric openscad can and cannot
       express, where hull/minkowski/offset break down at real scale).
-- [ ] phase 15 — competitive + prior art map (anne, sept 25, for later):
+- [ ] phase 15 — competitive + prior art map (anne, sept 25, for later).
+      one folder per tool + the comparison table at
+      research/deep-dive/competitive-priorart/README.md (kle, ergogen,
+      kicad-scripting, commercial; cells stay tbd until evidence lands):
       what exists and what has been tried. kle, kicad-python/skidl/pcbnew
       scripting, ergogen, atreus lineage, makerlab configurators, commercial
       (jlc easypcb, flux.ai). where keeberia actually sits relative to each:
       what each does better, what keeberia does that none do. no marketing,
       capability tables with sources.
-- [ ] phase 16 — community + user research (anne, sept 25, for later): what
+- [ ] phase 16 — community + user research (anne, sept 25, for later).
+      deliverable lives in research/deep-dive/community-user/: what
       people who make keyboards actually care about, what they struggle
       with, what would make them trust a generator over doing it manually.
       sources: geekhack/deskthority/reddit build logs and pain-point
       threads, discord communities where findable, qmk docs trouble spots.
       deliverable: evidence-backed user-need list, not opinion.
-- [ ] phase 17 — manufacturing reality (anne, sept 25, for later): deeper
+- [ ] phase 17 — manufacturing reality (anne, sept 25, for later).
+      deliverable lives in research/deep-dive/manufacturing-reality/: deeper
       than the fab capability sheets. real fab tolerance distributions (not
       the marketing numbers), real print test data (anne's own fdm/sla
       calibration prints), where the pixel-perfect model breaks down in

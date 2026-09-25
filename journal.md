@@ -483,3 +483,14 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   client-side case previews. answer pending in conversation; paracraft's
   actual scad surface is narrow (linear_extrude, hull, offset, booleans),
   which shapes the answer.
+
+## sept 25, night x: the deep-dive tree
+
+- scaffolded research/deep-dive/ per anne's structure: technical-depth/,
+  competitive-priorart/ (kle/, ergogen/, kicad-scripting/, commercial/ +
+  the comparison table README), community-user/, manufacturing-reality/.
+- discipline written into the tree: deep-dive pages are long-form
+  understanding, but load-bearing claims still need evidence lines in the
+  corpus before gating the engine. the competitive table is a skeleton
+  today, cells stay tbd until phase 15 lands evidence.
+- phases 14-17 in instruction.md now point at their deep-dive homes.
