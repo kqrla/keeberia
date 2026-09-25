@@ -361,9 +361,30 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       defect modes (elephant foot, layer seams on sockets)
 - [ ] phase 5 — checkman calibration targets: plate undersize allowance,
       ec11 shaft, fdm/sla shrink constants → datasheet evidence or print test
-- [ ] phase 6 — pcbway + seeed deep fab data; new fab candidates follow the
+- [ ] phase 6 — keyboard typology slice (anne, sept 25 night): split vs unibody —
+      pcb architecture differences (two matrices, inter-half links: trrs/trs/serial,
+      eeprom hand config), wireless vs wired (ble mcus, battery + charge circuits,
+      power switches) — circuitron-side design rules + firmware targets (zmk vs
+      qmk/kmk/rmk). feeding scope: split keyboards + wireless offerings.
+- [ ] phase 7 — layout standards slice: physical standards ansi (ansi-incits-154) vs
+      iso 9995 vs jis x 6002 / jis x 4024, key sizes + stabilizer classes (2u/2.25u/
+      2.75u/6.25u/7u), iso vertical enter, bae row — what a layout pick changes in the
+      pcb (stabilizer footprints, key size classes) and the case (plate cutouts).
+- [ ] phase 8 — legends + multilingual slice: how legends are made (doubleshot,
+      dye-sub, uv print, pad print), non-latin scripts on caps (cyrillic, greek, arabic,
+      devanagari, cjk/kana), multilingual kits (jis kana, iso-eu layouts by language: de
+      qwertz, fr azerty, nordic, etc.), and a legends dataset for the caps engine.
+      paracraft-side + a dataset deliverable.
+- [ ] phase 9 — firmware hotkeys/layers slice: layer systems + keycodes across
+      qmk/kmk/rmk/zmk (mo, lt, tt, osl; media/mouse keycodes; macros), how hotkeys
+      encode in firmware, what the builder ui must expose vs what stays in keymap files.
+      feeds scope/firmware.md + the firmware offering.
+- [ ] fab order integration (parked target): jlcpcb order api/partner program state —
+      scoped line required before any 'order from keeberia' flow; v1 = gerber download
+      + affiliate link (decided sept 25).
+- [ ] phase 10 — pcbway + seeed deep fab data; new fab candidates follow the
       candidates/ shape (finding / caveats / sources / how-this-enters-the-engine)
-- [ ] phase 7 — project/market evidence (segments, price bands, channels) —
+- [ ] phase 11 — project/market evidence (segments, price bands, channels) —
       business facts, kept out of design rules
 
 one bounded slice at a time: one domain, one process, one manufacturer where
