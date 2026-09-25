@@ -240,3 +240,11 @@ rebase note for the record: the two workstreams restructured the repo in paralle
 - scaffolded at /research/ and filled the first candidate for real: **jlcpcb**, evidence-backed via firecrawl fetch of their capabilities page (14 evidence lines, every number quoted verbatim). capabilities/jlcpcb.json = the fab profile circuitron's drc will import: min trace/space 0.10/0.10 (we default 0.25, 3x headroom), min drill 0.15 (our floor is 1.2), silkscreen text floor exactly 1.0mm — our silks sit at the floor, flagged for first-article verification.
 - ontology v0.1 seeded from the engines' own records. next candidates queued: pcbway, osh park, aisler, seeed; then defect-modes research; then switch/vendor sourcing.
 - also: anne offered more resources (openai free-tier models, featherless, gemini, brightdata) — useful for corpus-fill legwork, not for the supabase migration (deterministic, no inference). keys not in sandbox yet.
+
+## sept 25, later: xano → supabase — the port is written, waiting on one paste
+
+- anne's keeberia supabase project is live (fdubhzivtytjgyaoqwkg.supabase.co); keys verified (sb_publishable_ + sb_secret_). the dead jqmclqjs project remains in the sandbox's SUPABASE_URL env — anne should update it in security settings; tests pass it explicitly for now.
+- backend/supabase/migrations/0001_design_jobs.sql: the whole xano design as postgres — design_jobs table, rls (anon may enqueue + watch, only the daemon mutates), claim_job (atomic: for update skip locked — stronger than xano's query-then-edit), complete_job, requeue_stale (jobs whose daemon died return to the queue).
+- worker.ts: supabaseQueue transport implements the same Queue interface; KEEBERIA_QUEUE selects (default supabase, xano legacy). the entry is guarded so tests import the transport without waking the daemon.
+- test/supabase.ts: 7-step end-to-end proof (anon enqueue → rls blocks anon mutation → atomic claim → no double-claim → complete → anon reads result → cleanup). currently and correctly reports "table missing" — the one remaining step is anne pasting the migration into the dashboard sql editor (sandbox has no direct 5432/6543 access; that's by design anyway).
+- pooler/db ports verified blocked from the sandbox — the dashboard paste is the honest apply path.

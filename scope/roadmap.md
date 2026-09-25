@@ -12,7 +12,7 @@
 |---|---|---|---|
 | 1. layout grid | engine-side format | lovable frontend wired | stabilizers, spans |
 | 2. components (switch/knob/oled) | footprints + netlist verified | full component picker | choc properly, per-key rgb |
-| 3. pcb (shape, silk, hidden routing) | deterministic routing + drc + kicad export | xano api + autolayout daemon + gerbers | bigger matrices, splits |
+| 3. pcb (shape, silk, hidden routing) | deterministic routing + drc + kicad export | supabase api + autolayout daemon + gerbers | bigger matrices, splits |
 | 4. case | — | openscad generator (stl/step) | keeb cases, plates |
 | 5. caps + knob covers | — | knob covers minimum | keycap/cover configurator + artisan bespoke keycaps |
 | 6. sound + firmware (supporting) | — | firmware config export (qmk / kmk / rmk — see scope/firmware.md) | in-browser switch sound testing (see scope/haptics.md) |
@@ -44,7 +44,7 @@ the roadmap's law is one flow perfect end to end before the next; this section i
 - no ai in the copper path. ever. protoflow is the ai one; keeberia is the deterministic one — but protoflow **stays in the loop as the verifier**: every exported board gets cross-checked by protoflow's drc/erc + part library (its mcp) before it's called done. it can veto boards; it can't draw them
 - the keeberia website (layout-to-device.lovable.app) is the product — the repo serves it. every backend milestone ends with something the website can show
 - logical objects → manufacturing footprints. users never see nets, pads, or edas
-- xano hosts the public api for now — but nothing hard-depends on it: the daemon's queue is a pluggable transport and the whole backend must run without xano later. hosting: the daemon on render.com; heavy compute on amd cloud hardware when boards demand it
+- supabase hosts the public api (sept 25: superseded xano — postgres + rpcs, backend/supabase/) and nothing hard-depends on it: the daemon's queue is a pluggable transport. hosting: the daemon on render.com; heavy compute on amd cloud hardware when boards demand it
 - rendering: webgl (result viewer — board and case). the user sees a clean board, never a ratsnest
 - cad/case: openscad code with intuitive slider-based controls, makerworld makerlab style — parametric and deterministic, same traceparency argument as the copper
 - autorouting: freerouting (open source, deterministic — the right kind of "no ai") joins the copper path via a dsn in / ses out bridge. the engine's a* router stays as fallback until the bridge is proven
@@ -62,6 +62,6 @@ the roadmap's law is one flow perfect end to end before the next; this section i
 ## risks to watch
 
 - protoflow is mac-only desktop — its mcp is the automation path; if mcp access runs dry (1000 credits), fall back to manual spot-checks per release
-- xano custom-code bundle/timeout limits vs a ~2k-line engine — fallback is self-hosted on aws, same contract
+- ~~xano custom-code bundle/timeout limits~~ — moot since the supabase move; engine runs wherever the daemon runs (render/amd), same contract
 - oled/encoder breakouts constrain small board outlines — accept bigger boards over cramped ones
 - footprint drift — every value keeps provenance notes in `backend/engines/pcb/research/`; new parts get verified before they touch the netlist

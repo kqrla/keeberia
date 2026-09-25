@@ -1,3 +1,9 @@
+# xano — RETIRED → supabase (sept 25 2026)
+
+> anne's call: no more xano. this folder stays for the design notes and history; the live
+> system is backend/supabase/. the five files here were the source of truth for the port:
+> the table schema, the claim/complete verbs, the job fetch, and generate's enqueue.
+
 # xano deploy state
 
 instance: `xpnx-e4ie-cfuf.z7.xano.io` · workspace 1 ("anne's Workspace #1") · api group `keeberia` (id 3, canonical `1WbTpRUh`, branch v1)

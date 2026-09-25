@@ -137,15 +137,63 @@ export function xanoQueue(base: string): Queue {
 }
 
 /**
+ * v2 transport: supabase. postgres + three rpcs (claim_job / complete_job /
+ * requeue_stale — see backend/supabase/migrations/0001_design_jobs.sql).
+ * the queue is a table; the claim is atomic (for update skip locked), so
+ * two daemons can poll the same project and never claim the same job twice.
+ */
+export function supabaseQueue(url: string, serviceKey: string): Queue {
+  const rpc = async (fn: string, body: object) => {
+    const res = await fetch(`${url}/rest/v1/rpc/${fn}`, {
+      method: "POST",
+      headers: {
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) throw new Error(`${fn} failed: ${res.status} ${await res.text()}`);
+    return res.json();
+  };
+  return {
+    async claim() {
+      const rows = await rpc("claim_job", {});
+      return (rows && rows[0]) ?? null; // empty array = queue empty (honest shape, no xano null quirk)
+    },
+    async complete(jobId: number, result: JobResult) {
+      await rpc("complete_job", {
+        p_id: jobId,
+        p_artifacts: result.artifacts ?? (result.status === "ok" ? {} : null),
+        p_error: result.error ?? null,
+      });
+    },
+  };
+}
+
+/**
  * run the daemon. env:
  *   KEEBERIA_XANO_BASE — queue base url (defaults to the live keeberia instance)
  *   KEEBERIA_ONCE=1    — process one job then exit (cron-style); otherwise poll forever
  */
 export async function main() {
   const once = process.env.KEEBERIA_ONCE === "1" || process.argv.includes("--once");
-  const base = process.env.KEEBERIA_XANO_BASE ?? "https://xpnx-e4ie-cfuf.z7.xano.io/api:1WbTpRUh:v1";
-  const queue = xanoQueue(base);
-  console.log(`autolayout daemon up — queue: ${base}${once ? " (single pass)" : " (polling)"}`);
+  const transport = process.env.KEEBERIA_QUEUE ?? "supabase"; // xano retired sept 25; kept via KEEBERIA_QUEUE=xano
+  let queue: Queue;
+  let where: string;
+  if (transport === "xano") {
+    const base = process.env.KEEBERIA_XANO_BASE ?? "";
+    if (!base) throw new Error("KEEBERIA_QUEUE=xano needs KEEBERIA_XANO_BASE");
+    queue = xanoQueue(base);
+    where = base;
+  } else {
+    const url = process.env.SUPABASE_URL ?? "";
+    const key = process.env.SUPABASE_SERVICE_ROLE_KEY_2 ?? process.env.SUPABASE_SERVICE_ROLE_KEY ?? "";
+    if (!url || !key) throw new Error("supabase transport needs SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY_2");
+    queue = supabaseQueue(url, key);
+    where = `${url} (supabase)`;
+  }
+  console.log(`autolayout daemon up — queue: ${where}${once ? " (single pass)" : " (polling)"}`);
   for (;;) {
     const job = await queue.claim();
     if (!job) {
@@ -161,4 +209,5 @@ export async function main() {
   }
 }
 
-main();
+// only run when invoked directly — tests import the transport without waking the daemon
+if (process.argv[1]?.endsWith("worker.ts")) main();
