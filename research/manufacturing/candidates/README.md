@@ -11,6 +11,6 @@ status: drafted
 ## how this enters the engine
 ```
 
-candidates in here: jlcpcb (drafted, evidence-backed), pcbway / osh park / aisler / seeed
-(queued). later, non-fab vendors: switch distributors, mcu module sourcing, case printing
-services.
+candidates in here: jlcpcb, osh-park, aisler, seeed (all researched, evidence-backed —
+verified against live sources sept 25). pcbway still queued. later, non-fab vendors:
+switch distributors, mcu module sourcing, case printing services.
