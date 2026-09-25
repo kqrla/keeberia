@@ -248,3 +248,8 @@ rebase note for the record: the two workstreams restructured the repo in paralle
 - worker.ts: supabaseQueue transport implements the same Queue interface; KEEBERIA_QUEUE selects (default supabase, xano legacy). the entry is guarded so tests import the transport without waking the daemon.
 - test/supabase.ts: 7-step end-to-end proof (anon enqueue → rls blocks anon mutation → atomic claim → no double-claim → complete → anon reads result → cleanup). currently and correctly reports "table missing" — the one remaining step is anne pasting the migration into the dashboard sql editor (sandbox has no direct 5432/6543 access; that's by design anyway).
 - pooler/db ports verified blocked from the sandbox — the dashboard paste is the honest apply path.
+
+## sept 25, latest: scope/potential-partners.md — the funding map, verified
+
+- anne's list, checked against reality: bambu/makerworld let's make it fund (grants to $300k, real batches announced), elegoo/nexprint $1m creator fund (+ running challenges; they already host parametric web generators — best cultural fit), jlcpcb family (open-hardware sponsorship + easyeda spark $85k + oshwlab stars), pcbway cool projects (the archetype-fitting, lowest-friction first pitch), nlnet (real, next deadline nov 3, full-open licensing required — keeberia's license decision is the blocker), creality/snapmaker/formlabs/prusa (no formal programs verified — direct outreach). "protomakers" not found as a grant org — flagged back to anne for the right name.
+- the pitch, one line: every keeberia design ships printable case + caps derived from real switch stacks, and gerbers etched to documented fab rules. pitch order written down, non-negotiables in the doc (sponsorship never bends the evidence lines; no exclusive fab deals).
