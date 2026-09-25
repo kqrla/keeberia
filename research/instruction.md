@@ -424,6 +424,26 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       + affiliate link (decided sept 25).
 - [ ] phase 10 — pcbway + seeed deep fab data; new fab candidates follow the
       candidates/ shape (finding / caveats / sources / how-this-enters-the-engine)
+- [ ] phase 12 — kicad toolchain internals (anne, sept 25: "how even kicad
+      works"). the real toolchain as a concept, not just file formats: schematic
+      capture -> netlist -> pcb layout -> design rules -> routing (manual +
+      specctra dsn / freeroute autorouter -> ses import) -> zones/planes ->
+      drc/erc -> plot (rs-274x gerbers + excellon drill). why each stage exists,
+      what each file handoff carries, and the open-source keyboard ecosystem's
+      actual practice (kicad keyboard template projects, board layout for
+      manufacturing). which of these circuitron reimplements vs hands off.
+      note: backend/pcb/research/notes/format-prior-art.md already covers the
+      .kicad_pcb s-expression grammar + qmk info.json - cite, don't duplicate.
+- [ ] phase 13 — keyboard pcb construction concepts (anne, sept 25: "how
+      keyboards are made, what are considerations"). the electronics of a
+      keyboard pcb as a device: matrix scanning (rows x cols, diode direction,
+      why diodes at all), ghosting and nkro, controller pin budget (rows + cols +
+      extras on the mcu), usb wiring (esd protection, decoupling, fuse/raw vs
+      regulated), reset/boot pins exposed, trrs for splits (cites typology
+      6/15 already merged), pcb-mount vs plate-mount, stabilizer/stab wire
+      pcb clearance, mounting holes vs case standoffs (ties to keyboard_lib
+      stack heights already in circuitron records), bare mcu vs castellated
+      modules (xiao rp2040/samd21) as the solderable controller options.
 - [ ] phase 11 — project/market evidence (segments, price bands, channels) —
       business facts, kept out of design rules
 
