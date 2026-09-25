@@ -48,3 +48,12 @@ these three are the direct visual grounding for research/dual-legend-multilingua
 once that doc lands: they show the print convention is consistent across
 otherwise unrelated scripts, which is exactly the kind of claim that doc needs
 sourced, not just eyeballed from one keyboard.
+
+## size-formfactor-compact-tkl-full.png
+
+anne's third reference drop: a color-coded 3-tier size diagram (compact /
+tenkeyless-tkl / full-size), each tier adding a labeled area (alphanumeric
+block, then nav cluster, then numpad). grounds phase 7b: the size vernacular
+(60%, 65%, 75%, 80%/tkl, 96%, 1800/98%, 100%) that non-engineers actually use
+to describe a keeb size, separate from the ansi/iso/jis physical-standard
+question phase 7 already answered.

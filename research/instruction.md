@@ -375,6 +375,15 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       arabic, devanagari, cjk/kana), regional kits sharing one physical layout (jis
       kana, iso-eu by language: de qwertz, fr azerty, nordic), dataset schema sketch
       for the caps engine. paracraft-side.
+- [ ] phase 7b: keyboard size/form-factor taxonomy (anne, sept 25, from a
+      compact/tkl/full-size reference image): the vernacular size classes people
+      actually use to name keebs, distinct from phase 7's physical ANSI/ISO/JIS
+      standards. covers 40%, 60%, 65%, 75%, 80%/tkl, 96%, 1800/98%, 100%/full-size:
+      what each includes or drops (f-row, nav cluster, arrow cluster, numpad), the
+      named area clusters (alphanumeric block, nav cluster, numpad) the reference
+      image color-codes, and how a size name maps onto phase 7's key-count data.
+      product-facing: this is the language a non-engineer picks a macropad/keeb
+      size by, so the builder ui should expose size names, not just key counts.
 - [ ] phase 8b: dual-legend multilingual slice (anne, sept 25, clarified from a
       bengali keyboard reference image): NOT the same as 8a. this is one physical
       key carrying two scripts at once, one primary (large, main position) + one
