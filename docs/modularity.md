@@ -57,7 +57,42 @@ target shape, in steps:
 
 before building v2 for the logical axes, note the cheaper path: via/vial keymaps are a runtime remap in the host app, not a compile-time one. a board shipped with vial support switches qwerty to dvorak, or pc modifiers to mac, with zero regeneration because nothing is generated: the layer data changes on the device. firmware regeneration then only serves boards distributed without vial. phase 8b's dual-legend work is unaffected either way: legends are caps-side, not firmware-side.
 
-## 6. open questions
+## 6. reactivity: from invalidation to bidirectional edges (anne, sept 25 night)
+
+> thesis: everything above is still one-way. the matrix says which artifacts
+> go stale when a record changes, but the flows are synchronized lenses on
+> one live state object, not serial pipeline stages. the difference between
+> keeberia and the ergogen lineage is exactly here: reactive,
+> single-source-of-truth orchestration vs siloed static generation. if the
+> typing angle changes in the case flow, the pcb flow should already know
+> its standoffs moved.
+
+today: circuitron takes a layout and produces a pcb; paracraft takes that
+pcb and produces scad. the case never pushes back on the pcb. the graph
+above fixes the cost of that (only what changed regenerates) but not the
+direction.
+
+the wiring rules, so reactivity does not break decoupling:
+
+- engines never talk to each other (the standing decision). they talk to
+  the state. an edge is a declared read or a declared write on a record
+  field, owned by the orchestrator, not by the engines.
+- so the research question for each engine is: what does it read, what
+  does it write, and what does it currently derive statically that should
+  instead be a live relationship. that inventory is the dependency map,
+  and it lives as a deep-dive page (phase 14,
+  research/deep-dive/technical-depth/, dependency-map.md) because it needs
+  evidence from how the engines actually behave, not assumption.
+- the shared strip is where the first real bidirectional edges live:
+  mounting holes (case standoffs want them where walls are; pcb flow must
+  place them), plate openings, stack heights, the ec11 bore. physical
+  stack facts beat convenience when edges disagree, same rule as the
+  corpus: datasheet beats model, measured beats datasheet.
+- conflict resolution must be explicit before v3: if routing congestion
+  wants a hole where the case wall wants a standoff, some priority writes
+  the record and the other side reacts. no silent two-way writes.
+
+## 7. open questions
 
 - artifact store retention: stls and gerber zips are big. keep latest-n per design, garbage-collect by input-hash lru?
 - do we want the artifact store keyed additionally by engine version, so an engine change invalidates the world in one move? (leaning yes: engine semver is already a product feature via the version history.)

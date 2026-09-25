@@ -494,3 +494,21 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   corpus before gating the engine. the competitive table is a skeleton
   today, cells stay tbd until phase 15 lands evidence.
 - phases 14-17 in instruction.md now point at their deep-dive homes.
+
+## sept 25, night xi: reactivity named
+
+- anne sharpened the architecture thesis: the five flows are synchronized
+  lenses on one live state object, not pipeline stages. the ergogen-lineage
+  difference = reactive single-source-of-truth orchestration vs siloed
+  static generation. typing angle in the case flow should move pcb
+  standoffs without anyone clicking regenerate.
+- docs/modularity.md gained section 6: from invalidation to bidirectional
+  edges. wiring rules keep engines decoupled (edges are orchestrator-owned
+  reads/writes on record fields, not engine-to-engine calls), the shared
+  strip holds the first real bidirectional edges, physical stack facts
+  win conflicts, no silent two-way writes.
+- deep-dive technical-depth gained the dependency-map.md planned page: per
+  engine, inventory reads / writes / static derivations that should be
+  live. this is phase 14's first worked question, evidence over assumption.
+- nothing dispatched: the three workers (pcbway, kbd construction, kicad
+  toolchain) land first.

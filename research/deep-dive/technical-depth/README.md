@@ -12,6 +12,12 @@ summary: routing algorithms, the dsn/ses interchange, freeroute internals, and t
 
 ## planned pages (stubbed. dispatch when anne says go)
 
+- dependency-map.md: the reactivity question (anne, sept 25 night). what
+  does each engine need to know about that it currently derives statically,
+  and what needs to become a live bidirectional relationship instead? for
+  circuitron and paracraft separately: reads, writes, static derivations
+  that should be edges. the case-flow typing angle pushing pcb standoffs is
+  the first worked example. feeds docs/modularity.md section 6.
 - routing-algorithms.md: the routing landscape (maze/lee, a* variants,
   rip-up and reroute, negotiated congestion; grid vs shape-based), and
   where circuitron's a* actually sits in it.
