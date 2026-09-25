@@ -356,3 +356,17 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   plus the originals on disk — nothing else. found one honest gap while doing it: the
   1.3" oled has no downloaded original; its pattern is derived, flagged as such. every
   calibration flag (stack heights, ec11 shaft, usb shell typicality) is named per part.
+
+## sept 25, night iii: the shell comes home
+
+- anne: lovable is out of the loop entirely — no more changes to keeberia-front. that
+  removes the only reason the shell wasn't in this repo (drift with the synced repo).
+  ported keeberia-front verbatim into /frontend (last synced state, 9e483e5, "added
+  BTS engine pages"): react/vite/tailwind/shadcn, bun. keeberia-front stays frozen as
+  the provenance snapshot of the lovable era; /frontend is the living source now.
+- docs/frontend.md updated — it had literally ended with "if the frontend ever stops
+  being lovable-hosted, revisit this decision." revisited, decided, ported.
+- frontend/README.md: the shell's own doc — what it is, its client-of-the-engines
+  contract, ported-not-yet-wired status. next frontend step: wire to the supabase
+  queue + artifact download flow.
+- .gitignore untracked from the repo (local copy keeps ignoring itself + node_modules).
