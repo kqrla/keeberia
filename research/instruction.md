@@ -375,7 +375,7 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       arabic, devanagari, cjk/kana), regional kits sharing one physical layout (jis
       kana, iso-eu by language: de qwertz, fr azerty, nordic), dataset schema sketch
       for the caps engine. paracraft-side.
-- [ ] phase 7b: keyboard size/form-factor taxonomy (anne, sept 25, from a
+- [x] phase 7b: keyboard size/form-factor taxonomy (anne, sept 25, from a
       compact/tkl/full-size reference image): the vernacular size classes people
       actually use to name keebs, distinct from phase 7's physical ANSI/ISO/JIS
       standards. covers 40%, 60%, 65%, 75%, 80%/tkl, 96%, 1800/98%, 100%/full-size:
@@ -384,7 +384,7 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       image color-codes, and how a size name maps onto phase 7's key-count data.
       product-facing: this is the language a non-engineer picks a macropad/keeb
       size by, so the builder ui should expose size names, not just key counts.
-- [ ] phase 7c: mac keyboard variant slice (anne, sept 25, from a mac layout
+- [x] phase 7c: mac keyboard variant slice (anne, sept 25, from a mac layout
       reference image): macs use ansi physical spacing but a different modifier
       row (cmd/option replacing win/alt, fn added), no dedicated menu key, an
       inverted-t arrow cluster with half-height left/right arrows, and historically
@@ -393,7 +393,7 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       arrow cluster geometry) or purely a legend/keycode remap over the same ansi
       footprint - the same "physical vs logical" question phase 7 already answered
       for regional layouts, now asked of mac vs pc.
-- [ ] phase 7d: logical layout families, qwerty and its alternatives (anne,
+- [x] phase 7d: logical layout families, qwerty and its alternatives (anne,
       sept 25): dvorak, colemak, workman, azerty/qwertz (physical iso variants,
       already touched in phase 7), and full non-qwerty physical boards (alphabetical
       layouts, one-handed boards). core question again physical vs logical: dvorak/

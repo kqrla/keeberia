@@ -429,3 +429,26 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   standard behind the bengali example - not vendor convention like i'd assumed.
   proposed schema distinct from 8a's multi-zone one: dual_script_pair,
   secondary_font_size_ratio (~0.65), secondary_anchor_point, rtl_alignment_flip.
+
+## sept 25, night vii: the layout matrix closes
+
+- three workers landed and close the layout question matrix, 39 evidence lines total:
+- 7b size/form-factor (14 lines, research/keyboard-size-formfactor.md): the size
+  ladder is community vernacular from forums and vendor naming, not a standards
+  body. 100 -> 96 (squeezed, no gaps) -> 1800/98 (cherry g80-1800 lineage) -> 80
+  tkl (drops numpad, ~6u narrower) -> 75 (tkl stacked, no gaps) -> 65 (drops f-row,
+  keeps arrows) -> 60 (alpha block only, fn layer compensates) -> 40 (drops number
+  row too, often ortho). naming inconsistencies between vendors flagged honestly.
+- 7c mac variant (12 lines, research/mac-keyboard-variant.md): mac keyboards are
+  physically identical ansi boards. cmd/option vs win/alt is legend + keycode remap,
+  the inverted-t half-height arrows are apple cap design, not different switch
+  spacing. so mac support = keymap preset + legend set, zero circuitron/paracraft
+  geometry change. same answer phase 7 gave for regional layouts.
+- 7d logical layouts (13 lines, research/logical-layouts.md): dvorak/colemak/workman
+  are pure os-level remaps over unchanged hardware. qmk can bake the layout into the
+  firmware so the board outputs it regardless of host os (caveat: os layout +
+  firmware layout both active = double remap). real physical exceptions exist but
+  are rare (maltron bowls, abc boards).
+- product shape this leaves: one physical board, many logical faces. size class
+  bounds the matrix and plate; physical standard picks the footprint; mac and
+  logical layouts are keymap + legend presets on top.
