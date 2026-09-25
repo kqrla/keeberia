@@ -393,6 +393,16 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       arrow cluster geometry) or purely a legend/keycode remap over the same ansi
       footprint - the same "physical vs logical" question phase 7 already answered
       for regional layouts, now asked of mac vs pc.
+- [ ] phase 7d: logical layout families, qwerty and its alternatives (anne,
+      sept 25): dvorak, colemak, workman, azerty/qwertz (physical iso variants,
+      already touched in phase 7), and full non-qwerty physical boards (alphabetical
+      layouts, one-handed boards). core question again physical vs logical: dvorak/
+      colemak are os-level remaps over the same ansi footprint (pcb identical, only
+      the keymap changes) - but alphabetical physical boards are real different
+      geometry. firmware angle: qmk can bake dvorak/colemak into the keymap so the
+      board outputs the layout regardless of host os. closes the layout question
+      matrix: physical standard (7) x size class (7b) x mac variant (7c) x logical
+      layout family (7d).
 - [ ] phase 8b: dual-legend multilingual slice (anne, sept 25, clarified from a
       bengali keyboard reference image): NOT the same as 8a. this is one physical
       key carrying two scripts at once, one primary (large, main position) + one
