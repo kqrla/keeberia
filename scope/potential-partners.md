@@ -69,9 +69,19 @@ openness — all deliverables open-licensed and public. that's a real decision f
 keeberia: the engines are already public, but the license question has never been
 settled. if we want this door open, the license decision has to happen first.
 
-**protomakers** — flagged, not verified: no grant program by this name found. anne —
-did you mean a specific org? (there's a local makers association by the name, nothing
-national.) tell me the right name or link and i'll do the research pass.
+**prototype fund (prototypefund.de)** — resolved: this is anne's "protomakers". verified
+(sept 25, via the fund's own pages): germany's federal ministry for education and research
+(bmbf) funds open-source software through the open knowledge foundation — **up to €47,500
+per project**, 6-month funding period, ~25 projects per round, plus coaching and 1:1s.
+applications run **every fall; one source dates the current round to november 30, 2026**
+(the fund's own page was mid-update — re-verify dates on prototypefund.de before planning).
+
+the honest catch: **residency.** every funded team member must be EU-resident, and the
+applicant gbr's office (and its managing director's residence) must be in germany. keeberia
+as a us project doesn't fit that shape — this door only opens with a german-resident
+co-founder or partner entity. if that ever exists, the fit is real: open source by
+principle, civic-tech/infrastructure topics, "software by society for society" is exactly
+the evidence-discipline story.
 
 ## pitch order (my honest read)
 
