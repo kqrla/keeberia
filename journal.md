@@ -338,3 +338,21 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   schema extends the live corpus (scope/modality now required on new lines); the sept 25
   aisler citation incident is codified as merge discipline; checkman's calibration flags
   (plate undersize, ec11 shaft) are named as open research targets.
+
+## sept 25, night ii: the queue breathes, and backend/pcb gets its documentation
+
+- anne ran 0002_grants.sql. the full e2e against the live project passes end to end:
+  anon insert + select (rls-gated), claim_job claims (skip locked, attempts+1), second
+  claim finds nothing, complete_job marks done + anon sees the artifacts, requeue_stale
+  round-trips a claimed job back to queued with attempts preserved, and anon calling
+  claim_job is correctly refused. the supabase queue is live. the xano design is retired.
+- backend/pcb was a folder of substance with zero documentation — raw footprint sources,
+  fetch/inspect scripts, the pipeline notes — and nothing explaining any of it. now:
+  backend/pcb/README.md (what the folder is, what deliberately is NOT in it, the sourcing
+  rule), backend/pcb/research/README.md (the fetch → inspect → record provenance chain,
+  the stored originals as the authoritative copies).
+- docs/footprints-research.md: the registry header has referenced this file since sept 8
+  but it never existed. built it from the provenance actually recorded in footprints.ts
+  plus the originals on disk — nothing else. found one honest gap while doing it: the
+  1.3" oled has no downloaded original; its pattern is derived, flagged as such. every
+  calibration flag (stack heights, ec11 shaft, usb shell typicality) is named per part.
