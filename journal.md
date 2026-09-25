@@ -389,3 +389,22 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   docs/frontend.md (provenance now cites the kqrla/keeberia-front repo, not the
   platform that hosted it).
 - verified: grep -ri lovable frontend/ → clean. zero dangling imports.
+
+## sept 25, night v: the corpus grows four slices, em dashes retired
+
+- four workers delivered: typology (15 lines: trrs 4-conductor rule for i2c splits,
+  nrf52840 + tp4054 ble charging stack, zmk = ble-first firmware), layout standards
+  (15 lines: 19.05mm pitch, 2u+ stabilizers, 2u/6.25u/7u wire classes, eu languages
+  share iso hardware and differ only in legends), legends + non-latin scripts (15 lines:
+  doubleshot needs a mold per script, dye-sub is the practical route for niche scripts,
+  rtl scripts need mirrored anchors), firmware hotkeys (15 lines: qmk 16-bit keycode
+  caps lt/lm at layers 0-15, zmk/kmk/rmk decouple layers, tap-hold 200ms default).
+  all in incoming-*.jsonl, awaiting merge review. companion docs: keyboard-typology.md,
+  layout-standards.md, legends-multilingual.md, firmware-hotkeys.md.
+- anne clarified from a bengali keyboard image: multilingual dual-legend (two scripts
+  on one key, primary + secondary) is a different problem from the scripts slice.
+  phase 8b created for it; worker dispatched on print conventions + the os
+  input-method vs firmware-unicode wiring question.
+- anne's standing rule: no em dashes in the repo, including commit titles. applied
+  going forward; the ten em-dash commit titles on main were rewritten (title-only
+  history rewrite, bodies and file contents untouched).

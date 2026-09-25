@@ -370,11 +370,23 @@ dozen hand-verified lines ARE the gold set. do not scale a bad extractor.
       iso 9995 vs jis x 6002 / jis x 4024, key sizes + stabilizer classes (2u/2.25u/
       2.75u/6.25u/7u), iso vertical enter, bae row — what a layout pick changes in the
       pcb (stabilizer footprints, key size classes) and the case (plate cutouts).
-- [ ] phase 8 — legends + multilingual slice: how legends are made (doubleshot,
-      dye-sub, uv print, pad print), non-latin scripts on caps (cyrillic, greek, arabic,
-      devanagari, cjk/kana), multilingual kits (jis kana, iso-eu layouts by language: de
-      qwertz, fr azerty, nordic, etc.), and a legends dataset for the caps engine.
-      paracraft-side + a dataset deliverable.
+- [x] phase 8a: legends + non-latin scripts slice. how legends are made
+      (doubleshot, dye-sub, uv print, pad print), single-script sets (cyrillic, greek,
+      arabic, devanagari, cjk/kana), regional kits sharing one physical layout (jis
+      kana, iso-eu by language: de qwertz, fr azerty, nordic), dataset schema sketch
+      for the caps engine. paracraft-side.
+- [ ] phase 8b: dual-legend multilingual slice (anne, sept 25, clarified from a
+      bengali keyboard reference image): NOT the same as 8a. this is one physical
+      key carrying two scripts at once, one primary (large, main position) + one
+      secondary (small, corner) - e.g. bengali as primary + latin as secondary on
+      the same cap. research: (1) the print convention for primary/secondary
+      pairing (font size ratio, position rule), (2) the wiring question - does the
+      os input-method layer decide which character a keycode produces (standard
+      case, firmware sends one fixed scancode) or does keeberia need firmware-side
+      unicode input / layer switching for dual-script boards, (3) which language
+      pairs this pattern serves beyond bengali (hindi+latin, arabic+latin,
+      russian+latin, etc.) and whether the caps engine needs a distinct
+      dual-legend layout schema, not just the 8a multi-zone one.
 - [ ] phase 9 — firmware hotkeys/layers slice: layer systems + keycodes across
       qmk/kmk/rmk/zmk (mo, lt, tt, osl; media/mouse keycodes; macros), how hotkeys
       encode in firmware, what the builder ui must expose vs what stays in keymap files.
