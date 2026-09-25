@@ -1,0 +1,84 @@
+{
+  "domain": "keeberia — browser-designed macropads to physical boards",
+  "v": "0.1",
+  "note": "seeded from the engines' own records; every leaf class maps to a circuitron library / paracraft projection",
+  "classes": {
+    "switch": {
+      "families": [
+        "mx_solder",
+        "mx_hotswap",
+        "choc_v1"
+      ],
+      "attributes": [
+        "mount",
+        "plate_opening_mm",
+        "plate_thickness_mm",
+        "plate_top_to_pcb_mm",
+        "pads"
+      ],
+      "in_engines": "circuitron footprints.ts, category=switch"
+    },
+    "encoder": {
+      "families": [
+        "ec11_vertical"
+      ],
+      "attributes": [
+        "plate_hole_mm",
+        "pins",
+        "slots"
+      ]
+    },
+    "display": {
+      "families": [
+        "ssd1306_0.91"
+      ],
+      "attributes": [
+        "plate_window_mm",
+        "driver"
+      ]
+    },
+    "mcu_module": {
+      "families": [
+        "xiao_rp2040"
+      ],
+      "attributes": [
+        "module_thickness_mm",
+        "usb_shell",
+        "mcu_family",
+        "firmware_targets"
+      ]
+    },
+    "case": {
+      "attributes": [
+        "wall_mm (derived from switch stack)",
+        "standoff_mm",
+        "plate_thickness_mm (from records)",
+        "screw_size_m2"
+      ]
+    },
+    "keycap_profile": {
+      "families": [
+        "dsa"
+      ],
+      "attributes": [
+        "dishing",
+        "stem",
+        "legends (pending)"
+      ]
+    },
+    "fabrication": {
+      "kinds": [
+        "pcb_fab (jlcpcb candidate)",
+        "case_print (fdm/sla, a1 mini)"
+      ],
+      "capabilities_file": "research/manufacturing/capabilities/<fab>.json"
+    },
+    "firmware": {
+      "targets": [
+        "qmk (direct_pins mode)",
+        "kmk (pending)",
+        "rmk (pending decision)"
+      ]
+    }
+  }
+}

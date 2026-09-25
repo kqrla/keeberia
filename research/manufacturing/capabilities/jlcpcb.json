@@ -1,0 +1,35 @@
+{
+  "manufacturer": "jlcpcb",
+  "status": "drafted",
+  "evidence_prefix": "evid-jlc",
+  "scope": "rigid fr-4, 2-layer, 1oz (keeberia's default class)",
+  "rules": {
+    "min_trace_width_mm": 0.10,
+    "min_trace_spacing_mm": 0.10,
+    "min_drill_mm": 0.15,
+    "hole_tolerance_mm": { "plus": 0.13, "minus": 0.08 },
+    "min_via_hole_mm": 0.15,
+    "min_via_diameter_mm": 0.25,
+    "pth_annular_ring_mm": { "minimum": 0.20, "recommended": 0.25, "absolute_min_1oz_2layer": 0.18 },
+    "min_npth_drill_mm": 0.50,
+    "npth_pad_annular_ring_mm": 0.45,
+    "min_plated_slot_width_mm": 0.5,
+    "min_nonplated_slot_width_mm": 1.0,
+    "board_thickness_options_mm": [0.4, 0.6, 0.8, 1.0, 1.2, 1.6, 2.0],
+    "board_thickness_tolerance": { "gte_1mm": "±10%", "lt_1mm": "±0.1mm" },
+    "min_board_mm": [3, 3],
+    "max_board_2layer_mm": [670, 600],
+    "dimension_tolerance_mm": { "precision_routing": 0.1, "regular": 0.2 },
+    "silkscreen": { "min_line_width_mm": 0.15, "min_text_height_mm": 1.0, "width_height_ratio": "1:6", "pad_clearance_mm": 0.15 },
+    "copper_edge_clearance_mm": { "routed": 0.2, "v_cut": 0.4 },
+    "clearances_mm": { "pad_to_pad_diff_nets": 0.15, "pad_to_track": 0.10, "via_to_track": 0.20, "pth_to_track": 0.28 },
+    "surface_finishes": ["hasl_leaded", "hasl_lead_free", "enig", "osp"],
+    "copper_weights_2layer_oz": [1, 2, 2.5, 3.5, 4.5]
+  },
+  "cross_checks": {
+    "keeberia_trace_default_mm": 0.25,
+    "keeberia_smallest_drill_mm": 1.2,
+    "keeberia_silk_text_mm": 1.0,
+    "note": "all keeberia defaults clear jlcpcb floors; silk text height sits exactly at the 1.0mm floor — flagged for visual verification on first article"
+  }
+}

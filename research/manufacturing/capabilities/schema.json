@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "keeberia fab capabilities profile",
+  "description": "one json per fab; the engines import these as the design-rule source for drc. every rule must trace to evidence lines via evidence_prefix",
+  "type": "object",
+  "required": ["manufacturer", "status", "evidence_prefix", "scope", "rules"],
+  "properties": {
+    "manufacturer": { "type": "string" },
+    "status": { "enum": ["drafted", "verified"] },
+    "evidence_prefix": { "type": "string", "description": "evidence_id prefix in research/evidence/evidence.jsonl" },
+    "scope": { "type": "string", "description": "which board class these rules apply to" },
+    "rules": { "type": "object" },
+    "cross_checks": { "type": "object", "description": "what keeberia currently emits vs these floors" }
+  }
+}
