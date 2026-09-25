@@ -301,3 +301,23 @@ rebase note for the record: the two workstreams restructured the repo in paralle
 - what this buys the engine: a second verified eu fab (aisler: 125µm enig traces, 0.25mm min via, free
   untracked eu shipping) and the osh park premium-us option (6mil traces, 10mil min drill, published
   hole tolerances) — three cost/service tiers around jlcpcb now.
+
+## sept 25, night: checkman, and the commits change hands
+
+- new daemon: daemons/checkman — the manufacturing-fit gate. every other daemon trusts the
+  records; checkman re-measures the design against what will actually make it: the fab's
+  published rules (loaded from the research corpus capabilities json — jlcpcb, aisler, osh park
+  already work) and the process profile (fdm / sla presets). every check emits a margin in mm.
+- the smoke run over all four reference boards × three fabs × two processes says something
+  real: on fdm, switch plates fail (the 14mm mx opening shrinks to ~13.75 — clips will not
+  seat) and the 6.2mm knob bore shrinks past the ec11 shaft; on sla everything passes. so the
+  case-for-fdm question is settled by the tool, not by vibes. two assumptions are
+  calibration-flagged in the code (plate undersize allowance 0.1mm, ec11 shaft 6.0mm).
+- keeberia-front copy extracted into explain/ + positioning (verified verbatim against the
+  front source before commit).
+- .gitignore now ignores itself, because anne said so. project/market/ seeded: the
+  market-definition layer for custom keyboards/macropads — starts as questions, becomes
+  evidence like the fab corpus did.
+- all previous commits rewritten to author kqrla <192480930+kqrla@users.noreply.github.com>
+  (history rewritten + force-pushed; commit hashes cited in older journal entries refer to the
+  pre-rewrite objects).
