@@ -463,3 +463,23 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   skip in the linear worker pass; v2 = per-artifact claims; checkman caches the
   same way. via/vial noted as the zero-regeneration short-circuit for logical
   layout switching. no code yet, this is the contract the worker evolves into.
+
+## sept 25, night ix: downloads land, four fronts named
+
+- committed f9e3a77: three 1.3in oled footprint originals (gap closed in
+  docs/footprints-research.md) + ten vendor step models under
+  backend/cad/research/models/ (foostan/kbd mit + totem xiao, cern-ohl-p).
+  purpose documented: viewer reference + checkman fit checks only, the
+  generators stay parametric (study-don't-copy applies to geometry too).
+- found along the way: official kicad ships no 3d models for its own
+  button_switch_keyboard footprints, the reference wrl path is dead
+  upstream. the community corne library is the de facto source.
+- anne named four research fronts for later, stubbed as phases 14-17:
+  technical depth (routing/dsn-ses/freeroute/scad frontier), competitive +
+  prior art map (kle, ergogen, kicad-python lineage), community/user
+  research (maker trust and pain points), manufacturing reality (measured
+  tolerances vs datasheet reality, feeding checkman).
+- browser geometry question raised: openjscad vs alternatives for
+  client-side case previews. answer pending in conversation; paracraft's
+  actual scad surface is narrow (linear_extrude, hull, offset, booleans),
+  which shapes the answer.
