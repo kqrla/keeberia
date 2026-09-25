@@ -452,3 +452,14 @@ rebase note for the record: the two workstreams restructured the repo in paralle
 - product shape this leaves: one physical board, many logical faces. size class
   bounds the matrix and plate; physical standard picks the footprint; mac and
   logical layouts are keymap + legend presets on top.
+
+## sept 25, night viii: the projection graph
+
+- anne's call after the layout matrix closed: the engines must stay modular and
+  switchable under the hood, so orthogonal choices don't regenerate everything.
+  written down as docs/modularity.md: each artifact is a pure function of a
+  named input set (axis-by-artifact matrix), cache key = sha256 of canonical
+  inputs, content-addressed artifact store on the supabase project. v1 = group
+  skip in the linear worker pass; v2 = per-artifact claims; checkman caches the
+  same way. via/vial noted as the zero-regeneration short-circuit for logical
+  layout switching. no code yet, this is the contract the worker evolves into.
