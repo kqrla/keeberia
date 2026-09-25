@@ -258,3 +258,13 @@ rebase note for the record: the two workstreams restructured the repo in paralle
 
 - anne's "protomakers" = the german prototype fund. verified with the first tavily research pass (new credits): bmbf-funded via open knowledge foundation, up to €47,500/project, 6 months, ~25 projects/round, open source required, applications every fall (one source: nov 30 2026). the catch is residency — funded members must be eu-resident, the applicant gbr must sit in germany. keeberia as a us project doesn't fit unless a german-resident partner exists. doc updated with the honest version.
 - also: tavily + firecrawl + browserbase second keys landed; brightdata key pasted raw in chat (needs the secrets form); the gemini key came through garbled — asked anne to resend.
+
+## sept 25, late: materials track of the research corpus lands
+
+- the case-fab materials track is in: research/manufacturing/processes/{fdm,sla,defect-modes}.md — fdm as the default
+  case process (pla/petg/abs/asa with prusament TDS numbers: hdt 55C pla vs 68C petg, z-axis interlayer 21 mpa,
+  shrinkage per material), sla for cases + keycaps (stem fits are the tightest tolerance in the product), and a
+  cross-process defect index mapped to the exact case-engine parameters each defect threatens. 18 evidence lines
+  merged into evidence.jsonl (all schema-checked, verbatim excerpts, manufacturer docs preferred); two honest
+  "rule-of-thumb, unsourced" flags kept out of the evidence file per corpus discipline.
+- the two fab-candidate workers (osh park, aisler/seeed) stalled without writing — relaunched.
