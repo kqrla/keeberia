@@ -4,7 +4,7 @@
 
 ## where we are
 
-**v0 done** (see [versions/v0.md](versions/v0.md)) — deterministic pcb engine routes three test boards clean and exports kicad 8. engine lives at `backend/engines/circuitron/`.
+**v0 done** (see [versions/v0.md](versions/v0.md)) — deterministic pcb engine routes three test boards clean and exports kicad 8. engine lives at `engines/circuitron/`.
 
 ## phase map
 
@@ -15,7 +15,7 @@
 | 3. pcb (shape, silk, hidden routing) | deterministic routing + drc + kicad export | supabase api + autolayout daemon + gerbers | bigger matrices, splits |
 | 4. case | — | openscad generator (stl/step) | keeb cases, plates |
 | 5. caps + knob covers | — | knob covers minimum | keycap/cover configurator + artisan bespoke keycaps |
-| 6. sound + firmware (supporting) | — | firmware config export (qmk / kmk / rmk — see scope/firmware.md) | in-browser switch sound testing (see scope/haptics.md) |
+| 6. sound + firmware (supporting) | — | firmware config export (qmk / kmk / rmk — see backend/firmware/firmware.md) | in-browser switch sound testing (see scope/haptics.md) |
 
 ## immediate (blocked → unblock → build)
 
@@ -24,7 +24,7 @@
 2. ~~autolayout daemon~~ — done (sept 7): portable worker behind a queue interface, xano-rest transport, render.com blueprint. job #1 went queued → done end to end with artifacts
 3. **freerouting bridge** — the deterministic autorouting partner: engine emits placement + netlist as dsn, freerouting routes headless (java, render/amd — not xano), ses applies back to the board. until it lands, the engine's own a* router stays the v1 router and retry-ladder fallback
 4. ~~gerber + excellon export~~ — done (sept 7): `src/gerber.ts` emits rs-274x (mm, 3.5) for copper/mask/paste/silk/edge + excellon drills; structural validation passes on all reference boards and the daemon persists every fab file as an artifact. the B.Cu ground pour stays kicad-only until the zone engine lands
-5. ~~case generator~~ — done (sept 7): `backend/engines/paracraft/` compiles a board into readable, dependency-free openscad (named slider params, usb slot derived from the mcu placement, standoffs on the mounting holes, switch plate with key/encoder/oled openings). all three reference boards compile to real stls (openscad verified in sandbox). job #2 (ninepad) went queued → done with case_scad + case_params artifacts. print test on the a1 mini still pending
+5. ~~case generator~~ — done (sept 7): `engines/paracraft/` compiles a board into readable, dependency-free openscad (named slider params, usb slot derived from the mcu placement, standoffs on the mounting holes, switch plate with key/encoder/oled openings). all three reference boards compile to real stls (openscad verified in sandbox). job #2 (ninepad) went queued → done with case_scad + case_params artifacts. print test on the a1 mini still pending
 6. **frontend wiring** — job flow + webgl result viewer (board + case), notion/canva vibes strictly enforced
 
 ## future options — after macropads are perfect
@@ -64,4 +64,4 @@ the roadmap's law is one flow perfect end to end before the next; this section i
 - protoflow is mac-only desktop — its mcp is the automation path; if mcp access runs dry (1000 credits), fall back to manual spot-checks per release
 - ~~xano custom-code bundle/timeout limits~~ — moot since the supabase move; engine runs wherever the daemon runs (render/amd), same contract
 - oled/encoder breakouts constrain small board outlines — accept bigger boards over cramped ones
-- footprint drift — every value keeps provenance notes in `backend/engines/pcb/research/`; new parts get verified before they touch the netlist
+- footprint drift — every value keeps provenance notes in `backend/pcb/research/`; new parts get verified before they touch the netlist

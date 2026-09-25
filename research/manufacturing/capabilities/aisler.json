@@ -1,0 +1,45 @@
+{
+  "manufacturer": "aisler",
+  "status": "drafted",
+  "evidence_prefix": "evid-ais",
+  "scope": "rigid fr-4, 2-layer, 1oz (35µm) (keeberia's default class)",
+  "rules": {
+    "min_trace_width_mm": { "enig": 0.125, "hasl": 0.20 },
+    "min_trace_spacing_mm": { "enig": 0.125, "hasl": 0.15 },
+    "min_pth_drill_mm": 0.50,
+    "max_pth_drill_mm": 5.60,
+    "min_via_drill_mm": { "enig": 0.25, "hasl": 0.30 },
+    "max_via_drill_mm": 0.45,
+    "pth_annular_ring_mm": 0.30,
+    "via_annular_ring_mm": { "enig": 0.10, "hasl": 0.20 },
+    "min_npth_drill_mm": 0.50,
+    "max_npth_drill_mm": 5.60,
+    "min_plated_slot_width_mm": 0.70,
+    "min_nonplated_slot_width_mm": 0.80,
+    "board_thickness_options_mm": [1.6],
+    "min_board_mm": [10, 10],
+    "max_board_2layer_mm": [500, 500],
+    "silkscreen": {
+      "min_text_height_mm": 0.80,
+      "pad_clearance_mm": 0.125,
+      "max_board_coverage_pct": 25
+    },
+    "copper_edge_clearance_mm": 0.30,
+    "clearances_mm": {
+      "npth_to_copper": 0.25,
+      "npth_slot_lt_1.8mm_to_copper": 0.30,
+      "copper_to_edge": 0.30
+    },
+    "soldermask": {
+      "min_dam_mm": 0.10,
+      "suggested_expansion_mm": 0.05
+    },
+    "surface_finishes": ["hasl", "enig"]
+  },
+  "cross_checks": {
+    "keeberia_trace_default_mm": 0.25,
+    "keeberia_smallest_drill_mm": 1.2,
+    "keeberia_silk_text_mm": 1.0,
+    "note": "all keeberia defaults clear aisler floors; trace width 0.25mm clears HASL floor (0.20mm) and ENIG floor (0.125mm); 1.2mm drill clears 0.50mm PTH floor; text height 1.0mm clears 0.80mm floor; board silkscreen fill must not exceed 25% area limit"
+  }
+}

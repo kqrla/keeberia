@@ -29,7 +29,7 @@ history and the design notes).
 
 ## daemon
 
-`backend/daemons/autolayout/worker.ts` — `supabaseQueue(url, key)` implements the same
+`daemons/autolayout/worker.ts` — `supabaseQueue(url, key)` implements the same
 `Queue` interface the xano transport had; `KEEBERIA_QUEUE=supabase` (default) or
 `KEEBERIA_QUEUE=xano KEEBERIA_XANO_BASE=...` for the legacy transport. end-to-end test:
-`backend/daemons/autolayout/test/supabase.ts`.
+`daemons/autolayout/test/supabase.ts`.

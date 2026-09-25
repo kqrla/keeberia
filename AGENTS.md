@@ -124,8 +124,8 @@ project model → three.js / webgl → browser preview
 
 the engines have names:
 
-- **circuitron** (`backend/engines/circuitron/`) — pcb + schematic generation
-- **paracraft** (`backend/engines/paracraft/`) — scad generation: cases now, keycaps + knob covers later
+- **circuitron** (`engines/circuitron/`) — pcb + schematic generation
+- **paracraft** (`engines/paracraft/`) — scad generation: cases now, keycaps + knob covers later
 
 do not replace these engines with proprietary equivalents unless there is a very strong reason.
 

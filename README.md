@@ -470,7 +470,7 @@ for pcb generation, the target is kicad-compatible output and eventually things 
 
 for cad:
 
-- openscad (parametric, printable — the tradeoffs are on record in [backend/engines/cad/stack/tradeoffs.md](backend/engines/cad/stack/tradeoffs.md))
+- openscad (parametric, printable — the tradeoffs are on record in [backend/cad/stack/tradeoffs.md](backend/cad/stack/tradeoffs.md))
 - stl
 - 3mf
 - dxf

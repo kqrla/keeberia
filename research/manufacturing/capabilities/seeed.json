@@ -1,0 +1,41 @@
+{
+  "manufacturer": "seeed",
+  "status": "drafted",
+  "evidence_prefix": "evid-see",
+  "scope": "rigid fr-4, 2-layer, 1oz (keeberia's default class)",
+  "rules": {
+    "min_trace_width_mm": 0.10,
+    "min_trace_spacing_mm": 0.10,
+    "min_pth_drill_mm": 0.20,
+    "max_pth_drill_mm": 5.80,
+    "min_npth_drill_mm": 0.20,
+    "max_npth_drill_mm": 6.30,
+    "min_plated_slot_width_mm": 0.65,
+    "min_nonplated_slot_width_mm": 0.80,
+    "min_castellated_hole_diameter_mm": 0.50,
+    "board_thickness_options_mm": [0.6, 0.8, 1.0, 1.2, 1.6, 2.0, 2.5, 3.0],
+    "board_thickness_tolerance": { "lte_1mm": "±0.1mm", "gt_1mm": "±10%" },
+    "min_board_mm": [10, 10],
+    "max_board_2layer_mm": [500, 500],
+    "dimension_tolerance_mm": 0.2,
+    "silkscreen": {
+      "min_stroke_width_mm": 0.10,
+      "min_text_height_mm": 0.58
+    },
+    "copper_edge_clearance_mm": 0.30,
+    "soldermask": {
+      "min_dam_green_mm": 0.10,
+      "min_dam_other_colors_mm": 0.13,
+      "min_dam_without_0.1mm_option_green_mm": 0.32,
+      "min_dam_without_0.1mm_option_other_colors_mm": 0.35
+    },
+    "surface_finishes": ["hasl_leaded", "hasl_lead_free", "enig", "osp", "hard_gold"],
+    "copper_weights_2layer_oz": [1, 2, 3]
+  },
+  "cross_checks": {
+    "keeberia_trace_default_mm": 0.25,
+    "keeberia_smallest_drill_mm": 1.2,
+    "keeberia_silk_text_mm": 1.0,
+    "note": "all keeberia defaults clear seeed fusion floors; trace width 0.25mm clears 0.10mm (4 mil) floor; drill 1.2mm clears 0.20mm floor; text height 1.0mm clears 0.58mm (23 mil) floor; edge clearance requires 0.30mm keepout"
+  }
+}

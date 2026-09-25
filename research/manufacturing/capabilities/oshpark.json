@@ -1,0 +1,45 @@
+{
+  "manufacturer": "oshpark",
+  "status": "drafted",
+  "evidence_prefix": "evid-osh",
+  "scope": "rigid fr-4, 2-layer, 1oz (keeberia's default class)",
+  "rules": {
+    "min_trace_width_mm": 0.1524,
+    "min_trace_spacing_mm": 0.1524,
+    "min_drill_mm": 0.254,
+    "hole_tolerance_mm": {
+      "plus": 0.0635,
+      "minus": 0.0635,
+      "typical": 0.0254
+    },
+    "pth_annular_ring_mm": {
+      "minimum": 0.127
+    },
+    "min_plated_slot_width_mm": 0.508,
+    "board_thickness_options_mm": [1.6, 0.8],
+    "board_thickness_tolerance": {
+      "core_60mil": "±0.1524mm (±6mil)"
+    },
+    "min_board_mm": [6.35, 6.35],
+    "max_board_2layer_mm": [406.4, 558.8],
+    "silkscreen": {
+      "min_line_width_mm": 0.0762,
+      "recommended_line_width_mm": 0.127
+    },
+    "copper_edge_clearance_mm": {
+      "keepout": 0.381
+    },
+    "panelization": {
+      "min_board_spacing_mm": 2.54,
+      "min_frame_thickness_mm": 5.08
+    },
+    "surface_finishes": ["enig"],
+    "copper_weights_2layer_oz": [1, 2]
+  },
+  "cross_checks": {
+    "keeberia_trace_default_mm": 0.25,
+    "keeberia_smallest_drill_mm": 1.2,
+    "keeberia_silk_text_mm": 1.0,
+    "note": "all keeberia defaults clear osh park floors; min trace (0.25mm) comfortably clears 0.1524mm floor; smallest drill (1.2mm) far above 0.254mm floor"
+  }
+}
