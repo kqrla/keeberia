@@ -408,3 +408,24 @@ rebase note for the record: the two workstreams restructured the repo in paralle
 - anne's standing rule: no em dashes in the repo, including commit titles. applied
   going forward; the ten em-dash commit titles on main were rewritten (title-only
   history rewrite, bodies and file contents untouched).
+
+## sept 25, night vi: anne's reference drop, dual-legend answer lands
+
+- anne dropped 8 images: ansi/iso diagrams, two cluster-color maps, a resin skull
+  artisan cap photo, and three dual-legend keyboards (bengali, serbian cyrillic,
+  hebrew). saved to scope/reference/images/ with an index tying each to the
+  research it grounds - the skull caps confirm scope/research/artisan-scene.md's
+  multi-shot resin section already describes the real thing; the three dual-legend
+  photos are the exact visual case the 8b worker was sourcing blind.
+- phase 8b worker delivered (14 lines, research/dual-legend-multilingual.md): the
+  wiring answer anne actually asked for - a dual-legend key sends ONE fixed usb hid
+  scancode no matter how many scripts are printed on it; the os's active software
+  layout (windows language bar, macos input source, linux xkb/ibus) decides which
+  character comes out. the dual print is a physical label for a user who toggles os
+  layouts, not two live signals off one switch. firmware-side alternative exists
+  (qmk unicode_map / unicodemap_enable can type unicode without an os layout
+  installed at all, still via os-specific macro sequences, not raw hid) but zmk has
+  no core support, community-only. indian is13194:1991 inscript is the actual named
+  standard behind the bengali example - not vendor convention like i'd assumed.
+  proposed schema distinct from 8a's multi-zone one: dual_script_pair,
+  secondary_font_size_ratio (~0.65), secondary_anchor_point, rtl_alignment_flip.
