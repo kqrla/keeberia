@@ -1,0 +1,87 @@
+{
+  "manufacturer": "pcbway",
+  "status": "drafted",
+  "evidence_prefix": "evid-pw",
+  "scope": "rigid fr-4, 2-layer, 1oz (keeberia default class)",
+  "rules": {
+    "min_trace_width_mm": 0.1,
+    "min_trace_spacing_mm": 0.1,
+    "min_drill_mm": 0.15,
+    "hole_tolerance_mm": {
+      "pth": {
+        "plus": 0.08,
+        "minus": 0.08
+      },
+      "npth": {
+        "plus": 0.05,
+        "minus": 0.05
+      }
+    },
+    "pth_annular_ring_mm": {
+      "minimum": 0.15,
+      "recommended": 0.2
+    },
+    "board_thickness_options_mm": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.6,
+      2.0,
+      2.4,
+      2.6,
+      2.8,
+      3.0,
+      3.2
+    ],
+    "board_thickness_tolerance": {
+      "gte_1mm": "\u00b110%",
+      "lt_1mm": "\u00b10.1mm"
+    },
+    "min_board_mm": [
+      3,
+      3
+    ],
+    "max_board_2layer_mm": [
+      600,
+      1200
+    ],
+    "dimension_tolerance_mm": {
+      "cnc_routing": 0.2,
+      "v_scoring": 0.5
+    },
+    "silkscreen": {
+      "min_line_width_mm": 0.15,
+      "min_text_height_mm": 0.8,
+      "width_height_ratio": "1:5"
+    },
+    "surface_finishes": [
+      "hasl_leaded",
+      "hasl_lead_free",
+      "enig",
+      "osp",
+      "hard_gold",
+      "immersion_silver",
+      "immersion_tin",
+      "enepig"
+    ],
+    "copper_weights_2layer_oz": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "cross_checks": {
+    "keeberia_trace_default_mm": 0.25,
+    "keeberia_smallest_drill_mm": 1.2,
+    "keeberia_silk_text_mm": 1.0,
+    "note": "all keeberia defaults comfortably clear pcbway floors; silk text height (1.0mm) sits safely above pcbway 0.8mm floor"
+  }
+}
