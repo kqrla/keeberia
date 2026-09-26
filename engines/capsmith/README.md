@@ -7,7 +7,13 @@
 > is structural generation, the other is artisan composition. different
 > problem, different engine.
 
-or simply put: paracraft builds the cap. capsmith builds what sits on it.
+or simply put: paracraft builds the cap. capsmith glues the croissant on.
+
+one thing to keep crisp: this is NOT a "croissant keycap", a single sculpted
+cap shaped like a croissant. it is a completely normal openscad keycap with
+a sourced croissant sitting on its top surface, unioned into one printable
+piece. the metaphor is literally glue: the topper never changes the cap's
+profile, stem, or dish, it just rides on top.
 
 ## why this is a different engine, not a caps-engine mode
 
@@ -34,10 +40,10 @@ contained to one place.
      evidence line, this is the one place in keeberia where someone else's
      mesh ships in a product rather than only informing a parametric
      rebuild, so the license check is load-bearing, not a courtesy.
-   - **hand-authored**: simple geometric motifs (the bow, the star, the
-     succulent bloom) may be cheap enough to build directly as parametric
-     scad primitives rather than sourced, worth a case-by-case call per
-     motif once the library starts.
+   - **hand-authored**: simple motifs (the bow, the star) may be cheap
+     enough to model directly rather than source. still a topper mesh that
+     sits on top, same composition rule, never a sculpted cap. worth a
+     case-by-case call per motif once the library starts.
 3. **union**: topper mesh placed at the cap's top surface (dish center or
    flat top depending on profile) and boolean-unioned onto the base.
 
