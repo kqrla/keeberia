@@ -512,3 +512,26 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   live. this is phase 14's first worked question, evidence over assumption.
 - nothing dispatched: the three workers (pcbway, kbd construction, kicad
   toolchain) land first.
+
+## sept 26, morning i: capsmith named
+
+- anne named the artisan-keycap direction capsmith: decorative toppers
+  (croissant, waffle, bow, succulent, tiny espresso machine) composed onto
+  a paracraft base cap. deliberately not a caps-engine mode: paracraft
+  is parametric (everything traces to a spec), capsmith is compositional
+  (a sourced or hand-built topper mesh unioned onto an existing cap), and
+  mixing the two would break paracraft's traceability property.
+- scaffolded engines/capsmith/README.md as a scope doc: the composition
+  model (base from paracraft + topper mesh + boolean union), the licensing
+  discipline for cc0-sourced toppers (thingiverse/printables filtered by
+  explicit cc0, provenance sidecar per asset, same rigor as a research
+  evidence line since this is the one place a mesh ships as-is rather than
+  informing a parametric rebuild), and the mesh-boolean tool question
+  (likely the same manifold-3d answer as the browser-preview question from
+  last night, worth not duplicating the toolchain).
+- open, not decided: which cc0 sources are actually viable at volume for
+  food/cute motifs specifically (unverified), the real overhang/clearance
+  rule (reference photos show toppers overhanging onto neighbor keys, so
+  "fits in 1u" is not the constraint), and whether a two-piece post-purchase
+  topper insert is ever wanted (different product, not day-one scope).
+- offerings/keycaps/README.md now names both paths for buyers.
