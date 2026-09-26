@@ -66,6 +66,35 @@ news for the premise and clarifies the differentiation:
    registry still needs measured pitch/volume data with provenance, not
    borrowed audio).
 
+### mechvibes licensing, checked (sept 26 2026)
+
+the "licensed shortcut" lead was checked live and the honest answer is:
+**it is a shortcut to the format and the ux, not to the audio.**
+
+- the mechvibes APP is genuinely open source: mit license, repo
+  github.com/hainguyents13/mechvibes (2.3k stars), with an active rust
+  rewrite (mechvibes-dx) that the author says becomes main mechvibes at
+  v1.0. so the pack FORMAT (json config + recorded ogg/wav per key,
+  keydown/keyup events in the dx rewrite) is free to adopt or study.
+- the SOUND PACKS are the catch: they are community recordings
+  ("many users have created and shared sound packs", the readme's own
+  words), and nothing in the repo or the pack ecosystem states a
+  per-pack license. mit covers the code, not the recordings. shipping
+  a community pack in keeberia would need per-pack clearance from each
+  recorder, exactly the capsmith CC0 discipline but with no license
+  filter existing to lean on.
+- a supporting precedent found in passing: raccoontype.space (a typing
+  site) credits first-party sounds as "synthesized in-house and owned
+  outright" and lists third-party recordings as shipping "under their
+  own licenses" individually. that is the patchwork confirmed: sites
+  that ship pack audio either own it or clear it pack by pack.
+
+conclusion, on record: keeberia's in-product sound is either recorded
+in-house on real builds (matching keeberia's own reference boards) or
+synthesized, with measured hz/db data in the registry carrying the
+provenance. mechvibes-style community packs are a format reference and
+a licensing minefield, not a sample library.
+
 ## evidence plan (nothing built, queued for a research worker)
 
 - **golem.hu/sound/** (same author as the keyboard lexicon, dovenyi):
