@@ -7,7 +7,8 @@
 > is structural generation, the other is artisan composition. different
 > problem, different engine.
 
-or simply put: paracraft builds the cap. capsmith glues the croissant on.
+or simply put: capsmith is picking toppings for your keyboard. paracraft
+builds the cap, capsmith glues the croissant on.
 
 one thing to keep crisp: this is NOT a "croissant keycap", a single sculpted
 cap shaped like a croissant. it is a completely normal openscad keycap with
