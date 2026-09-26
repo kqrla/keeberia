@@ -535,3 +535,50 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   "fits in 1u" is not the constraint), and whether a two-piece post-purchase
   topper insert is ever wanted (different product, not day-one scope).
 - offerings/keycaps/README.md now names both paths for buyers.
+
+## sept 26, morning ii: keycap taxonomy + clicketies
+
+- anne split "custom keycaps" into three independent axes, they were
+  getting collapsed into one confusing idea:
+  theme (set-level color/legend/aesthetic, "kuromi themed keycaps" means
+  a whole matching set, shape unchanged), shape (the cap's own molded top
+  deviates from a standard profile, can be one accent cap or emergent
+  across a whole set, the reference photo is a 3x3 block whose nine caps
+  together read as one cat paw with toe beans), and topper (capsmith: a
+  separate object glued onto an otherwise standard cap, the mold itself
+  never changes). documented in offerings/keycaps/README.md. theme and
+  most of shape are paracraft's parametric path, capsmith covers topper
+  only, organic per-cap shape sculpts (paw pads) are an open question,
+  not obviously parametric.
+- new offering named: clicketies, fidget clicky keys. keycap-styled
+  tactile toys with no typing function, no pcb, no matrix, no firmware.
+  the reference is a keychain-sized 3x3 keycap block whose whole job is
+  the click, not text entry. scoped in offerings/clicketies/README.md:
+  circuitron's job (netlist, matrix, firmware) plausibly doesn't apply
+  at all, open question is whether it needs a real mx-style switch or a
+  simpler non-electrical clicker mechanism, which decides whether this
+  needs a pcb path at all.
+- offerings/README.md now lists clicketies alongside macropads/keyboards/
+  keycaps/cases/types.
+
+## sept 26, morning iii: niche capture, capsmith/clicketies sharpened
+
+- anne confirmed keeberia's two product modes read as functional
+  (macropads, keyboards) vs fidget (clicketies), a cohesive split, but
+  explicitly asked NOT to add that framing to offerings/README.md, so it
+  is not promoted to product docs, only logged here and in
+  project/positioning/niche.md's closing note.
+- capsmith's or-simply-put now leads with anne's own line: "picking
+  toppings for your keyboard."
+- clicketies confirmed to actually ship as keychains, both a single
+  keycap on a clip and a 3x3 grid block, not just the one reference
+  photo's incidental packaging.
+- new project/positioning/niche.md: anne's niche-intersection brainstorm
+  (tactile stim toys / mechanical keyboard culture / desk aesthetics /
+  customizable accessories / tiny cute objects, and why it hits creator
+  economy / personalization / hardware tooling automation / custom
+  manufacturing / desk setup culture), plus reference examples tying
+  capsmith and clicketies to those bullets directly. flagged one open
+  question there: a licensed-character topper (kuromi) shown in the
+  wild means capsmith's topper library will eventually need a licensing
+  policy for recognizable characters, not just cc0 food/motif sourcing.
