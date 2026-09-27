@@ -69,11 +69,19 @@ or simply put, a parametric caps engine needs structured metadata to place, scal
 
 latin script is first because the corpus already covers its physical variants (iso, qwertz, azerty, nordic iso) and its legends need no script engine work.
 
-### v1
+the v0 split also records the honest nuance that latin script does not mean one keyboard: physical standards split per region (us-ansi, iso-european, iso variants with an extra key next to left shift), logical layouts split per language (qwerty, qwertz, azerty), and even english differs (us-ansi horizontal 2.25u return vs uk-iso vertical enter with the extra key). language version + physical standard + logical layout are three independent choices per buyer, see research/layout-standards.md.
 
-- v1.1: russian
+### v1: cyrillic-script family
 
-cyrillic, gated on the dual-legend pipeline: jcuken is already evidenced `[evid-leg-012]`, so this is caps-engine capability, not research-from-zero.
+v1 subtypes are the different languages written in cyrillic, not one russian line:
+
+- v1.1: russian (jcuken, already evidenced `[evid-leg-012]`, so this is caps-engine capability, not research-from-zero)
+- v1.2: ukrainian and belarusian (jcuken-family with extra letters: ґ є і ї)
+- v1.3: bulgarian and macedonian (own phonetic-bulgarian layout lineage)
+- v1.4: serbian cyrillic (serbia ships both faces of its keyboards, the latin face is already v0.5 territory)
+- v1.5: kazakh, kyrgyz, mongolian and other cyrillic-extension languages
+
+tajik note: tajik is written in cyrillic but it is a persian-language family member, not slavic. on the script axis it needs NO exception: it is the same dual-legend pipeline plus six extra glyph forms (ғ ӣ қ ӯ ҳ ҷ), which is less new work than ukrainian adds to russian. the honest reason to hold it is demand (tiny custom-keeb market, middling purchasing power), which is the market ladder's call, not the language ladder's. so: script-wise in at v1, market-wise parked.
 
 ### v2
 

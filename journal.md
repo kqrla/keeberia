@@ -690,3 +690,21 @@ numbers are vendor leads, the dB figures in section 3 are modelled not
 measured (measured hz/db is an open evidence question, in-house
 recordings per the sourcing decision), and sections 4 and 5 are design
 prose and lead territory with no corpus lines yet.
+
+## language ladder corrections + latin-script layout nuance (sept 27)
+
+anne corrected the ladder: v1 is the cyrillic-script family (russian,
+ukrainian/belarusian, bulgarian/macedonian, serbian cyrillic, the
+cyrillic-extension languages), not a single russian line. tajik: no
+script exception needed, it is the same dual-legend pipeline plus six
+glyph forms, the honest hold is demand-side (market ladder's call), so
+script-wise in at v1, market-wise parked.
+
+also gathered the latin-script-is-not-one-keyboard nuance: english
+itself splits (us ansi 101-key vs uk iso 102-key with the extra key at
+left shift), azerty is three swaps from qwerty, qwertz is din 2137-2
+based, nordic legend sets split by language pair. 4 new corpus lines
+(evid-lay-020/021, evid-llog-020/021), layout-standards.md gained the
+per-language variants section with the three-way frame: language
+version x physical standard x logical layout, independent choices per
+buyer. corpus 249.

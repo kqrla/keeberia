@@ -103,3 +103,15 @@ community-driven layouts do not adhere to formal standards organizations (ansi/i
 1. **plate cutout tolerances for stabilizers**: what exact clearance margins (in mm) must paracraft apply to plate stabilizer cutouts across different materials (3mm acrylic vs 1.5mm aluminum vs 3d-printed petg) to prevent wire binding?
 2. **universal pcb pad overlap**: how should circuitron handle universal ansi/iso pcb footprints (where iso enter and ansi enter switch pads overlap) without triggering drc annular ring or clearance violations?
 3. **6u spacebar wire & stem center offsets**: what are the exact stem spacing standards for 6u spacebars across different keycap profiles (gmk vs signature plastics), given that 6u spacebars historically used off-center switch stems?
+
+
+## per-language variants within latin script (v0 nuance)
+
+latin script does not mean one keyboard, and neither does english:
+
+- **english splits in two**: us english is the 101-key ansi board with horizontal return; uk english is the 102-key iso board with the extra key between left shift and z, a shorter left shift, and the vertical iso return `[evid-lay-020]`. the v0.1 english language version asks which english, and the answer changes plate, keycount, and legend set.
+- **azerty (fr, be)**: three swaps from qwerty (a with q, z with w, m onto the semicolon key), so french buyers need logical legends replaced, not just iso geometry `[evid-llog-020]`.
+- **qwertz (de, at)**: din 2137-2 standard, z replaces y in the top-left six `[evid-llog-021]`; the iso-de extra key next to left shift carries the angular brackets.
+- **nordic (v0.4)**: the a-ring sits right of p across norwegian and swedish/finnish boards, with placements differing between the norwegian/danish and swedish/finnish pairs, so nordic is two legend sets, not five `[evid-lay-021]`.
+
+the three-way frame per buyer: language version (research/legends-multilingual.md section 5) x physical standard (this doc) x logical layout. they are independent choices: a german buyer can run qwertz on iso-de caps or even qwerty on iso caps, and the engine must never assume one from another.
