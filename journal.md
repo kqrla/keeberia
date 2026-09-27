@@ -730,3 +730,14 @@ night wrap-up: corpus at 253 lines, sound + language fronts closed,
 per-pass pages in place. remaining later: phases 14-17, measured
 hz/db evidence, frontend wiring, per-pass gather rounds when each
 version turns on.
+
+## units considerations (sept 27, wrap-up)
+
+scope/units.md: metric canonical (mm), u as the community display
+vocabulary (1u = 19.05mm = 0.75 inch exactly, anchored on the
+cherry-official grid line), imperial only at the display edge (us
+locale courtesy) and the fab-intake edge (mils, oz, awg in us
+datasheets, stored with explicit unit fields and converted once at
+load). never store converted values, never round tolerances through
+conversion (0.1mm is not 4 mil). imperial-side facts are flagged for
+a future evidence pass, not asserted.
