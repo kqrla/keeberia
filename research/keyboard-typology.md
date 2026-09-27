@@ -53,7 +53,7 @@ wireless custom keyboards standardized on Nordic's nRF52840 32-bit ARM Cortex-M4
 
 ### 2.4 wired-only connector requirements
 - **5.1kΩ CC pull-down resistors**: every female USB-C receptacle on a keyboard PCB must place two 5.1kΩ pull-down resistors (one on CC1, one on CC2) to GND (`evid-typ-010`). without these resistors, USB Type-C to Type-C host cables (such as modern MacBooks) will fail to deliver 5V power (`evid-typ-010`).
-- **connector form factors**: wired boards use either through-hole 12-pin/16-pin USB-C sockets for hand-soldering durability or mid-mount connectors (e.g., HRO TYPE-C-31-M-12) recessed into PCB cutouts for ultra-slim case profiles (`evid-typ-011`).
+- **connector form factors**: wired boards use either through-hole 12-pin/16-pin USB-C sockets for hand-soldering durability or mid-mount connectors (e.g., HRO TYPE-C-31-M-12) for ultra-slim case profiles (claim contested: the lcsc listing for this exact part says surface mount right angle, so the mid-mount recessed-cutout claim needs the real hro datasheet before it can ship as an engine fact, see contradictions.jsonl).
 
 ---
 

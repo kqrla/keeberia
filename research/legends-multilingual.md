@@ -1,7 +1,7 @@
 # keycap legends and non-latin script dataset for parametric caps engine
 
 ## executive thesis
-keycap legend manufacturing trade-offs directly constrain physical geometry and parametric engine choices, or simply put: doubleshot injection moulding provides permanent legends but imposes strict tooling constraints per glyph [evid-leg-001, evid-leg-002], whereas dye-sublimation (and reverse dye-sub) offers flexible high-resolution custom scripts at the cost of substrate plastic restrictions [evid-leg-003, evid-leg-004]. for non-latin scripts and multilingual keycap kits, modern international layouts rely either on standardized primary mappings (e.g. dubeolsik [evid-leg-009] or jcuken [evid-leg-012]) or sub-legends added alongside primary latin glyphs [evid-leg-010, evid-leg-011, evid-leg-013]. a parametric legend dataset must model multi-position bounding boxes, script text direction (rtl vs ltr) [evid-leg-015], and manufacturing constraints.
+keycap legend manufacturing trade-offs directly constrain physical geometry and parametric engine choices, or simply put: doubleshot injection moulding provides permanent legends but imposes strict tooling constraints per glyph [evid-leg-001, evid-leg-002], whereas dye-sublimation (and reverse dye-sub) offers flexible high-resolution custom scripts at the cost of substrate plastic restrictions [evid-leg-003, evid-leg-004]. for non-latin scripts and multilingual keycap kits, modern international layouts rely either on standardized primary mappings (e.g. dubeolsik [evid-leg-009] or jcuken [evid-leg-012]) or sub-legends added alongside primary latin glyphs [evid-leg-010, evid-leg-011, evid-leg-013]. a parametric legend dataset must model multi-position bounding boxes, script text direction (rtl vs ltr), and manufacturing constraints.
 
 ## 1. legend manufacturing processes
 ### double-shot injection moulding
@@ -40,7 +40,7 @@ or simply put, a parametric caps engine needs structured metadata to place, scal
 - `glyph_id`: string (unique identifier, e.g. "glyph-cyr-0410")
 - `script_family`: enum (`latin`, `cyrillic`, `greek`, `arabic`, `devanagari`, `hangul`, `hiragana`, `katakana`, `zhuyin`, `cangjie`, `hebrew`)
 - `character_code`: string (unicode code point, e.g. "U+0410")
-- `text_direction`: enum (`ltr`, `rtl`) - [evid-leg-015] notes that rtl contexts orient coordinates from the upper-right corner.
+- `text_direction`: enum (`ltr`, `rtl`) - notes that rtl contexts orient coordinates from the upper-right corner.
 - `placement_zone`: enum (`top_left`, `top_right`, `center`, `bottom_left`, `bottom_right`, `front_center`, `side_print`) - models primary vs sub-legend positioning [evid-leg-013].
 - `font_family`: string (font name or path)
 - `font_weight`: number (e.g. 400, 700)

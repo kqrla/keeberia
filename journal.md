@@ -582,3 +582,41 @@ rebase note for the record: the two workstreams restructured the repo in paralle
   question there: a licensed-character topper (kuromi) shown in the
   wild means capsmith's topper library will eventually need a licensing
   policy for recognizable characters, not just cc0 food/motif sourcing.
+
+## verification pass: layouts + multilingual fronts (sept 27, live)
+
+the 8 layout/multilingual fronts (dl, leg, lay, llog, mac, sf, fw, typ) are
+now verified against live sources and merged. the corpus went from 118 to
+225 lines (106 merged from this pass, plus typ-010 re-sourced from the
+tusb320 datasheet, plus the 2 splt lines from the split-keyboard work).
+
+verdict tally: 55 confirmed verbatim as-written, 43 were loose paraphrases
+where the supporting text really was on the page, so the excerpts were
+replaced with the true verbatim text, 6 dead or js-walled sources were
+re-sourced to live reputable pages (jcuken to wikipedia, inscript to
+wikipedia, unit pitch to deskthority wiki, touch bar to wikipedia,
+right-click to apple support, dynamic keymap default to the qmk source
+itself), and 9 were dropped with reasons on record.
+
+drops worth knowing about: evid-dl-010 (inscript IS 13194, scribd walls and
+the wiki page had no quotable standardization text), evid-leg-015 (rtl
+coordinate origin, a ui convention from a microsoft glossary behind a
+scribd wall, not worth re-sourcing), evid-ll-001 and evid-ll-012 (dead
+generic claims already covered by other lines), evid-ll-008 (colemak-dh
+d/h geometry, official pages confirm the mod exists but none state the
+center-column detail cleanly, re-source pending), evid-sz-013 and
+evid-fw-011 (dead vendor and js-app pages, generic claims covered
+elsewhere), and evid-typ-011, which is the interesting one.
+
+evid-typ-011 is now contr-001 in contradictions.jsonl: the keeb.io-era
+research said HRO TYPE-C-31-M-12 is a mid-mount connector that sits in a
+pcb cutout, but the live lcsc listing for that exact part says surface
+mount, right angle. circuitron cannot treat it as a mid-mount footprint
+until the real hro datasheet settles it.
+
+process note: the sub-agent workers stalled twice at their processing
+checkpoints without producing output, so this pass was run in-conversation
+with scripts instead (bulk fetch, normalized verbatim matching, fuzzy
+alignment to repair loose quotes, manual judgment on the weak matches).
+verify-*.jsonl files are committed as the per-front audit trail of every
+verdict.

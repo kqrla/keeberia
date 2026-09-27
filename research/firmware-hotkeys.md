@@ -48,7 +48,7 @@ or simply put: the UI should expose 90% of user needs visually (layers as tabs, 
 2. **custom C/rust event handlers**: `process_record_user` in qmk or custom rust modules in rmk for stateful macros or oled animations.
 
 ### prior art & configurator ecosystem:
-- **qmk configurator**: web UI export/import via structured `keymap.json` [evid-fw-011].
+- **qmk configurator**: web UI export/import via structured `keymap.json`.
 - **via / remap / vial**: dynamic runtime keymap editing over webhid/raw hid without reflashing firmware [evid-fw-012, evid-fw-015].
 - **zmk keymap editor / zmk studio**: webusb-based RPC interface for live keymap updates on zmk devices.
 
@@ -60,7 +60,7 @@ or simply put: choice of firmware dictates hardware target compatibility and tra
 
 | firmware | primary transport | hardware platform | live web remapping protocol |
 |---|---|---|---|
-| **qmk** | USB wired standard [evid-fw-011] | AVR, ARM (STM32, RP2040) | VIA / Vial over Raw HID [evid-fw-012] |
+| **qmk** | USB wired standard | AVR, ARM (STM32, RP2040) | VIA / Vial over Raw HID [evid-fw-012] |
 | **kmk** | USB wired / BLE | RP2040, nRF52 (CircuitPython) | None (direct USB file editing) |
 | **rmk** | USB wired / BLE native [evid-fw-006] | RP2040, nRF52, ESP32-C3 (Rust Embassy) | Vial / Rynk over USB & BLE [evid-fw-015] |
 | **zmk** | BLE-first wireless [evid-fw-013] | nRF52, RP2040 (Zephyr RTOS) | ZMK Studio RPC over WebUSB/BLE |

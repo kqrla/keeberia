@@ -18,7 +18,7 @@ unlike physical layout standards (ansi, iso, jis) governed by official standards
 ### 96% (compact full-size)
 * **composition**: retains full numeric keypad and alphanumeric functionality but eliminates empty spacing gaps between clusters `[evid-sz-003]`.
 * **key count**: typically 96 to 98 keys `[evid-sz-003]`.
-* **layout changes**: arrow keys and numpad are squeezed flush against the alphanumeric block. modifier keys on the right bottom row shrink from 1.25u to 1u, and right shift shrinks from 2.75u to 1.75u `[evid-sz-013]`.
+* **layout changes**: arrow keys and numpad are squeezed flush against the alphanumeric block. modifier keys on the right bottom row shrink from 1.25u to 1u, and right shift shrinks from 2.75u to 1.75u ``.
 
 ### 1800 / 98% (1800-compact)
 * **lineage**: derived from the classic Cherry G80-1800 industrial keyboard footprint `[evid-sz-004]`.
@@ -34,7 +34,7 @@ unlike physical layout standards (ansi, iso, jis) governed by official standards
 ### 75% (compressed tkl)
 * **composition**: retains the function row and dedicated arrow keys, but removes all cluster spacing gaps and stacks navigation keys in a single vertical column `[evid-sz-005]`.
 * **key count**: 80 to 84 keys `[evid-sz-005]`.
-* **layout changes**: the function row touches the number row directly. right shift is reduced to 1.75u to make room for up/left/down/right arrow keys `[evid-sz-013]`.
+* **layout changes**: the function row touches the number row directly. right shift is reduced to 1.75u to make room for up/left/down/right arrow keys ``.
 
 ### 65% (compact with arrows)
 * **composition**: drops the dedicated top function row (F1-F12) and primary navigation cluster, but retains physical arrow keys and a 1u-wide column of select nav keys (Del, PgUp, PgDn) on the right edge `[evid-sz-006]`.
@@ -70,7 +70,7 @@ as visualized in the scope reference diagram (`scope/reference/images/size-formf
 | Size Class | Key Range | Kept Clusters / Features | Dropped / Compressed Clusters | Evidence Pointers |
 | :--- | :--- | :--- | :--- | :--- |
 | **100% (Full-Size)** | 104 (ANSI) / 105 (ISO) | Alpha block, F-row, nav cluster, arrow cluster, numpad | None (full standard layout) | `[evid-sz-001]` |
-| **96% (Compact Full)** | 96 - 98 | Alpha block, F-row, compressed arrows, numpad | Cluster spacing gaps eliminated; right shift reduced to 1.75u | `[evid-sz-003]`, `[evid-sz-013]` |
+| **96% (Compact Full)** | 96 - 98 | Alpha block, F-row, compressed arrows, numpad | Cluster spacing gaps eliminated; right shift reduced to 1.75u | `[evid-sz-003]`, `` |
 | **1800 / 98%** | 98 | Alpha block, F-row, isolated arrows, numpad | Full nav cluster dropped; replaced with spacing blockers | `[evid-sz-004]` |
 | **80% (TKL)** | 87 (ANSI) / 88 (ISO) | Alpha block, F-row, nav cluster, arrow cluster | Numeric keypad completely removed | `[evid-sz-002]` |
 | **75%** | 80 - 84 | Alpha block, compressed F-row, dedicated arrows, vertical nav column | Cluster spacing gaps removed; F-row touches number row | `[evid-sz-005]` |
@@ -105,7 +105,7 @@ in keeberia, a user begins device creation by choosing a size class. this high-l
 ### 1. circuitron (pcb matrix & netlist engine)
 * **matrix switch count**: size class dictates total switch footprints and matrix scanning pin counts `[evid-sz-012]`. a 100% board requires 104 switch positions, while a 60% board requires only 61 positions `[evid-sz-001]`, `[evid-sz-007]`.
 * **electrical matrix bounds**: determines the row-and-column matrix layout (e.g. 5x15 matrix for 60% vs 6x19 matrix for 100%) `[evid-sz-012]`.
-* **keycap kitting BOM validation**: compressed size classes (96%, 75%, 65%) require non-standard modifier key sizes (1.75u right shift, 1u alt/fn/ctrl) `[evid-sz-013]`. circuitron flags keycap set incompatibilities if the user selects a standard 104-key keycap set for a 75% or 96% PCB `[evid-sz-013]`.
+* **keycap kitting BOM validation**: compressed size classes (96%, 75%, 65%) require non-standard modifier key sizes (1.75u right shift, 1u alt/fn/ctrl) ``. circuitron flags keycap set incompatibilities if the user selects a standard 104-key keycap set for a 75% or 96% PCB ``.
 
 ### 2. paracraft (case CAD & plate cutout engine)
 * **plate footprint & outer boundary**: size class defines bounding dimensions for the plate, top case frame, and bottom housing `[evid-sz-012]`.
