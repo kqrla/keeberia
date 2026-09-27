@@ -50,7 +50,7 @@ alternative logical layouts exist to address ergonomic and efficiency limitation
 * **rationale**: created by oj bucao to reduce lateral finger stretching and horizontal center-column reaching by prioritizing vertical finger movement `[evid-ll-007]`.
 
 ### colemak-dh
-* **rationale**: developed by steve p as a colemak variant that moves high-frequency letters d and h off the middle center columns down to natural home-row finger curl positions (re-source pending, original reddit thread dead).
+* **rationale**: developed by steve p as a colemak variant that moves high-frequency letters d and h into easier-to-reach positions, cutting centre column usage about half, now sourced to the official mod-dh page `[evid-ll-008]`.
 
 ---
 
@@ -62,7 +62,7 @@ alternative logical layouts exist to address ergonomic and efficiency limitation
 | **Dvorak** | OS or Firmware Remap | None (Standard ANSI/ISO/JIS PCB & Plate) | Maximizes home row letter frequency and hand alternation | ``, `[evid-ll-005]` |
 | **Colemak** | OS or Firmware Remap | None (Standard ANSI/ISO/JIS PCB & Plate) | Low finger travel while preserving QWERTY shortcuts (ZXCV) | ``, `[evid-ll-006]` |
 | **Workman** | OS or Firmware Remap | None (Standard ANSI/ISO/JIS PCB & Plate) | Minimizes lateral finger reaching and horizontal effort | ``, `[evid-ll-007]` |
-| **Colemak-DH** | OS or Firmware Remap | None (Standard ANSI/ISO/JIS PCB & Plate) | Eliminates center column reaches for D and H via natural finger curl | (pending re-source) |
+| **Colemak-DH** | OS or Firmware Remap | None (Standard ANSI/ISO/JIS PCB & Plate) | Eliminates center column reaches for D and H via natural finger curl | `[evid-ll-008]` |
 | **Maltron 3D** | Physical Hardware Exception | High (3D concave wells, custom PCB & enclosure) | Contoured hand wells and separate thumb clusters | ``, `[evid-ll-003]` |
 | **BigKeys / ABC** | Physical Hardware Exception | High (Custom key grid, oversized keycaps, dedicated PCB) | Physical alphabetical layout for accessibility and education | `[evid-ll-004]` |
 | **One-Handed / Half** | Physical Hardware Exception | High (Compact single-hand PCB matrix and case) | Dedicated single-handed ergonomic layout | `[evid-ll-003]` |

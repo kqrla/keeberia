@@ -1,5 +1,7 @@
 # switch taxonomy and sound culture research
 
+> evidence status: the corpus lines for this doc live in research/evidence/evidence.jsonl under the evid-ss-* ids (lexicon: evid-ss-lex-001..004, acoustic drivers: evid-ss-drv-001..005, switch taxonomy + sourcing: evid-ss-sw-001..009). until the body below is retrofit line by line, the corpus is the source of record for claims here.
+
 > research on mechanical switch types, acoustic physics, community sound terminology, sound-first UX design, and reference communities for keeberia. written for in-browser sound testing and non-geek switch selection.
 
 ---

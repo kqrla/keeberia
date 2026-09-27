@@ -648,3 +648,32 @@ scope/research/switches-and-sound.md sections, and the same treatment for
 whatever the sound-picker work needs next (in-house recording provenance
 is already decided: own reference boards or synthesized, never community
 packs).
+
+## re-source queue closed, contr-001 resolved (sept 27, night)
+
+three open items closed in one pass, corpus at 245 (evid-ll-008 restored,
+evid-leg-016 and evid-typ-012 added).
+
+contr-001 is resolved and the answer was worth the trouble: the official
+HRO datasheet drawing (one page, vector, no extractable text, read with
+vision) shows TYPE-C-31-M-12 is an EDGE-mount part. it sits on top of the
+pcb overhanging the board edge ("RECOMMEND P.C.B LAYOUT (COMPONENT SIDE)"
+with the "PCB EDGE" label), dual-row smt contacts, four through-board
+shield tabs in 0.60mm slots. not mid-mount, not a recessed cutout part.
+the lcsc surface-mount attribution was the closer truth, the keeb.io-era
+claim is retired, and circuitron gets a real design rule: board-edge
+slots + smt pads, no cutout.
+
+evid-ll-008 (colemak-dh) is restored from the official colemakmods mod-dh
+page: d and h into easier positions, centre column usage cut about half,
+angle variant for ergo boards. the logical-layouts doc carries the
+citation again.
+
+the rtl gap for the hebrew side of v2 is narrowed: bidirectional text
+conventions are now evidenced (evid-leg-016), so rtl legends are a
+rendering question on an evidenced foundation rather than
+research-from-zero.
+
+switches-and-sound.md got its corpus pointer header (evid-ss-* ids) as
+the interim retrofit; the full line-by-line retrofit of that doc's body
+is still pending.

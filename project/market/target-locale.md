@@ -49,7 +49,7 @@ the cyrillic markets (russia, bulgaria, ukraine, serbia's cyrillic face) open wh
 - china
 - the hebrew side of israel
 
-the CJK four are the densest keeb cultures on earth and the biggest product lift at the same time: kana/kanji, hangul, bopomofo, hanzi. the RTL family behind them (hebrew, and arabic beyond) is the capability bar: the product has to handle right-to-left legend placement, corner anchoring, and international key mappings before that side of any market means anything. the RTL legend-anchoring question is currently an open research item (the one line we had on RTL coordinate origins did not survive verification and was dropped, re-source pending).
+the CJK four are the densest keeb cultures on earth and the biggest product lift at the same time: kana/kanji, hangul, bopomofo, hanzi. the RTL family behind them (hebrew, and arabic beyond) is the capability bar: the product has to handle right-to-left legend placement, corner anchoring, and international key mappings before that side of any market means anything. RTL legend placement stays an open engine question, though bidirectional text conventions are now evidenced (`evid-leg-016`), so the hebrew side is a rendering question, not a research-from-zero one.
 
 ## the demand lens
 
