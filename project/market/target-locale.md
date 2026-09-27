@@ -4,9 +4,9 @@
 
 or simply put: pass one sells manufacturable files you take to whatever fab you like, so almost nowhere is off the table. pass two orders through keeberia to a connected fab, and a destination only becomes live when that specific fab route is verified. one country, two different maps.
 
-## why no rollout phases
+## the two passes
 
-keeberia does not have a phased country rollout like a physical-goods marketplace. it has two product passes with different geographic logic:
+the product has two passes with different geographic logic:
 
 - **pass one: file download (first)**. one-off purchase, no subscription. keeberia hands over the manufacturable bundle (gerbers, drill, case stl, caps, bom, firmware source) and the buyer figures out fabrication themselves: their own jlcpcb account, their own sla shop, their own soldering iron or a friend's. nothing physical crosses a border, so the locale question is payment, tax on digital goods, and support language, not shipping.
 - **pass two: connected ordering (later)**. ordering through keeberia to connected fabs (jlcpcb family first, per the partnership direction). now physical goods ship, so geography goes deny-by-default: a destination is not live because a fab advertises worldwide delivery. each fab route (jlcpcb, pcbway, osh park, aisler, seeed) gets its own destination verification, duties and tax handling, and defect/returns story before its countries switch on.
