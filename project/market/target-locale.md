@@ -35,20 +35,21 @@ all latin-script, all with existing custom-keeb scenes, none of them blocked on 
 - spain, portugal, and italy
 - romania, croatia, slovenia, serbia, and other latin-script balkan markets
 - singapore
+- israel (served english-first: large english-fluent buyer base, so the market itself opens in v1. the hebrew side is v2, gated on RTL capability, not on demand)
 
 ### v1.5: cyrillic research begins
 
 the cyrillic markets (russia, bulgaria, ukraine, serbia's cyrillic face) open when the dual-legend pipeline can prove itself: jcuken is already evidenced in the corpus, so this gate is about caps-engine dual-legend capability (primary/secondary pairing, print convention), not research-from-zero.
 
-### v2: CJK and right-to-left, in this order
+### v2: CJK, then the RTL script family
 
 - japan
 - south korea
 - taiwan
 - china
-- israel
+- the hebrew side of israel
 
-these are the densest keeb cultures on earth and the biggest product lift at the same time: kana/kanji, hangul, bopomofo, hanzi, and then the right-to-left script family. israel is explicitly the capability bar for RTL: the product has to handle right-to-left legend placement, corner anchoring, and international key mappings before that market means anything. the RTL legend-anchoring question is currently an open research item (the one line we had on RTL coordinate origins did not survive verification and was dropped, re-source pending).
+the CJK four are the densest keeb cultures on earth and the biggest product lift at the same time: kana/kanji, hangul, bopomofo, hanzi. the RTL family behind them (hebrew, and arabic beyond) is the capability bar: the product has to handle right-to-left legend placement, corner anchoring, and international key mappings before that side of any market means anything. the RTL legend-anchoring question is currently an open research item (the one line we had on RTL coordinate origins did not survive verification and was dropped, re-source pending).
 
 ## the demand lens
 
