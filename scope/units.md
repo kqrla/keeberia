@@ -23,5 +23,5 @@ or simply put: metric is the truth inside, imperial is a courtesy outside.
 
 ## open questions
 
-- evidence lines for the imperial-side facts (1 oz copper thickness in um/mil, mil conventions in us fab datasheets, 4-40 standoff prevalence in vintage boards): not yet gathered, this doc is design reasoning anchored on the cherry grid line. gather before checkman consumes any mil-based rule.
+- imperial-side facts now evidenced: 1 oz copper = 35 um = 0.0014 in `[evid-typ-013]`, the mil (0.0254 mm) as the us fab unit for trace/spacing/hole sizes `[evid-typ-014]`, and real boards mixing mils and metric on one artifact `[evid-typ-015]`, which is why per-rule unit fields are mandatory. still ungathered: 4-40 standoff prevalence in vintage boards.
 - does the us locale default to imperial display or stay metric with a toggle? product decision, defer to the v0.1 english pass (research/languages/v0.1-english.md).

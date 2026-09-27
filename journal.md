@@ -741,3 +741,13 @@ datasheets, stored with explicit unit fields and converted once at
 load). never store converted values, never round tolerances through
 conversion (0.1mm is not 4 mil). imperial-side facts are flagged for
 a future evidence pass, not asserted.
+
+## units evidence pass (sept 27, final push)
+
+the flagged imperial facts are now corpus-backed: 1 oz copper = 35um =
+0.0014in, mil = 0.0254mm as the us fab unit, and the hackaday line that
+real boards mix mils and metric on one artifact (which is the direct
+evidence for per-rule unit fields). swiss german/french two-face split
+also landed from the qwertz page, resolving the v0.2 swiss question.
+corpus 254. the nordic pair line stays honestly open. night wrapped for
+real now: credits nearly out, reset in 3 days.
