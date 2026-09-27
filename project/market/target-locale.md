@@ -85,6 +85,8 @@ all ladder entries are product targets, not live promises. there is no per-count
 - demand signals per country (community size, creator density, vendor density, group-buy activity) to set the real ordering inside each version band
 - dual-legend print convention and RTL legend anchoring, the two research items gating v1.5 and v2
 
+the language support ladder (which script the product can actually write: english, german, romance, nordic, slavic latin, then russian, then chinese/korean/japanese, then bengali/hindi/hebrew/arabic/urdu) lives in [`../../research/legends-multilingual.md`](../../research/legends-multilingual.md) section 5. the two ladders interlock: a locale opens when its language version ships and its demand evidence clears.
+
 see also:
 
 - [target-user-profile.md](target-user-profile.md) (who the locales contain)

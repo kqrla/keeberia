@@ -54,3 +54,49 @@ or simply put, a parametric caps engine needs structured metadata to place, scal
 1. what exact minimum draft angle and wall thickness thresholds do modern cherry/oem/kat doubleshot tooling suppliers require for enclosed non-latin glyph loops (e.g. detailed devanagari ligatures)?
 2. how do 5-sided reverse dye-sublimation process color tolerances handle precise color matching on dark keycap corners compared to traditional injection molded abs colors?
 3. what are the exact standardized sub-legend font sizes (in pt or mm) used by gmk vs signature plastics vs keykobo for cyrillic and hangul sub-legends?
+
+## 5. language support ladder (targeting, anne sept 27)
+
+> thesis: the language ladder is the script-capability roadmap for the multilingual front, ordered by what the legend pipeline and layout defaults can prove next. it is a different axis from the market ladder in project/market/target-locale.md (which orders demand and delivery): a locale opens only when its language version ships and its demand evidence clears.
+
+### v0: latin script
+
+- v0.1: english
+- v0.2: german
+- v0.3: romance languages
+- v0.4: nordic languages / scandinavia
+- v0.5: slavic polish, latin-script balkan languages
+
+latin script is first because the corpus already covers its physical variants (iso, qwertz, azerty, nordic iso) and its legends need no script engine work.
+
+### v1
+
+- v1.1: russian
+
+cyrillic, gated on the dual-legend pipeline: jcuken is already evidenced `[evid-leg-012]`, so this is caps-engine capability, not research-from-zero.
+
+### v2
+
+- v2.0: chinese script (mandarin first, cantonese later)
+- v2.5: korean script
+- v2.8: japanese script
+
+note the ordering is deliberate and differs from the market ladder (japan, korea, taiwan, china on demand): the language front sequences by script engine lift (hanzi glyph scale first, hangul dubeolsik `[evid-leg-009]` next, kana/kanji last), and the two ladders interlock per locale.
+
+### v3
+
+- v3.1: bengali
+- v3.3: hindi
+- v3.5: hebrew
+- v3.8: modern standard arabic
+- v3.9: urdu
+
+the indic cluster (bengali, hindi, inscript-class mappings) comes first in v3, then the right-to-left cluster: hebrew, arabic, urdu. urdu last is notable: it is arabic-script but calls for its own mapping, and the rtl rendering conventions are now evidenced `[evid-leg-016]`. the cursive joining behavior of arabic-script legends (glyphs change shape by position) is an open engine question: no corpus line yet, flag for the v3 research pass.
+
+### how the ladders interlock
+
+- market v0 cohort (germany, uk, us+ca, nl+be, france, ireland, nordics, ch+at, au+nz) maps to language v0.1 through v0.4.
+- market v1 latin expansion (poland, czechia, spain/portugal/italy, latin balkans) maps to language v0.5 and v0.3.
+- market v1.5 cyrillic gate = language v1.1.
+- market v2 CJK = language v2.x per script; hebrew-side israel = language v3.5 (so it slips to the v3 window on the language axis even though the locale ladder gates it at market-v2).
+- language v3.1 bengali and v3.3 hindi open indic locales not yet on the market ladder: add them to market research when their turn approaches.
