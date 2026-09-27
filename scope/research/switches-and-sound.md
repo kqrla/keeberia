@@ -1,6 +1,6 @@
 # switch taxonomy and sound culture research
 
-> evidence status: the corpus lines for this doc live in research/evidence/evidence.jsonl under the evid-ss-* ids (lexicon: evid-ss-lex-001..004, acoustic drivers: evid-ss-drv-001..005, switch taxonomy + sourcing: evid-ss-sw-001..009). until the body below is retrofit line by line, the corpus is the source of record for claims here.
+> evidence status: retrofitted sept 27 against research/evidence/evidence.jsonl. corpus lines carry the evid-ss-* ids (lexicon: evid-ss-lex-001..004, acoustic drivers: evid-ss-drv-001..005, switch taxonomy + sourcing: evid-ss-sw-001..009). inline product-page links in the body are leads, not verification: where a claim below carries an evid marker it is corpus-verified, unmarked spec-sheet numbers (weights, per-switch descriptor prose) remain vendor-lead territory until gathered.
 
 > research on mechanical switch types, acoustic physics, community sound terminology, sound-first UX design, and reference communities for keeberia. written for in-browser sound testing and non-geek switch selection.
 
@@ -8,7 +8,7 @@
 
 ## 1. switch taxonomy by feel and sound
 
-mechanical keyboard switches are traditionally grouped by mechanical feel (linear, tactile, clicky, silent, hall-effect/magnetic, optical, low-profile). non-geek users rarely choose based on spring weight or actuation millimeter; they choose based on how the keypress feels under the finger and how it sounds to their ears.
+mechanical keyboard switches are traditionally grouped by mechanical feel (linear, tactile, clicky, silent, hall-effect/magnetic, optical, low-profile). the family boundaries and the two-weight convention (actuation g vs bottom-out g) are corpus-verified `[evid-ss-sw-002, evid-ss-sw-003]`. non-geek users rarely choose based on spring weight or actuation millimeter; they choose based on how the keypress feels under the finger and how it sounds to their ears.
 
 below is a taxonomy of the 7 major switch families with 10–15 benchmark examples per family, detailing their tactile feel, stem construction, and specific acoustic signatures.
 
@@ -21,7 +21,7 @@ linear switches feature a smooth, uninterrupted key travel from top to bottom-ou
 #### popular examples and acoustic signatures
 
 1. **gateron oil king**
-   - *feel*: smooth, medium-heavy 55g actuation / 80g bottom-out.
+   - *feel*: smooth, medium-heavy 55g actuation / 80g bottom-out. `[evid-ss-sw-001, evid-ss-sw-002]`
    - *sound descriptor*: deep, thocky, low-pitched thud. nylon upper housing and black secret-blend bottom housing dampen top-out noise, resulting in a dense, quiet rebound and heavy bottom-out impact.
    - *source*: [divinikey gateron oil king](https://divinikey.com/products/gateron-oil-king-linear-switches)
 
@@ -283,7 +283,7 @@ silent switches employ internal rubber, silicone, or TPE dampeners on the stem r
 
 ### 5. hall-effect / magnetic switches (rapid trigger)
 
-magnetic hall-effect (HE) switches replace physical contact leaves with a permanent magnet inside the stem and a hall sensor on the pcb. without metallic leaf friction or leaf chatter, acoustic sound comes strictly from stem collisions against bottom and top housings.
+magnetic hall-effect (HE) switches replace physical contact leaves with a permanent magnet inside the stem and a hall sensor on the pcb, which is what makes them contactless and position-measurable `[evid-ss-sw-006]`, with rapid trigger documented as a firmware feature built on that hardware `[evid-ss-sw-005]`. without metallic leaf friction or leaf chatter, acoustic sound comes strictly from stem collisions against bottom and top housings.
 
 #### popular examples and acoustic signatures
 
@@ -465,11 +465,15 @@ low-profile switches (kailh choc v1/v2, gateron low profile) feature reduced tot
 
 ---
 
+mounting pin variants (3-pin vs 5-pin) share identical electrical contacts; 5-pin adds three plastic alignment legs for pcb-mount seating and clips down to 3-pin for plate-mount boards `[evid-ss-sw-007, evid-ss-sw-009]`.
+
+---
+
 ## 2. community sound lexicon
 
 the custom mechanical keyboard community has developed a rich, albeit informal acoustic vocabulary. non-geek users frequently arrive with these terms in mind after seeing videos on tiktok, youtube shorts, or twitch.
 
-below are plain-language definitions for the nine dominant acoustic terms used in switch and keyboard sound culture.
+below are plain-language definitions for the nine dominant acoustic terms used in switch and keyboard sound culture. corpus caveats: the community itself treats these as listening words, not standardized measurements `[evid-ss-lex-001]`; usage is unstable in the wild, with clacky conflated into thocky and creamy derived as a mashup term `[evid-ss-lex-003, evid-ss-lex-004]`, so keeberia's picker ships its own glossary definitions rather than inheriting loose community usage. the thocky = deep/heavy/resonant vs clacky = sharp/bright split is vendor-editorial confirmed `[evid-ss-lex-002]`.
 
 ```text
 [thock]        --------------------> deep, bassy, heavy wooden thud (< 500 Hz)
@@ -554,8 +558,10 @@ the overall sound of a mechanical keyboard or macropad is an acoustic system. a 
 
 ### breakdown of physical variables
 
-#### 1. switch type & internal geometry
-- **stem pole length**: standard stems hit housing rails first; "long-pole" stems hit the bottom housing floor directly. long-pole stems increase acoustic volume by 4–6 dB and pitch the bottom-out sound upward toward a crisp clack or pop.
+corpus-verified driver lines: plate material pitch (brass brighter, pc cushioned) `[evid-ss-drv-001]`, foam positions (case foam absorbs cavity vibration, plate dampening sits between plate and pcb) `[evid-ss-drv-002]`, case internal geometry and edge reflection `[evid-ss-drv-003]`, lube removing spring ping and stem friction `[evid-ss-drv-004]`, silent-switch silicone dampener pads in the stem `[evid-ss-drv-005]`. the dB and hz numbers in this section are modelled estimates, not corpus measurements: measured hz/db data is an open evidence question (own reference boards, per the sound-sourcing decision).
+
+#### 1. switch type & internal geometry [evid-ss-drv-004]
+- **stem pole length**: standard stems hit housing rails first; "long-pole" stems hit the bottom housing floor directly. (unverified dB figure above stays vendor-lead until gathered.) long-pole stems increase acoustic volume by 4–6 dB and pitch the bottom-out sound upward toward a crisp clack or pop.
 - **housing plastic**:
   - *nylon (pa66)*: soft plastic, absorbs treble, yields warm deep thock.
   - *polycarbonate (pc)*: hard stiff plastic, reflects high frequencies, yields crisp bright clack.
@@ -751,6 +757,8 @@ export interface SwitchSoundMetadata {
 
 ## 5. existing sound-test resources and community databases
 
+no corpus lines here yet: the resource list below is lead territory. the sound-sourcing decision on record (offerings/types/README.md): in-product sound is recorded in-house on keeberia reference boards or synthesized, never community packs (pack licenses are unstated), and the blind-test ear-trainer pattern is adopted as a UX lens.
+
 keeberia can reference, cite, or integrate with established switch databases, community blogs, and audio creators.
 
 ### 1. review blogs & technical research sites
@@ -791,6 +799,10 @@ keeberia can reference, cite, or integrate with established switch databases, co
 ---
 
 ## 6. summary of key findings for keeberia
+
+verified and corpus-backed: family taxonomy, the two-weight convention, cherry datasheet specs incl. the 19.05 mm grid, hall-effect contactless operation + rapid trigger as firmware, choc low-profile dimensions, 3/5-pin mounting, the lexicon's listening-word nature, plate/foam/case/lube/silent-pad driver lines.
+
+still open (lead or modelled): per-switch descriptor prose below the family level, long-pole dB claims, measured hz/db analyses, sound-test resource verification, and the picker's metadata schema (section 4 is design prose, no corpus lines).
 
 1. **non-geeks shop by sound, not specs**: standard specs (actuation distance, spring force) confuse beginners. organizing switches by acoustic category ("thocky", "creamy", "marbly", "clacky", "clicky", "silent") provides immediate clarity.
 2. **long-pole stem vs standard pole dictates pitch**: switches with extended stems (long-pole) hit the housing floor earlier, generating a louder, crisper, higher-pitched pop or clack. standard stems produce a deeper, rounder sound.

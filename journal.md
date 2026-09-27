@@ -677,3 +677,16 @@ research-from-zero.
 switches-and-sound.md got its corpus pointer header (evid-ss-* ids) as
 the interim retrofit; the full line-by-line retrofit of that doc's body
 is still pending.
+
+## switches-and-sound retrofit done (sept 27)
+
+the doc's body now carries the evid-ss-* markers where the corpus
+actually backs the claim: family taxonomy + two-weight convention, oil
+king specs, hall-effect contactless + rapid trigger as firmware, choc
+dims, 3/5-pin mounting, the lexicon's listening-word caveats and
+clacky/thocky conflation, and the plate/foam/case/lube/silent-pad
+driver lines. honest splits stay visible: unmarked per-switch spec
+numbers are vendor leads, the dB figures in section 3 are modelled not
+measured (measured hz/db is an open evidence question, in-house
+recordings per the sourcing decision), and sections 4 and 5 are design
+prose and lead territory with no corpus lines yet.
