@@ -708,3 +708,25 @@ based, nordic legend sets split by language pair. 4 new corpus lines
 per-language variants section with the three-way frame: language
 version x physical standard x logical layout, independent choices per
 buyer. corpus 249.
+
+## per-language-pass corpus pages (sept 27, wrap-up)
+
+research/languages/ now holds one evidence-citing page per keeb language
+pass (v0.1 english through v3 indic+rtl), each with the three-way frame
+(physical standard x logical layout x legend set), evidenced facts with
+evid ids, and honest open questions for the pass evidence round.
+
+four new corpus lines close old flags: inscript is now excerpt-backed
+(closes the line dropped in the first verification pass), the arabic
+cursive contextual-forms fact closes the v3 open engine flag from the
+ladder note (it is a shaping requirement, still an engine choice to
+make), serbo-croatian/slovene five extra glyphs backs the v0.5 pattern,
+and pinyin-over-qwerty lands the v2 thesis that CJK legends are
+aesthetic, not input-required. the nordic pair split and per-country
+romance/slavic legend lines stay flagged as open questions rather than
+asserted. corpus 253.
+
+night wrap-up: corpus at 253 lines, sound + language fronts closed,
+per-pass pages in place. remaining later: phases 14-17, measured
+hz/db evidence, frontend wiring, per-pass gather rounds when each
+version turns on.
