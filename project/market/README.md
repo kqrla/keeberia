@@ -1,37 +1,20 @@
 # the market
 
-or simply put: before keeberia can sell to the custom-input world, this
-folder has to say who that world is, in numbers we can source and defend.
+> thesis: keeberia's market is defined by who the product removes pain for, not by keyboard industry headcounts. the folder names the profiles and the locales first, then earns the numbers the same way the fab corpus did: claims get sources, sources get excerpts, numbers get ranges.
 
-this is the market-definition layer — the who/where/how-much behind the
-product families in `../offerings/`. it starts as questions, becomes
-evidence the same way the fab corpus did: claims get sources, sources get
-excerpts, numbers get ranges.
+or simply put: before keeberia can sell to the custom-input world, this folder has to say who that world is and where they are, in numbers we can source and defend. it is not one dump: the profiles live in one file, the locale map in another.
 
-the segments to define (draft, to be evidenced later):
+## files in this folder
 
-- **macropad / stream-deck users** — streamers, editors, cad users. they buy
-  finished pads today (elgato, luaPAD-class 3x3s). price band, volume, and
-  where they hang out: to research.
-- **custom keyboard enthusiasts** — r/mechanicalkeyboards, keebfolks, discord
-  scene. they buy group-buys and self-build; they are the natural first
-  users of "design your own" but the hardest to wow. what they already spend
-  per board: to research (group-buy boards commonly land in the low
-  hundreds of dollars — verify with evidence, don't quote).
-- **ergonomic / split keyboard users** — the community that already
-  generates its own pcbs by hand (zmk/qmk forks, corne-class boards). the
-  pain keeberia removes is largest here.
-- **makers who want one custom input device** — not hobbyists of keyboards
-  specifically, just people who want a made-to-order macro panel for their
-  desk. probably the actual mass market, least defined.
+- [target-user-profile.md](target-user-profile.md): the five buyer profiles (macropad/stream-deck users, keyboard enthusiasts, ergo/split users, desk makers, fidget/clickety buyers), what each buys today, what keeberia removes for them, and their open numbers.
+- [target-locale.md](target-locale.md): the locale map, scoped per product pass: pass one file downloads (one-off purchase, no subscription, buyer self-fabricates) vs pass two connected fab ordering (deny-by-default per fab route). includes the high-ppp priority marks and the research holds.
 
-channels to map later: etsy / tindie / makerworld storefronts, group-buy
-platforms, the print-and-assemble services (who actually fulfills a
-keeberia design today — aisler/jlcpcb boards + sla shops + hand assembly),
-and direct.
+## the wedge (repo-internal, not market evidence)
 
-what we hold as true today (repo-internal, not market evidence): keeberia's
-wedge is that no existing tool takes a non-engineer from "i want a pad with
-these six keys and a knob" to manufacturable gerbers + case + caps in one
-sitting. the market sizing that proves the wedge is worth money — later,
-here, with sources.
+what we hold as true today: keeberia's wedge is that no existing tool takes a non-engineer from "i want a pad with these six keys and a knob" to manufacturable gerbers + case + caps in one sitting. profiles 2 and 3 (enthusiasts, ergo users) are pass-one capable and double as the correctness proof audience; profiles 1 and 4 convert best once connected ordering or a curated fab path exists.
+
+## the evidence pass (later, here, with sources)
+
+per profile: price bands, replacement cycles, spend per build, community sizes, and hangouts. per locale: digital-goods tax treatment, payment coverage, fab destination reality, and demand signals for the high-ppp cohort. channels to map: etsy / tindie / makerworld storefronts, group-buy platforms, print-and-assemble fulfillment (who actually builds a keeberia design today), and direct.
+
+until then, everything here is planning state, not promises.
