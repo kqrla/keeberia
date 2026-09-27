@@ -620,3 +620,31 @@ with scripts instead (bulk fetch, normalized verbatim matching, fuzzy
 alignment to repair loose quotes, manual judgment on the weak matches).
 verify-*.jsonl files are committed as the per-front audit trail of every
 verdict.
+
+## switches + sound front, gathered and merged (sept 27, pre-dawn)
+
+the lexicon + sound pass is in: 18 lines across three subfronts (lexicon,
+acoustic drivers, switch taxonomy + sourcing), all live-verified at gather
+time so this one needed no repair pass. corpus is at 235.
+
+the good finds: cherry's own silent red datasheet confirms the 19.05 mm
+standard grid dimension, which upgrades the unit-pitch fact from a
+community wiki line (deskthority, "no international standard specifies
+it") to manufacturer-official data, worth citing together. the kbd.news
+and keeb-finder oil king lines pin the actuation-vs-bottom-out two-weight
+convention every vendor page uses. rapid trigger is documented as a
+firmware feature over hall-effect hardware, which lands in the firmware
+scope: firmware targets expose it as configuration, not as different
+switches. and the dangkeebs piece gives the honest lexicon caveat: the
+community conflates clacky with thocky and derives creamy as a mashup
+term, so keeberia's picker needs its own glossary rather than inherited
+loose usage. same page also notes the whole descriptors-are-listening-
+words-not-measurements framing that kbdfans states outright.
+
+workers stalled at their checkpoints a third time, so the whole front was
+gathered in-conversation (search batches + live fetches + verbatim
+extraction, all at once). pending next: retrofit evidence pointers into
+scope/research/switches-and-sound.md sections, and the same treatment for
+whatever the sound-picker work needs next (in-house recording provenance
+is already decided: own reference boards or synthesized, never community
+packs).
