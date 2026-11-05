@@ -767,3 +767,15 @@ drc is unwired, 2-layer only, i2c-only oleds, freeroute bridge untested
 (jar absent). suggested order recorded in the doc, cheapest first: drive
 route constants from the fab record.
 
+## circuitron gets fab rules (nov 5 2026)
+
+the audit's cheap fix landed: fab capability records now drive the pcb
+engine. circuitron takes a fab profile, clamps geometry to its own floors so
+validated boards do not move, and takes the fab's real drc numbers. the
+matrix test (5 fabs x 4 boards) caught a genuine defect on the first run:
+vias at 0.7/0.35 are a 0.175 annular ring, under jlcpcb's 0.20 minimum and
+half its 0.25 recommendation. every board we had "validated" was borderline
+at the fab. vias are 0.85 now (0.25 annular) and the engine drc enforces the
+floor. protoflow dropped per anne; kicad-cli wired as an optional server-side
+second opinion so users never need kicad installed.
+

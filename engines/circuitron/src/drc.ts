@@ -17,7 +17,30 @@ function distSegPoint(a: Pt, b: Pt, p: Pt): number {
   return Math.hypot(p.x - (a.x + t * dx), p.y - (a.y + t * dy));
 }
 
-export function runDrc(ctx: BoardCtx, result: PcbResult): PcbResult {
+/** fab-driven thresholds. the engine defaults reproduce the pre-fab
+ *  checks exactly, so a board with no fab selected is unchanged. */
+export interface DrcLimits {
+  fabId?: string;
+  spacingMm: number;        // trace-to-foreign-pad
+  edgeMm: number;           // copper-to-board-edge
+  minTraceWidthMm: number;  // 0 = not checked
+  minAnnularMm: number;     // via annular ring, 0 = not checked
+  minDrillMm: number;       // through-hole pad drill, 0 = not checked
+  minViaDrillMm: number;
+  minViaDiameterMm: number;
+}
+
+export const ENGINE_DRC: DrcLimits = {
+  spacingMm: 0.13, edgeMm: 0.2,
+  minTraceWidthMm: 0, minAnnularMm: 0.2, minDrillMm: 0,
+  minViaDrillMm: 0, minViaDiameterMm: 0,
+};
+
+export function runDrc(
+  ctx: BoardCtx,
+  result: PcbResult,
+  limits: DrcLimits = ENGINE_DRC,
+): PcbResult {
   const w = ctx.outline.width / 2, h = ctx.outline.height / 2;
   // pads carry their true shape: a capsule (oval) is narrow across its short
   // axis, and measuring it as a max-dimension circle would flag legal routes.
@@ -62,7 +85,7 @@ export function runDrc(ctx: BoardCtx, result: PcbResult): PcbResult {
   for (const seg of result.segments) {
     // outline check
     for (const p of [seg.start, seg.end]) {
-      if (Math.abs(p.x) > w - 0.2 || Math.abs(p.y) > h - 0.2) {
+      if (Math.abs(p.x) > w - limits.edgeMm || Math.abs(p.y) > h - limits.edgeMm) {
         result.warnings.push({ level: "error", message: `trace outside board edge on net ${seg.net}`, net: seg.net });
       }
     }
@@ -87,7 +110,7 @@ export function runDrc(ctx: BoardCtx, result: PcbResult): PcbResult {
       } else {
         d = distSegPoint(seg.start, seg.end, pad.pos) - pad.radius;
       }
-      if (d < seg.width / 2 + 0.13) {
+      if (d < seg.width / 2 + limits.spacingMm) {
         result.warnings.push({
           level: "error",
           message: `trace of net ${seg.net} clears pad ${pad.name} (net ${pad.net ?? "none"}) by only ${d.toFixed(2)}mm`,
@@ -96,6 +119,46 @@ export function runDrc(ctx: BoardCtx, result: PcbResult): PcbResult {
       }
     }
   }
+  // ── fab-floor checks (no-ops under ENGINE_DRC) ──────────────────────────
+  const floor = (v: number) => Math.round(v * 10000) / 10000;
+  if (limits.minTraceWidthMm > 0) {
+    for (const seg of result.segments) {
+      if (seg.width < limits.minTraceWidthMm - 1e-9) {
+        result.warnings.push({
+          level: "error",
+          message: `trace width ${floor(seg.width)}mm is under ${limits.fabId ?? "the fab"}'s ${limits.minTraceWidthMm}mm floor on net ${seg.net}`,
+          net: seg.net,
+        });
+      }
+    }
+  }
+  for (const via of result.vias ?? []) {
+    const annular = (via.size - via.drill) / 2;
+    if (limits.minViaDrillMm > 0 && via.drill < limits.minViaDrillMm - 1e-9) {
+      result.warnings.push({ level: "error", message: `via drill ${floor(via.drill)}mm is under ${limits.fabId ?? "the fab"}'s ${limits.minViaDrillMm}mm floor` });
+    }
+    if (limits.minViaDiameterMm > 0 && via.size < limits.minViaDiameterMm - 1e-9) {
+      result.warnings.push({ level: "error", message: `via diameter ${floor(via.size)}mm is under ${limits.fabId ?? "the fab"}'s ${limits.minViaDiameterMm}mm floor` });
+    }
+    if (limits.minAnnularMm > 0 && annular < limits.minAnnularMm - 1e-9) {
+      result.warnings.push({ level: "error", message: `via annular ring ${floor(annular)}mm is under ${limits.fabId ?? "the fab"}'s ${limits.minAnnularMm}mm floor` });
+    }
+  }
+  if (limits.minDrillMm > 0) {
+    for (const pl of ctx.placements) {
+      const fp = FOOTPRINTS[pl.library];
+      for (const pad of fp.pads) {
+        const drill = (pad as { drill?: number }).drill;
+        if (typeof drill === "number" && drill > 0 && drill < limits.minDrillMm - 1e-9 && pad.type === "thru_hole") {
+          result.warnings.push({
+            level: "error",
+            message: `drill ${floor(drill)}mm on pad ${pl.ref}.${pad.pad} is under ${limits.fabId ?? "the fab"}'s ${limits.minDrillMm}mm floor`,
+          });
+        }
+      }
+    }
+  }
+
   // dedupe
   const seen = new Set<string>();
   result.warnings = result.warnings.filter((w) => {

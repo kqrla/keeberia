@@ -71,3 +71,21 @@ the pcb front is not neglected. it is ahead of the case side in engine completen
 3. exercise dsn/ses with a real freerouting jar and record the round trip in a test
 4. add the 2-layer-only assumption to the README's constraint list
 5. decide the spi oled question at the part-record level, not the footprint level
+
+
+## fix landed (nov 5 2026, same day)
+
+the cheapest item from the list is done: circuitron now takes a fab profile
+(`src/fab.ts`) and derives the routing floors and drc thresholds from
+`research/manufacturing/capabilities/<id>.json`. no fab selected still means
+the engine's own numbers. `test/fab.ts` runs all five records against all
+four boards, and the matrix immediately paid for itself: our vias were
+0.7mm over a 0.35mm drill, a 0.175mm annular ring, under jlcpcb's 0.20
+minimum and well under its 0.25 recommendation. vias are 0.85mm now and the
+engine drc refuses anything thinner.
+
+protoflow: dropped by anne, not needed for this. kicad-cli: wired as an
+optional second opinion (`test/kicad_drc.ts`), server/ci only, skipped when
+the binary is absent. the user never needs kicad.
+
+still open: 4-layer, oled spi, freeroute round trip, stackup choice.

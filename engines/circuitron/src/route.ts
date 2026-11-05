@@ -16,16 +16,26 @@ import { Net, RouteWarning, Segment, Via } from "./types.ts";
 import { BoardCtx, padAbsPos } from "./layout.ts";
 import { FOOTPRINTS } from "./footprints.ts";
 
-const RES = 0.5;            // grid resolution mm
-const VIA_COST = 16;         // layer-change penalty
-const DIAG = 1.414;
-const EDGE_CLEAR = 0.6;      // copper-to-edge clearance
-const TRACE_W = 0.25;
-const TRACE_W_POWER = 0.45;
-const VIA_SIZE = 0.7;
-const VIA_DRILL = 0.35;
-const PAD_CLEAR = 0.35;     // halo clearance around foreign pads
-const PAD_CORE = 0.18;       // hard clearance around pad copper
+/** the numbers the router draws with. a fab profile can tighten them
+ *  (fab.ts clamps to these floors), never loosen them. */
+export interface RouteConstants {
+  res: number;        // grid resolution mm
+  viaCost: number;    // layer-change penalty
+  diag: number;
+  edgeClear: number;  // copper-to-edge margin mm
+  traceW: number;
+  traceWPower: number;
+  viaSize: number;   // 0.85 over a 0.35 drill = 0.25 annular, the jlcpcb recommended floor
+  viaDrill: number;
+  padHalo: number;    // halo clearance around foreign pads
+  padCore: number;    // hard clearance around pad copper
+}
+
+export const ENGINE_ROUTE: RouteConstants = {
+  res: 0.5, viaCost: 16, diag: 1.414, edgeClear: 0.6,
+  traceW: 0.25, traceWPower: 0.45, viaSize: 0.85, viaDrill: 0.35,
+  padHalo: 0.35, padCore: 0.18,
+};
 
 interface Grid {
   x0: number; y0: number;
@@ -83,7 +93,17 @@ class Heap {
   get size() { return this.a.length; }
 }
 
-export function routeAll(ctx: BoardCtx, nets: Net[]): RouteResult {
+export function routeAll(
+  ctx: BoardCtx,
+  nets: Net[],
+  profile: RouteConstants = ENGINE_ROUTE,
+): RouteResult {
+  const {
+    res: RES, viaCost: VIA_COST, diag: DIAG, edgeClear: EDGE_CLEAR,
+    traceW: TRACE_W, traceWPower: TRACE_W_POWER,
+    viaSize: VIA_SIZE, viaDrill: VIA_DRILL,
+    padHalo: PAD_CLEAR, padCore: PAD_CORE,
+  } = profile;
   const { outline } = ctx;
   const x0 = -outline.width / 2 - EDGE_CLEAR - RES * 2;
   const y0 = -outline.height / 2 - EDGE_CLEAR - RES * 2;
