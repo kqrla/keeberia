@@ -779,3 +779,25 @@ at the fab. vias are 0.85 now (0.25 annular) and the engine drc enforces the
 floor. protoflow dropped per anne; kicad-cli wired as an optional server-side
 second opinion so users never need kicad installed.
 
+## 3d preview assets (nov 5 2026)
+
+anne's ask: the two 3d views (pcb only, pcb plus case) should have their
+component bodies prefetched instead of fetched at render time. the repo
+already held ten vendored step files from the sept 25 hunt, parked in
+research with prose provenance and nothing consuming them. they now live in
+assets/models/ with a manifest (source repo, license, sha256, and bounding
+boxes measured from the real vendor meshes) and a prefetch tool that
+verifies hashes and converts step to mesh json via occt-import-js (a dev
+dependency; the engines stay zero-dep and the browser never parses step).
+
+circuitron gained src/scene3d.ts: one deterministic scene, two views. board
+numbers, per-component transforms with real z from the model bbox, optional
+case block on the same plate and standoff records paracraft uses. proxies
+cover anything unbound, so the preview never blocks on a missing asset.
+test/scene3d.ts passes on all four boards, deterministic across runs, with
+oled as the only proxy left.
+
+the honest constraint: grabcad has no api and per-model licenses vary, so
+those entries are manual pulls with the license recorded before use, and
+the script only fetches allowlisted hosts. oled modules are the current gap.
+

@@ -2,6 +2,14 @@
 title: vendor 3d models, step, provenance
 ---
 
+# step models (moved)
+
+the files themselves now live in `assets/models/` with a manifest that records
+source repo, license, hash, and measured bounding boxes. this page stays as the
+research note for how they were found.
+
+---
+
 # step models: vendor geometry for the viewer and checkman
 
 > thesis: paracraft and the caps engine generate all their own geometry

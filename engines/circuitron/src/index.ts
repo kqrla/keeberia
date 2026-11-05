@@ -13,6 +13,7 @@ import { runDrc } from "./drc.ts";
 import { buildBom, buildQmkInfo } from "./bom.ts";
 import { exportKicadPcb } from "./kicad.ts";
 import { FabProfile, FabSpec, resolveFab } from "./fab.ts";
+import { buildScene3d, Scene3d, Scene3dOptions } from "./scene3d.ts";
 import { NetlistResult } from "./netlist.ts";
 import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, EC11, XIAO, OLED_091 } from "./footprints.ts";
 
@@ -24,12 +25,15 @@ export interface EngineOutput {
   netlist: NetlistResult;
   /** which fab rules shaped this board; engine-default when none was chosen */
   fab: Pick<FabProfile, "id" | "source" | "thicknessMm" | "layers" | "maxBoardMm" | "notes">;
+  /** deterministic 3d scene for the viewer: pcb only, or pcb plus case */
+  scene3d: Scene3d;
 }
 
 export function generatePcb(
   layout: KeeberiaLayout,
   router: "engine" | "freerouting" = "engine",
   fab?: FabSpec,
+  scene?: Scene3dOptions,
 ): EngineOutput {
   const profile = resolveFab(fab);
   // 1. place
@@ -102,7 +106,10 @@ export function generatePcb(
     maxBoardMm: profile.maxBoardMm,
     notes: profile.notes,
   };
-  return { result, kicadPcb, bomCsv, qmkInfo, netlist, fab: fabInfo };
+  // 6b. viewer scene: mm numbers only, model bindings optional
+  const scene3d = buildScene3d(ctx, result, { thicknessMm: profile.thicknessMm, ...(scene ?? {}) });
+
+  return { result, kicadPcb, bomCsv, qmkInfo, netlist, fab: fabInfo, scene3d };
 }
 
 function bomToCsv(bom: PcbResult["bom"]): string {
