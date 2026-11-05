@@ -751,3 +751,19 @@ evidence for per-rule unit fields). swiss german/french two-face split
 also landed from the qwertz page, resolving the v0.2 swiss question.
 corpus 254. the nordic pair line stays honestly open. night wrapped for
 real now: credits nearly out, reset in 3 days.
+
+## circuitron audit (nov 5 2026)
+
+backfilled scope/modality onto the 74 legacy fab-corpus lines (0fc7c95), so
+all 254 evidence lines now carry the two-sided attribution (pcb 114, case
+28, shared 84, firmware 28). then ran the pcb engine for the first time in
+weeks: 4 reference boards, all nets routed, 0 drc errors, kicad exports
+parse, gerber exports cross-check. circuitron is healthy and worker-wired.
+wrote docs/circuitron-status.md with the finding that matters: the generator
+hardcodes its own clearance and stack constants, and its only drc authority
+is itself. corpus fab rules reach checkman after generation, never the
+generator. protoflow (allocated for exactly this) is unwired, kicad-cli
+drc is unwired, 2-layer only, i2c-only oleds, freeroute bridge untested
+(jar absent). suggested order recorded in the doc, cheapest first: drive
+route constants from the fab record.
+
