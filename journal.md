@@ -801,3 +801,24 @@ the honest constraint: grabcad has no api and per-model licenses vary, so
 those entries are manual pulls with the license recorded before use, and
 the script only fetches allowlisted hosts. oled modules are the current gap.
 
+## pcb structure vs taste, and downloadable solids (nov 5 2026)
+
+anne's framing: decouple the vanity from the functional, and give the user
+step and glb/stl they can take away. done in one pass.
+
+silhouette is an input now (rect, polygon, or an uploaded dxf the engine
+stitches from line and lwpolyline entities), validated as a rule: closed,
+self intersection free, minimum width, cutout webs, and every pad must sit
+inside it or the board errors. decorative cutouts and silkscreen art live in
+vanity.ts with their own checks against the fab record, so taste can never
+loosen structure.
+
+downloads: stl and glb from one triangulation whose volume the test proves
+(area times thickness minus cutouts, to rounding). step took two wrong turns
+worth recording: a faceted brep (poly_loop faces) is schema valid and every
+reader we have dropped it silently, and the plain-face version only parsed
+once the file carried a proper application context and a product tree with a
+placement representation the brep hangs from. occt now reads our brep back
+and agrees with the internal mesh. the writer emits exact planar faces, which
+is what kernels actually accept, and the test refuses to ship unverified.
+

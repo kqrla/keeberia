@@ -154,7 +154,11 @@ function fpSilkLines(pl: Placement): Array<[Pt, Pt]> {
 
 const EDGE_SEGMENTS_PER_CORNER = 8;
 
-export function exportGerbers(result: PcbResult): { files: Record<string, string>; warnings: Array<{ level: "warning" | "error"; message: string }> } {
+export function exportGerbers(
+  result: PcbResult,
+  shape?: { kind: "rect"; width: number; height: number; cornerRadius: number } | { kind: "polygon"; points: Array<{ x: number; y: number }> },
+  cutouts?: Array<Array<{ x: number; y: number }>>,
+): { files: Record<string, string>; warnings: Array<{ level: "warning" | "error"; message: string }> } {
   const files: Record<string, string> = {};
   const warnings: Array<{ level: "warning" | "error"; message: string }> = [];
   const maskExpand = 0.1;   // mm per side, mask openings larger than pads
@@ -208,8 +212,15 @@ export function exportGerbers(result: PcbResult): { files: Record<string, string
     }
   }
 
-  // ── edge cuts: rounded rect, arcs approximated by segments (deterministic) ──
-  {
+  // ── edge cuts: user polygon when present, else the rounded rect ──
+  if (shape && shape.kind === "polygon") {
+    const g = layers["Edge.Cuts"];
+    const loop = (pts: Pt[]) => {
+      for (let i = 0; i < pts.length; i++) g.line(pts[i], pts[(i + 1) % pts.length], 0.1);
+    };
+    loop(shape.points);
+    for (const c of cutouts ?? []) loop(c);
+  } else {
     const g = layers["Edge.Cuts"];
     const w = result.outline.width, h = result.outline.height, r = result.outline.cornerRadius;
     const edge = 0.1; // stroke ~ a hairline

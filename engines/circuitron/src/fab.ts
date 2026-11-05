@@ -33,6 +33,8 @@ export interface FabProfile {
   maxBoardMm: [number, number];
   silkMinLineMm: number;
   silkMinTextMm: number;
+  /** narrowest non-plated cutout/slot the fab will route (shape + vanity cutouts) */
+  minCutoutWidthMm: number;
   /** human-readable deltas vs the engine defaults, for reports and the ui */
   notes: string[];
 }
@@ -74,6 +76,7 @@ export function engineProfile(): FabProfile {
     maxBoardMm: [670, 600],
     silkMinLineMm: 0.15,
     silkMinTextMm: 1.0,
+    minCutoutWidthMm: 1.0,
     notes: ["no fab selected: engine floors only"],
   };
 }
@@ -173,6 +176,7 @@ export function fabFromRecord(id: string, record: unknown): FabProfile {
   const silk = pick(rules, "silkscreen");
   const silkMinLineMm = firstNum(silk, "min_line_width_mm", "min_stroke_width_mm") ?? base.silkMinLineMm;
   const silkMinTextMm = firstNum(silk, "min_text_height_mm") ?? base.silkMinTextMm;
+  const minCutoutWidthMm = firstNum(rules, "min_nonplated_slot_width_mm") ?? base.minCutoutWidthMm;
   if (silkMinLineMm > base.silkMinLineMm || silkMinTextMm > base.silkMinTextMm) {
     notes.push(`silkscreen floors ${silkMinLineMm}mm line / ${silkMinTextMm}mm text`);
   }
@@ -189,6 +193,7 @@ export function fabFromRecord(id: string, record: unknown): FabProfile {
     maxBoardMm,
     silkMinLineMm,
     silkMinTextMm,
+    minCutoutWidthMm,
     notes,
   };
 }

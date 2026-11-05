@@ -14,6 +14,7 @@
  */
 import { Net, RouteWarning, Segment, Via } from "./types.ts";
 import { BoardCtx, padAbsPos } from "./layout.ts";
+import { pointInShape } from "./outline.ts";
 import { FOOTPRINTS } from "./footprints.ts";
 
 /** the numbers the router draws with. a fab profile can tighten them
@@ -139,7 +140,10 @@ export function routeAll(
   for (let gy = 0; gy < ny; gy++)
     for (let gx = 0; gx < nx; gx++) {
       const wx = Math.abs(x0 + gx * RES), wy = Math.abs(y0 + gy * RES);
-      if (wx > outline.width / 2 - 0.45 || wy > outline.height / 2 - 0.45) {
+      const insideEdge = ctx.shape
+        ? pointInShape(ctx.shape, { x: wx, y: wy }, 0.45)
+        : Math.abs(wx) <= outline.width / 2 - 0.45 && Math.abs(wy) <= outline.height / 2 - 0.45;
+      if (!insideEdge) {
         grid.core[0][gy * nx + gx] = 1;
         grid.core[1][gy * nx + gx] = 1;
         grid.halo[0][gy * nx + gx] = 1;

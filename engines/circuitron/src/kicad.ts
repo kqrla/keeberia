@@ -124,6 +124,18 @@ function indent(s: string): string {
 }
 
 function edgeCuts(ctx: BoardCtx): string[] {
+  if (ctx.shape && ctx.shape.kind === "polygon") {
+    const out: string[] = [];
+    const loop = (pts: Array<{ x: number; y: number }>) => {
+      for (let i = 0; i < pts.length; i++) {
+        const a = pts[i], b = pts[(i + 1) % pts.length];
+        out.push(`  (gr_line (start ${f(a.x)} ${f(a.y)}) (end ${f(b.x)} ${f(b.y)}) (stroke (width 0.1) (type solid)) (layer "Edge.Cuts"))`);
+      }
+    };
+    loop(ctx.shape.points);
+    for (const c of ctx.cutouts ?? []) loop(c);
+    return out;
+  }
   const { width, height, cornerRadius: r } = ctx.outline;
   const w = width / 2, h = height / 2;
   const seg = (x1: number, y1: number, x2: number, y2: number) =>

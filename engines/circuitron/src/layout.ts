@@ -15,8 +15,12 @@ export interface BoardCtx {
   /** cell map, index = row*cols + col */
   cells: Cell[];
   options: Required<Pick<LayoutOptions, "mcu" | "hotswap" | "boardName" | "mounting" | "forceMatrix">>;
-  /** board bounds in board coords (after centering) */
+  /** board bounds in board coords (after centering); bbox of `shape` when one is set */
   outline: { width: number; height: number; cornerRadius: number };
+  /** the actual silhouette: rect (default) or a user polygon from a shape spec or dxf */
+  shape?: OutlineShape;
+  /** decorative/user cutouts, already validated against the fab profile */
+  cutouts?: Pt[][];
   placements: Placement[];
   /** offset applied: boardPt = gridPt - centerOffset */
   gridToBoard: (p: Pt) => Pt;

@@ -12,8 +12,12 @@ mkdirSync("out/gerbers", { recursive: true });
 let failed = false;
 
 for (const [name, layout] of layouts) {
-  const pcb = generatePcb(layout).result;
-  const { files, warnings } = exportGerbers(pcb);
+  const out = generatePcb(layout);
+  const pcb = out.result;
+  const shape = out.outline.shape === "polygon"
+    ? { kind: "polygon" as const, points: out.outline.points }
+    : { kind: "rect" as const, width: out.outline.bbox.width, height: out.outline.bbox.height, cornerRadius: out.outline.cornerRadius };
+  const { files, warnings } = exportGerbers(pcb, shape, out.outline.cutouts);
 
   const dir = `out/gerbers/${name}`;
   mkdirSync(dir, { recursive: true });

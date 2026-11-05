@@ -56,7 +56,13 @@ export async function runJob(job: DesignJob): Promise<JobResult> {
         return { jobId: job.id, ok: false, status: "error", error: caseErrors[0].message };
       }
       // gerbers: the jlc-orderable output, one artifact per fab file
-      const gerbs = exportGerbers(out.result);
+      const gerbs = exportGerbers(
+        out.result,
+        out.outline.shape === "polygon"
+          ? { kind: "polygon", points: out.outline.points }
+          : { kind: "rect", width: out.outline.bbox.width, height: out.outline.bbox.height, cornerRadius: out.outline.cornerRadius },
+        out.outline.cutouts,
+      );
       const gerberErrors = gerbs.warnings.filter((w) => w.level === "error");
       if (gerberErrors.length > 0) {
         return { jobId: job.id, ok: false, status: "error", error: gerberErrors[0].message };

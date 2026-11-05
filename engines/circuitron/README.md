@@ -36,6 +36,18 @@ is absent. nobody using keeberia needs kicad: the browser sends a layout, the
 daemon generates, and this gate runs before a human can order the artifacts.
 
 
+## structure vs taste, and the downloads
+
+the pipeline knows two kinds of input. structure (placements, nets, copper,
+clearances) is engine owned and verified. taste (silhouette as rect, polygon
+or uploaded dxf, decorative cutouts, silkscreen art) is user owned and
+validated against the same fab record, never allowed to loosen a rule. see
+`docs/pcb-artifacts.md` for the seam.
+
+three downloads come out of every board: `.step` (planar brep, verified by
+reading it back through occt), `.glb` (glTF 2.0, metres), `.stl` (binary,
+millimetres). `src/step.ts`, `src/mesh3d.ts`.
+
 ## pipeline
 
 ```

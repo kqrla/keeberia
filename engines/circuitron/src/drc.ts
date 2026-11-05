@@ -6,6 +6,7 @@
  */
 import { PcbResult, Pt } from "./types.ts";
 import { BoardCtx, padAbsPos } from "./layout.ts";
+import { pointInShape, shapePolygon, distToSegment } from "./outline.ts";
 import { FOOTPRINTS } from "./footprints.ts";
 
 function distSegPoint(a: Pt, b: Pt, p: Pt): number {
@@ -85,7 +86,14 @@ export function runDrc(
   for (const seg of result.segments) {
     // outline check
     for (const p of [seg.start, seg.end]) {
-      if (Math.abs(p.x) > w - limits.edgeMm || Math.abs(p.y) > h - limits.edgeMm) {
+      const edgeDist = (() => {
+        if (!ctx.shape) return Math.min(w - Math.abs(p.x), h - Math.abs(p.y));
+        const poly = shapePolygon(ctx.shape);
+        let best = Infinity;
+        for (let k = 0, m = poly.length - 1; k < poly.length; m = k++) best = Math.min(best, distToSegment(p, poly[m], poly[k]));
+        return pointInShape(ctx.shape, p, 0) ? best : -best;
+      })();
+      if (edgeDist < limits.edgeMm) {
         result.warnings.push({ level: "error", message: `trace outside board edge on net ${seg.net}`, net: seg.net });
       }
     }
