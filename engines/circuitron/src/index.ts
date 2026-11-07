@@ -18,13 +18,14 @@ import { budgetReport, BudgetReport } from "./budget.ts";
 import { OutlineSpec, resolveOutline, pointInShape, shapePolygon } from "./outline.ts";
 import { VanitySpec, validateVanity } from "./vanity.ts";
 import { NetlistResult } from "./netlist.ts";
+import type { QmkInfo } from "./types.ts";
 import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, EC11, XIAO, OLED_091 } from "./footprints.ts";
 
 export interface EngineOutput {
   result: PcbResult;
   kicadPcb: string;
   bomCsv: string;
-  qmkInfo: Record<string, unknown>;
+  qmkInfo: QmkInfo;
   netlist: NetlistResult;
   /** which fab rules shaped this board; engine-default when none was chosen */
   fab: Pick<FabProfile, "id" | "source" | "thicknessMm" | "layers" | "maxBoardMm" | "notes">;
@@ -59,7 +60,7 @@ export function generatePcb(
     minBoardMm: profile.minBoardMm,
     maxBoardMm: profile.maxBoardMm,
     minCutoutWidthMm: profile.minCutoutWidthMm,
-    minWebToEdgeMm: Math.max(1.0, profile.edgeClearMm),
+    minWebToEdgeMm: Math.max(1.0, profile.route.edgeClear),
   };
   const outlineRes = resolveOutline(
     (layout as { outline?: OutlineSpec }).outline,

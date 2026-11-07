@@ -11,6 +11,7 @@
  * compiled into a .uf2 by the containerized qmk worker (qmkfm/qmk_cli) —
  * that infra lands with the render.com deployment. no compile claims here.
  */
+import type { QmkInfo } from "./types.ts";
 import type { BoardCtx } from "./layout.ts";
 import type { NetlistResult } from "./netlist.ts";
 import { FOOTPRINTS } from "./footprints.ts";
@@ -24,7 +25,7 @@ export interface QmkBundle {
 function keyOrder(ctx: BoardCtx): Array<{ ref: string; label: string }> {
   return ctx.placements
     .filter((p) => FOOTPRINTS[p.library]?.category === "switch")
-    .map((p) => ({ ref: p.ref, label: p.label ?? p.ref }));
+    .map((p) => ({ ref: p.ref, label: p.value ?? p.ref }));
 }
 
 /** label → qmk keycode. small, honest table; unknown labels map to KC_NO. */
@@ -70,7 +71,7 @@ function sanitise(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "") || "pad";
 }
 
-export function buildQmkBundle(ctx: BoardCtx, netlist: NetlistResult, qmkInfo: Record<string, unknown>): QmkBundle {
+export function buildQmkBundle(ctx: BoardCtx, netlist: NetlistResult, qmkInfo: QmkInfo): QmkBundle {
   const warnings: string[] = [];
   const files: Record<string, string> = {};
   const name = ctx.options.boardName || "keeberia-pad";

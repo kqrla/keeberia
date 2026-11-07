@@ -4,6 +4,6 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_direct(
-    KC_NO, KC_NO, KC_NO
+    KC_ESC, KC_2, KC_3
 )
 };

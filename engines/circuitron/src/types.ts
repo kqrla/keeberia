@@ -117,7 +117,7 @@ export interface Segment {
 export interface Via { at: Pt; size: number; drill: number; net: string }
 
 export interface RouteWarning {
-  level: "warning" | "error";
+  level: "info" | "warning" | "error";
   message: string;
   net?: string;
 }
@@ -159,6 +159,8 @@ export interface CaseProjection {
   plateWindow?: { w: number; h: number };
   /** switch-plate thickness this part family is designed for (mx 1.5, choc 1.2) */
   plateThickness?: number;
+  /** plate top face above the pcb top face: the stack height the case build reads (mx 5.334, choc 2.2) */
+  plateTopToPcb?: number;
   /** usb-c shell + module stack hanging off the pcb's back (mcu carriers) */
   usbShell?: { w: number; h: number; moduleThickness: number };
 }
@@ -185,4 +187,19 @@ export interface FootprintDef {
   flipSilkWhenBack?: boolean;
   /** enclosure demands of this part (see CaseProjection) */
   case?: CaseProjection;
+}
+
+/** qmk info.json, as the engine emits it (data-driven keyboard definition) */
+export interface QmkInfo {
+  keyboard_name: string;
+  manufacturer: string;
+  usb: { vid: string; pid: string; device_version: string };
+  processor: string;
+  bootloader: string;
+  features: { encoder_keys?: boolean; oled?: boolean; extrakey?: boolean };
+  /** direct: one gpio per key. matrix: row and column pins */
+  matrix_pins?: { direct?: string[]; rows?: string[]; cols?: string[] };
+  diode_direction?: "COL2ROW";
+  layout?: Record<string, Array<{ x: number; y: number; w: number }>>;
+  encoder?: { enabled: boolean; encoder_pins: string[][] };
 }

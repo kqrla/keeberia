@@ -10,7 +10,7 @@ const PAD_SHAPE: Record<string, string> = {
   circle: "circle", rect: "rect", oval: "oval", roundrect: "roundrect",
 };
 
-function padLayers(pad: any, side: string): string {
+function padLayers(pad: any, side: string): string[] {
   if (pad.type === "thru_hole") return ["*.Cu", "*.Mask"];
   // smd pads live on the side the part is mounted on
   const cu = side === "B" ? "B.Cu" : "F.Cu";

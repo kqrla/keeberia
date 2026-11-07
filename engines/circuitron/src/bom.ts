@@ -3,9 +3,8 @@
  */
 import { BoardCtx } from "./layout.ts";
 import { NetlistResult } from "./netlist.ts";
-import { FootprintDef, PcbResult } from "./types.ts";
+import { FootprintDef, PcbResult, QmkInfo } from "./types.ts";
 import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, EC11, XIAO, OLED_091, M2_HOLE } from "./footprints.ts";
-import { DIODE_SOD123 } from "./netlist.ts";
 
 export function buildBom(ctx: BoardCtx): PcbResult["bom"] {
   const groups = new Map<string, { refs: string[]; value: string; footprint: string; notes?: string }>();
@@ -25,7 +24,7 @@ export function buildBom(ctx: BoardCtx): PcbResult["bom"] {
   }));
 }
 
-export function buildQmkInfo(ctx: BoardCtx, netlist: NetlistResult): Record<string, unknown> {
+export function buildQmkInfo(ctx: BoardCtx, netlist: NetlistResult): QmkInfo {
   const switches = ctx.placements.filter(
     (p) => FOOTPRINTS[p.library]?.category === "switch");
   const encoders = ctx.placements.filter((p) => FOOTPRINTS[p.library]?.category === "encoder");
@@ -36,7 +35,7 @@ export function buildQmkInfo(ctx: BoardCtx, netlist: NetlistResult): Record<stri
     .filter((c) => c.type === "key")
     .map((c) => ({ x: c.col, y: c.row, w: c.colSpan ?? 1 }));
 
-  const info: Record<string, unknown> = {
+  const info: QmkInfo = {
     keyboard_name: ctx.options.boardName,
     manufacturer: "keeberia",
     usb: { vid: "0xFEED", pid: "0x0001", device_version: "1.0.0" },

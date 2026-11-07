@@ -11,6 +11,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_direct(
-    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+    KC_1, KC_2, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9
 )
 };

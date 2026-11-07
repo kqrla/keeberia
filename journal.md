@@ -881,3 +881,41 @@ of pads and it is blocked on a rail decision (sk6812 wants 3.4v on data at 5v,
 evid-kc-016), wireless is second, and splits, stabilizers, pico and trackballs
 wait. choc hotswap stays blocked on a footprint record, not on code.
 
+## the build check (nov 7 2026)
+
+tsx strips types. that is the whole story: circuitron has been running green
+for months through a runner that never looks at a type annotation, so a file
+could import a symbol nobody exports, read a field its own interface dropped,
+or pass a list where a string is expected, and every suite would still pass.
+
+typechecked it properly today (typescript 5 against src/*.ts, strict). 18
+errors, 7 of them real:
+
+- firmware read `placement.label`, a field placements never had. the legend
+  lives in `value`. so every key fell through to its ref short-circuit and
+  every generated keymap was KC_NO. the committed artifacts prove it: ninepad
+  went from eight KC_NO to KC_1 through KC_9.
+- index.ts read `profile.edgeClearMm`, which FabProfile does not have (the
+  field is `route.edgeClear`). `Math.max(1.0, undefined)` is NaN, and every
+  comparison against NaN is false, so the cutout-to-edge web rule silently
+  passed everything whenever a fab was selected. a NaN floor is worse than no
+  rule: it looks enforced in the code and is enforced nowhere.
+- kicad padLayers was declared returning string but returns a layer list.
+- CaseProjection was missing plateTopToPcb, which paracraft already reads.
+- layout.ts used OutlineShape without importing it.
+- a dead import of DIODE_SOD123, a symbol netlist.ts never exported.
+- qmkInfo was Record<string, unknown> in the public EngineOutput, so nothing
+  could typecheck the firmware contract at all. it is a real QmkInfo now.
+
+plus the three freeroute errors, which were only missing @types/node.
+
+then the lesson half: `engines/circuitron/check.sh` is typecheck plus every
+suite in one command, and `test/edge.ts` locks both silent failures. the web
+rule is asserted across three fab records at 0.35mm (refused, dropped) and
+4mm (kept), and every reference board's keymap must have one code per key with
+no ref-des leaking through. build clean, and the downstream consumers
+(checkman 24 runs, paracraft 8 specs) are unchanged.
+
+or simply put: the engine was telling the truth about the board and lying
+about the firmware, and nothing was checking.
+

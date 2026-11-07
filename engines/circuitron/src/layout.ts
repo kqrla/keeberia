@@ -5,6 +5,7 @@
  */
 import { Cell, KeeberiaLayout, LayoutOptions, Placement, Pt, PcbResult } from "./types.ts";
 import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, CHOC_V1, EC11, OLED_091, XIAO, M2_HOLE } from "./footprints.ts";
+import type { OutlineShape } from "./outline.ts";
 
 export const DEFAULT_PITCH = 19.05;
 
