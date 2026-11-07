@@ -841,3 +841,21 @@ also closed the cutout loop: every cutout now emits a rout program (g85 slots,
 one per loop edge) beside its edge cuts loop, and the gerber test refuses to
 ship unless the slot count matches the edge count.
 
+## open source keyboards by type (nov 7 2026, firecrawl + github api)
+
+anne asked for other types, and the firecrawl key is what found the map:
+split, ortho and classic repositories, then the github api for trees and raw
+boards so nothing paid per page. sixteen boards parsed, plates and spacers
+dropped, twelve real boards left.
+
+the headlines. two layers everywhere, zero inner-layer segments including a
+board that declares In1.Cu and routes nothing on it. complexity scales about
+ten times from macropad (median 110 segments, 2 vias) to split (1038, 82) and
+ortho-40 (788, 59), so our reference boards are macropad class and the router
+has a scale hill to climb. splits mostly ship one reversible board rather
+than a mirrored pair, which is the cheap path for us. splits pour four of
+four while macropads pour nineteen of sixty, so our pour is conventional at
+keyboard scale and opinionated at pad scale. keychron's hardware repo is
+source available with a no-copy licence and no editable cad, so it stays a
+study source.
+
