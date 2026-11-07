@@ -6,6 +6,7 @@
 import { Cell, KeeberiaLayout, LayoutOptions, Placement, Pt, PcbResult } from "./types.ts";
 import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, CHOC_V1, EC11, OLED_091, XIAO, M2_HOLE } from "./footprints.ts";
 import type { OutlineShape } from "./outline.ts";
+import { rect as rectOf, rectFromCenter, boardRegion, silhouetteShape, recenterSilhouette, mountableCorners } from "./silhouette.ts";
 
 export const DEFAULT_PITCH = 19.05;
 
@@ -22,6 +23,8 @@ export interface BoardCtx {
   shape?: OutlineShape;
   /** decorative/user cutouts, already validated against the fab profile */
   cutouts?: Pt[][];
+  /** set when the cell arrangement cannot become a board (disconnected, empty) */
+  silhouetteError?: string;
   placements: Placement[];
   /** offset applied: boardPt = gridPt - centerOffset */
   gridToBoard: (p: Pt) => Pt;
@@ -165,41 +168,100 @@ export function placeComponents(layout: KeeberiaLayout): BoardCtx {
     nets: {},
   });
 
-  // outline: bounding box over every part courtyard (pads included via
-  // keepoutRadius when wider), plus edge margin. Computed AFTER placement so
-  // oversize parts (OLED breakouts) grow the board instead of overflowing.
+  // silhouette: the envelope everything must fit inside (every part courtyard
+  // plus margin, and every cell the board should cover), minus the cells the
+  // user blocked. a part never carves a notch: the mcu and a display sit on the
+  // board, they do not reshape it. an empty cell always does, because that is
+  // the shape the user painted. treated as a union of part courtyards instead,
+  // every display became a wing and the streamdeck lost six nets of routing.
   const margin = 2.5; // mm from courtyard to edge
   const m2Inset = 3.5; // mounting hole center inset from edge
   let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  const grow = (x0: number, y0: number, x1: number, y1: number) => {
+    minX = Math.min(minX, x0); maxX = Math.max(maxX, x1);
+    minY = Math.min(minY, y0); maxY = Math.max(maxY, y1);
+  };
   for (const pl of placements) {
     const fp = FOOTPRINTS[pl.library];
     const ext = Math.max(fp.size.w / 2, fp.keepoutRadius ?? 0);
     const extY = Math.max(fp.size.h / 2, fp.keepoutRadius ?? 0);
-    minX = Math.min(minX, pl.pos.x - ext);
-    maxX = Math.max(maxX, pl.pos.x + ext);
-    minY = Math.min(minY, pl.pos.y - extY);
-    maxY = Math.max(maxY, pl.pos.y + extY);
+    grow(pl.pos.x - ext - margin, pl.pos.y - extY - margin, pl.pos.x + ext + margin, pl.pos.y + extY + margin);
   }
-  minX -= margin; maxX += margin; minY -= margin; maxY += margin;
+  const cellRects: ReturnType<typeof rectOf>[] = [];
+  const blockRects: ReturnType<typeof rectOf>[] = [];
+  const occupied = new Set(cells.filter((c) => c.type !== "blocker").map((c) => `${c.row},${c.col}`));
+  for (const cell of cells) {
+    const c = cellCenter(cell, pitch);
+    const w = (cell.colSpan ?? 1) * pitch;
+    const h = (cell.rowSpan ?? 1) * pitch;
+    const r = rectFromCenter(c.x, c.y, w, h);
+    if (cell.type === "blocker") {
+      // a blocker with no neighbour on a side opens to that side, so an empty
+      // cell at the edge cuts through the margin instead of becoming an
+      // enclosed slot with a 2.5mm web of board around it
+      const cut = margin + 2;
+      blockRects.push(rectOf(
+        occupied.has(`${cell.row},${cell.col - 1}`) ? r.x0 : r.x0 - cut,
+        occupied.has(`${cell.row - 1},${cell.col}`) ? r.y0 : r.y0 - cut,
+        occupied.has(`${cell.row},${cell.col + 1}`) ? r.x1 : r.x1 + cut,
+        occupied.has(`${cell.row + 1},${cell.col}`) ? r.y1 : r.y1 + cut,
+      ));
+    } else {
+      cellRects.push(r);
+      grow(r.x0, r.y0, r.x1, r.y1);
+    }
+  }
+  if (!isFinite(minX)) throw new Error("nothing placed and no cells: there is no board to make");
+  const union = boardRegion(rectOf(minX, minY, maxX, maxY), blockRects);
+  // a shape the tracer refuses must reach the user as an error, never as a
+  // silent fall back to the bounding box
+  const silhouetteError = union.ok ? undefined : union.error;
+  const bb = union.ok
+    ? recenterSilhouette(union.silhouette).bbox
+    : { width: Math.round((maxX - minX) * 100) / 100, height: Math.round((maxY - minY) * 100) / 100 };
 
-  const outline = {
-    width: Math.round((maxX - minX) * 100) / 100,
-    height: Math.round((maxY - minY) * 100) / 100,
-    cornerRadius: 2.5,
-  };
-  const cx = (minX + maxX) / 2;
-  const cy = (minY + maxY) / 2;
-  const gridToBoard = (p: Pt): Pt => ({ x: p.x - cx, y: p.y - cy });
+  const outline = { width: bb.width, height: bb.height, cornerRadius: 2.5 };
+  const round6 = (v: number) => Math.round(v * 1e6) / 1e6;
+  const snap = (v: number) => (Math.abs(v) < 1e-9 ? 0 : v);
+  // the envelope bbox is the board bbox whether or not the trace succeeded
+  const cx = round6((minX + maxX) / 2);
+  const cy = round6((minY + maxY) / 2);
+  const gridToBoard = (p: Pt): Pt => ({ x: snap(p.x - cx), y: snap(p.y - cy) });
   for (const pl of placements) pl.pos = gridToBoard(pl.pos);
+
+  // the silhouette in board coords, for the engine to validate and ship
+  let shape: OutlineShape | undefined;
+  let cutouts: Pt[][] | undefined;
+  let silhouetteForHoles: ReturnType<typeof recenterSilhouette> | undefined;
+  if (union.ok) {
+    const shifted = recenterSilhouette(union.silhouette);
+    shape = silhouetteShape(shifted, outline.cornerRadius);
+    cutouts = shifted.holes.map((h) => h.map((q) => ({ x: Math.round(q.x * 1000) / 1000, y: Math.round(q.y * 1000) / 1000 })));
+    if (!shifted.holes.length) cutouts = undefined;
+    if (shape.kind === "polygon") {
+      shape = { kind: "polygon", points: shape.points.map((q) => ({ x: Math.round(q.x * 1000) / 1000, y: Math.round(q.y * 1000) / 1000 })) };
+    }
+    // mounting holes move onto real corners of a stepped board
+    if (shape.kind === "rect") {
+      // parity: a rectangular board keeps the exact dims it always had
+      shape = { kind: "rect", width: outline.width, height: outline.height, cornerRadius: outline.cornerRadius };
+    } else {
+      silhouetteForHoles = shifted;
+    }
+  }
 
   // mounting holes
   if (opts.mounting === "corner") {
     const hx = outline.width / 2 - m2Inset;
     const hy = outline.height / 2 - m2Inset;
-    const holes: Pt[] = [
-      { x: -hx, y: -hy }, { x: hx, y: -hy },
-      { x: -hx, y: hy }, { x: hx, y: hy },
-    ];
+    const holes: Pt[] = silhouetteForHoles
+      // a stepped board has no bounding-box corners to trust: put the holes on
+      // real corners, each one verified to keep its circle on the board
+      ? mountableCorners(silhouetteForHoles, M2_HOLE.pads[0].drill! / 2, 0.5, 4)
+      : [
+          { x: -hx, y: -hy }, { x: hx, y: -hy },
+          { x: -hx, y: hy }, { x: hx, y: hy },
+        ];
     holes.forEach((p, i) => {
       placements.push({
         ref: `H${i + 1}`,
@@ -216,7 +278,7 @@ export function placeComponents(layout: KeeberiaLayout): BoardCtx {
 
   return {
     pitch, rows, cols, cells, options: opts,
-    outline, placements, gridToBoard,
+    outline, placements, gridToBoard, shape, cutouts, silhouetteError,
   };
 }
 

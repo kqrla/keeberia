@@ -919,3 +919,28 @@ no ref-des leaking through. build clean, and the downstream consumers
 or simply put: the engine was telling the truth about the board and lying
 about the firmware, and nothing was checking.
 
+
+---
+
+## the board edge is the shape you painted (nov 7 2026)
+
+the ui lets you put switches around a block, so the shape is often not a
+rectangle. the engine took the bounding box of every part and called that the
+board, which meant an L, a plus, or a ring silently became a rectangle with dead
+board where the notch should have been.
+
+the first attempt unioned the part courtyards exactly. it was honest geometry
+and it was wrong twice over. the xiao and a 1.3in display do not sit inside one
+cell, so every board grew a wing, and a union keeps every disagreement: the ec11
+keepout ends 0.29mm short of the mx courtyard, which traced a 0.29mm stair along
+the edge of a ninepad. worst of all the streamdeck lost six nets of routing to
+the step, and the fab suite is what caught it, not me.
+
+the rule that holds: the board is the envelope everything must fit inside, minus
+the cells you blocked. a part never carves a notch. a blocked cell always does,
+opening through the margin on the edge and becoming a routed slot in the middle.
+a shape that cannot be built refuses with a sentence instead of falling back to
+a rectangle in silence.
+
+or simply put: you paint cells, the edge follows the cells, and the parts have to
+live on the board rather than shape it.

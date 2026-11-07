@@ -74,3 +74,39 @@ file leaves the engine.
 narrow slots under the fab's minimum non-plated width never get this far:
 vanity validation rejects them at input time, so a rout program cannot ask
 for a cut the house cannot make.
+
+## the silhouette rule (nov 7 2026)
+
+the board edge used to be the bounding box of every part. that was wrong the
+moment the ui let you paint switches anywhere: a 3x3 block with two keys on the
+right of the middle row is a plus shape, and it shipped as a rectangle with dead
+board where the notch should be. the user drew a shape and got a rectangle back.
+
+the rule now:
+
+- the board is the envelope everything must fit inside (every switch courtyard
+  plus 2.5mm, and every cell you painted), minus the cells you blocked
+- a part never carves a notch. the xiao and a display sit on the board, they do
+  not reshape it
+- a blocked cell always does. on the edge it opens through the margin, in the
+  middle it becomes a routed slot you can see through
+- a shape that cannot be built is an error, never a silent fall back: pieces
+  that do not touch, or a blocker that removes the ground under the mcu, refuse
+  with a sentence you can act on
+
+`src/silhouette.ts` traces the region exactly, on the lattice of the real edges,
+with the material always on the left, so no staircasing appears. blocked cells
+become cutouts and land in the excellon rout file as g85 slots.
+
+two things measured, both recorded because they cost real time:
+
+- unioning part courtyards instead of the envelope looked more honest and turned
+  every display into a wing. on the reference streamdeck the step cost six nets
+  of routing space, which the fab suite caught
+- the ec11 keepout ends 0.29mm short of the mx courtyard, so an exact union
+  traced a 0.29mm stair along the edge. `coalesceRects` pushes edges within
+  0.6mm outward into one line: a 0.3mm step is milling noise, not a shape
+
+one geometry change: choc boards grow 0.05mm per axis, because a 19.05mm cell is
+wider than a choc courtyard plus margin, and the cell you painted now wins the
+edge. mx boards are unchanged.

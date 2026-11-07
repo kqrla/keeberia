@@ -334,6 +334,11 @@ export function resolveOutline(spec: OutlineSpec | undefined, limits: OutlineLim
   return finish(shape, inner, limits, warnings, errors, true);
 }
 
+/** validate an already-built silhouette (from the cell+part union) against fab limits */
+export function validateSilhouette(shape: OutlineShape, cutouts: Pt[][], limits: OutlineLimits): ResolvedOutline {
+  return finish(shape, cutouts, limits, [], [], true);
+}
+
 function finish(shape: OutlineShape, cutouts: Pt[][], limits: OutlineLimits, warnings: string[], errors: string[], validateShape = false): ResolvedOutline {
   const bb = shapeBBox(shape);
   const width = +(bb.maxX - bb.minX).toFixed(3);

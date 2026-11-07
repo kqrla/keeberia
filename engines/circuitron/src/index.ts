@@ -15,7 +15,7 @@ import { exportKicadPcb } from "./kicad.ts";
 import { FabProfile, FabSpec, resolveFab } from "./fab.ts";
 import { buildScene3d, Scene3d, Scene3dOptions } from "./scene3d.ts";
 import { budgetReport, BudgetReport } from "./budget.ts";
-import { OutlineSpec, resolveOutline, pointInShape, shapePolygon } from "./outline.ts";
+import { OutlineSpec, resolveOutline, validateSilhouette, pointInShape, shapePolygon, OutlineShape } from "./outline.ts";
 import { VanitySpec, validateVanity } from "./vanity.ts";
 import { NetlistResult } from "./netlist.ts";
 import type { QmkInfo } from "./types.ts";
@@ -62,11 +62,15 @@ export function generatePcb(
     minCutoutWidthMm: profile.minCutoutWidthMm,
     minWebToEdgeMm: Math.max(1.0, profile.route.edgeClear),
   };
-  const outlineRes = resolveOutline(
-    (layout as { outline?: OutlineSpec }).outline,
-    fabLimits,
-    { kind: "rect", width: ctx.outline.width, height: ctx.outline.height, cornerRadius: ctx.outline.cornerRadius },
-  );
+  // the layout's own silhouette (cells + parts) is the default; an explicit
+  // rect/polygon/dxf spec overrides it, because a user drawing an edge means it
+  const spec = (layout as { outline?: OutlineSpec }).outline;
+  const autoShape: OutlineShape = ctx.shape ?? {
+    kind: "rect", width: ctx.outline.width, height: ctx.outline.height, cornerRadius: ctx.outline.cornerRadius,
+  };
+  const outlineRes = !spec || spec.kind === "auto"
+    ? validateSilhouette(autoShape, ctx.cutouts ?? [], fabLimits)
+    : resolveOutline(spec, fabLimits, autoShape as { kind: "rect"; width: number; height: number; cornerRadius: number });
   if (outlineRes.shape.kind === "polygon") {
     ctx.shape = outlineRes.shape;
     ctx.cutouts = outlineRes.cutouts;
@@ -164,6 +168,8 @@ export function generatePcb(
   }
   for (const e of vanity.errors) outlineRes.errors.push(`vanity: ${e}`);
   for (const w of vanity.warnings) outlineRes.warnings.push(`vanity: ${w}`);
+
+  if (ctx.silhouetteError) outlineRes.errors.push(ctx.silhouetteError);
 
   // 4c. silhouette verdicts join the board warnings
   for (const e of outlineRes.errors) result.warnings.push({ level: "error", message: e });
