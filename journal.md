@@ -822,3 +822,22 @@ placement representation the brep hangs from. occt now reads our brep back
 and agrees with the internal mesh. the writer emits exact planar faces, which
 is what kernels actually accept, and the test refuses to ship unverified.
 
+## oss macropads measured (nov 7 2026)
+
+anne asked for the open source macropad landscape, hackpad program first. the
+program repo turned out to hold 349 projects with 382 kicad boards, so we
+measured instead of reading opinion: 60 boards, one per project, parsed for
+layers, segments, vias, footprints, zones and mcu. the shape of the answer is
+stable. two layers on 59 of 60, four layers on none, both faces routed on 59
+of 60 at a 58/42 front/back split, median 110 segments and 2 vias, xiao on
+every board, hotswap on 5, diodes on 28, pour on 19.
+
+two readings matter for us. our reference boards sit inside the segment band
+but above the via median, so a later router pass should price a detour against
+a layer change. and our gnd pour is a keeberia opinion, not an inherited
+convention, which is fine as long as we say so.
+
+also closed the cutout loop: every cutout now emits a rout program (g85 slots,
+one per loop edge) beside its edge cuts loop, and the gerber test refuses to
+ship unless the slot count matches the edge count.
+
