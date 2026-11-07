@@ -60,3 +60,17 @@ every cutout, to within a rounding error.
 - [`docs/3d-preview.md`](3d-preview.md): the viewer scenes those files dress.
 - [`docs/circuitron-status.md`](circuitron-status.md): engine health and gaps.
 - [`assets/models/README.md`](../assets/models/README.md): prefetched component bodies.
+
+## cutouts reach the fab twice, on purpose
+
+an internal cutout appears in two artifacts with two meanings. in
+`Edge.Cuts` it is the boundary: this is the authority, and every house reads
+it as the silhouette of the opening. in `keeberia-cutouts.drl` it is a real
+rout program: one G85 slot per loop edge, with a 1.00mm bit, which is what a
+cam tool needs to actually schedule the cut. the two must agree, and the
+gerber test asserts the slot count equals the loop edge count before either
+file leaves the engine.
+
+narrow slots under the fab's minimum non-plated width never get this far:
+vanity validation rejects them at input time, so a rout program cannot ask
+for a cut the house cannot make.

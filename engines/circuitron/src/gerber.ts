@@ -270,6 +270,33 @@ export function exportGerbers(
     }
     L.push("M95", "");
     files["keeberia.drl"] = L.join("\n");
+
+
+  // routed cutouts: g85 slots a cam tool can act on.
+  // edge cuts stay the authority for the silhouette. this file exists because
+  // fab cam wants an explicit rout program for internal openings, and a bare
+  // loop in edge cuts gets read differently by every house.
+  if ((cutouts ?? []).length > 0) {
+    const tool = 1.0; // standard router bit, jlc and pcbway both run 1mm internally
+    const S: string[] = [
+      "M48", "METRIC,TZ",
+      "; keeberia routed cutouts, mirrors the internal Edge.Cuts loops",
+      `T1C${tool.toFixed(2)}`, "%", "G90*", "G05*", "T1",
+    ];
+    let slots = 0;
+    for (const loop of cutouts ?? []) {
+      for (let i = 0; i < loop.length; i++) {
+        const a = loop[i], b = loop[(i + 1) % loop.length];
+        if (Math.hypot(b.x - a.x, b.y - a.y) < 0.01) continue;
+        S.push(`X${a.x.toFixed(3)}Y${(-a.y).toFixed(3)}G85X${b.x.toFixed(3)}Y${(-b.y).toFixed(3)}`);
+        slots++;
+      }
+    }
+    S.push("M95", "");
+    files["keeberia-cutouts.drl"] = S.join("\n");
+    if (slots === 0) warnings.push({ level: "warning", message: "cutouts were given but produced no rout slots" });
+  }
+
     if (hits.length === 0) warnings.push({ level: "error", message: "this board has no drill hits — something is wrong with the pad model" });
   }
 

@@ -65,5 +65,38 @@ for (const [name, layout] of layouts) {
     `traces: ${(files["keeberia-F.Cu.gbr"].match(/D01\*/g) ?? []).length + (files["keeberia-B.Cu.gbr"].match(/D01\*/g) ?? []).length}`);
 }
 
+
+// ── routed cutouts: a g85 slot program must exist when the board has cutouts ──
+{
+  const circle = (c: { x: number; y: number }, r: number) =>
+    Array.from({ length: 24 }, (_, i) => {
+      const a = (i / 24) * Math.PI * 2;
+      return { x: c.x + r * Math.cos(a), y: c.y + r * Math.sin(a) };
+    });
+  const withCutout = {
+    ...(layouts.find(([n]) => n === "hackpad-3key")![1] as Record<string, unknown>),
+    outline: {
+      kind: "polygon" as const,
+      points: [
+        { x: -70, y: -50 }, { x: 70, y: -50 }, { x: 84, y: 0 },
+        { x: 70, y: 50 }, { x: -70, y: 50 }, { x: -84, y: 0 },
+      ],
+    },
+    vanity: { cutouts: [circle({ x: 0, y: 0 }, 4)] },
+  };
+  const out = generatePcb(withCutout as never);
+  const shape = out.outline.shape === "polygon"
+    ? { kind: "polygon" as const, points: out.outline.points }
+    : { kind: "rect" as const, width: out.outline.bbox.width, height: out.outline.bbox.height, cornerRadius: out.outline.cornerRadius };
+  const { files, warnings } = exportGerbers(out.result, shape, out.outline.cutouts);
+  const rout = files["keeberia-cutouts.drl"];
+  const slots = rout ? (rout.match(/G85/g) ?? []).length : 0;
+  const loopPts = out.outline.cutouts[0]?.length ?? 0;
+  const edgeCuts = (files["keeberia-Edge.Cuts.gbr"].match(/D01\*/g) ?? []).length;
+  const ok = !!rout && slots === loopPts && loopPts > 0 && edgeCuts >= loopPts && warnings.every((w) => w.level !== "error");
+  console.log(`cutout-rout: slots ${slots} of ${loopPts} loop edges, edge cuts ${edgeCuts}, file ${rout ? "present" : "MISSING"} -> ${ok ? "ok" : "FAIL"}`);
+  if (!ok) failed = true;
+}
+
 if (failed) { console.log("gerber export: FAILED"); process.exit(1); }
 console.log("gerber export: all reference layouts pass structural validation");
