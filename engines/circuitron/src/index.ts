@@ -14,6 +14,7 @@ import { buildBom, buildQmkInfo } from "./bom.ts";
 import { exportKicadPcb } from "./kicad.ts";
 import { FabProfile, FabSpec, resolveFab } from "./fab.ts";
 import { buildScene3d, Scene3d, Scene3dOptions } from "./scene3d.ts";
+import { budgetReport, BudgetReport } from "./budget.ts";
 import { OutlineSpec, resolveOutline, pointInShape, shapePolygon } from "./outline.ts";
 import { VanitySpec, validateVanity } from "./vanity.ts";
 import { NetlistResult } from "./netlist.ts";
@@ -29,6 +30,8 @@ export interface EngineOutput {
   fab: Pick<FabProfile, "id" | "source" | "thicknessMm" | "layers" | "maxBoardMm" | "notes">;
   /** deterministic 3d scene for the viewer: pcb only, or pcb plus case */
   scene3d: Scene3d;
+  /** what the design asks of the mcu, phrased in parts */
+  budget: BudgetReport;
   /** the silhouette actually used, plus anything the user's shape got wrong */
   outline: {
     shape: "rect" | "polygon";
@@ -195,7 +198,17 @@ export function generatePcb(
     errors: outlineRes.errors,
   };
 
-  return { result, kicadPcb, bomCsv, qmkInfo, netlist, fab: fabInfo, scene3d, outline: outlineInfo };
+  const budget = budgetReport({
+    keys,
+    rows: ctx.cells.length ? Math.max(...ctx.cells.map((c) => c.row)) + 1 : undefined,
+    cols: ctx.cells.length ? Math.max(...ctx.cells.map((c) => c.col)) + 1 : undefined,
+    encoders,
+    displays: oleds,
+    rgb: Boolean((layout.options ?? {}).rgb),
+    forceMatrix: ctx.options.forceMatrix,
+  });
+
+  return { result, kicadPcb, bomCsv, qmkInfo, netlist, fab: fabInfo, scene3d, outline: outlineInfo, budget };
 }
 
 function bomToCsv(bom: PcbResult["bom"]): string {

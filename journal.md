@@ -859,3 +859,25 @@ keyboard scale and opinionated at pad scale. keychron's hardware repo is
 source available with a no-copy licence and no editable cad, so it stays a
 study source.
 
+## macropad types, circuitron only (nov 7 2026)
+
+anne's correction after the keyboard sweep: macropads are the scope, and the
+repo already holds the broad taxonomy (backend/pcb research, 18 types), so the
+job was to narrow it, measure it, and let the engine speak about it.
+
+measured the 60 hackpad boards against eight macropad archetypes. median 9
+keys, max 20, screen pads 13, micro 11, 3x4 10, rotary 8, compact 6, numpad 5,
+knob 4, shortcut 2. knobs on 28 of 59, screens on 28, rgb on 22.
+
+then gave circuitron a budget report: the same pin arithmetic the netlist
+enforces, run as a report in parts instead of an exception in pin names. it
+also caught that matrices were sized by whatever grid fit the pins, so a 3x3
+became 2x5; the physical grid now wins when it can. 55 of 59 real pads fit the
+xiao budget, and the four that do not are knob heavy outliers worth studying
+rather than archetypes.
+
+the gap order flipped on the evidence. rgb is the biggest measured gap at 37%
+of pads and it is blocked on a rail decision (sk6812 wants 3.4v on data at 5v,
+evid-kc-016), wireless is second, and splits, stabilizers, pico and trackballs
+wait. choc hotswap stays blocked on a footprint record, not on code.
+
