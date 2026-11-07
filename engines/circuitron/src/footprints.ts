@@ -139,6 +139,35 @@ export const XIAO: FootprintDef = {
   case: { usbShell: { w: 9.4, h: 3.26, moduleThickness: 1.0 } },  // typical usb-c midmount receptacle on the module face
 };
 
+/** Pro Micro class carrier (ATmega32U4 and its clones): 33.8×17.75mm board,
+ *  two rows of 12 castellated pads at 2.54 pitch, rows 15.24mm apart, usb at
+ *  the top edge. left top to bottom: TX0 RX1 GND GND D2 D3 D4 D5 D6 D7 D8 D9.
+ *  right top to bottom: RAW GND RST VCC A3 A2 A1 A0 D15 D14 D16 D10.
+ *  (analog pads are also d18..d21 on 32u4 boards; the mcu record names them a0..a3) */
+export const PRO_MICRO: FootprintDef = {
+  id: "keeberia:PRO_MICRO",
+  kicadName: "keeberia:Module_ProMicro",
+  description: "Pro Micro carrier (2x12 castellated, 2.54 pitch)",
+  size: { w: 17.75, h: 33.8 },
+  keepoutRadius: 19,
+  category: "mcu",
+  pads: (() => {
+    const left = ["D1", "D0", "GND", "GND", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9"];
+    const right = ["RAW", "GND", "RST", "VCC", "A3", "A2", "A1", "A0", "D15", "D14", "D16", "D10"];
+    const pads: FootprintDef["pads"] = [];
+    // pads run down the long axis (module local y), usb edge at local -y
+    const first = -((left.length - 1) * 2.54) / 2;
+    left.forEach((p, i) =>
+      pads.push({ pad: p, pos: { x: -7.62, y: first + i * 2.54 }, size: { w: 1.7, h: 1.7 }, shape: "oval", type: "smd", layer: "B.Cu" }));
+    right.forEach((p, i) =>
+      pads.push({ pad: p, pos: { x: 7.62, y: first + i * 2.54 }, size: { w: 1.7, h: 1.7 }, shape: "oval", type: "smd", layer: "B.Cu" }));
+    return pads;
+  })(),
+  silks: [...rectSilks(17.75, 33.8), { kind: "line" as const, start: { x: -3.0, y: -16.9 }, end: { x: 3.0, y: -16.9 } }],
+  flipSilkWhenBack: true,
+  case: { usbShell: { w: 9.0, h: 3.4, moduleThickness: 1.0 } },
+};
+
 /** 0.91" 128×32 SSD1306 OLED on a 38×12mm breakout, 4-pin header at the
  *  right edge (2.54 pitch): GND VCC SCL SDA */
 export const OLED_128X32_091: FootprintDef = {
@@ -209,7 +238,7 @@ export const MOUNT_M2: FootprintDef = {
  *  connector is exposed through the case opening instead. */
 
 export const FOOTPRINTS: Record<string, FootprintDef> = {};
-for (const fp of [MX_SOLDER, MX_HOTSWAP, CHOC_V1, EC11, XIAO, OLED_128X32_091, OLED_128X64_13, DIODE, MOUNT_M2]) {
+for (const fp of [MX_SOLDER, MX_HOTSWAP, CHOC_V1, EC11, XIAO, PRO_MICRO, OLED_128X32_091, OLED_128X64_13, DIODE, MOUNT_M2]) {
   FOOTPRINTS[fp.id] = fp;
 }
 

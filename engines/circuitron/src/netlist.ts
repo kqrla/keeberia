@@ -2,16 +2,15 @@
  * Netlist synthesis.
  * Direct mode: every key gets its own GPIO (micropads). Falls back to a
  * matrix (rows x cols, one diode per key) when keys exceed the GPIO budget.
- * XIAO RP2040: 11 GPIO (D0..D10), I2C hard-reserved on D4(SDA)/D5(SCL) when
- * an OLED is present.
+ * the pin list, the i2c pair and the power pads come from the resolved mcu
+ * record (src/mcu.ts), so a 32u4 carrier spends its own pads, not the xiao's.
  */
 import { BoardCtx, padAbsPos } from "./layout.ts";
 import { FootprintDef, Net, Placement, Pt } from "./types.ts";
 import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, DIODE } from "./footprints.ts";
+import { MCUS, MCU_IDS } from "./mcu.ts";
 
 
-const XIAO_GPIOS = ["D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10"];
-const I2C = { sda: "D4", scl: "D5" };
 
 export interface NetlistResult {
   nets: Net[];
@@ -45,8 +44,10 @@ export function buildNetlist(ctx: BoardCtx): NetlistResult {
   const encoders = placements.filter((p) => FOOTPRINTS[p.library]?.category === "encoder");
   const oleds = placements.filter((p) => FOOTPRINTS[p.library]?.category === "display");
 
+  const mcuDef = ctx.mcu;
+  const I2C = mcuDef.i2c;
   const hasOled = oleds.length > 0;
-  let freeGpios = [...XIAO_GPIOS];
+  let freeGpios = [...mcuDef.gpios];
   if (hasOled) freeGpios = freeGpios.filter((g) => g !== I2C.sda && g !== I2C.scl);
   const encBudget = encoders.length * 2;
   if (encBudget + switches.length > freeGpios.length && ctx.options.forceMatrix === false) {
@@ -59,12 +60,12 @@ export function buildNetlist(ctx: BoardCtx): NetlistResult {
 
   // GND + power always
   const gnd = net("GND", "power");
-  addPad(gnd, "U1", "GND", padAbsPos(mcu, "GND"), mcu.side);
-  mcu.nets["GND"] = "GND";
+  addPad(gnd, "U1", mcuDef.power.gnd, padAbsPos(mcu, mcuDef.power.gnd), mcu.side);
+  mcu.nets[mcuDef.power.gnd] = "GND";
 
   const p3v3 = net("+3V3", "power");
-  addPad(p3v3, "U1", "3V3", padAbsPos(mcu, "3V3"), mcu.side);
-  mcu.nets["3V3"] = "+3V3";
+  addPad(p3v3, "U1", mcuDef.power.logic, padAbsPos(mcu, mcuDef.power.logic), mcu.side);
+  mcu.nets[mcuDef.power.logic] = "+3V3";
 
   // encoders: A/B on GPIO, common -> GND
   encoders.forEach((enc, i) => {
@@ -131,8 +132,8 @@ export function buildNetlist(ctx: BoardCtx): NetlistResult {
   }
   if (!rows) throw new Error(
     `pin budget exceeded: ${keyCount} keys need rows+cols matrix pins plus ${encBudget} encoder pins` +
-    `${hasOled ? " plus 2 I2C pins" : ""}, but the XIAO has only ${XIAO_GPIOS.length} GPIO total. ` +
-    `reduce keys, drop the OLED/encoder, or wait for the RP2040-Pico MCU option (26 GPIO).`);
+    `${hasOled ? " plus 2 I2C pins" : ""}, but the ${mcuDef.label} has only ${mcuDef.gpios.length} GPIO total. ` +
+    `reduce keys, drop the OLED/encoder, or pick an mcu with more pins (${MCU_IDS.filter((id) => MCUS[id].gpios.length > mcuDef.gpios.length).join(", ") || "none available"}).`);
   if (rows * cols < keyCount) throw new Error("matrix sizing bug");
 
   const rowPins = keyPins.slice(0, rows);

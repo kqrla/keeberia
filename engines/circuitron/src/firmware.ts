@@ -83,9 +83,8 @@ export function buildQmkBundle(ctx: BoardCtx, netlist: NetlistResult, qmkInfo: Q
   const info: Record<string, unknown> = {
     ...qmkInfo,
     keyboard_folder: `keeberia/${sanitise(name)}`,
-    bootloader: "rp2040-bootloader",
-    processor: "RP2040",
-    board: "seeed_xiao_rp2040",
+    bootloader: ctx.mcu.bootloader,
+    processor: ctx.mcu.chip,
     usb: { vid: "0xFEED", pid: pidFor(name), device_version: "1.0.0" },
     features: {
       ...((qmkInfo.features as object) ?? {}),
@@ -93,7 +92,23 @@ export function buildQmkBundle(ctx: BoardCtx, netlist: NetlistResult, qmkInfo: Q
       ...(hasOled ? { oled: true, extrakey: true } : {}),
     },
   };
+  // the board string only exists when qmk ships one for this carrier; otherwise
+  // the keyboard folder declares its own mcu. zmk has no qmk board at all.
+  if (ctx.mcu.firmware.kind === "qmk-board") info.board = ctx.mcu.firmware.board;
+  if (ctx.mcu.firmware.kind === "qmk-handwired") info.mcu = ctx.mcu.chip;
   files["info.json"] = JSON.stringify(info, null, 2) + "\n";
+
+  if (ctx.mcu.firmware.kind === "zmk") {
+    // honest seam: the pad, netlist and bom are correct, the keymap is not ours
+    // to generate yet. say so in the bundle instead of shipping a qmk folder
+    // that cannot build for an nrf52 chip.
+    warnings.push(`${ctx.mcu.label} runs zmk, not qmk: this bundle has no keymap code. use the matrix pins in info.json as the zmk matrix transform`);
+    files["README-firmware.md"] =
+      `# firmware for ${name}\n\n` +
+      `this board carries a ${ctx.mcu.label}. zmk is the toolchain for it, and circuitron does not generate zmk yet.\n\n` +
+      `what is already correct here: matrix_pins in info.json, the diode direction, and the per-key layout. ` +
+      `translate them into a zmk shields/ keyboard folder, and add a battery switch and JST pads to the schematic before you order.\n`;
+  }
 
   // ── keymap.c ──
   const direct = netlist.mode === "direct";

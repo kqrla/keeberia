@@ -4,7 +4,8 @@
 import { BoardCtx } from "./layout.ts";
 import { NetlistResult } from "./netlist.ts";
 import { FootprintDef, PcbResult, QmkInfo } from "./types.ts";
-import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, EC11, XIAO, OLED_091, M2_HOLE } from "./footprints.ts";
+import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, EC11, OLED_091, M2_HOLE } from "./footprints.ts";
+import { pinLabel } from "./mcu.ts";
 
 export function buildBom(ctx: BoardCtx): PcbResult["bom"] {
   const groups = new Map<string, { refs: string[]; value: string; footprint: string; notes?: string }>();
@@ -39,8 +40,8 @@ export function buildQmkInfo(ctx: BoardCtx, netlist: NetlistResult): QmkInfo {
     keyboard_name: ctx.options.boardName,
     manufacturer: "keeberia",
     usb: { vid: "0xFEED", pid: "0x0001", device_version: "1.0.0" },
-    processor: ctx.options.mcu === "xiao_rp2040" ? "RP2040" : "MCU",
-    bootloader: ctx.options.mcu === "xiao_rp2040" ? "rp2040-bootloader" : "unknown",
+    processor: ctx.mcu.chip,
+    bootloader: ctx.mcu.bootloader,
     features: { encoder_keys: encoders.length ? true : undefined, oled: hasOled || undefined },
   };
 
@@ -50,12 +51,12 @@ export function buildQmkInfo(ctx: BoardCtx, netlist: NetlistResult): QmkInfo {
       const pin = Object.entries(netlist.keyNetOf).find(([ref]) => ref === sw.ref)?.[1].pin;
       if (pin) pins[sw.ref] = pin;
     }
-    info.matrix_pins = { direct: Object.values(pins).map((p) => `GP${xiaoGp(p)}`) };
+    info.matrix_pins = { direct: Object.values(pins).map((p) => pinLabel(ctx.mcu, p)) };
     info.layout = { LAYOUT_direct: layoutKeys };
   } else if (netlist.matrix) {
     info.matrix_pins = {
-      rows: netlist.matrix.rowPins.map((p) => `GP${xiaoGp(p)}`),
-      cols: netlist.matrix.colPins.map((p) => `GP${xiaoGp(p)}`),
+      rows: netlist.matrix.rowPins.map((p) => pinLabel(ctx.mcu, p)),
+      cols: netlist.matrix.colPins.map((p) => pinLabel(ctx.mcu, p)),
     };
     info.diode_direction = "COL2ROW";
     info.layout = { LAYOUT_default: layoutKeys };
@@ -63,8 +64,8 @@ export function buildQmkInfo(ctx: BoardCtx, netlist: NetlistResult): QmkInfo {
 
   if (encoders.length) {
     info.encoder = { enabled: true, encoder_pins: encoders.map((_, i) => [
-      `GP${xiaoGp(netlistEncoderPin(netlist, i, "A"))}`,
-      `GP${xiaoGp(netlistEncoderPin(netlist, i, "B"))}`,
+      pinLabel(ctx.mcu, netlistEncoderPin(netlist, i, "A")),
+      pinLabel(ctx.mcu, netlistEncoderPin(netlist, i, "B")),
     ]) };
   }
   return info;
@@ -76,10 +77,3 @@ function netlistEncoderPin(netlist: NetlistResult, i: number, which: "A" | "B"):
   return pad?.pad ?? "D0";
 }
 
-/** XIAO RP2040 pad -> RP2040 GPIO number */
-const XIAO_GP: Record<string, number> = {
-  D0: 26, D1: 27, D2: 28, D3: 29, D4: 6, D5: 7, D6: 8, D7: 9, D8: 4, D9: 2, D10: 3,
-};
-function xiaoGp(pad: string): number {
-  return XIAO_GP[pad] ?? 0;
-}

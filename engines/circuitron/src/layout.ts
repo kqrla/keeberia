@@ -4,7 +4,8 @@
  * Board coords: re-centered so the board outline is centered at (0,0), KiCad y-down.
  */
 import { Cell, KeeberiaLayout, LayoutOptions, Placement, Pt, PcbResult } from "./types.ts";
-import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, CHOC_V1, EC11, OLED_091, XIAO, M2_HOLE } from "./footprints.ts";
+import { getMcu, DEFAULT_MCU, type McuDef } from "./mcu.ts";
+import { FOOTPRINTS, MX_SOLDER, MX_HOTSWAP, CHOC_V1, EC11, OLED_091, M2_HOLE } from "./footprints.ts";
 import type { OutlineShape } from "./outline.ts";
 import { rect as rectOf, rectFromCenter, boardRegion, silhouetteShape, recenterSilhouette, mountableCorners } from "./silhouette.ts";
 
@@ -25,6 +26,8 @@ export interface BoardCtx {
   cutouts?: Pt[][];
   /** set when the cell arrangement cannot become a board (disconnected, empty) */
   silhouetteError?: string;
+  /** the resolved microcontroller record every downstream stage reads */
+  mcu: McuDef;
   placements: Placement[];
   /** offset applied: boardPt = gridPt - centerOffset */
   gridToBoard: (p: Pt) => Pt;
@@ -60,7 +63,7 @@ export function cellCenter(cell: Cell, pitch: number): Pt {
 /**
  * Place all components deterministically:
  * - keys/encoders/oled at their grid cell centers (front side; hotswap pads on back)
- * - XIAO on the BACK, centered below the bottom row of keys
+ * - the mcu on the BACK, centered below the bottom row of keys
  * - M2 mounting holes at the 4 corners
  */
 export function placeComponents(layout: KeeberiaLayout): BoardCtx {
@@ -68,7 +71,7 @@ export function placeComponents(layout: KeeberiaLayout): BoardCtx {
   const cells = normalizeCells(layout);
   const { rows, cols } = layout.grid;
   const opts = {
-    mcu: layout.options?.mcu ?? ("xiao_rp2040" as const),
+    mcu: layout.options?.mcu ?? DEFAULT_MCU,
     hotswap: layout.options?.hotswap ?? true,
     boardName: layout.options?.boardName ?? layout.name ?? "keeberia",
     mounting: layout.options?.mounting ?? ("corner" as const),
@@ -81,11 +84,13 @@ export function placeComponents(layout: KeeberiaLayout): BoardCtx {
     h: (rows - 1) * pitch,
   };
 
-  // XIAO sits on the back, below the key field.
+  // the mcu sits on the back, below the key field.
   // keyArea.x/y mark cell edges; cell centers sit at +pitch/2.
   const centersMidX = keyArea.w / 2 + pitch / 2; // midpoint of key CENTERS
-  const mcuW = XIAO.size.w;   // 21
-  const mcuH = XIAO.size.h;    // 17.5
+  const mcu = getMcu(opts.mcu);
+  const mcuFootprint = FOOTPRINTS[mcu.footprint];
+  if (!mcuFootprint) throw new Error(`mcu "${mcu.id}" points at missing footprint ${mcu.footprint}`);
+  const mcuH = mcuFootprint.size.h;
   const gapKeysMcu = 3;        // clearance between key courtyard and module
   const mcuCenterGrid: Pt = {
     x: centersMidX,
@@ -157,14 +162,14 @@ export function placeComponents(layout: KeeberiaLayout): BoardCtx {
   // footprints; in our exporter we mirror pad x ourselves.
   placements.push({
     ref: "U1",
-    library: XIAO.id,
-    kicadFootprintName: XIAO.kicadName,
+    library: mcuFootprint.id,
+    kicadFootprintName: mcuFootprint.kicadName,
     pos: mcuCenterGrid,
     // 180°: the usb-c edge (module local -y) faces the board edge, not the
     // key field — the case compiler cuts the usb slot in the wall from this.
     rotation: 180,
     side: "B",
-    value: "XIAO " + opts.mcu.replace("xiao_", "").toUpperCase(),
+    value: mcu.label,
     nets: {},
   });
 
@@ -278,7 +283,7 @@ export function placeComponents(layout: KeeberiaLayout): BoardCtx {
 
   return {
     pitch, rows, cols, cells, options: opts,
-    outline, placements, gridToBoard, shape, cutouts, silhouetteError,
+    outline, placements, gridToBoard, shape, cutouts, silhouetteError, mcu,
   };
 }
 

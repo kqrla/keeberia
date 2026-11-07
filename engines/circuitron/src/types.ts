@@ -50,7 +50,7 @@ export interface SilkscreenItem {
 
 export interface LayoutOptions {
   /** microcontroller module */
-  mcu?: "xiao_rp2040" | "xiao_samd21" | "xiao_nrf52840" | "xiao_esp32c3";
+  mcu?: string; // an id from src/mcu.ts; unknown ids are refused by name
   /** optional user silhouette: auto (parts bbox rect), rect, polygon, or dxf text */
   outline?: unknown;
   /** legacy hint, kept for older layouts */

@@ -944,3 +944,28 @@ a rectangle in silence.
 
 or simply put: you paint cells, the edge follows the cells, and the parts have to
 live on the board rather than shape it.
+
+---
+
+## the board was a constant (nov 7 2026)
+
+the xiao was named in four places that did not know about each other: the netlist
+pin list, the budget arithmetic, the bom's gpio labels, the qmk info.json. that
+is not "we only support one board", it is "we support one board correctly and
+every other board silently wrong". a pro micro design would have printed rp2040
+gpio numbers on its own silkscreen.
+
+so the mcu is a record now, in src/mcu.ts: footprint, pads, i2c pair, power pad
+and its voltage, chip, bootloader, firmware toolchain, and whether the module has
+a radio. three boards are in the catalogue and the same nine-key pad generates
+clean on all of them, which is how the netlist, budget, bom, firmware and router
+get proven per board instead of per default.
+
+the pro micro is the useful one to have added: 18 gpio and 5v logic, so the same
+16 keys that need a matrix on a xiao fit directly, and the power rail genuinely
+differs (VCC, not 3V3). the nrf52840 record is the wireless pad path, and it is
+a swap because it uses the same carrier footprint. it also refuses to lie: no
+keymap, a README instead, because zmk is not something this engine generates.
+
+or simply put: every board is a record, and the engine reads it instead of
+remembering it.

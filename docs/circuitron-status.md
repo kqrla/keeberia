@@ -27,6 +27,10 @@ scale: 2853 lines of typescript across 17 source files, zero runtime deps. the w
 
 ## 2. the gaps, ranked by risk
 
+### 2.0 the mcu was hardcoded (closed nov 7 2026)
+
+the netlist pin list, budget arithmetic, bom gpio labels and qmk info.json all named the xiao. now `src/mcu.ts` holds one record per carrier and everything downstream reads it: three boards (xiao rp2040, xiao nrf52840, pro micro) generate the same pad cleanly, with their own pads, power rails and firmware toolchain. see docs/mcu.md. what this does not fix: zmk is still not generated, and battery/charge/power-switch parts are still missing, so wireless is a swap rather than a product.
+
 ### 2.1 verification authority is the engine itself
 
 `drc.ts` is circuitron checking circuitron. there is no independent second opinion:

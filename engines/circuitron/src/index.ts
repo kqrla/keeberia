@@ -33,6 +33,16 @@ export interface EngineOutput {
   scene3d: Scene3d;
   /** what the design asks of the mcu, phrased in parts */
   budget: BudgetReport;
+  /** which microcontroller the board was built around, and what it can do */
+  mcu: {
+    id: string;
+    label: string;
+    chip: string;
+    gpios: number;
+    logicVolts: number;
+    wireless: "ble" | "none";
+    firmware: "qmk-board" | "qmk-handwired" | "zmk";
+  };
   /** the silhouette actually used, plus anything the user's shape got wrong */
   outline: {
     shape: "rect" | "polygon";
@@ -213,9 +223,20 @@ export function generatePcb(
     displays: oleds,
     rgb: Boolean((layout.options ?? {}).rgb),
     forceMatrix: ctx.options.forceMatrix,
+    mcu: ctx.mcu.id,
   });
 
-  return { result, kicadPcb, bomCsv, qmkInfo, netlist, fab: fabInfo, scene3d, outline: outlineInfo, budget };
+  const mcuInfo = {
+    id: ctx.mcu.id,
+    label: ctx.mcu.label,
+    chip: ctx.mcu.chip,
+    gpios: ctx.mcu.gpios.length,
+    logicVolts: ctx.mcu.power.logicVolts,
+    wireless: (ctx.mcu.wireless?.ble ? "ble" : "none") as "ble" | "none",
+    firmware: ctx.mcu.firmware.kind,
+  };
+
+  return { result, kicadPcb, bomCsv, qmkInfo, netlist, fab: fabInfo, scene3d, outline: outlineInfo, budget, mcu: mcuInfo };
 }
 
 function bomToCsv(bom: PcbResult["bom"]): string {

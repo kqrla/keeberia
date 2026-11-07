@@ -11,8 +11,10 @@
  * kind of pad someone is building.
  */
 
+/** the default board's gpio count, kept for callers that pass no mcu */
+import { getMcu } from "./mcu.ts";
+
 export const XIAO_GPIO_TOTAL = 11;
-const I2C_PINS = ["D4", "D5"];
 
 export interface BudgetInput {
   keys: number;
@@ -23,6 +25,8 @@ export interface BudgetInput {
   displays?: number;
   rgb?: boolean;
   forceMatrix?: boolean;
+  /** mcu record id, defaults to the xiao rp2040 */
+  mcu?: string;
 }
 
 export interface BudgetReport {
@@ -43,6 +47,8 @@ export interface BudgetReport {
   reason?: string;
   /** capabilities asked for that the engine does not generate yet */
   unsupported: string[];
+  /** which board this budget was computed against */
+  mcu: string;
   notes: string[];
 }
 
@@ -56,19 +62,21 @@ export function matrixShape(n: number, pins: number): { rows: number; cols: numb
 }
 
 export function budgetReport(input: BudgetInput): BudgetReport {
+  const board = getMcu(input.mcu);
+  const gpioTotal = board.gpios.length;
   const keys = Math.max(0, Math.floor(input.keys));
   const encoders = Math.max(0, Math.floor(input.encoders ?? 0));
   const displays = Math.max(0, Math.floor(input.displays ?? 0));
   const unsupported: string[] = [];
   const notes: string[] = [];
 
-  const i2c = displays > 0 ? I2C_PINS.length : 0;
+  const i2c = displays > 0 ? 2 : 0; // the record always keeps a two-pad i2c pair
   const encoderPins = encoders * 2;
-  const freeForKeys = XIAO_GPIO_TOTAL - i2c - encoderPins;
+  const freeForKeys = gpioTotal - i2c - encoderPins;
 
   if (input.rgb) {
     // evid-kc-016: sk6812 wants 3.4v on data when the chain runs at 5v, so a
-    // 3.3v xiao needs either a 3.3v chain or a level shifter. not a wiring
+    // a 3.3v board needs either a 3.3v chain or a level shifter. not a wiring
     // detail we can guess at, so the chain is not generated yet.
     unsupported.push("per-key rgb (sk6812 chain not generated: needs a 5v or 3.3v chain decision, evid-kc-016)");
   }
@@ -105,7 +113,7 @@ export function budgetReport(input: BudgetInput): BudgetReport {
     if (encoders) parts.push(`${encoders} knob${encoders > 1 ? "s" : ""}`);
     if (displays) parts.push(`${displays} screen${displays > 1 ? "s" : ""}`);
     reason =
-      `${parts.join(" + ")} needs more pins than a xiao has. ` +
+      `${parts.join(" + ")} needs more pins than a ${board.label} has. ` +
       `a matrix only helps if rows + columns fit in ${freeForKeys} free pins, and they do not. ` +
       `drop a part, or use an mcu with more gpio (the pico option is parked).`;
   }
@@ -116,7 +124,8 @@ export function budgetReport(input: BudgetInput): BudgetReport {
 
   return {
     archetype: guessArchetype(keys, encoders, displays),
-    gpioTotal: XIAO_GPIO_TOTAL,
+    mcu: board.id,
+    gpioTotal,
     pins: { i2c, encoders: encoderPins, keys: keyPins, total },
     mode,
     matrix,

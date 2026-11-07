@@ -53,7 +53,7 @@ else
 fi
 
 # ── 2. suites ───────────────────────────────────────────────────────────────
-for t in run budget edge silhouette fab scene3d export3d step validate gerber render firmware freeroute; do
+for t in run budget edge mcu silhouette fab scene3d export3d step validate gerber render firmware freeroute; do
   [ -f "test/$t.ts" ] || continue
   out=$(timeout 400 npx tsx "test/$t.ts" 2>&1)
   code=$?
